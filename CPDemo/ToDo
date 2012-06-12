@@ -1,0 +1,29 @@
+ToDo
+
+Resources -add
+    hidAPI
+        Win
+        Mac
+    Licence
+        BSD? GPL?
+        
+Make file
+    OSX
+    Linux
+    Win
+    
+Remove unused enums / datatypes
+    
+FGModule
+
+Refactor common between FGModule and CPDemo
+
+Add threading for blocking on panel
+
+Extra panels
+    Radio
+    Multi
+    
+Mapping
+    Generic ?Cessna
+    Per plane?

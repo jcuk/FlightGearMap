@@ -42,14 +42,15 @@ int main (int argc, const char * argv[])
         //TODO: get inital device state without blocking for message:
         //lastMsg = ~message;
         
-        //TODO: need to thread. Cn only block on one device
+        //TODO: need to thread? Can only block on one device
                 
         for (;;) {
             //blocks for 100ms
             int mRes = hid_read_timeout((hid_device*)switchPanel, (uint8_t*)&message, sizeof(uint32_t), 100);
-                        
+            
             if (mRes > 0) {                
                 processSPMessage(message);
+                std::cout << "No message\n";
             }
 
         }
