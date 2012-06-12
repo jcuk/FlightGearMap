@@ -1,0 +1,278 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5BB9538F1585628C0044383E /* cpdemo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5BB9538E1585628C0044383E /* cpdemo.cpp */; };
+		5BB953A91585D07A0044383E /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BB953A81585D07A0044383E /* IOKit.framework */; };
+		5BB953AC1585D11F0044383E /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BB953AB1585D11F0044383E /* Cocoa.framework */; };
+		5BB953AE158654CA0044383E /* hid.c in Sources */ = {isa = PBXBuildFile; fileRef = 5BB953AD158654CA0044383E /* hid.c */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		5BB953881585628C0044383E /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		5BB9538A1585628C0044383E /* CPDemo */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = CPDemo; sourceTree = BUILT_PRODUCTS_DIR; };
+		5BB9538E1585628C0044383E /* cpdemo.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = cpdemo.cpp; sourceTree = "<group>"; };
+		5BB953981585D02C0044383E /* hidapi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = hidapi.h; path = include/hidapi.h; sourceTree = "<group>"; };
+		5BB9539E1585D02C0044383E /* pasync.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pasync.h; sourceTree = "<group>"; };
+		5BB9539F1585D02C0044383E /* pinet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pinet.h; sourceTree = "<group>"; };
+		5BB953A01585D02C0044383E /* pport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pport.h; sourceTree = "<group>"; };
+		5BB953A11585D02C0044383E /* pstreams.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pstreams.h; sourceTree = "<group>"; };
+		5BB953A21585D02C0044383E /* ptime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ptime.h; sourceTree = "<group>"; };
+		5BB953A31585D02C0044383E /* ptypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ptypes.h; sourceTree = "<group>"; };
+		5BB953A71585D02C0044383E /* defs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = defs.h; path = include/defs.h; sourceTree = "<group>"; };
+		5BB953A81585D07A0044383E /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = System/Library/Frameworks/IOKit.framework; sourceTree = SDKROOT; };
+		5BB953AB1585D11F0044383E /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		5BB953AD158654CA0044383E /* hid.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = hid.c; path = "../../saitek-xplane-saitek-plugin-xplane-50d0d9f/hidapi/mac/hid.c"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5BB953871585628C0044383E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5BB953A91585D07A0044383E /* IOKit.framework in Frameworks */,
+				5BB953AC1585D11F0044383E /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5BB9537F1585628C0044383E = {
+			isa = PBXGroup;
+			children = (
+				5BB9538D1585628C0044383E /* CPDemo */,
+				5BB9538B1585628C0044383E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		5BB9538B1585628C0044383E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5BB9538A1585628C0044383E /* CPDemo */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5BB9538D1585628C0044383E /* CPDemo */ = {
+			isa = PBXGroup;
+			children = (
+				5BB953AA1585D0AD0044383E /* framework */,
+				5BB953971585CFB80044383E /* includes */,
+				5BB9538E1585628C0044383E /* cpdemo.cpp */,
+			);
+			path = CPDemo;
+			sourceTree = "<group>";
+		};
+		5BB953971585CFB80044383E /* includes */ = {
+			isa = PBXGroup;
+			children = (
+				5BB953981585D02C0044383E /* hidapi.h */,
+				5BB953AF158654D30044383E /* hidapi */,
+				5BB9539D1585D02C0044383E /* ptypes */,
+				5BB953A71585D02C0044383E /* defs.h */,
+			);
+			name = includes;
+			sourceTree = "<group>";
+		};
+		5BB9539D1585D02C0044383E /* ptypes */ = {
+			isa = PBXGroup;
+			children = (
+				5BB9539E1585D02C0044383E /* pasync.h */,
+				5BB9539F1585D02C0044383E /* pinet.h */,
+				5BB953A01585D02C0044383E /* pport.h */,
+				5BB953A11585D02C0044383E /* pstreams.h */,
+				5BB953A21585D02C0044383E /* ptime.h */,
+				5BB953A31585D02C0044383E /* ptypes.h */,
+			);
+			name = ptypes;
+			path = include/ptypes;
+			sourceTree = "<group>";
+		};
+		5BB953AA1585D0AD0044383E /* framework */ = {
+			isa = PBXGroup;
+			children = (
+				5BB953AB1585D11F0044383E /* Cocoa.framework */,
+				5BB953A81585D07A0044383E /* IOKit.framework */,
+			);
+			name = framework;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		5BB953AF158654D30044383E /* hidapi */ = {
+			isa = PBXGroup;
+			children = (
+				5BB953B0158654E10044383E /* mac */,
+			);
+			name = hidapi;
+			sourceTree = "<group>";
+		};
+		5BB953B0158654E10044383E /* mac */ = {
+			isa = PBXGroup;
+			children = (
+				5BB953AD158654CA0044383E /* hid.c */,
+			);
+			name = mac;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5BB953891585628C0044383E /* CPDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5BB953941585628C0044383E /* Build configuration list for PBXNativeTarget "CPDemo" */;
+			buildPhases = (
+				5BB953861585628C0044383E /* Sources */,
+				5BB953871585628C0044383E /* Frameworks */,
+				5BB953881585628C0044383E /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CPDemo;
+			productName = CPDemo;
+			productReference = 5BB9538A1585628C0044383E /* CPDemo */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5BB953811585628C0044383E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+			};
+			buildConfigurationList = 5BB953841585628C0044383E /* Build configuration list for PBXProject "CPDemo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 5BB9537F1585628C0044383E;
+			productRefGroup = 5BB9538B1585628C0044383E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5BB953891585628C0044383E /* CPDemo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5BB953861585628C0044383E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5BB9538F1585628C0044383E /* cpdemo.cpp in Sources */,
+				5BB953AE158654CA0044383E /* hid.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		5BB953921585628C0044383E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		5BB953931585628C0044383E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		5BB953951585628C0044383E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SYMROOT = /Users/jasoncrane/Documents/FlightGearProjects/CPDemo/build;
+			};
+			name = Debug;
+		};
+		5BB953961585628C0044383E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SYMROOT = /Users/jasoncrane/Documents/FlightGearProjects/CPDemo/build;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5BB953841585628C0044383E /* Build configuration list for PBXProject "CPDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5BB953921585628C0044383E /* Debug */,
+				5BB953931585628C0044383E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5BB953941585628C0044383E /* Build configuration list for PBXNativeTarget "CPDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5BB953951585628C0044383E /* Debug */,
+				5BB953961585628C0044383E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 5BB953811585628C0044383E /* Project object */;
+}
