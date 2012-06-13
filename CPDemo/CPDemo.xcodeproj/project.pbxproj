@@ -7,10 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5B4B34E91588794A00335579 /* hid.c in Sources */ = {isa = PBXBuildFile; fileRef = 5B4B34CF1588794A00335579 /* hid.c */; };
 		5BB9538F1585628C0044383E /* cpdemo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5BB9538E1585628C0044383E /* cpdemo.cpp */; };
 		5BB953A91585D07A0044383E /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BB953A81585D07A0044383E /* IOKit.framework */; };
 		5BB953AC1585D11F0044383E /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BB953AB1585D11F0044383E /* Cocoa.framework */; };
-		5BB953AE158654CA0044383E /* hid.c in Sources */ = {isa = PBXBuildFile; fileRef = 5BB953AD158654CA0044383E /* hid.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -27,19 +27,22 @@
 
 /* Begin PBXFileReference section */
 		5B4B34B9158801C700335579 /* ToDo */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ToDo; sourceTree = "<group>"; };
+		5B4B34C0158876BA00335579 /* Makefile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.make; name = Makefile; path = CPDemo/Makefile; sourceTree = "<group>"; };
+		5B4B34C31588794A00335579 /* AUTHORS.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = AUTHORS.txt; sourceTree = "<group>"; };
+		5B4B34C41588794A00335579 /* HACKING.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = HACKING.txt; sourceTree = "<group>"; };
+		5B4B34C51588794A00335579 /* LICENSE-bsd.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "LICENSE-bsd.txt"; sourceTree = "<group>"; };
+		5B4B34C61588794A00335579 /* LICENSE-gpl3.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "LICENSE-gpl3.txt"; sourceTree = "<group>"; };
+		5B4B34C71588794A00335579 /* LICENSE-orig.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "LICENSE-orig.txt"; sourceTree = "<group>"; };
+		5B4B34C81588794A00335579 /* LICENSE.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE.txt; sourceTree = "<group>"; };
+		5B4B34CF1588794A00335579 /* hid.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = hid.c; sourceTree = "<group>"; };
+		5B4B34D01588794A00335579 /* Makefile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.make; path = Makefile; sourceTree = "<group>"; };
+		5B4B34D11588794A00335579 /* README.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
+		5B4B34EF15887B1C00335579 /* hidapi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = hidapi.h; path = include/hidapi.h; sourceTree = "<group>"; };
 		5BB9538A1585628C0044383E /* CPDemo */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = CPDemo; sourceTree = BUILT_PRODUCTS_DIR; };
 		5BB9538E1585628C0044383E /* cpdemo.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = cpdemo.cpp; sourceTree = "<group>"; };
-		5BB953981585D02C0044383E /* hidapi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = hidapi.h; path = include/hidapi.h; sourceTree = "<group>"; };
-		5BB9539E1585D02C0044383E /* pasync.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pasync.h; sourceTree = "<group>"; };
-		5BB9539F1585D02C0044383E /* pinet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pinet.h; sourceTree = "<group>"; };
-		5BB953A01585D02C0044383E /* pport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pport.h; sourceTree = "<group>"; };
-		5BB953A11585D02C0044383E /* pstreams.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pstreams.h; sourceTree = "<group>"; };
-		5BB953A21585D02C0044383E /* ptime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ptime.h; sourceTree = "<group>"; };
-		5BB953A31585D02C0044383E /* ptypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ptypes.h; sourceTree = "<group>"; };
 		5BB953A71585D02C0044383E /* defs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = defs.h; path = include/defs.h; sourceTree = "<group>"; };
 		5BB953A81585D07A0044383E /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = System/Library/Frameworks/IOKit.framework; sourceTree = SDKROOT; };
 		5BB953AB1585D11F0044383E /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
-		5BB953AD158654CA0044383E /* hid.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = hid.c; path = "../../saitek-xplane-saitek-plugin-xplane-50d0d9f/hidapi/mac/hid.c"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,9 +58,34 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5B4B34C21588794A00335579 /* hidapi */ = {
+			isa = PBXGroup;
+			children = (
+				5B4B34C31588794A00335579 /* AUTHORS.txt */,
+				5B4B34C41588794A00335579 /* HACKING.txt */,
+				5B4B34C51588794A00335579 /* LICENSE-bsd.txt */,
+				5B4B34C61588794A00335579 /* LICENSE-gpl3.txt */,
+				5B4B34C71588794A00335579 /* LICENSE-orig.txt */,
+				5B4B34C81588794A00335579 /* LICENSE.txt */,
+				5B4B34CE1588794A00335579 /* mac */,
+				5B4B34D11588794A00335579 /* README.txt */,
+			);
+			path = hidapi;
+			sourceTree = "<group>";
+		};
+		5B4B34CE1588794A00335579 /* mac */ = {
+			isa = PBXGroup;
+			children = (
+				5B4B34CF1588794A00335579 /* hid.c */,
+				5B4B34D01588794A00335579 /* Makefile */,
+			);
+			path = mac;
+			sourceTree = "<group>";
+		};
 		5BB9537F1585628C0044383E = {
 			isa = PBXGroup;
 			children = (
+				5B4B34C0158876BA00335579 /* Makefile */,
 				5B4B34B9158801C700335579 /* ToDo */,
 				5BB9538D1585628C0044383E /* CPDemo */,
 				5BB9538B1585628C0044383E /* Products */,
@@ -75,36 +103,21 @@
 		5BB9538D1585628C0044383E /* CPDemo */ = {
 			isa = PBXGroup;
 			children = (
+				5B4B34C21588794A00335579 /* hidapi */,
 				5BB953AA1585D0AD0044383E /* framework */,
-				5BB953971585CFB80044383E /* includes */,
+				5BB953971585CFB80044383E /* include */,
 				5BB9538E1585628C0044383E /* cpdemo.cpp */,
 			);
 			path = CPDemo;
 			sourceTree = "<group>";
 		};
-		5BB953971585CFB80044383E /* includes */ = {
+		5BB953971585CFB80044383E /* include */ = {
 			isa = PBXGroup;
 			children = (
-				5BB953981585D02C0044383E /* hidapi.h */,
-				5BB953AF158654D30044383E /* hidapi */,
-				5BB9539D1585D02C0044383E /* ptypes */,
+				5B4B34EF15887B1C00335579 /* hidapi.h */,
 				5BB953A71585D02C0044383E /* defs.h */,
 			);
-			name = includes;
-			sourceTree = "<group>";
-		};
-		5BB9539D1585D02C0044383E /* ptypes */ = {
-			isa = PBXGroup;
-			children = (
-				5BB9539E1585D02C0044383E /* pasync.h */,
-				5BB9539F1585D02C0044383E /* pinet.h */,
-				5BB953A01585D02C0044383E /* pport.h */,
-				5BB953A11585D02C0044383E /* pstreams.h */,
-				5BB953A21585D02C0044383E /* ptime.h */,
-				5BB953A31585D02C0044383E /* ptypes.h */,
-			);
-			name = ptypes;
-			path = include/ptypes;
+			name = include;
 			sourceTree = "<group>";
 		};
 		5BB953AA1585D0AD0044383E /* framework */ = {
@@ -115,22 +128,6 @@
 			);
 			name = framework;
 			path = ..;
-			sourceTree = "<group>";
-		};
-		5BB953AF158654D30044383E /* hidapi */ = {
-			isa = PBXGroup;
-			children = (
-				5BB953B0158654E10044383E /* mac */,
-			);
-			name = hidapi;
-			sourceTree = "<group>";
-		};
-		5BB953B0158654E10044383E /* mac */ = {
-			isa = PBXGroup;
-			children = (
-				5BB953AD158654CA0044383E /* hid.c */,
-			);
-			name = mac;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -184,7 +181,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5BB9538F1585628C0044383E /* cpdemo.cpp in Sources */,
-				5BB953AE158654CA0044383E /* hid.c in Sources */,
+				5B4B34E91588794A00335579 /* hid.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

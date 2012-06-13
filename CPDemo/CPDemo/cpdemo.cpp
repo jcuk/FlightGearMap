@@ -11,8 +11,6 @@
 #include "hidapi.h"
 #include "defs.h"
 
-#include "pasync.h"
-
 enum tristate {on, off, unchanged};
 
 void processSPMessage(uint32_t msg);
@@ -50,7 +48,6 @@ int main (int argc, const char * argv[])
             
             if (mRes > 0) {                
                 processSPMessage(message);
-                std::cout << "No message\n";
             }
 
         }
