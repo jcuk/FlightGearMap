@@ -12,9 +12,9 @@ ifeq ($(HOSTOS),darwin)
 else
  ifeq ($(HOSTOS),linux)
   HIDAPIPATH=./hidapi/linux
-  LIBS=
-  LNFLAGS=-rdynamic -nodefaultlibs -L.
-  CFLAGS=-march=i386 -Wall -O3 -DAPL=0 -DIBM=0 -DLIN=1 -fvisibility=hidden
+  LIBS=-lc
+  LNFLAGS=-rdynamic -L.
+  CFLAGS=-march=native -Wall -O3 -DAPL=0 -DIBM=0 -DLIN=1 -fvisibility=hidden
  else # windows
   HOSTOS=windows
   HIDAPIPATH=./hidapi/windows

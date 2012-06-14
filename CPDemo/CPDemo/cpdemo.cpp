@@ -11,6 +11,16 @@
 #include "hidapi.h"
 #include "defs.h"
 
+#ifndef _UINT8_T
+#define _UINT8_T
+typedef unsigned char uint8_t;
+#endif /* _UINT32_T */
+
+#ifndef _UINT32_T
+#define _UINT32_T
+typedef unsigned int uint32_t;
+#endif /* _UINT32_T */
+
 enum tristate {on, off, unchanged};
 
 void processSPMessage(uint32_t msg);
