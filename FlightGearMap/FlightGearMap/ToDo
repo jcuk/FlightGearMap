@@ -1,0 +1,16 @@
+Improve aircraft graphic
+Allow re connecton of telnet
+in / out of background (suspend / resume telnet)
+config screen
+Info screen
+Icons
+Get working for Ipad
+    graphics
+    Storyboard
+New app store app
+check in to svn (+java)
+refactor out AST in names
+Persist config
+format port in config
+update connection status label
+update config fields on popup

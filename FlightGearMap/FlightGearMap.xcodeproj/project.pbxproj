@@ -1,0 +1,399 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5B35DD4F158FC3F8009EA907 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B35DD4E158FC3F8009EA907 /* MapKit.framework */; };
+		5B35DD53158FCDAF009EA907 /* TelnetPositionClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B35DD52158FCDAF009EA907 /* TelnetPositionClient.m */; };
+		5B35DD60158FDD41009EA907 /* GCDAsyncSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B35DD5E158FDD41009EA907 /* GCDAsyncSocket.m */; };
+		5B3D3F78158FE24E00393425 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B3D3F77158FE24E00393425 /* Security.framework */; settings = {ATTRIBUTES = (Required, ); }; };
+		5B3D3F7E158FE3DB00393425 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B3D3F7D158FE3DB00393425 /* CFNetwork.framework */; };
+		5B3D3F84159062DE00393425 /* TBXML.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B3D3F83159062DD00393425 /* TBXML.m */; };
+		5B3D3F9C1591ABA400393425 /* ToDo in Resources */ = {isa = PBXBuildFile; fileRef = 5B3D3F9B1591ABA400393425 /* ToDo */; };
+		5B3D3F9E1591AFC200393425 /* plane.png in Resources */ = {isa = PBXBuildFile; fileRef = 5B3D3F9D1591AFC100393425 /* plane.png */; };
+		5B3D3FAB15923A9400393425 /* info.png in Resources */ = {isa = PBXBuildFile; fileRef = 5B3D3FAA15923A9400393425 /* info.png */; };
+		5B3D3FCC1592776200393425 /* UIConfigController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B3D3FCB1592776200393425 /* UIConfigController.m */; };
+		5B3D3FEE159393DA00393425 /* InfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B3D3FEC159393DA00393425 /* InfoView.m */; };
+		5B68E648158FBF65009DBDE6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B68E647158FBF65009DBDE6 /* UIKit.framework */; };
+		5B68E64A158FBF65009DBDE6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B68E649158FBF65009DBDE6 /* Foundation.framework */; };
+		5B68E64C158FBF65009DBDE6 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B68E64B158FBF65009DBDE6 /* CoreGraphics.framework */; };
+		5B68E652158FBF65009DBDE6 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5B68E650158FBF65009DBDE6 /* InfoPlist.strings */; };
+		5B68E654158FBF65009DBDE6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B68E653158FBF65009DBDE6 /* main.m */; };
+		5B68E658158FBF65009DBDE6 /* FGMAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B68E657158FBF65009DBDE6 /* FGMAppDelegate.m */; };
+		5B68E65B158FBF65009DBDE6 /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B68E659158FBF65009DBDE6 /* MainStoryboard_iPhone.storyboard */; };
+		5B68E65E158FBF65009DBDE6 /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B68E65C158FBF65009DBDE6 /* MainStoryboard_iPad.storyboard */; };
+		5B68E661158FBF66009DBDE6 /* FGMViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B68E660158FBF66009DBDE6 /* FGMViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		5B35DD4E158FC3F8009EA907 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		5B35DD51158FCDAF009EA907 /* TelnetPositionClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TelnetPositionClient.h; sourceTree = "<group>"; };
+		5B35DD52158FCDAF009EA907 /* TelnetPositionClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TelnetPositionClient.m; sourceTree = "<group>"; };
+		5B35DD5E158FDD41009EA907 /* GCDAsyncSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDAsyncSocket.m; sourceTree = "<group>"; };
+		5B35DD5F158FDD41009EA907 /* GCDAsyncSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDAsyncSocket.h; sourceTree = "<group>"; };
+		5B3D3F77158FE24E00393425 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		5B3D3F79158FE27C00393425 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
+		5B3D3F7B158FE38600393425 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		5B3D3F7D158FE3DB00393425 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		5B3D3F83159062DD00393425 /* TBXML.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TBXML.m; path = "../../../../Downloads/71squared-TBXML-766b375/TBXML-Code/TBXML.m"; sourceTree = "<group>"; };
+		5B3D3F85159062F100393425 /* TBXML.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TBXML.h; path = "../../../../Downloads/71squared-TBXML-766b375/TBXML-Headers/TBXML.h"; sourceTree = "<group>"; };
+		5B3D3F861590EE1D00393425 /* MapStatusUpdater.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapStatusUpdater.h; sourceTree = "<group>"; };
+		5B3D3F9B1591ABA400393425 /* ToDo */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ToDo; sourceTree = "<group>"; };
+		5B3D3F9D1591AFC100393425 /* plane.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = plane.png; sourceTree = "<group>"; };
+		5B3D3FAA15923A9400393425 /* info.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = info.png; sourceTree = "<group>"; };
+		5B3D3FCA1592776100393425 /* UIConfigController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIConfigController.h; sourceTree = "<group>"; };
+		5B3D3FCB1592776200393425 /* UIConfigController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIConfigController.m; sourceTree = "<group>"; };
+		5B3D3FEC159393DA00393425 /* InfoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InfoView.m; sourceTree = "<group>"; };
+		5B3D3FED159393DA00393425 /* InfoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InfoView.h; sourceTree = "<group>"; };
+		5B68E643158FBF65009DBDE6 /* FlightGearMap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlightGearMap.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5B68E647158FBF65009DBDE6 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		5B68E649158FBF65009DBDE6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		5B68E64B158FBF65009DBDE6 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		5B68E64F158FBF65009DBDE6 /* FlightGearMap-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "FlightGearMap-Info.plist"; sourceTree = "<group>"; };
+		5B68E651158FBF65009DBDE6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		5B68E653158FBF65009DBDE6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		5B68E655158FBF65009DBDE6 /* FlightGearMap-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FlightGearMap-Prefix.pch"; sourceTree = "<group>"; };
+		5B68E656158FBF65009DBDE6 /* FGMAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FGMAppDelegate.h; sourceTree = "<group>"; };
+		5B68E657158FBF65009DBDE6 /* FGMAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FGMAppDelegate.m; sourceTree = "<group>"; };
+		5B68E65A158FBF65009DBDE6 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
+		5B68E65D158FBF65009DBDE6 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
+		5B68E65F158FBF65009DBDE6 /* FGMViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FGMViewController.h; sourceTree = "<group>"; };
+		5B68E660158FBF66009DBDE6 /* FGMViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FGMViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5B68E640158FBF65009DBDE6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5B3D3F7E158FE3DB00393425 /* CFNetwork.framework in Frameworks */,
+				5B35DD4F158FC3F8009EA907 /* MapKit.framework in Frameworks */,
+				5B68E648158FBF65009DBDE6 /* UIKit.framework in Frameworks */,
+				5B68E64A158FBF65009DBDE6 /* Foundation.framework in Frameworks */,
+				5B68E64C158FBF65009DBDE6 /* CoreGraphics.framework in Frameworks */,
+				5B3D3F78158FE24E00393425 /* Security.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5B35DD55158FCE0C009EA907 /* Telnet */ = {
+			isa = PBXGroup;
+			children = (
+				5B35DD5E158FDD41009EA907 /* GCDAsyncSocket.m */,
+				5B35DD5F158FDD41009EA907 /* GCDAsyncSocket.h */,
+				5B35DD51158FCDAF009EA907 /* TelnetPositionClient.h */,
+				5B35DD52158FCDAF009EA907 /* TelnetPositionClient.m */,
+				5B3D3F861590EE1D00393425 /* MapStatusUpdater.h */,
+			);
+			name = Telnet;
+			sourceTree = "<group>";
+		};
+		5B3D3F82159062B700393425 /* TBXML */ = {
+			isa = PBXGroup;
+			children = (
+				5B3D3F85159062F100393425 /* TBXML.h */,
+				5B3D3F83159062DD00393425 /* TBXML.m */,
+			);
+			name = TBXML;
+			sourceTree = "<group>";
+		};
+		5B3D3F9F1591B41B00393425 /* Graphics */ = {
+			isa = PBXGroup;
+			children = (
+				5B3D3FAA15923A9400393425 /* info.png */,
+				5B3D3F9D1591AFC100393425 /* plane.png */,
+			);
+			name = Graphics;
+			sourceTree = "<group>";
+		};
+		5B3D3FEB159393B000393425 /* InfoView */ = {
+			isa = PBXGroup;
+			children = (
+				5B3D3FEC159393DA00393425 /* InfoView.m */,
+				5B3D3FED159393DA00393425 /* InfoView.h */,
+			);
+			name = InfoView;
+			sourceTree = "<group>";
+		};
+		5B3D3FF91593C1E200393425 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				5B68E646158FBF65009DBDE6 /* Frameworks */,
+				5B68E64E158FBF65009DBDE6 /* Supporting Files */,
+				5B3D3F9F1591B41B00393425 /* Graphics */,
+				5B68E659158FBF65009DBDE6 /* MainStoryboard_iPhone.storyboard */,
+				5B68E65C158FBF65009DBDE6 /* MainStoryboard_iPad.storyboard */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		5B68E638158FBF65009DBDE6 = {
+			isa = PBXGroup;
+			children = (
+				5B68E64D158FBF65009DBDE6 /* FlightGearMap */,
+				5B68E644158FBF65009DBDE6 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		5B68E644158FBF65009DBDE6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5B68E643158FBF65009DBDE6 /* FlightGearMap.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5B68E646158FBF65009DBDE6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5B3D3F7D158FE3DB00393425 /* CFNetwork.framework */,
+				5B3D3F7B158FE38600393425 /* MobileCoreServices.framework */,
+				5B3D3F79158FE27C00393425 /* CoreFoundation.framework */,
+				5B3D3F77158FE24E00393425 /* Security.framework */,
+				5B35DD4E158FC3F8009EA907 /* MapKit.framework */,
+				5B68E647158FBF65009DBDE6 /* UIKit.framework */,
+				5B68E649158FBF65009DBDE6 /* Foundation.framework */,
+				5B68E64B158FBF65009DBDE6 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		5B68E64D158FBF65009DBDE6 /* FlightGearMap */ = {
+			isa = PBXGroup;
+			children = (
+				5B3D3F9B1591ABA400393425 /* ToDo */,
+				5B3D3FF91593C1E200393425 /* Resources */,
+				5B3D3FEB159393B000393425 /* InfoView */,
+				5B3D3F82159062B700393425 /* TBXML */,
+				5B35DD55158FCE0C009EA907 /* Telnet */,
+				5B68E656158FBF65009DBDE6 /* FGMAppDelegate.h */,
+				5B68E657158FBF65009DBDE6 /* FGMAppDelegate.m */,
+				5B68E65F158FBF65009DBDE6 /* FGMViewController.h */,
+				5B68E660158FBF66009DBDE6 /* FGMViewController.m */,
+				5B3D3FCA1592776100393425 /* UIConfigController.h */,
+				5B3D3FCB1592776200393425 /* UIConfigController.m */,
+			);
+			path = FlightGearMap;
+			sourceTree = "<group>";
+		};
+		5B68E64E158FBF65009DBDE6 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				5B68E64F158FBF65009DBDE6 /* FlightGearMap-Info.plist */,
+				5B68E650158FBF65009DBDE6 /* InfoPlist.strings */,
+				5B68E653158FBF65009DBDE6 /* main.m */,
+				5B68E655158FBF65009DBDE6 /* FlightGearMap-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5B68E642158FBF65009DBDE6 /* FlightGearMap */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5B68E664158FBF66009DBDE6 /* Build configuration list for PBXNativeTarget "FlightGearMap" */;
+			buildPhases = (
+				5B68E63F158FBF65009DBDE6 /* Sources */,
+				5B68E640158FBF65009DBDE6 /* Frameworks */,
+				5B68E641158FBF65009DBDE6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FlightGearMap;
+			productName = FlightGearMap;
+			productReference = 5B68E643158FBF65009DBDE6 /* FlightGearMap.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5B68E63A158FBF65009DBDE6 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+			};
+			buildConfigurationList = 5B68E63D158FBF65009DBDE6 /* Build configuration list for PBXProject "FlightGearMap" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 5B68E638158FBF65009DBDE6;
+			productRefGroup = 5B68E644158FBF65009DBDE6 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5B68E642158FBF65009DBDE6 /* FlightGearMap */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5B68E641158FBF65009DBDE6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5B68E652158FBF65009DBDE6 /* InfoPlist.strings in Resources */,
+				5B68E65B158FBF65009DBDE6 /* MainStoryboard_iPhone.storyboard in Resources */,
+				5B68E65E158FBF65009DBDE6 /* MainStoryboard_iPad.storyboard in Resources */,
+				5B3D3F9C1591ABA400393425 /* ToDo in Resources */,
+				5B3D3F9E1591AFC200393425 /* plane.png in Resources */,
+				5B3D3FAB15923A9400393425 /* info.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5B68E63F158FBF65009DBDE6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5B68E654158FBF65009DBDE6 /* main.m in Sources */,
+				5B68E658158FBF65009DBDE6 /* FGMAppDelegate.m in Sources */,
+				5B68E661158FBF66009DBDE6 /* FGMViewController.m in Sources */,
+				5B35DD53158FCDAF009EA907 /* TelnetPositionClient.m in Sources */,
+				5B35DD60158FDD41009EA907 /* GCDAsyncSocket.m in Sources */,
+				5B3D3F84159062DE00393425 /* TBXML.m in Sources */,
+				5B3D3FCC1592776200393425 /* UIConfigController.m in Sources */,
+				5B3D3FEE159393DA00393425 /* InfoView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		5B68E650158FBF65009DBDE6 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5B68E651158FBF65009DBDE6 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		5B68E659158FBF65009DBDE6 /* MainStoryboard_iPhone.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5B68E65A158FBF65009DBDE6 /* en */,
+			);
+			name = MainStoryboard_iPhone.storyboard;
+			sourceTree = "<group>";
+		};
+		5B68E65C158FBF65009DBDE6 /* MainStoryboard_iPad.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5B68E65D158FBF65009DBDE6 /* en */,
+			);
+			name = MainStoryboard_iPad.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		5B68E662158FBF66009DBDE6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				SDKROOT = iphoneos;
+				SYMROOT = /Users/jasoncrane/Documents/iPhoneProjects/FlightGearMap/build;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		5B68E663158FBF66009DBDE6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				SYMROOT = /Users/jasoncrane/Documents/iPhoneProjects/FlightGearMap/build;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5B68E665158FBF66009DBDE6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "FlightGearMap/FlightGearMap-Prefix.pch";
+				INFOPLIST_FILE = "FlightGearMap/FlightGearMap-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		5B68E666158FBF66009DBDE6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "FlightGearMap/FlightGearMap-Prefix.pch";
+				INFOPLIST_FILE = "FlightGearMap/FlightGearMap-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5B68E63D158FBF65009DBDE6 /* Build configuration list for PBXProject "FlightGearMap" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5B68E662158FBF66009DBDE6 /* Debug */,
+				5B68E663158FBF66009DBDE6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5B68E664158FBF66009DBDE6 /* Build configuration list for PBXNativeTarget "FlightGearMap" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5B68E665158FBF66009DBDE6 /* Debug */,
+				5B68E666158FBF66009DBDE6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 5B68E63A158FBF65009DBDE6 /* Project object */;
+}
