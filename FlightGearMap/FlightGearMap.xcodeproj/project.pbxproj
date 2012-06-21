@@ -18,6 +18,7 @@
 		5B3D3FAB15923A9400393425 /* info.png in Resources */ = {isa = PBXBuildFile; fileRef = 5B3D3FAA15923A9400393425 /* info.png */; };
 		5B3D3FCC1592776200393425 /* UIConfigController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B3D3FCB1592776200393425 /* UIConfigController.m */; };
 		5B3D3FEE159393DA00393425 /* InfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B3D3FEC159393DA00393425 /* InfoView.m */; };
+		5B3D40161593CD9B00393425 /* cross.png in Resources */ = {isa = PBXBuildFile; fileRef = 5B3D40151593CD9B00393425 /* cross.png */; };
 		5B68E648158FBF65009DBDE6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B68E647158FBF65009DBDE6 /* UIKit.framework */; };
 		5B68E64A158FBF65009DBDE6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B68E649158FBF65009DBDE6 /* Foundation.framework */; };
 		5B68E64C158FBF65009DBDE6 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B68E64B158FBF65009DBDE6 /* CoreGraphics.framework */; };
@@ -49,6 +50,7 @@
 		5B3D3FCB1592776200393425 /* UIConfigController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIConfigController.m; sourceTree = "<group>"; };
 		5B3D3FEC159393DA00393425 /* InfoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InfoView.m; sourceTree = "<group>"; };
 		5B3D3FED159393DA00393425 /* InfoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InfoView.h; sourceTree = "<group>"; };
+		5B3D40151593CD9B00393425 /* cross.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cross.png; sourceTree = "<group>"; };
 		5B68E643158FBF65009DBDE6 /* FlightGearMap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlightGearMap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B68E647158FBF65009DBDE6 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		5B68E649158FBF65009DBDE6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -106,6 +108,7 @@
 		5B3D3F9F1591B41B00393425 /* Graphics */ = {
 			isa = PBXGroup;
 			children = (
+				5B3D40151593CD9B00393425 /* cross.png */,
 				5B3D3FAA15923A9400393425 /* info.png */,
 				5B3D3F9D1591AFC100393425 /* plane.png */,
 			);
@@ -250,6 +253,7 @@
 				5B3D3F9C1591ABA400393425 /* ToDo in Resources */,
 				5B3D3F9E1591AFC200393425 /* plane.png in Resources */,
 				5B3D3FAB15923A9400393425 /* info.png in Resources */,
+				5B3D40161593CD9B00393425 /* cross.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -8,9 +8,7 @@ Get working for Ipad
     graphics
     Storyboard
 New app store app
-check in to svn (+java)
-refactor out AST in names
+check in java
 Persist config
-format port in config
 update connection status label
 update config fields on popup

@@ -66,7 +66,7 @@
     //now draw the rounded rectangle
     CGContextSetStrokeColorWithColor(context, [[UIColor blackColor] CGColor]);
     CGContextSetLineWidth(context,0.0f);
-    CGContextSetRGBFillColor(context, 1.0, 1.0, 1.0, 0.2f);
+    CGContextSetRGBFillColor(context, 1.0, 1.0, 1.0, 0.5f);
     
     //since I need room in my rect for the shadow, make the rounded rectangle a little smaller than frame
     CGRect rrect = CGRectMake(CGRectGetMinX(rect), CGRectGetMinY(rect), CGRectGetWidth(rect), CGRectGetHeight(rect));
@@ -91,14 +91,6 @@
     CGContextDrawPath(context, kCGPathFillStroke);
 
     [webView setNeedsDisplayInRect:rect];
-}
-
-
-- (void)dealloc
-{
-    [super dealloc];
-    [webView release];
-    [dismissButton release];
 }
 
 @end
