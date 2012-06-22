@@ -13,19 +13,16 @@
 @protocol UIConfigControllerDelagate <NSObject>
 - (void)configViewControllerDidCancel:(UIConfigController *)controller;
 - (void)configViewControllerDidSave:(UIConfigController *)controller;
-- (void)configViewControllerConnect:(UIConfigController *)controller;
-
 @end
 
 @interface UIConfigController : UIViewController {
-    IBOutlet UILabel *connectionStatus;
+    IBOutlet UITextField *machineAddress;
+    IBOutlet UITextField *port;
 }
 
 @property (nonatomic, weak) id <UIConfigControllerDelagate> delegate;
-@property (nonatomic, retain) IBOutlet UITextField *machineAddress;
-@property (nonatomic, retain) IBOutlet UITextField *port;
-
--(IBAction)connect:(id)sender;
+@property (strong) IBOutlet UITextField *machineAddress;
+@property (strong) IBOutlet UITextField *port;
 
 - (IBAction)cancel:(id)sender;
 - (IBAction)done:(id)sender;

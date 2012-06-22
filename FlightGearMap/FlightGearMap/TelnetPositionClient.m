@@ -23,19 +23,18 @@ NSObject <MapStatusUpdater> *mapStatusUpdater;
 
 @synthesize port,address,status;
 
+-(void)updateStatus:(connection)conStatus {
+    status = conStatus;
+}
+
 -(id)init:(NSObject <MapStatusUpdater> *)updater {
     self = [super init];
     if (self) {
         formatter = [[NSNumberFormatter alloc] init];
         [formatter setNumberStyle:NSNumberFormatterDecimalStyle];
         mapStatusUpdater = updater;
-        
-        //Default port and address
-        //TODO: persist this
-        port = @"9999";
-        address = @"127.0.0.1";
-        
-        status = DISCONNECTED;
+                
+        [self updateStatus:DISCONNECTED];
         
         NSLog(@"Machine %@",address);
 
@@ -61,24 +60,25 @@ NSObject <MapStatusUpdater> *mapStatusUpdater;
     
     int portNum = [[formatter numberFromString:port] intValue];
     
-    status = CONNECTING;
+    [self updateStatus:CONNECTING];
+    //TODO: handel error
     NSError *err = nil;
     if (![socket connectToHost:address onPort:portNum error:&err])
     {
-        status = CANT_CONNECT;
+        [self updateStatus:CANT_CONNECT];
         NSLog(@"Error connecting to telnet host: %@", err);
     }
 }
 
 -(void)stop {
-    status = DISCONNECTED;
+    [self updateStatus:DISCONNECTED];
     [socket disconnect];
 }
 
 - (void)socket:(GCDAsyncSocket *)sender didConnectToHost:(NSString *)host port:(UInt16)port
 {
     NSLog(@"Connected to FlightGear telnet host.");
-    status = CONNECTED;
+    [self updateStatus:CONNECTED];
 }
 
 -(NSNumber *)getDoubleFromXML:(TBXML*)xml elementName:(NSString *)name {

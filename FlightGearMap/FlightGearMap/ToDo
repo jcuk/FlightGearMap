@@ -1,14 +1,9 @@
-Improve aircraft graphic
-Allow re connecton of telnet
-in / out of background (suspend / resume telnet)
-config screen
-Info screen
+in / out of background (suspend / resume telnet)?
 Icons
+    57x57
+    
 Get working for Ipad
     graphics
     Storyboard
 New app store app
 check in java
-Persist config
-update connection status label
-update config fields on popup

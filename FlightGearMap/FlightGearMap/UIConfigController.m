@@ -10,13 +10,14 @@
 
 @implementation UIConfigController
 
-@synthesize delegate,port,machineAddress;
+@synthesize delegate, machineAddress, port;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
+        machineAddress = [[UITextField alloc]init];
     }
     return self;
 }
@@ -71,8 +72,5 @@
 	[self.delegate configViewControllerDidSave:self];
 }
 
--(IBAction)connect:(id)sender {
-    [self.delegate configViewControllerConnect:self];
-}
 
 @end
