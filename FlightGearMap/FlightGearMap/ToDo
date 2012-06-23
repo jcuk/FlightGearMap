@@ -1,9 +1,9 @@
 in / out of background (suspend / resume telnet)?
 Icons
     57x57
+    512x512
     
-Get working for Ipad
-    graphics
-    Storyboard
 New app store app
 check in java
+Test rotation
+iPad problem: cant dismiss keyboard from modal view controller

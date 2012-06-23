@@ -263,6 +263,4 @@ TelnetPositionClient *client;
 }
 
 
-
-
 @end

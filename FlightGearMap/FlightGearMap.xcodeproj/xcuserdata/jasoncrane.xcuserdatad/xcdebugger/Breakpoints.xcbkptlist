@@ -121,11 +121,11 @@
          continueAfterRunningActions = "No"
          isPathRelative = "1"
          filePath = "FlightGearMap/UIConfigController.m"
-         timestampString = "362041926.138312"
+         timestampString = "362158272.323401"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "67"
-         endingLineNumber = "67"
+         startingLineNumber = "72"
+         endingLineNumber = "72"
          landmarkName = "-cancel:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -135,11 +135,11 @@
          continueAfterRunningActions = "No"
          isPathRelative = "1"
          filePath = "FlightGearMap/UIConfigController.m"
-         timestampString = "362041926.138312"
+         timestampString = "362158272.323401"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "72"
-         endingLineNumber = "72"
+         startingLineNumber = "77"
+         endingLineNumber = "77"
          landmarkName = "-done:"
          landmarkType = "5">
       </FileBreakpoint>

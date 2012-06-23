@@ -155,7 +155,7 @@
                     </connections>
                 </viewController>
             </objects>
-            <point key="canvasLocation" x="540" y="-47"/>
+            <point key="canvasLocation" x="550" y="45"/>
         </scene>
     </scenes>
     <resources>
@@ -176,9 +176,7 @@
             <source key="sourceIdentifier" type="project" relativePath="./Classes/UIConfigController.h"/>
             <relationships>
                 <relationship kind="action" name="cancel:"/>
-                <relationship kind="action" name="connect:"/>
                 <relationship kind="action" name="done:"/>
-                <relationship kind="outlet" name="connectionStatus" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="machineAddress" candidateClass="UITextField"/>
                 <relationship kind="outlet" name="port" candidateClass="UITextField"/>
             </relationships>

@@ -60,6 +60,12 @@
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 
+//This should fix the keyboard not being dismissed 
+- (BOOL)disablesAutomaticKeyboardDismissal {
+    return NO;
+}
+
+
 #pragma mark - Buttons
 
 - (IBAction)cancel:(id)sender
@@ -71,6 +77,5 @@
 {
 	[self.delegate configViewControllerDidSave:self];
 }
-
 
 @end
