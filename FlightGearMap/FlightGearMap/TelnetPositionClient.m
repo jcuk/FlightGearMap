@@ -12,8 +12,13 @@
 #define TAG_POSITION 1
 #define TAG_ORIENTATION 2
 
-NSString* orientation   = @"dump /orientation\n";
-NSString* position      = @"dump /position\n";
+NSString *XML_START =  @"<?xml";
+NSString *XML_END = @"</PropertyList>";
+
+NSString* orientation   = @"dump /orientation\r\n";
+NSString* position      = @"dump /position\r\n";
+
+NSMutableString *incomingXML;
 
 NSTimer *timer;
 NSNumberFormatter *formatter;
@@ -37,13 +42,15 @@ NSObject <MapStatusUpdater> *mapStatusUpdater;
         [self updateStatus:DISCONNECTED];
         
         NSLog(@"Machine %@",address);
+        
+        incomingXML = [[NSMutableString alloc]init];
 
     }
     return self;
 }
 
 -(void)requestNewPosition {
- //   NSLog(@"Requesting new position");
+    NSLog(@"Requesting new position / orientation");
     NSData* data=[orientation dataUsingEncoding:NSUTF8StringEncoding];
     
     [socket writeData:data withTimeout:-1 tag:TAG_ORIENTATION];
@@ -61,12 +68,14 @@ NSObject <MapStatusUpdater> *mapStatusUpdater;
     int portNum = [[formatter numberFromString:port] intValue];
     
     [self updateStatus:CONNECTING];
-    //TODO: handel error
+    //TODO: handle error
     NSError *err = nil;
     if (![socket connectToHost:address onPort:portNum error:&err])
     {
         [self updateStatus:CANT_CONNECT];
         NSLog(@"Error connecting to telnet host: %@", err);
+    } else {
+        NSLog(@"connected");
     }
 }
 
@@ -77,7 +86,7 @@ NSObject <MapStatusUpdater> *mapStatusUpdater;
 
 - (void)socket:(GCDAsyncSocket *)sender didConnectToHost:(NSString *)host port:(UInt16)port
 {
-    NSLog(@"Connected to FlightGear telnet host.");
+    NSLog(@"Connected to FlightGear telnet host %@:%d",host,port);
     [self updateStatus:CONNECTED];
 }
 
@@ -91,35 +100,59 @@ NSObject <MapStatusUpdater> *mapStatusUpdater;
 
 }
 
-
-- (void)socket:(GCDAsyncSocket *)sender didReadData:(NSData *)data withTag:(long)tag
-{
-    NSString *incoming = [[NSString alloc] initWithData:data encoding:NSASCIIStringEncoding];
-    
-    //NSLog(@"Recieved xml:%@:",incoming);
-    
+-(void)processIncomingXml:(NSString *)xml {
+    NSLog(@"XML to process : %@",xml);
     //TODO: handle errors
     NSError *error;
-    TBXML * tbxml = [TBXML newTBXMLWithXMLString:incoming error:&error];
-        
+    TBXML * tbxml = [TBXML newTBXMLWithXMLString:xml error:&error];
+     
     NSNumber *lon = [self getDoubleFromXML:tbxml elementName:@"longitude-deg"];
     NSNumber *lat = [self getDoubleFromXML:tbxml elementName:@"latitude-deg"];
     NSNumber *alt = [self getDoubleFromXML:tbxml elementName:@"altitude-ft"];
-        
+     
     if (lon && lat) {
-   //     NSLog(@"Position %f,%f",[lat doubleValue],[lon doubleValue]);
-        
+    //     NSLog(@"Position %f,%f",[lat doubleValue],[lon doubleValue]);
+     
         [mapStatusUpdater updatePosition:[lon doubleValue] lat:[lat doubleValue] altInFt:[alt doubleValue]];
     }
-            
+     
     NSNumber *heading = [self getDoubleFromXML:tbxml elementName:@"heading-deg"];
-    
+     
     if (heading) {
-   //     NSLog(@"Heading %f:", [heading doubleValue]);
-        
+    //     NSLog(@"Heading %f:", [heading doubleValue]);
+     
         [mapStatusUpdater updateHeading:[heading doubleValue]];
     }
+     
+     
 }
-                   
 
+
+- (void)socket:(GCDAsyncSocket *)sender didReadData:(NSData *)data withTag:(long)tag
+{
+   
+    NSLog(@"Got response");
+    NSString *incoming = [[NSString alloc] initWithData:data encoding:NSASCIIStringEncoding];
+    
+    [incomingXML appendString:incoming];
+    
+    //get complete xml from partial response
+    NSRange end;
+    while ((end = [incomingXML rangeOfString:XML_END]).location != NSNotFound) {
+   
+        //Only process XML from start tag. Ignore any preamble, prompts etc.
+        NSRange start = [incomingXML rangeOfString:XML_START];
+        NSRange validXMLRange = NSMakeRange(start.location, end.location+end.length-start.location);
+        
+        [self processIncomingXml:[incomingXML substringWithRange:validXMLRange]];
+        
+        //Remove all consumed XML including preamble
+        NSRange consumedXML = NSMakeRange(0, validXMLRange.location + validXMLRange.length);
+        [incomingXML replaceCharactersInRange:consumedXML withString:@""];
+        
+    }
+    
+
+}
+    
 @end

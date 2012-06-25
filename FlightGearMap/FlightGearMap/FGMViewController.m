@@ -13,7 +13,7 @@
 #define START_LAT 39.281516
 #define START_LON -76.580806
 
-#define INFO_TEXT @"<html><head><style>body{background-color:transparent; font-family:helvetica} h3{text-align:center;}</style></head><body><h3>Flight Gear Map</h3><p>Live map for use with <a href=""www.flightgear.org"">FlightGear</a>, the open source flight simulator</p><p>To use flight gear map, you must have FlightGear running with the Telnet option enabled e.g.:</p><code>fgfs --telnet={port number}</code><p>where <code>{port number}</code> is the telnet port number you wish to use. (If you are unsure try port 9999) On the configuration screen, enter the name or IP address of the machine flight gear is running on, and the telnet port number. Tap Done and FlightGear Map will connect to your FlightGear instance.<br><center>Jason Crane 2012</center></br></body></html>"
+#define INFO_TEXT @"<html><head><style>body{background-color:transparent; font-family:helvetica} h3{text-align:center;}</style></head><body><h3>Flight Gear Map</h3><p>Live map for use with <a href=""http://www.flightgear.org"">FlightGear</a>, the open source flight simulator</p><p>To use flight gear map, you must have FlightGear running with the Telnet option enabled e.g.:</p><code>fgfs --telnet={port number}</code><p>where <code>{port number}</code> is the telnet port number you wish to use. (If you are unsure try port 9999) On the configuration screen, enter the name or IP address of the machine flight gear is running on, and the telnet port number. Tap Done and FlightGear Map will connect to your FlightGear instance.<br><center>Jason Crane 2012</center></br></body></html>"
 
 
 @implementation FGMViewController
@@ -111,9 +111,7 @@ TelnetPositionClient *client;
             [self reconnectClient:machine port:port];
         }
     
-        [client start];
-    
-        [NSTimer scheduledTimerWithTimeInterval:.5 target:client selector:@selector(requestNewPosition) userInfo:nil repeats:YES]; 
+        [NSTimer scheduledTimerWithTimeInterval:1 target:client selector:@selector(requestNewPosition) userInfo:nil repeats:YES]; 
     }
     
     if (UI_USER_INTERFACE_IDIOM() != UIUserInterfaceIdiomPhone) {
