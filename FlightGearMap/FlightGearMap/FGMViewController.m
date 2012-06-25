@@ -112,6 +112,9 @@ TelnetPositionClient *client;
         }
     
         [NSTimer scheduledTimerWithTimeInterval:1 target:client selector:@selector(requestNewPosition) userInfo:nil repeats:YES]; 
+    } else {
+        [client stop];
+        [client start];
     }
     
     if (UI_USER_INTERFACE_IDIOM() != UIUserInterfaceIdiomPhone) {
@@ -139,10 +142,9 @@ TelnetPositionClient *client;
 
 - (void)viewDidUnload
 {
+    [infoView removeFromSuperview];
     [self set_mapView:nil];
     [super viewDidUnload];
-    // Release any retained subviews of the main view.
-    // e.g. self.myOutlet = nil;
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -162,12 +164,15 @@ TelnetPositionClient *client;
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
-    // Return YES for supported orientations
-    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
-        return (interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown);
+    //Rotate info view
+    if (interfaceOrientation == UIDeviceOrientationPortrait || interfaceOrientation == UIDeviceOrientationPortraitUpsideDown) {
+        infoView.frame = infoRectV;
     } else {
-        return YES;
+        infoView.frame = infoRectH;
     }
+    [infoView setNeedsDisplay];
+    
+    return YES;
 }
 
 -(void)updatePosition:(double)lon lat:(double)latitude altInFt:(double)alt {

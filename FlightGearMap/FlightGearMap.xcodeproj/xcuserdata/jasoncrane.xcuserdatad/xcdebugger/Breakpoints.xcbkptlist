@@ -9,11 +9,11 @@
          continueAfterRunningActions = "No"
          isPathRelative = "1"
          filePath = "FlightGearMap/TelnetPositionClient.m"
-         timestampString = "362271531.878122"
+         timestampString = "362336679.195376"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "66"
-         endingLineNumber = "66"
+         startingLineNumber = "79"
+         endingLineNumber = "79"
          landmarkName = "-start"
          landmarkType = "5">
       </FileBreakpoint>
@@ -23,11 +23,11 @@
          continueAfterRunningActions = "No"
          isPathRelative = "1"
          filePath = "FlightGearMap/TelnetPositionClient.m"
-         timestampString = "362271531.878122"
+         timestampString = "362336679.195376"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "96"
-         endingLineNumber = "96"
+         startingLineNumber = "111"
+         endingLineNumber = "111"
          landmarkName = "-getDoubleFromXML:elementName:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -149,12 +149,12 @@
          continueAfterRunningActions = "No"
          isPathRelative = "1"
          filePath = "FlightGearMap/FGMViewController.m"
-         timestampString = "362268958.602484"
+         timestampString = "362337309.525259"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "245"
-         endingLineNumber = "245"
-         landmarkName = "-prepareForSegue:sender:"
+         startingLineNumber = "250"
+         endingLineNumber = "250"
+         landmarkName = "-viewDidLoad"
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
@@ -163,12 +163,12 @@
          continueAfterRunningActions = "No"
          isPathRelative = "1"
          filePath = "FlightGearMap/FGMViewController.m"
-         timestampString = "362268958.602484"
+         timestampString = "362337309.525259"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "221"
-         endingLineNumber = "221"
-         landmarkName = "-configViewControllerDidSave:"
+         startingLineNumber = "226"
+         endingLineNumber = "226"
+         landmarkName = "-viewDidLoad"
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
@@ -177,12 +177,12 @@
          continueAfterRunningActions = "No"
          isPathRelative = "1"
          filePath = "FlightGearMap/FGMViewController.m"
-         timestampString = "362268958.602484"
+         timestampString = "362337309.525259"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "229"
-         endingLineNumber = "229"
-         landmarkName = "-prepareForSegue:sender:"
+         startingLineNumber = "234"
+         endingLineNumber = "234"
+         landmarkName = "-viewDidLoad"
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
@@ -205,12 +205,26 @@
          continueAfterRunningActions = "No"
          isPathRelative = "1"
          filePath = "FlightGearMap/FGMViewController.m"
-         timestampString = "362268958.602484"
+         timestampString = "362337309.525259"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "198"
-         endingLineNumber = "198"
-         landmarkName = "-configViewControllerDidSave:"
+         startingLineNumber = "203"
+         endingLineNumber = "203"
+         landmarkName = "-viewDidLoad"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         isPathRelative = "1"
+         filePath = "FlightGearMap/TelnetPositionClient.m"
+         timestampString = "362336679.195376"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "99"
+         endingLineNumber = "99"
+         landmarkName = "-stop"
          landmarkType = "5">
       </FileBreakpoint>
    </FileBreakpoints>

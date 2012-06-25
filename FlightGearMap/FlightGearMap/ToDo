@@ -1,9 +1,14 @@
-in / out of background (suspend / resume telnet)?
-Icons
-    57x57
-    512x512
-    
 New app store app
-check in java
-Test rotation
-iPad problem: cant dismiss keyboard from modal view controller
+    New bundle identifier?
+    Screen shots
+    Instructions
+    
+iPad problem: cant dismiss keyboard from modal view controller (Known apple bug WONTFIX)
+
+Telnet server
+    check in Java
+    Deploy to NAS
+    Firewall open 9999
+    port forward 9999 to TS-119
+    Test from work (IP address?)
+

@@ -29,6 +29,9 @@
 		5B68E65B158FBF65009DBDE6 /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B68E659158FBF65009DBDE6 /* MainStoryboard_iPhone.storyboard */; };
 		5B68E65E158FBF65009DBDE6 /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B68E65C158FBF65009DBDE6 /* MainStoryboard_iPad.storyboard */; };
 		5B68E661158FBF66009DBDE6 /* FGMViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B68E660158FBF66009DBDE6 /* FGMViewController.m */; };
+		5BA95C251598D5840058D568 /* icon57.png in Resources */ = {isa = PBXBuildFile; fileRef = 5BA95C241598D5840058D568 /* icon57.png */; };
+		5BA95C271598D6110058D568 /* icon114.png in Resources */ = {isa = PBXBuildFile; fileRef = 5BA95C261598D6110058D568 /* icon114.png */; };
+		5BA95C291598D65D0058D568 /* icon72.png in Resources */ = {isa = PBXBuildFile; fileRef = 5BA95C281598D65D0058D568 /* icon72.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -67,6 +70,9 @@
 		5B68E65D158FBF65009DBDE6 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
 		5B68E65F158FBF65009DBDE6 /* FGMViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FGMViewController.h; sourceTree = "<group>"; };
 		5B68E660158FBF66009DBDE6 /* FGMViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FGMViewController.m; sourceTree = "<group>"; };
+		5BA95C241598D5840058D568 /* icon57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon57.png; path = ../icon57.png; sourceTree = "<group>"; };
+		5BA95C261598D6110058D568 /* icon114.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon114.png; path = ../icon114.png; sourceTree = "<group>"; };
+		5BA95C281598D65D0058D568 /* icon72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon72.png; path = ../icon72.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +116,9 @@
 		5B3D3F9F1591B41B00393425 /* Graphics */ = {
 			isa = PBXGroup;
 			children = (
+				5BA95C281598D65D0058D568 /* icon72.png */,
+				5BA95C261598D6110058D568 /* icon114.png */,
+				5BA95C241598D5840058D568 /* icon57.png */,
 				5B3D40151593CD9B00393425 /* cross.png */,
 				5B3D3FAA15923A9400393425 /* info.png */,
 				5B3D3F9D1591AFC100393425 /* plane.png */,
@@ -258,6 +267,9 @@
 				5B3D3FAB15923A9400393425 /* info.png in Resources */,
 				5B3D40161593CD9B00393425 /* cross.png in Resources */,
 				5B3D402E1595175400393425 /* save.plist in Resources */,
+				5BA95C251598D5840058D568 /* icon57.png in Resources */,
+				5BA95C271598D6110058D568 /* icon114.png in Resources */,
+				5BA95C291598D65D0058D568 /* icon72.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -329,7 +341,7 @@
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				SDKROOT = iphoneos;
 				SYMROOT = /Users/jasoncrane/Documents/iPhoneProjects/FlightGearMap/build;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -349,7 +361,7 @@
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				SDKROOT = iphoneos;
 				SYMROOT = /Users/jasoncrane/Documents/iPhoneProjects/FlightGearMap/build;
@@ -364,6 +376,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FlightGearMap/FlightGearMap-Prefix.pch";
 				INFOPLIST_FILE = "FlightGearMap/FlightGearMap-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -375,6 +388,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FlightGearMap/FlightGearMap-Prefix.pch";
 				INFOPLIST_FILE = "FlightGearMap/FlightGearMap-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
