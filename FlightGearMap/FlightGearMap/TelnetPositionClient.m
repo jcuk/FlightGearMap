@@ -12,6 +12,8 @@
 #define TAG_POSITION 1
 #define TAG_ORIENTATION 2
 
+#define TIMEOUT_NONE -1
+
 NSString *XML_START =  @"<?xml";
 NSString *XML_END = @"</PropertyList>";
 
@@ -50,15 +52,26 @@ NSObject <MapStatusUpdater> *mapStatusUpdater;
 }
 
 -(void)requestNewPosition {
-    NSLog(@"Requesting new position / orientation");
-    NSData* data=[orientation dataUsingEncoding:NSUTF8StringEncoding];
+    if (status == CONNECTED) {
+        NSLog(@"Requesting new position / orientation");
+        NSData* data=[orientation dataUsingEncoding:NSUTF8StringEncoding];
     
-    [socket writeData:data withTimeout:-1 tag:TAG_ORIENTATION];
-    [socket readDataWithTimeout:-1 tag:TAG_ORIENTATION ];
+        [socket writeData:data withTimeout:TIMEOUT_NONE tag:TAG_ORIENTATION];
+        [socket readDataWithTimeout:TIMEOUT_NONE tag:TAG_ORIENTATION ];
     
-    data=[position dataUsingEncoding:NSUTF8StringEncoding];
-    [socket writeData:data withTimeout:-1 tag:TAG_POSITION];
-    [socket readDataWithTimeout:-1 tag:TAG_POSITION ];
+        data=[position dataUsingEncoding:NSUTF8StringEncoding];
+        [socket writeData:data withTimeout:TIMEOUT_NONE tag:TAG_POSITION];
+        [socket readDataWithTimeout:TIMEOUT_NONE tag:TAG_POSITION ];
+    } else {
+        NSLog(@"Attempting re-connect");
+        [self start];
+    }
+    
+}
+
+-(void)socketDidDisconnect:(GCDAsyncSocket *) caller withError:(NSError *)error {
+    NSLog(@"Socket did close stream");
+    [self stop];
     
 }
 
@@ -68,12 +81,13 @@ NSObject <MapStatusUpdater> *mapStatusUpdater;
     int portNum = [[formatter numberFromString:port] intValue];
     
     [self updateStatus:CONNECTING];
-    //TODO: handle error
+
     NSError *err = nil;
     if (![socket connectToHost:address onPort:portNum error:&err])
     {
         [self updateStatus:CANT_CONNECT];
         NSLog(@"Error connecting to telnet host: %@", err);
+        [self stop];
     } else {
         NSLog(@"connected");
     }
@@ -82,11 +96,12 @@ NSObject <MapStatusUpdater> *mapStatusUpdater;
 -(void)stop {
     [self updateStatus:DISCONNECTED];
     [socket disconnect];
+    socket = nil;
 }
 
-- (void)socket:(GCDAsyncSocket *)sender didConnectToHost:(NSString *)host port:(UInt16)port
+- (void)socket:(GCDAsyncSocket *)sender didConnectToHost:(NSString *)host port:(UInt16)portNum
 {
-    NSLog(@"Connected to FlightGear telnet host %@:%d",host,port);
+    NSLog(@"Connected to FlightGear telnet host %@:%d",host,portNum);
     [self updateStatus:CONNECTED];
 }
 
@@ -105,6 +120,10 @@ NSObject <MapStatusUpdater> *mapStatusUpdater;
     //TODO: handle errors
     NSError *error;
     TBXML * tbxml = [TBXML newTBXMLWithXMLString:xml error:&error];
+    
+    if (error) {
+        NSLog(@"Error parsing incoming xml %@",error);
+    }
      
     NSNumber *lon = [self getDoubleFromXML:tbxml elementName:@"longitude-deg"];
     NSNumber *lat = [self getDoubleFromXML:tbxml elementName:@"latitude-deg"];
