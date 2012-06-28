@@ -12,7 +12,6 @@
 		5B35DD60158FDD41009EA907 /* GCDAsyncSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B35DD5E158FDD41009EA907 /* GCDAsyncSocket.m */; };
 		5B3D3F78158FE24E00393425 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B3D3F77158FE24E00393425 /* Security.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 		5B3D3F7E158FE3DB00393425 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B3D3F7D158FE3DB00393425 /* CFNetwork.framework */; };
-		5B3D3F84159062DE00393425 /* TBXML.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B3D3F83159062DD00393425 /* TBXML.m */; };
 		5B3D3F9C1591ABA400393425 /* ToDo in Resources */ = {isa = PBXBuildFile; fileRef = 5B3D3F9B1591ABA400393425 /* ToDo */; };
 		5B3D3F9E1591AFC200393425 /* plane.png in Resources */ = {isa = PBXBuildFile; fileRef = 5B3D3F9D1591AFC100393425 /* plane.png */; };
 		5B3D3FAB15923A9400393425 /* info.png in Resources */ = {isa = PBXBuildFile; fileRef = 5B3D3FAA15923A9400393425 /* info.png */; };
@@ -32,6 +31,7 @@
 		5BA95C251598D5840058D568 /* icon57.png in Resources */ = {isa = PBXBuildFile; fileRef = 5BA95C241598D5840058D568 /* icon57.png */; };
 		5BA95C271598D6110058D568 /* icon114.png in Resources */ = {isa = PBXBuildFile; fileRef = 5BA95C261598D6110058D568 /* icon114.png */; };
 		5BA95C291598D65D0058D568 /* icon72.png in Resources */ = {isa = PBXBuildFile; fileRef = 5BA95C281598D65D0058D568 /* icon72.png */; };
+		5BA95C2C159CF43B0058D568 /* TBXML.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BA95C2B159CF43B0058D568 /* TBXML.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,8 +44,6 @@
 		5B3D3F79158FE27C00393425 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
 		5B3D3F7B158FE38600393425 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		5B3D3F7D158FE3DB00393425 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
-		5B3D3F83159062DD00393425 /* TBXML.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TBXML.m; path = "../../../../Downloads/71squared-TBXML-766b375/TBXML-Code/TBXML.m"; sourceTree = "<group>"; };
-		5B3D3F85159062F100393425 /* TBXML.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TBXML.h; path = "../../../../Downloads/71squared-TBXML-766b375/TBXML-Headers/TBXML.h"; sourceTree = "<group>"; };
 		5B3D3F861590EE1D00393425 /* MapStatusUpdater.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapStatusUpdater.h; sourceTree = "<group>"; };
 		5B3D3F9B1591ABA400393425 /* ToDo */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ToDo; sourceTree = "<group>"; };
 		5B3D3F9D1591AFC100393425 /* plane.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = plane.png; sourceTree = "<group>"; };
@@ -73,6 +71,8 @@
 		5BA95C241598D5840058D568 /* icon57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon57.png; path = ../icon57.png; sourceTree = "<group>"; };
 		5BA95C261598D6110058D568 /* icon114.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon114.png; path = ../icon114.png; sourceTree = "<group>"; };
 		5BA95C281598D65D0058D568 /* icon72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon72.png; path = ../icon72.png; sourceTree = "<group>"; };
+		5BA95C2A159CF4290058D568 /* TBXML.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBXML.h; sourceTree = "<group>"; };
+		5BA95C2B159CF43B0058D568 /* TBXML.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBXML.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,8 +107,8 @@
 		5B3D3F82159062B700393425 /* TBXML */ = {
 			isa = PBXGroup;
 			children = (
-				5B3D3F85159062F100393425 /* TBXML.h */,
-				5B3D3F83159062DD00393425 /* TBXML.m */,
+				5BA95C2B159CF43B0058D568 /* TBXML.m */,
+				5BA95C2A159CF4290058D568 /* TBXML.h */,
 			);
 			name = TBXML;
 			sourceTree = "<group>";
@@ -285,9 +285,9 @@
 				5B68E661158FBF66009DBDE6 /* FGMViewController.m in Sources */,
 				5B35DD53158FCDAF009EA907 /* TelnetPositionClient.m in Sources */,
 				5B35DD60158FDD41009EA907 /* GCDAsyncSocket.m in Sources */,
-				5B3D3F84159062DE00393425 /* TBXML.m in Sources */,
 				5B3D3FCC1592776200393425 /* UIConfigController.m in Sources */,
 				5B3D3FEE159393DA00393425 /* InfoView.m in Sources */,
+				5BA95C2C159CF43B0058D568 /* TBXML.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
