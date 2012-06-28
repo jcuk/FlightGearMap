@@ -14,7 +14,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" id="u7a-GM-88b">
-                                <rect key="frame" x="-1" y="22" width="768" height="960"/>
+                                <rect key="frame" x="-1" y="0.0" width="768" height="960"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </mapView>
                             <imageView opaque="NO" userInteractionEnabled="NO" contentMode="center" image="plane.png" id="zcW-ao-nPM">
@@ -62,6 +62,7 @@
                     </connections>
                 </viewController>
             </objects>
+            <point key="canvasLocation" x="-131" y="-283"/>
         </scene>
         <scene sceneID="sC4-cp-PjA">
             <objects>
