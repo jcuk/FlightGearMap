@@ -22,10 +22,9 @@ public class TelnetServer {
 	private double start_lat;
 	private double start_lon;
 	private double alt;
-	private double gelv_m;
-	private double gelv_ft;
+	private double ground_elv_m;
+	private double ground_elv_ft;  
 	private double hdg;
-	
 	private double w_rad;
 	private double n_rad;
 	
@@ -44,8 +43,8 @@ public class TelnetServer {
 		this.start_lon		= start_lon;
 		
 		this.alt		= alt;
-		this.gelv_m		= gelv_m;
-		this.gelv_ft	= gelv_ft;
+		this.ground_elv_m		= gelv_m;
+		this.ground_elv_ft	= gelv_ft;
 		
 		this.w_rad		= w_rad;
 		this.n_rad		= n_rad;
@@ -137,10 +136,10 @@ public class TelnetServer {
 		sb.append(alt);
 		sb.append("</altitude-ft>\r\n");
 		sb.append("  <ground-elev-m type=\"double\">");
-		sb.append(gelv_m);
+		sb.append(ground_elv_m);
 		sb.append("</ground-elev-m>\r\n");
 		sb.append("  <ground-elev-ft type=\"double\">");
-		sb.append(gelv_ft);
+		sb.append(ground_elv_ft);
 		sb.append("</ground-elev-ft>\r\n");
 		sb.append("</PropertyList>\r\n");
 		sb.append("\r\n");
