@@ -24,8 +24,6 @@
 				<string>icon114.png</string>
 				<string>icon72.png</string>
 			</array>
-			<key>UIPrerenderedIcon</key>
-			<false/>
 		</dict>
 	</dict>
 	<key>CFBundleIdentifier</key>
