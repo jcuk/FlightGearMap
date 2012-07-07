@@ -70,6 +70,8 @@
 		960B320115A7A16300152F59 /* rpm-70.png in Resources */ = {isa = PBXBuildFile; fileRef = 960B31DD15A7A16300152F59 /* rpm-70.png */; };
 		960B320215A7A16300152F59 /* speed-70.png in Resources */ = {isa = PBXBuildFile; fileRef = 960B31DE15A7A16300152F59 /* speed-70.png */; };
 		960B320315A7A16300152F59 /* trn1-70.png in Resources */ = {isa = PBXBuildFile; fileRef = 960B31DF15A7A16300152F59 /* trn1-70.png */; };
+		96C3E02015A8DEB000DCF289 /* InstrumentWithHand.m in Sources */ = {isa = PBXBuildFile; fileRef = 96C3E01F15A8DEB000DCF289 /* InstrumentWithHand.m */; };
+		96C3E02215A8F16500DCF289 /* hand1-70.png in Resources */ = {isa = PBXBuildFile; fileRef = 96C3E02115A8F16500DCF289 /* hand1-70.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -151,6 +153,10 @@
 		960B31DD15A7A16300152F59 /* rpm-70.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "rpm-70.png"; sourceTree = "<group>"; };
 		960B31DE15A7A16300152F59 /* speed-70.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "speed-70.png"; sourceTree = "<group>"; };
 		960B31DF15A7A16300152F59 /* trn1-70.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "trn1-70.png"; sourceTree = "<group>"; };
+		96C3E01C15A8D3A800DCF289 /* Drawable.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Drawable.h; sourceTree = "<group>"; };
+		96C3E01E15A8DEB000DCF289 /* InstrumentWithHand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InstrumentWithHand.h; sourceTree = "<group>"; };
+		96C3E01F15A8DEB000DCF289 /* InstrumentWithHand.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InstrumentWithHand.m; sourceTree = "<group>"; };
+		96C3E02115A8F16500DCF289 /* hand1-70.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "hand1-70.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -296,6 +302,9 @@
 				960B310B15A77D9300152F59 /* InstrumentView.m */,
 				960B310D15A77E0D00152F59 /* Instrument.h */,
 				960B310E15A77E0D00152F59 /* Instrument.m */,
+				96C3E01C15A8D3A800DCF289 /* Drawable.h */,
+				96C3E01E15A8DEB000DCF289 /* InstrumentWithHand.h */,
+				96C3E01F15A8DEB000DCF289 /* InstrumentWithHand.m */,
 			);
 			name = InstrumentView;
 			sourceTree = "<group>";
@@ -365,6 +374,7 @@
 		960B31D915A7A16300152F59 /* 70 */ = {
 			isa = PBXGroup;
 			children = (
+				96C3E02115A8F16500DCF289 /* hand1-70.png */,
 				960B31DA15A7A16300152F59 /* alt1-70.png */,
 				960B31DB15A7A16300152F59 /* ati3-70.png */,
 				960B31DC15A7A16300152F59 /* climb-70.png */,
@@ -472,6 +482,7 @@
 				960B320115A7A16300152F59 /* rpm-70.png in Resources */,
 				960B320215A7A16300152F59 /* speed-70.png in Resources */,
 				960B320315A7A16300152F59 /* trn1-70.png in Resources */,
+				96C3E02215A8F16500DCF289 /* hand1-70.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -492,6 +503,7 @@
 				5BA95C2C159CF43B0058D568 /* TBXML.m in Sources */,
 				960B310C15A77D9300152F59 /* InstrumentView.m in Sources */,
 				960B310F15A77E0D00152F59 /* Instrument.m in Sources */,
+				96C3E02015A8DEB000DCF289 /* InstrumentWithHand.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

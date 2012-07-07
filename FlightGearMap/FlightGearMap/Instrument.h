@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Drawable.h"
 
-@interface Instrument : UIView
+@interface Instrument : UIView <Drawable>
 
 - (id)initWithImage:(NSString *)fileName;
 

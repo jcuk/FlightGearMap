@@ -21,8 +21,9 @@
     return self;
 }
 
-
-
+-(void)drawRect:(CGRect)rect {
+    [image drawInRect:rect];
+}
 
 
 @end

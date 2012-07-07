@@ -8,6 +8,7 @@
 
 #import "InstrumentView.h"
 #import "Instrument.h"
+#import "InstrumentWithHand.h"
 
 @implementation InstrumentView
 
@@ -23,8 +24,8 @@ NSMutableArray * instruments;
         [instruments addObject:[[Instrument alloc]initWithImage:@"ati3-70.png"]];
         [instruments addObject:[[Instrument alloc]initWithImage:@"climb-70.png"]];
         [instruments addObject:[[Instrument alloc]initWithImage:@"rpm-70.png"]];
-        [instruments addObject:[[Instrument alloc]initWithImage:@"speed-70.png"]];
-        [instruments addObject:[[Instrument alloc]initWithImage:@"speed-70.png"]];
+        [instruments addObject:[[InstrumentWithHand alloc]initWithImage:@"speed-70.png"]];
+        [instruments addObject:[[Instrument alloc]initWithImage:@"trn1-70.png"]];
         
     }
     return self;
@@ -39,7 +40,7 @@ NSMutableArray * instruments;
         
         CGRect imageRect = CGRectMake(0, y, 70, 70);
         
-        [instrument.image drawInRect:imageRect];
+        [instrument drawRect:imageRect];
         
         y+=step;
     }
