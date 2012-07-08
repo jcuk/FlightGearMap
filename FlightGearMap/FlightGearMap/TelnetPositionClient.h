@@ -10,7 +10,7 @@
 #import "GCDAsyncSocket.h"
 #import "MapStatusUpdater.h"
 
-typedef enum {DISCONNECTED, CONNECTED, CONNECTING, CANT_CONNECT} connection;
+typedef enum {DISCONNECTED, CONNECTED, CONNECTING, CANT_CONNECT, NO_CONFIG} connection;
 
 @interface TelnetPositionClient : NSObject {
     GCDAsyncSocket *socket;

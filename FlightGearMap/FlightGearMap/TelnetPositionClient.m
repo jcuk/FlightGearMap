@@ -62,7 +62,7 @@ NSObject <MapStatusUpdater> *mapStatusUpdater;
         data=[position dataUsingEncoding:NSUTF8StringEncoding];
         [socket writeData:data withTimeout:TIMEOUT_NONE tag:TAG_POSITION];
         [socket readDataWithTimeout:TIMEOUT_NONE tag:TAG_POSITION ];
-    } else {
+    } else if (status != NO_CONFIG) {
         NSLog(@"Attempting re-connect");
         [self start];
     }
@@ -80,16 +80,21 @@ NSObject <MapStatusUpdater> *mapStatusUpdater;
     
     int portNum = [[formatter numberFromString:port] intValue];
     
-    [self updateStatus:CONNECTING];
-
-    NSError *err = nil;
-    if (![socket connectToHost:address onPort:portNum error:&err])
-    {
-        [self updateStatus:CANT_CONNECT];
-        NSLog(@"Error connecting to telnet host: %@", err);
-        [self stop];
+    if ([address length] == 0 || [port length] ==0) {
+        [self updateStatus:NO_CONFIG];
     } else {
-        NSLog(@"connected");
+    
+        [self updateStatus:CONNECTING];
+
+        NSError *err = nil;
+        if (![socket connectToHost:address onPort:portNum error:&err])
+        {
+            [self updateStatus:CANT_CONNECT];
+            NSLog(@"Error connecting to telnet host: %@", err);
+            [self stop];
+        } else {
+            NSLog(@"connected");
+        }
     }
 }
 
