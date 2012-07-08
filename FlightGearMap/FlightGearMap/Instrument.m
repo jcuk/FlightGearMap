@@ -10,20 +10,14 @@
 
 @implementation Instrument
 
-@synthesize image;
-
-- (id)initWithImage:(NSString *)fileName
-{
-    self = [super init];
+-(id)initWithFilename:(NSString *)fileName {
+    UIImage *image = [UIImage imageNamed:fileName];
+    self = [super initWithImage:image];
     if (self) {
-        image = [UIImage imageNamed:fileName];
+        
     }
+    
     return self;
 }
-
--(void)drawRect:(CGRect)rect {
-    [image drawInRect:rect];
-}
-
 
 @end

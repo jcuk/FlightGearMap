@@ -9,11 +9,8 @@
 #import <UIKit/UIKit.h>
 #import "Drawable.h"
 
-@interface Instrument : UIView <Drawable>
+@interface Instrument : UIImageView
 
-- (id)initWithImage:(NSString *)fileName;
-
-@property (readonly, strong) UIImage *image;
-
+- (id)initWithFilename:(NSString *)fileName;
 
 @end

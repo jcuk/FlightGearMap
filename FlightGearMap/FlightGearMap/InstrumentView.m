@@ -20,31 +20,28 @@ NSMutableArray * instruments;
     if (self) {
         instruments = [[NSMutableArray alloc]init];
         
-        [instruments addObject:[[Instrument alloc]initWithImage:@"alt1-70.png"]];
-        [instruments addObject:[[Instrument alloc]initWithImage:@"ati3-70.png"]];
-        [instruments addObject:[[Instrument alloc]initWithImage:@"climb-70.png"]];
-        [instruments addObject:[[Instrument alloc]initWithImage:@"rpm-70.png"]];
-        [instruments addObject:[[InstrumentWithHand alloc]initWithImage:@"speed-70.png"]];
-        [instruments addObject:[[Instrument alloc]initWithImage:@"trn1-70.png"]];
+        [instruments addObject:[[Instrument alloc]initWithFilename:@"alt1-70.png"]];
+        [instruments addObject:[[Instrument alloc]initWithFilename:@"ati3-70.png"]];
+        [instruments addObject:[[Instrument alloc]initWithFilename:@"climb-70.png"]];
+        [instruments addObject:[[Instrument alloc]initWithFilename:@"rpm-70.png"]];
+        [instruments addObject:[[Instrument alloc]initWithFilename:@"speed-70.png"]];
+        [instruments addObject:[[Instrument alloc]initWithFilename:@"trn1-70.png"]];
+        [instruments addObject:[[Instrument alloc]initWithFilename:@"alt1-70.pn"]];
+                
+        int y = 0;
+        int step = 70;
+        
+        //TODO: rotate
+        //TODO: retina
+        //TODO: ipad
+        for (Instrument *instrument in instruments) {
+            [self addSubview:instrument];
+            instrument.frame = CGRectMake(0, y, 70, 70);
+            y += step;
+        }
         
     }
     return self;
-}
-
-- (void)drawRect:(CGRect)rect
-{
-    int y = 0;
-    int step = 70;
-    
-    for (Instrument *instrument in instruments) {
-        
-        CGRect imageRect = CGRectMake(0, y, 70, 70);
-        
-        [instrument drawRect:imageRect];
-        
-        y+=step;
-    }
-    
 }
 
 @end
