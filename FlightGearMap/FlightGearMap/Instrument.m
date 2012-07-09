@@ -14,7 +14,7 @@
     UIImage *image = [UIImage imageNamed:fileName];
     self = [super initWithImage:image];
     if (self) {
-        
+        self.opaque = NO;
     }
     
     return self;
