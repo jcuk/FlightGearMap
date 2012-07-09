@@ -10,21 +10,18 @@
 
 @implementation InstrumentWithHand
 
-//hand-70 5x27
+float handCentre = 0.2;
 
-UIImage *hand;
-
-int centX = 35;
-int centY = 35;
-
-int handCentX = 3;
-int handCentY = 13;
-
-- (id)initWithImage:(NSString *)fileName {
+- (id)initWithFilename:(NSString *)fileName {
     //Also need :  min:(int)minVal aMin:(int)angleMin max:(int)maxVal aMax:(int)angleMax
-    self = [super initWithImage:fileName];
+    self = [super initWithFilename:fileName];
     if (self) {
-        hand = [UIImage imageNamed:@"hand1-70.png"];
+        
+        UIImage *hand = [UIImage imageNamed:@"hand1-70.png"];
+        UIImageView *handView = [[UIImageView alloc] initWithImage:hand];
+        [self addSubview:handView];
+        [self bringSubviewToFront:handView];
+        handView.frame = CGRectMake(super.image.size.width/2 - hand.size.width/2, super.image.size.height/2 - hand.size.height/2 - hand.size.height*handCentre, hand.size.width, hand.size.height);
         
     }
     return self;
@@ -33,16 +30,5 @@ int handCentY = 13;
 -(int)angle {
     return 0;
 }
-
--(void)drawRect:(CGRect)rect {
-    [super drawRect:rect];
-    
-    int value = 100;
-    
-    //TODO: draw hand
-    
-    [hand drawAtPoint:CGPointMake(rect.origin.x+centX-handCentX,rect.origin.y+centY-handCentY)];
-}
-
 
 @end

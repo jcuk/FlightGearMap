@@ -23,13 +23,13 @@ NSMutableArray * instruments;
         [instruments addObject:[[Instrument alloc]initWithFilename:@"alt1-70.png"]];
         [instruments addObject:[[Instrument alloc]initWithFilename:@"ati3-70.png"]];
         [instruments addObject:[[Instrument alloc]initWithFilename:@"climb-70.png"]];
-        [instruments addObject:[[Instrument alloc]initWithFilename:@"rpm-70.png"]];
+        [instruments addObject:[[InstrumentWithHand alloc]initWithFilename:@"rpm-70.png"]];
         [instruments addObject:[[Instrument alloc]initWithFilename:@"speed-70.png"]];
         [instruments addObject:[[Instrument alloc]initWithFilename:@"trn1-70.png"]];
         [instruments addObject:[[Instrument alloc]initWithFilename:@"alt1-70.pn"]];
                 
         int y = 0;
-        int step = 70;
+        int step = 69;
         
         //TODO: rotate
         //TODO: retina
