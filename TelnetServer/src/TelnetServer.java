@@ -9,40 +9,42 @@ import java.net.SocketException;
 
 public class TelnetServer {
 	
-	private static final int TELNET_SOCKET = 9999;
+	private static final int TELNET_SOCKET = 9999; // the port used by the server
 	private static final int HEADER_LENGTH = 21;
 	
 	private static final String EXIT = "quit";
 	private static final String DUMP_POSITION = "dump /position";
 	private static final String DUMP_ORIENTATION = "dump /orientation";
 	
-	private double lat;
-	private double lon;
+	private double lat; // latitude
+	private double lon; // longitude
 	
-	private double start_lat;
-	private double start_lon;
-	private double alt;
-	private double ground_elv_m;
-	private double ground_elv_ft;  
-	private double hdg;
+	private double start_lat; // starting latitude
+	private double start_lon; // starting longitude
+	private double alt; //altitude
+	private double alt_check; // the value of this variable tells the server whether the plane should be ascending or descending   i.e. 0 = descending 1 = ascending
+	private double ground_elv_m; // height above ground in meters
+	private double ground_elv_ft;  // height above ground in feet
+	private double hdg; // heading
 	private double w_rad;
 	private double n_rad;
 	
-	private double ms_per_cir;
+	private double ms_per_cir; // ... per circle
 
 	public static void main(String[] args) throws Exception {
-		TelnetServer server = new TelnetServer(51.471333, -0.460768, 1000.0, 300.0, 1000.0, 0.0112, -0.019, 60 * 2000); //LHR, 1m per c
+		TelnetServer server = new TelnetServer(51.471333, -0.460768, 5000.0, 0, 1666.66, 5000.0, 0.0112, -0.019, 60 * 2000); //LHR, 1m per c
 		// W : 51.472081,-0.498877
 		// N : 51.493782,-0.462313
 		server.start();
 	}
 	
 	
-	public TelnetServer(double start_lat, double start_lon, double alt, double gelv_m, double gelv_ft, double w_rad, double n_rad, double ms_per_cir) {
+	public TelnetServer(double start_lat, double start_lon, double alt, double alt_check, double gelv_m, double gelv_ft, double w_rad, double n_rad, double ms_per_cir) {
 		this.start_lat		= start_lat;
 		this.start_lon		= start_lon;
 		
 		this.alt		= alt;
+		this.alt_check  = alt_check;
 		this.ground_elv_m		= gelv_m;
 		this.ground_elv_ft	= gelv_ft;
 		
@@ -147,7 +149,7 @@ public class TelnetServer {
 		return sb.toString();
 	}
 	
-	private void updatePos() {
+	private void updatePos() { // calculates latitude, longitude and heading for virtual plane
 		double pos_rad = (System.currentTimeMillis() % ms_per_cir)/ms_per_cir * 2 * Math.PI;
 		
 		hdg = Math.toDegrees(pos_rad + Math.PI);
@@ -155,6 +157,17 @@ public class TelnetServer {
 		lat = start_lat + Math.sin(pos_rad) * n_rad;
 		lon = start_lon + Math.cos(pos_rad) * w_rad;
 		
+		if (alt == 1000){
+			alt_check = 1;}
+		else if (alt == 5001){
+			alt_check = 0;}
+		
+		if (alt_check == 0){
+			--alt;}
+		else if (alt_check == 1){
+			++alt;}
+		
+			
+		}
 	}
 
-}
