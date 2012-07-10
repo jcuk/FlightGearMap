@@ -15,7 +15,6 @@
 - (id)initWithFilename:(NSString *)fileName;
 -(void)addSubviewInFront:(UIView *)view;
 -(void)addSubviewBehind:(UIView *)view;
-
-@property (weak) PlaneData* planeData;
+-(void)updatePlaneData:(PlaneData *)planeData;
 
 @end

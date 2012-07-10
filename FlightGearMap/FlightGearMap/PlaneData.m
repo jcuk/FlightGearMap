@@ -7,20 +7,30 @@
 //
 
 #import "PlaneData.h"
+#import <Foundation/Foundation.h>
 
 @implementation PlaneData
+
+NSMutableDictionary *data;
+
+-(NSString *)makeKey:(PlaneDataType)dataType {
+    return [NSString stringWithFormat:@"@d",dataType];
+}
 
 -(id) init {
     self = [super init];
     if (self) {
-        //TODO: init map
+        data = [[NSMutableDictionary alloc]init];
     }
     return self;
 }
 
--(float)getDataValue:(PlaneDataType)dataType {
-    //TODO: implement this
-    return 0.0f;
+-(NSNumber *)getDataValue:(PlaneDataType)dataType {
+    return [data objectForKey:[self makeKey:dataType]];
+}
+
+-(void)addData:(float)value dataType:(PlaneDataType)dataType {
+    [data setObject:[[NSNumber alloc]initWithFloat:value] forKey:[self makeKey:dataType]];
 }
 
 @end

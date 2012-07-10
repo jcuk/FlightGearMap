@@ -10,8 +10,6 @@
 
 @implementation Instrument
 
-@synthesize planeData;
-
 -(void)addSubviewCentered:(UIView *)view {
     [self addSubview:view];
     view.frame = CGRectMake(self.frame.size.width / 2 - view.frame.size.width / 2, 
@@ -27,8 +25,7 @@
 -(void)addSubviewBehind:(UIView *)view {
     [self addSubviewCentered:view];
     [self sendSubviewToBack:view];
-    
-    
+
 }
 
 -(id)initWithFilename:(NSString *)fileName {
@@ -42,6 +39,10 @@
     }
     
     return self;
+}
+
+-(void)updatePlaneData:(PlaneData *)planeData {
+    
 }
 
 @end

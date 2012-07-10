@@ -46,4 +46,10 @@ NSMutableArray * instruments;
     return self;
 }
 
+-(void)updatePlaneData:(PlaneData *)planeData {
+    for (Instrument *instrument in instruments) {
+        [instrument updatePlaneData:planeData];
+    }
+}
+
 @end
