@@ -10,4 +10,6 @@
 
 @interface InstrumentWithHand : Instrument
 
+-(void)addHand:(NSString *)fileName;
+
 @end

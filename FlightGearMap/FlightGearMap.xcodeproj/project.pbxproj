@@ -74,6 +74,12 @@
 		96C3E02215A8F16500DCF289 /* hand1-70.png in Resources */ = {isa = PBXBuildFile; fileRef = 96C3E02115A8F16500DCF289 /* hand1-70.png */; };
 		96C3E02915AB88BF00DCF289 /* InstrumentAltimeter.m in Sources */ = {isa = PBXBuildFile; fileRef = 96C3E02815AB88BF00DCF289 /* InstrumentAltimeter.m */; };
 		96C3E0C215AB8D4C00DCF289 /* alt0-70.png in Resources */ = {isa = PBXBuildFile; fileRef = 96C3E0C115AB8D4C00DCF289 /* alt0-70.png */; };
+		96C3E0C415AC0AF000DCF289 /* hand2-70.png in Resources */ = {isa = PBXBuildFile; fileRef = 96C3E0C315AC0AF000DCF289 /* hand2-70.png */; };
+		96C3E0CC15AC10A100DCF289 /* PlaneData.m in Sources */ = {isa = PBXBuildFile; fileRef = 96C3E0CB15AC10A100DCF289 /* PlaneData.m */; };
+		96C3E0CF15AC9C4E00DCF289 /* InstrumentHorizon.m in Sources */ = {isa = PBXBuildFile; fileRef = 96C3E0CE15AC9C4E00DCF289 /* InstrumentHorizon.m */; };
+		96C3E0D115AC9DBF00DCF289 /* ati2-70.png in Resources */ = {isa = PBXBuildFile; fileRef = 96C3E0D015AC9DBF00DCF289 /* ati2-70.png */; };
+		96C3E0D315AC9EF300DCF289 /* ati1-70.png in Resources */ = {isa = PBXBuildFile; fileRef = 96C3E0D215AC9EF300DCF289 /* ati1-70.png */; };
+		96C3E0D515ACA1A800DCF289 /* ati0-70.png in Resources */ = {isa = PBXBuildFile; fileRef = 96C3E0D415ACA1A800DCF289 /* ati0-70.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -162,6 +168,14 @@
 		96C3E02715AB88BF00DCF289 /* InstrumentAltimeter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InstrumentAltimeter.h; sourceTree = "<group>"; };
 		96C3E02815AB88BF00DCF289 /* InstrumentAltimeter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InstrumentAltimeter.m; sourceTree = "<group>"; };
 		96C3E0C115AB8D4C00DCF289 /* alt0-70.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "alt0-70.png"; sourceTree = "<group>"; };
+		96C3E0C315AC0AF000DCF289 /* hand2-70.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "hand2-70.png"; sourceTree = "<group>"; };
+		96C3E0CA15AC10A100DCF289 /* PlaneData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlaneData.h; sourceTree = "<group>"; };
+		96C3E0CB15AC10A100DCF289 /* PlaneData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlaneData.m; sourceTree = "<group>"; };
+		96C3E0CD15AC9C4E00DCF289 /* InstrumentHorizon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InstrumentHorizon.h; sourceTree = "<group>"; };
+		96C3E0CE15AC9C4E00DCF289 /* InstrumentHorizon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InstrumentHorizon.m; sourceTree = "<group>"; };
+		96C3E0D015AC9DBF00DCF289 /* ati2-70.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ati2-70.png"; sourceTree = "<group>"; };
+		96C3E0D215AC9EF300DCF289 /* ati1-70.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ati1-70.png"; sourceTree = "<group>"; };
+		96C3E0D415ACA1A800DCF289 /* ati0-70.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ati0-70.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -272,18 +286,14 @@
 		5B68E64D158FBF65009DBDE6 /* FlightGearMap */ = {
 			isa = PBXGroup;
 			children = (
+				96C3E0C615AC0F4400DCF289 /* PlaneData */,
+				96C3E0C515AC0F2F00DCF289 /* MainView */,
 				960B310815A77C5A00152F59 /* InstrumentView */,
 				5B3D3F9B1591ABA400393425 /* ToDo */,
 				5B3D3FF91593C1E200393425 /* Resources */,
 				5B3D3FEB159393B000393425 /* InfoView */,
 				5B3D3F82159062B700393425 /* TBXML */,
 				5B35DD55158FCE0C009EA907 /* Telnet */,
-				5B68E656158FBF65009DBDE6 /* FGMAppDelegate.h */,
-				5B68E657158FBF65009DBDE6 /* FGMAppDelegate.m */,
-				5B68E65F158FBF65009DBDE6 /* FGMViewController.h */,
-				5B68E660158FBF66009DBDE6 /* FGMViewController.m */,
-				5B3D3FCA1592776100393425 /* UIConfigController.h */,
-				5B3D3FCB1592776200393425 /* UIConfigController.m */,
 			);
 			path = FlightGearMap;
 			sourceTree = "<group>";
@@ -312,6 +322,8 @@
 				96C3E01F15A8DEB000DCF289 /* InstrumentWithHand.m */,
 				96C3E02715AB88BF00DCF289 /* InstrumentAltimeter.h */,
 				96C3E02815AB88BF00DCF289 /* InstrumentAltimeter.m */,
+				96C3E0CD15AC9C4E00DCF289 /* InstrumentHorizon.h */,
+				96C3E0CE15AC9C4E00DCF289 /* InstrumentHorizon.m */,
 			);
 			name = InstrumentView;
 			sourceTree = "<group>";
@@ -381,6 +393,10 @@
 		960B31D915A7A16300152F59 /* 70 */ = {
 			isa = PBXGroup;
 			children = (
+				96C3E0D415ACA1A800DCF289 /* ati0-70.png */,
+				96C3E0D215AC9EF300DCF289 /* ati1-70.png */,
+				96C3E0D015AC9DBF00DCF289 /* ati2-70.png */,
+				96C3E0C315AC0AF000DCF289 /* hand2-70.png */,
 				96C3E0C115AB8D4C00DCF289 /* alt0-70.png */,
 				96C3E02115A8F16500DCF289 /* hand1-70.png */,
 				960B31DA15A7A16300152F59 /* alt1-70.png */,
@@ -391,6 +407,28 @@
 				960B31DF15A7A16300152F59 /* trn1-70.png */,
 			);
 			path = 70;
+			sourceTree = "<group>";
+		};
+		96C3E0C515AC0F2F00DCF289 /* MainView */ = {
+			isa = PBXGroup;
+			children = (
+				5B68E656158FBF65009DBDE6 /* FGMAppDelegate.h */,
+				5B68E657158FBF65009DBDE6 /* FGMAppDelegate.m */,
+				5B68E65F158FBF65009DBDE6 /* FGMViewController.h */,
+				5B68E660158FBF66009DBDE6 /* FGMViewController.m */,
+				5B3D3FCA1592776100393425 /* UIConfigController.h */,
+				5B3D3FCB1592776200393425 /* UIConfigController.m */,
+			);
+			name = MainView;
+			sourceTree = "<group>";
+		};
+		96C3E0C615AC0F4400DCF289 /* PlaneData */ = {
+			isa = PBXGroup;
+			children = (
+				96C3E0CA15AC10A100DCF289 /* PlaneData.h */,
+				96C3E0CB15AC10A100DCF289 /* PlaneData.m */,
+			);
+			name = PlaneData;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -492,6 +530,10 @@
 				960B320315A7A16300152F59 /* trn1-70.png in Resources */,
 				96C3E02215A8F16500DCF289 /* hand1-70.png in Resources */,
 				96C3E0C215AB8D4C00DCF289 /* alt0-70.png in Resources */,
+				96C3E0C415AC0AF000DCF289 /* hand2-70.png in Resources */,
+				96C3E0D115AC9DBF00DCF289 /* ati2-70.png in Resources */,
+				96C3E0D315AC9EF300DCF289 /* ati1-70.png in Resources */,
+				96C3E0D515ACA1A800DCF289 /* ati0-70.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -514,6 +556,8 @@
 				960B310F15A77E0D00152F59 /* Instrument.m in Sources */,
 				96C3E02015A8DEB000DCF289 /* InstrumentWithHand.m in Sources */,
 				96C3E02915AB88BF00DCF289 /* InstrumentAltimeter.m in Sources */,
+				96C3E0CC15AC10A100DCF289 /* PlaneData.m in Sources */,
+				96C3E0CF15AC9C4E00DCF289 /* InstrumentHorizon.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

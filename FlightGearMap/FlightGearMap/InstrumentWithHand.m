@@ -12,16 +12,27 @@
 
 float handCentre = 0.2;
 
+-(CGRect)centerHand:(CGSize)imageSize hand:(CGSize)handSize size:(float)handCenter {
+    return CGRectMake(imageSize.width/2 - handSize.width/2, imageSize.height/2 - handSize.height/2 - handSize.height*handCentre, handSize.width, handSize.height);
+}
+
+-(void)addHand:(NSString *)fileName {
+    
+    UIImage *hand = [UIImage imageNamed:fileName];
+    UIImageView *handView = [[UIImageView alloc] initWithImage:hand];
+    //[self addSubview:handView];
+    //[self bringSubviewToFront:handView];
+    [self addSubviewInFront:handView];
+    handView.frame = [self centerHand:super.frame.size hand:hand.size size:handCentre];
+    
+}
+
 - (id)initWithFilename:(NSString *)fileName {
     //Also need :  min:(int)minVal aMin:(int)angleMin max:(int)maxVal aMax:(int)angleMax
     self = [super initWithFilename:fileName];
     if (self) {
         
-        UIImage *hand = [UIImage imageNamed:@"hand1-70.png"];
-        UIImageView *handView = [[UIImageView alloc] initWithImage:hand];
-        [self addSubview:handView];
-        [self bringSubviewToFront:handView];
-        handView.frame = CGRectMake(super.image.size.width/2 - hand.size.width/2, super.image.size.height/2 - hand.size.height/2 - hand.size.height*handCentre, hand.size.width, hand.size.height);
+        [self addHand:@"hand1-70.png"];
         
     }
     return self;

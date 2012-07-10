@@ -8,9 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import "Drawable.h"
+#import "PlaneData.h"
 
 @interface Instrument : UIImageView
 
 - (id)initWithFilename:(NSString *)fileName;
+-(void)addSubviewInFront:(UIView *)view;
+-(void)addSubviewBehind:(UIView *)view;
+
+@property (weak) PlaneData* planeData;
 
 @end

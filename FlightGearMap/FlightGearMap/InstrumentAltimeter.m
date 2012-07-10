@@ -16,18 +16,11 @@
         UIImage *altitude = [UIImage imageNamed:@"alt0-70.png"];
         UIImageView *altView = [[UIImageView alloc] initWithImage:altitude];
         [self addSubview:altView];
-        [self sendSubviewToBack:altView]; //dosent work??
+        [self sendSubviewToBack:altView];
         
-        UIImage *hand1 = [UIImage imageNamed:@"hand1-70.png"];
-        UIImageView *hand1View = [[UIImageView alloc] initWithImage:hand1];
-        [self addSubview:hand1View];
-        [self bringSubviewToFront:hand1View];
-        
-        //TODO: 2nd hand
-        //TODO: refactor frame manipulation
-        //-(CGRect)centerHand:(CGRec):instFrame frame:(CGRect)handFrame size:(float):handSize
-     
-     
+        [super addHand:@"hand1-70.png"];
+        [super addHand:@"hand2-70.png"];
+             
     }
     
     return self;
