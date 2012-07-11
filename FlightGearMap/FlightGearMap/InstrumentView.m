@@ -8,9 +8,9 @@
 
 #import "InstrumentView.h"
 #import "Instrument.h"
-#import "InstrumentWithHand.h"
 #import "InstrumentAltimeter.h"
 #import "InstrumentHorizon.h"
+#import "InstrumentGeneric.h"
 
 @implementation InstrumentView
 
@@ -25,8 +25,8 @@ NSMutableArray * instruments;
         [instruments addObject:[[InstrumentAltimeter alloc]initWithFilename:@"alt1-70.png"]];
         [instruments addObject:[[InstrumentHorizon alloc]initWithFilename:@"ati3-70.png"]];
         [instruments addObject:[[Instrument alloc]initWithFilename:@"climb-70.png"]];
-        [instruments addObject:[[InstrumentWithHand alloc]initWithFilename:@"rpm-70.png"]];
-        [instruments addObject:[[InstrumentWithHand alloc]initWithFilename:@"speed-70.png"]];
+        [instruments addObject:[[InstrumentGeneric alloc]initWithFilename:@"rpm-70.png"]];
+        [instruments addObject:[[InstrumentGeneric alloc]initWithFilename:@"speed-70.png"]];
         [instruments addObject:[[Instrument alloc]initWithFilename:@"trn1-70.png"]];
         [instruments addObject:[[Instrument alloc]initWithFilename:@"alt1-70.pn"]];
                 

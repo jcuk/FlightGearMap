@@ -11,6 +11,7 @@
 #import "MapStatusUpdater.h"
 #import "UIConfigController.h"
 #import "InfoView.h"
+#import "InstrumentView.h"
 
 #define METERS_PER_MILE 1609.344
 
@@ -25,6 +26,7 @@
 @property (weak, nonatomic) IBOutlet MKMapView *_mapView;
 @property (weak, nonatomic) IBOutlet UIImageView *_planeView;
 @property (weak, nonatomic) IBOutlet UILabel *_altitudeLabel;
+@property (weak, nonatomic) IBOutlet InstrumentView *_instrumentView;
 
 
 @end

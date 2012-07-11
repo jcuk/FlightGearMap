@@ -75,6 +75,7 @@
                     <navigationItem key="navigationItem" id="cKP-i6-90y"/>
                     <connections>
                         <outlet property="_altitudeLabel" destination="eMy-pJ-kSC" id="Qfm-ge-TfL"/>
+                        <outlet property="_instrumentView" destination="4kO-aJ-Hew" id="xE8-32-qwR"/>
                         <outlet property="_mapView" destination="ooO-s7-y2L" id="nyY-Dt-LbR"/>
                         <outlet property="_planeView" destination="d1L-DL-BTj" id="57q-1R-2Pp"/>
                     </connections>
@@ -176,6 +177,7 @@
             <relationships>
                 <relationship kind="action" name="infoPressed:"/>
                 <relationship kind="outlet" name="_altitudeLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="_instrumentView" candidateClass="InstrumentView"/>
                 <relationship kind="outlet" name="_mapView" candidateClass="MKMapView"/>
                 <relationship kind="outlet" name="_planeView" candidateClass="UIImageView"/>
             </relationships>

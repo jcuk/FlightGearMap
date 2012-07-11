@@ -16,4 +16,7 @@ typedef enum {
     NAV2_SEL_RADIAL,ADF_DEFLECTION,ELEV_TRIM,FLAPS
 }PlaneDataType;
 
+-(void)addData:(double)value dataType:(PlaneDataType)dataType;
+-(NSNumber *)getDataValue:(PlaneDataType)dataType;
+
 @end

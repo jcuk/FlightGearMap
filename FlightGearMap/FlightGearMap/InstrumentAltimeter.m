@@ -10,20 +10,40 @@
 
 @implementation InstrumentAltimeter
 
+UIView *hundredsHandView;
+UIView *thousandsHandsView;
+UIView *calibrationView;
+
 -(id)initWithFilename:(NSString *)fileName {
     self = [super initWithFilename:fileName];
     if (self) {
         UIImage *altitude = [UIImage imageNamed:@"alt0-70.png"];
-        UIImageView *altView = [[UIImageView alloc] initWithImage:altitude];
-        [self addSubview:altView];
-        [self sendSubviewToBack:altView];
+        UIImageView *calibrationView = [[UIImageView alloc] initWithImage:altitude];
+        [self addSubview:calibrationView];
+        [self sendSubviewToBack:calibrationView];
         
-        [super addHand:@"hand1-70.png"];
-        [super addHand:@"hand2-70.png"];
+        hundredsHandView = [super addHand:@"hand1-70.png"];
+        thousandsHandsView = [super addHand:@"hand2-70.png"];
              
     }
     
     return self;
+}
+
+-(void)updatePlaneData:(PlaneData *)planeData {
+    NSNumber *alt = [planeData getDataValue:ALTITUDE];
+    
+    if (alt) {
+        double altitude = [alt doubleValue];
+        double hundredsHandAngle = (altitude / 1000) * 2 * PI;
+        double thousandsHandAngle = (altitude / 10000) * 2 * PI;
+        
+        CGAffineTransform rotateHundreds = CGAffineTransformMakeRotation( hundredsHandAngle);
+        [hundredsHandView setTransform:rotateHundreds];
+        
+        CGAffineTransform rotateThousands = CGAffineTransformMakeRotation( thousandsHandAngle);
+        [thousandsHandsView setTransform:rotateThousands];
+    }
 }
 
 

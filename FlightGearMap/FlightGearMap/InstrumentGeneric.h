@@ -1,13 +1,13 @@
 //
-//  InstrumentAltimeter.h
+//  InstrumentGeneric.h
 //  FlightGearMap
 //
-//  Created by Jason Crane on 09/07/2012.
+//  Created by Jason Crane on 11/07/2012.
 //  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
 //
 
 #import "Instrument.h"
 
-@interface InstrumentAltimeter : Instrument
+@interface InstrumentGeneric : Instrument
 
 @end

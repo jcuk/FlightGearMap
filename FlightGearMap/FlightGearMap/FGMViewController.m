@@ -9,6 +9,7 @@
 #import "FGMViewController.h"
 #import "TelnetPositionClient.h"
 #import <CoreLocation/CoreLocation.h>
+#import "PlaneData.h"
 
 #define START_LAT 39.281516
 #define START_LON -76.580806
@@ -17,9 +18,10 @@
 
 
 @implementation FGMViewController
-@synthesize _mapView,_planeView,_altitudeLabel;
+@synthesize _mapView,_planeView,_altitudeLabel,_instrumentView;
 
 TelnetPositionClient *client;
+PlaneData *planeData;
 
 - (void)didReceiveMemoryWarning
 {
@@ -46,6 +48,10 @@ TelnetPositionClient *client;
     }
     
     _altitudeLabel.text = [NSString stringWithFormat:@"Alt: %dft",(int)alt];
+    
+    //TODO: this should not be here. Move it to UDP code
+    [planeData addData:alt dataType:ALTITUDE];
+    [_instrumentView updatePlaneData:planeData];
     
 }
 
@@ -132,6 +138,8 @@ TelnetPositionClient *client;
     } else {
         infoView = [[InfoView alloc]initWithFrame:infoRectV];
     }
+    
+    planeData = [[PlaneData alloc]init];
     
     [self.view addSubview:infoView];
     infoView.hidden = YES;

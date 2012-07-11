@@ -41,8 +41,25 @@
     return self;
 }
 
--(void)updatePlaneData:(PlaneData *)planeData {
+-(CGRect)centerHand:(CGSize)imageSize hand:(CGSize)handSize {
+    return CGRectMake(imageSize.width/2 - handSize.width/2, imageSize.height/2 - handSize.height/2,
+                      handSize.width, handSize.height);
+}
+
+-(UIView *)addHand:(NSString *)fileName {
     
+    UIImage *hand = [UIImage imageNamed:fileName];
+    UIImageView *handView = [[UIImageView alloc] initWithImage:hand];
+    
+    [self addSubviewInFront:handView];
+    handView.frame = [self centerHand:super.frame.size hand:hand.size];
+    
+    return handView;
+    
+}
+
+-(void)updatePlaneData:(PlaneData *)planeData {
+    //Override for your particular instrument
 }
 
 @end

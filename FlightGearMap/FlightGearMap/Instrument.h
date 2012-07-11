@@ -10,11 +10,15 @@
 #import "Drawable.h"
 #import "PlaneData.h"
 
+
+#define PI 3.141
+
 @interface Instrument : UIImageView
 
 - (id)initWithFilename:(NSString *)fileName;
 -(void)addSubviewInFront:(UIView *)view;
 -(void)addSubviewBehind:(UIView *)view;
 -(void)updatePlaneData:(PlaneData *)planeData;
+-(UIView *)addHand:(NSString *)fileName;
 
 @end

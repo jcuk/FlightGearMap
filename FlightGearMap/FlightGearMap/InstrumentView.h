@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "PlaneData.h"
 
 @interface InstrumentView : UIView
+
+-(void)updatePlaneData:(PlaneData *)planeData;
 
 @end
