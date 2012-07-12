@@ -121,7 +121,7 @@ NSObject <MapStatusUpdater> *mapStatusUpdater;
 }
 
 -(void)processIncomingXml:(NSString *)xml {
-    NSLog(@"XML to process : %@",xml);
+    //NSLog(@"XML to process : %@",xml);
     //TODO: handle errors
     NSError *error;
     TBXML * tbxml = [TBXML newTBXMLWithXMLString:xml error:&error];

@@ -20,5 +20,6 @@
 -(void)addSubviewBehind:(UIView *)view;
 -(void)updatePlaneData:(PlaneData *)planeData;
 -(UIView *)addHand:(NSString *)fileName;
+-(UIView *)rootView;
 
 @end

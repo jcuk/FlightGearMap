@@ -11,18 +11,16 @@
 
 @implementation InstrumentGeneric
 
-UIView *_handView;
-PlaneDataType _planeDataType;
-float _minVal, _maxVal, _maxAngle,_minAngle;
-
 -(id)initWithFilename:(NSString *)fileName hand:(NSString *)handFilename dataType:(PlaneDataType)planeDataType
-max:(float)maxValue min:(float)minValue minAngle:(float)minHandAngle maxAngle:(float)maxHandAngle {
+min:(float)minValue max:(float)maxValue minAngle:(float)minHandAngle maxAngle:(float)maxHandAngle {
     self = [super initWithFilename:fileName];
     if (self) {
         _handView = [super addHand:handFilename];   
         _planeDataType = planeDataType;
         _minVal = minValue;
         _maxVal = maxValue;
+        _maxAngle = maxHandAngle;
+        _minAngle = minHandAngle;
     }
     
     return self;
@@ -30,13 +28,18 @@ max:(float)maxValue min:(float)minValue minAngle:(float)minHandAngle maxAngle:(f
 
 -(void)updatePlaneData:(PlaneData *)planeData {
     NSNumber *dataValue = [planeData getDataValue:_planeDataType];
-    double angle = 0;
+    
+    //Default to 0 if no data available
+    double value=0;
+
     if (dataValue) {
-        double prop = ([dataValue doubleValue] - _minVal)/_maxVal;
-        angle = prop *(_maxAngle - _minAngle) + _minAngle;
+        value = [dataValue doubleValue];
     }
+    
+    double prop = (value - _minVal)/(_maxVal-_minVal);
+    double angle = prop *(_maxAngle - _minAngle) + _minAngle;
         
-    CGAffineTransform rotate = CGAffineTransformMakeRotation(angle * 2 * PI);
+    CGAffineTransform rotate = CGAffineTransformMakeRotation(angle/360 * 2 * PI);
     [_handView setTransform:rotate];
 }
 

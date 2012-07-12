@@ -62,4 +62,8 @@
     //Override for your particular instrument
 }
 
+-(UIView *)rootView {
+    return self;
+}
+
 @end

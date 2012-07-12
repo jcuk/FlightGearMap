@@ -8,6 +8,13 @@
 
 #import "Instrument.h"
 
-@interface InstrumentGeneric : Instrument
+@interface InstrumentGeneric : Instrument {
+    UIView *_handView;
+    PlaneDataType _planeDataType;
+    float _minVal, _maxVal, _maxAngle,_minAngle;
+}
+
+-(id)initWithFilename:(NSString *)fileName hand:(NSString *)handFilename dataType:(PlaneDataType)planeDataType
+    min:(float)minValue max:(float)maxValue minAngle:(float)minHandAngle maxAngle:(float)maxHandAngle;
 
 @end

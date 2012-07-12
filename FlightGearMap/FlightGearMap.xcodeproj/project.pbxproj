@@ -80,6 +80,9 @@
 		96C3E0D315AC9EF300DCF289 /* ati1-70.png in Resources */ = {isa = PBXBuildFile; fileRef = 96C3E0D215AC9EF300DCF289 /* ati1-70.png */; };
 		96C3E0D515ACA1A800DCF289 /* ati0-70.png in Resources */ = {isa = PBXBuildFile; fileRef = 96C3E0D415ACA1A800DCF289 /* ati0-70.png */; };
 		96C3E0E415ADF03C00DCF289 /* InstrumentGeneric.m in Sources */ = {isa = PBXBuildFile; fileRef = 96C3E0E315ADF03C00DCF289 /* InstrumentGeneric.m */; };
+		96C3E0E615AEB3F000DCF289 /* turn-70.png in Resources */ = {isa = PBXBuildFile; fileRef = 96C3E0E515AEB3F000DCF289 /* turn-70.png */; };
+		96C3E0E915AF352100DCF289 /* InstrumentTurnAndSlip.m in Sources */ = {isa = PBXBuildFile; fileRef = 96C3E0E815AF352000DCF289 /* InstrumentTurnAndSlip.m */; };
+		96C3E10815AF388600DCF289 /* slip-70.png in Resources */ = {isa = PBXBuildFile; fileRef = 96C3E10715AF388600DCF289 /* slip-70.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -176,6 +179,10 @@
 		96C3E0D415ACA1A800DCF289 /* ati0-70.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ati0-70.png"; sourceTree = "<group>"; };
 		96C3E0E215ADF03C00DCF289 /* InstrumentGeneric.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InstrumentGeneric.h; sourceTree = "<group>"; };
 		96C3E0E315ADF03C00DCF289 /* InstrumentGeneric.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InstrumentGeneric.m; sourceTree = "<group>"; };
+		96C3E0E515AEB3F000DCF289 /* turn-70.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "turn-70.png"; sourceTree = "<group>"; };
+		96C3E0E715AF352000DCF289 /* InstrumentTurnAndSlip.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InstrumentTurnAndSlip.h; sourceTree = "<group>"; };
+		96C3E0E815AF352000DCF289 /* InstrumentTurnAndSlip.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InstrumentTurnAndSlip.m; sourceTree = "<group>"; };
+		96C3E10715AF388600DCF289 /* slip-70.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "slip-70.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -324,6 +331,8 @@
 				96C3E0CE15AC9C4E00DCF289 /* InstrumentHorizon.m */,
 				96C3E0E215ADF03C00DCF289 /* InstrumentGeneric.h */,
 				96C3E0E315ADF03C00DCF289 /* InstrumentGeneric.m */,
+				96C3E0E715AF352000DCF289 /* InstrumentTurnAndSlip.h */,
+				96C3E0E815AF352000DCF289 /* InstrumentTurnAndSlip.m */,
 			);
 			name = InstrumentView;
 			sourceTree = "<group>";
@@ -393,6 +402,8 @@
 		960B31D915A7A16300152F59 /* 70 */ = {
 			isa = PBXGroup;
 			children = (
+				96C3E10715AF388600DCF289 /* slip-70.png */,
+				96C3E0E515AEB3F000DCF289 /* turn-70.png */,
 				96C3E0D415ACA1A800DCF289 /* ati0-70.png */,
 				96C3E0D215AC9EF300DCF289 /* ati1-70.png */,
 				96C3E0D015AC9DBF00DCF289 /* ati2-70.png */,
@@ -534,6 +545,8 @@
 				96C3E0D115AC9DBF00DCF289 /* ati2-70.png in Resources */,
 				96C3E0D315AC9EF300DCF289 /* ati1-70.png in Resources */,
 				96C3E0D515ACA1A800DCF289 /* ati0-70.png in Resources */,
+				96C3E0E615AEB3F000DCF289 /* turn-70.png in Resources */,
+				96C3E10815AF388600DCF289 /* slip-70.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -558,6 +571,7 @@
 				96C3E0CC15AC10A100DCF289 /* PlaneData.m in Sources */,
 				96C3E0CF15AC9C4E00DCF289 /* InstrumentHorizon.m in Sources */,
 				96C3E0E415ADF03C00DCF289 /* InstrumentGeneric.m in Sources */,
+				96C3E0E915AF352100DCF289 /* InstrumentTurnAndSlip.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

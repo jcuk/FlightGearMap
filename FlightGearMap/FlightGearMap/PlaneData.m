@@ -14,7 +14,7 @@
 NSMutableDictionary *data;
 
 -(NSString *)makeKey:(PlaneDataType)dataType {
-    return [NSString stringWithFormat:@"@d",dataType];
+    return [NSString stringWithFormat:@"%d",dataType];
 }
 
 -(id) init {
