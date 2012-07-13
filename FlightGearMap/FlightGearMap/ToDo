@@ -1,14 +1,33 @@
-New app store app
-    New bundle identifier?
-    Screen shots
-    Instructions
-    
 iPad problem: cant dismiss keyboard from modal view controller (Known apple bug WONTFIX)
 
-Telnet server
-    check in Java
-    Deploy to NAS
-    Firewall open 9999
-    port forward 9999 to TS-119
-    Test from work (IP address?)
 
+Graphics
+    Redo rpm@2x
+    Redo slip ball
+    Add all @2x
+    Add ipad view
+    Add ipad graphics
+    Add ipad @2x graphics
+    
+confg screen
+    instruments on off
+    udp
+    email config
+    
+Network
+    UDP comms
+    simulator ?
+    andatlas.xml
+    
+Instruments
+    Enable / disable
+    Rotate
+    Position
+    Calibrate airspeed
+    Pegging?
+    
+Instructions
+    Add udp deails
+    
+SVN / project
+    Tidy up unknown files - checkout / checkin

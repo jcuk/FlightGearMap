@@ -37,7 +37,6 @@
 		960B31FE15A7A16300152F59 /* alt1~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 960B31DA15A7A16300152F59 /* alt1~iphone.png */; };
 		960B31FF15A7A16300152F59 /* ati3~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 960B31DB15A7A16300152F59 /* ati3~iphone.png */; };
 		960B320015A7A16300152F59 /* climb~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 960B31DC15A7A16300152F59 /* climb~iphone.png */; };
-		960B320115A7A16300152F59 /* rpm~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 960B31DD15A7A16300152F59 /* rpm~iphone.png */; };
 		960B320215A7A16300152F59 /* speed~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 960B31DE15A7A16300152F59 /* speed~iphone.png */; };
 		960B320315A7A16300152F59 /* trn1~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 960B31DF15A7A16300152F59 /* trn1~iphone.png */; };
 		96C3E02215A8F16500DCF289 /* hand1~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 96C3E02115A8F16500DCF289 /* hand1~iphone.png */; };
@@ -54,7 +53,22 @@
 		96C3E0E915AF352100DCF289 /* InstrumentTurnAndSlip.m in Sources */ = {isa = PBXBuildFile; fileRef = 96C3E0E815AF352000DCF289 /* InstrumentTurnAndSlip.m */; };
 		96C3E10815AF388600DCF289 /* slip~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 96C3E10715AF388600DCF289 /* slip~iphone.png */; };
 		96C3E10A15B008CD00DCF289 /* trn0~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 96C3E10915B008CD00DCF289 /* trn0~iphone.png */; };
-		96C3E11E15B0A3B200DCF289 /* rpm@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 96C3E11D15B0A3B100DCF289 /* rpm@2x.png */; };
+		96C3E12015B0B23800DCF289 /* rpm~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 96C3E11F15B0B23800DCF289 /* rpm~iphone.png */; };
+		96C3E16D15B0CB0200DCF289 /* alt0@2x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 96C3E15E15B0CAF700DCF289 /* alt0@2x~iphone.png */; };
+		96C3E16E15B0CB0200DCF289 /* alt1@2x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 96C3E15F15B0CAF700DCF289 /* alt1@2x~iphone.png */; };
+		96C3E16F15B0CB0200DCF289 /* ati0@2x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 96C3E16015B0CAF800DCF289 /* ati0@2x~iphone.png */; };
+		96C3E17015B0CB0200DCF289 /* ati1@2x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 96C3E16115B0CAF800DCF289 /* ati1@2x~iphone.png */; };
+		96C3E17115B0CB0200DCF289 /* ati2@2x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 96C3E16215B0CAF900DCF289 /* ati2@2x~iphone.png */; };
+		96C3E17215B0CB0200DCF289 /* ati3@2x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 96C3E16315B0CAFA00DCF289 /* ati3@2x~iphone.png */; };
+		96C3E17315B0CB0200DCF289 /* climb@2x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 96C3E16415B0CAFA00DCF289 /* climb@2x~iphone.png */; };
+		96C3E17415B0CB0200DCF289 /* hand1@2x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 96C3E16515B0CAFC00DCF289 /* hand1@2x~iphone.png */; };
+		96C3E17515B0CB0200DCF289 /* hand2@2x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 96C3E16615B0CAFC00DCF289 /* hand2@2x~iphone.png */; };
+		96C3E17615B0CB0200DCF289 /* rpm@2x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 96C3E16715B0CAFD00DCF289 /* rpm@2x~iphone.png */; };
+		96C3E17715B0CB0200DCF289 /* slip@2x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 96C3E16815B0CAFD00DCF289 /* slip@2x~iphone.png */; };
+		96C3E17815B0CB0200DCF289 /* speed@2x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 96C3E16915B0CAFE00DCF289 /* speed@2x~iphone.png */; };
+		96C3E17915B0CB0200DCF289 /* trn0@2x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 96C3E16A15B0CB0000DCF289 /* trn0@2x~iphone.png */; };
+		96C3E17A15B0CB0200DCF289 /* trn1@2x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 96C3E16B15B0CB0100DCF289 /* trn1@2x~iphone.png */; };
+		96C3E17B15B0CB0200DCF289 /* turn@2x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 96C3E16C15B0CB0100DCF289 /* turn@2x~iphone.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -68,7 +82,7 @@
 		5B3D3F7B158FE38600393425 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		5B3D3F7D158FE3DB00393425 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		5B3D3F861590EE1D00393425 /* MapStatusUpdater.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapStatusUpdater.h; sourceTree = "<group>"; };
-		5B3D3F9B1591ABA400393425 /* ToDo */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ToDo; sourceTree = "<group>"; };
+		5B3D3F9B1591ABA400393425 /* ToDo */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = ToDo; path = FlightGearMap/ToDo; sourceTree = "<group>"; };
 		5B3D3F9D1591AFC100393425 /* plane.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = plane.png; sourceTree = "<group>"; };
 		5B3D3FAA15923A9400393425 /* info.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = info.png; sourceTree = "<group>"; };
 		5B3D3FCA1592776100393425 /* UIConfigController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIConfigController.h; sourceTree = "<group>"; };
@@ -103,7 +117,6 @@
 		960B31DA15A7A16300152F59 /* alt1~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "alt1~iphone.png"; sourceTree = "<group>"; };
 		960B31DB15A7A16300152F59 /* ati3~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ati3~iphone.png"; sourceTree = "<group>"; };
 		960B31DC15A7A16300152F59 /* climb~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "climb~iphone.png"; sourceTree = "<group>"; };
-		960B31DD15A7A16300152F59 /* rpm~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "rpm~iphone.png"; sourceTree = "<group>"; };
 		960B31DE15A7A16300152F59 /* speed~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "speed~iphone.png"; sourceTree = "<group>"; };
 		960B31DF15A7A16300152F59 /* trn1~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "trn1~iphone.png"; sourceTree = "<group>"; };
 		96C3E01C15A8D3A800DCF289 /* Drawable.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Drawable.h; sourceTree = "<group>"; };
@@ -126,7 +139,22 @@
 		96C3E0E815AF352000DCF289 /* InstrumentTurnAndSlip.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InstrumentTurnAndSlip.m; sourceTree = "<group>"; };
 		96C3E10715AF388600DCF289 /* slip~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "slip~iphone.png"; sourceTree = "<group>"; };
 		96C3E10915B008CD00DCF289 /* trn0~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "trn0~iphone.png"; sourceTree = "<group>"; };
-		96C3E11D15B0A3B100DCF289 /* rpm@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "rpm@2x.png"; sourceTree = "<group>"; };
+		96C3E11F15B0B23800DCF289 /* rpm~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "rpm~iphone.png"; sourceTree = "<group>"; };
+		96C3E15E15B0CAF700DCF289 /* alt0@2x~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "alt0@2x~iphone.png"; path = "140/alt0@2x~iphone.png"; sourceTree = "<group>"; };
+		96C3E15F15B0CAF700DCF289 /* alt1@2x~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "alt1@2x~iphone.png"; path = "140/alt1@2x~iphone.png"; sourceTree = "<group>"; };
+		96C3E16015B0CAF800DCF289 /* ati0@2x~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "ati0@2x~iphone.png"; path = "140/ati0@2x~iphone.png"; sourceTree = "<group>"; };
+		96C3E16115B0CAF800DCF289 /* ati1@2x~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "ati1@2x~iphone.png"; path = "140/ati1@2x~iphone.png"; sourceTree = "<group>"; };
+		96C3E16215B0CAF900DCF289 /* ati2@2x~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "ati2@2x~iphone.png"; path = "140/ati2@2x~iphone.png"; sourceTree = "<group>"; };
+		96C3E16315B0CAFA00DCF289 /* ati3@2x~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "ati3@2x~iphone.png"; path = "140/ati3@2x~iphone.png"; sourceTree = "<group>"; };
+		96C3E16415B0CAFA00DCF289 /* climb@2x~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "climb@2x~iphone.png"; path = "140/climb@2x~iphone.png"; sourceTree = "<group>"; };
+		96C3E16515B0CAFC00DCF289 /* hand1@2x~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "hand1@2x~iphone.png"; path = "140/hand1@2x~iphone.png"; sourceTree = "<group>"; };
+		96C3E16615B0CAFC00DCF289 /* hand2@2x~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "hand2@2x~iphone.png"; path = "140/hand2@2x~iphone.png"; sourceTree = "<group>"; };
+		96C3E16715B0CAFD00DCF289 /* rpm@2x~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "rpm@2x~iphone.png"; path = "140/rpm@2x~iphone.png"; sourceTree = "<group>"; };
+		96C3E16815B0CAFD00DCF289 /* slip@2x~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "slip@2x~iphone.png"; path = "140/slip@2x~iphone.png"; sourceTree = "<group>"; };
+		96C3E16915B0CAFE00DCF289 /* speed@2x~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "speed@2x~iphone.png"; path = "140/speed@2x~iphone.png"; sourceTree = "<group>"; };
+		96C3E16A15B0CB0000DCF289 /* trn0@2x~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "trn0@2x~iphone.png"; path = "140/trn0@2x~iphone.png"; sourceTree = "<group>"; };
+		96C3E16B15B0CB0100DCF289 /* trn1@2x~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "trn1@2x~iphone.png"; path = "140/trn1@2x~iphone.png"; sourceTree = "<group>"; };
+		96C3E16C15B0CB0100DCF289 /* turn@2x~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "turn@2x~iphone.png"; path = "140/turn@2x~iphone.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -205,6 +233,7 @@
 		5B68E638158FBF65009DBDE6 = {
 			isa = PBXGroup;
 			children = (
+				5B3D3F9B1591ABA400393425 /* ToDo */,
 				5B68E64D158FBF65009DBDE6 /* FlightGearMap */,
 				5B68E644158FBF65009DBDE6 /* Products */,
 			);
@@ -240,7 +269,6 @@
 				96C3E0C615AC0F4400DCF289 /* PlaneData */,
 				96C3E0C515AC0F2F00DCF289 /* MainView */,
 				960B310815A77C5A00152F59 /* InstrumentView */,
-				5B3D3F9B1591ABA400393425 /* ToDo */,
 				5B3D3FF91593C1E200393425 /* Resources */,
 				5B3D3FEB159393B000393425 /* InfoView */,
 				5B3D3F82159062B700393425 /* TBXML */,
@@ -284,7 +312,21 @@
 		960B31B715A7A16300152F59 /* Instruments */ = {
 			isa = PBXGroup;
 			children = (
-				96C3E11415B0937300DCF289 /* @2iPhone */,
+				96C3E15E15B0CAF700DCF289 /* alt0@2x~iphone.png */,
+				96C3E15F15B0CAF700DCF289 /* alt1@2x~iphone.png */,
+				96C3E16015B0CAF800DCF289 /* ati0@2x~iphone.png */,
+				96C3E16115B0CAF800DCF289 /* ati1@2x~iphone.png */,
+				96C3E16215B0CAF900DCF289 /* ati2@2x~iphone.png */,
+				96C3E16315B0CAFA00DCF289 /* ati3@2x~iphone.png */,
+				96C3E16415B0CAFA00DCF289 /* climb@2x~iphone.png */,
+				96C3E16515B0CAFC00DCF289 /* hand1@2x~iphone.png */,
+				96C3E16615B0CAFC00DCF289 /* hand2@2x~iphone.png */,
+				96C3E16715B0CAFD00DCF289 /* rpm@2x~iphone.png */,
+				96C3E16815B0CAFD00DCF289 /* slip@2x~iphone.png */,
+				96C3E16915B0CAFE00DCF289 /* speed@2x~iphone.png */,
+				96C3E16A15B0CB0000DCF289 /* trn0@2x~iphone.png */,
+				96C3E16B15B0CB0100DCF289 /* trn1@2x~iphone.png */,
+				96C3E16C15B0CB0100DCF289 /* turn@2x~iphone.png */,
 				960B31D915A7A16300152F59 /* iPhone */,
 			);
 			path = Instruments;
@@ -293,6 +335,7 @@
 		960B31D915A7A16300152F59 /* iPhone */ = {
 			isa = PBXGroup;
 			children = (
+				96C3E11F15B0B23800DCF289 /* rpm~iphone.png */,
 				96C3E10915B008CD00DCF289 /* trn0~iphone.png */,
 				96C3E10715AF388600DCF289 /* slip~iphone.png */,
 				96C3E0E515AEB3F000DCF289 /* turn0~iphone.png */,
@@ -305,7 +348,6 @@
 				960B31DA15A7A16300152F59 /* alt1~iphone.png */,
 				960B31DB15A7A16300152F59 /* ati3~iphone.png */,
 				960B31DC15A7A16300152F59 /* climb~iphone.png */,
-				960B31DD15A7A16300152F59 /* rpm~iphone.png */,
 				960B31DE15A7A16300152F59 /* speed~iphone.png */,
 				960B31DF15A7A16300152F59 /* trn1~iphone.png */,
 			);
@@ -333,15 +375,6 @@
 				96C3E0CB15AC10A100DCF289 /* PlaneData.m */,
 			);
 			name = PlaneData;
-			sourceTree = "<group>";
-		};
-		96C3E11415B0937300DCF289 /* @2iPhone */ = {
-			isa = PBXGroup;
-			children = (
-				96C3E11D15B0A3B100DCF289 /* rpm@2x.png */,
-			);
-			name = "@2iPhone";
-			path = 140;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -408,7 +441,6 @@
 				960B31FE15A7A16300152F59 /* alt1~iphone.png in Resources */,
 				960B31FF15A7A16300152F59 /* ati3~iphone.png in Resources */,
 				960B320015A7A16300152F59 /* climb~iphone.png in Resources */,
-				960B320115A7A16300152F59 /* rpm~iphone.png in Resources */,
 				960B320215A7A16300152F59 /* speed~iphone.png in Resources */,
 				960B320315A7A16300152F59 /* trn1~iphone.png in Resources */,
 				96C3E02215A8F16500DCF289 /* hand1~iphone.png in Resources */,
@@ -420,7 +452,22 @@
 				96C3E0E615AEB3F000DCF289 /* turn0~iphone.png in Resources */,
 				96C3E10815AF388600DCF289 /* slip~iphone.png in Resources */,
 				96C3E10A15B008CD00DCF289 /* trn0~iphone.png in Resources */,
-				96C3E11E15B0A3B200DCF289 /* rpm@2x.png in Resources */,
+				96C3E12015B0B23800DCF289 /* rpm~iphone.png in Resources */,
+				96C3E16D15B0CB0200DCF289 /* alt0@2x~iphone.png in Resources */,
+				96C3E16E15B0CB0200DCF289 /* alt1@2x~iphone.png in Resources */,
+				96C3E16F15B0CB0200DCF289 /* ati0@2x~iphone.png in Resources */,
+				96C3E17015B0CB0200DCF289 /* ati1@2x~iphone.png in Resources */,
+				96C3E17115B0CB0200DCF289 /* ati2@2x~iphone.png in Resources */,
+				96C3E17215B0CB0200DCF289 /* ati3@2x~iphone.png in Resources */,
+				96C3E17315B0CB0200DCF289 /* climb@2x~iphone.png in Resources */,
+				96C3E17415B0CB0200DCF289 /* hand1@2x~iphone.png in Resources */,
+				96C3E17515B0CB0200DCF289 /* hand2@2x~iphone.png in Resources */,
+				96C3E17615B0CB0200DCF289 /* rpm@2x~iphone.png in Resources */,
+				96C3E17715B0CB0200DCF289 /* slip@2x~iphone.png in Resources */,
+				96C3E17815B0CB0200DCF289 /* speed@2x~iphone.png in Resources */,
+				96C3E17915B0CB0200DCF289 /* trn0@2x~iphone.png in Resources */,
+				96C3E17A15B0CB0200DCF289 /* trn1@2x~iphone.png in Resources */,
+				96C3E17B15B0CB0200DCF289 /* turn@2x~iphone.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
