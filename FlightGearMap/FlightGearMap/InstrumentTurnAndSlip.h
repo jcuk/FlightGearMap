@@ -10,4 +10,8 @@
 
 @interface InstrumentTurnAndSlip : InstrumentGeneric
 
+{
+    UIView *_slipView;
+}
+
 @end

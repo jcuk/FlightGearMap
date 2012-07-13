@@ -17,6 +17,10 @@
                             view.frame.size.width, view.frame.size.height);
 }
 
+-(CGSize)rootSize {
+    return self.frame.size;
+}
+
 -(void)addSubviewInFront:(UIView *)view {
     [self addSubviewCentered:view];
     [self bringSubviewToFront:view];
@@ -46,13 +50,24 @@
                       handSize.width, handSize.height);
 }
 
--(UIView *)addHand:(NSString *)fileName {
+-(UIView *)addHand:(NSString *)fileName off:(double)offset inFront:(bool)front  {
+    return [self addHandWithOffset:fileName off:offset inFront:front];    
+}
+
+-(UIView *)addHandWithOffset:(NSString *)fileName off:(double)offset inFront:(bool)front {
     
-    UIImage *hand = [UIImage imageNamed:fileName];
-    UIImageView *handView = [[UIImageView alloc] initWithImage:hand];
+    UIImage *handOffset = [UIImage imageNamed:fileName];
+    UIImageView *handView = [[UIImageView alloc] initWithImage:handOffset];
     
-    [self addSubviewInFront:handView];
-    handView.frame = [self centerHand:super.frame.size hand:hand.size];
+    if (front) {
+        [self addSubviewInFront:handView];
+    } else {
+        [self addSubviewBehind:handView];
+    }
+    
+    
+    handView.frame = CGRectMake(super.frame.size.width/2 - handOffset.size.width/2, super.frame.size.height/2 * (1 + offset) - handOffset.size.height/2,
+               handOffset.size.width, handOffset.size.height);
     
     return handView;
     
@@ -60,10 +75,6 @@
 
 -(void)updatePlaneData:(PlaneData *)planeData {
     //Override for your particular instrument
-}
-
--(UIView *)rootView {
-    return self;
 }
 
 @end

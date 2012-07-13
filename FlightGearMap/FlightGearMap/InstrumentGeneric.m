@@ -15,7 +15,7 @@
 min:(float)minValue max:(float)maxValue minAngle:(float)minHandAngle maxAngle:(float)maxHandAngle {
     self = [super initWithFilename:fileName];
     if (self) {
-        _handView = [super addHand:handFilename];   
+        _handView = [super addHand:handFilename off:0.0 inFront:YES];   
         _planeDataType = planeDataType;
         _minVal = minValue;
         _maxVal = maxValue;

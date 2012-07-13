@@ -13,15 +13,15 @@
 -(id)initWithFilename:(NSString *)fileName {
     self = [super initWithFilename:fileName];
     if (self) {
-        UIImage *bank = [UIImage imageNamed:@"ati2-70.png"];
+        UIImage *bank = [UIImage imageNamed:@"ati2.png"];
         UIImageView *bankView = [[UIImageView alloc] initWithImage:bank];
         [self addSubviewBehind:bankView];
         
-        UIImage *horizon = [UIImage imageNamed:@"ati1-70.png"];
+        UIImage *horizon = [UIImage imageNamed:@"ati1.png"];
         UIImageView *horizonView = [[UIImageView alloc] initWithImage:horizon];
         [self addSubviewBehind:horizonView];
         
-        UIImage *horizonBG = [UIImage imageNamed:@"ati0-70.png"];
+        UIImage *horizonBG = [UIImage imageNamed:@"ati0.png"];
         UIImageView *horizonBGView = [[UIImageView alloc] initWithImage:horizonBG];
         [self addSubviewBehind:horizonBGView];
         

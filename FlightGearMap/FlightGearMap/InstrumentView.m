@@ -23,15 +23,15 @@ NSMutableArray * instruments;
     if (self) {
         instruments = [[NSMutableArray alloc]init];
         
-        [instruments addObject:[[InstrumentAltimeter alloc]initWithFilename:@"alt1-70.png"]];
-        [instruments addObject:[[InstrumentHorizon alloc]initWithFilename:@"ati3-70.png"]];
-        [instruments addObject:[[InstrumentGeneric alloc]initWithFilename:@"climb-70.png"
-            hand:@"hand1-70.png" dataType:CLIMB_RATE min:-2000 max:2000 minAngle:-265 maxAngle:85]];
-        [instruments addObject:[[InstrumentGeneric alloc]initWithFilename:@"rpm-70.png"
-            hand:@"hand1-70.png" dataType:RPM min:0 max:3500 minAngle:-125 maxAngle:125]];
-        [instruments addObject:[[InstrumentGeneric alloc]initWithFilename:@"speed-70.png"
-            hand:@"hand1-70.png" dataType:SPEED min:0 max:320 minAngle:0 maxAngle:220]];
-        [instruments addObject:[[InstrumentTurnAndSlip alloc]initWithFilename:@"trn1-70.png"]];
+        [instruments addObject:[[InstrumentAltimeter alloc]initWithFilename:@"alt1.png"]];
+        [instruments addObject:[[InstrumentHorizon alloc]initWithFilename:@"ati3.png"]];
+        [instruments addObject:[[InstrumentGeneric alloc]initWithFilename:@"climb.png"
+            hand:@"hand1.png" dataType:CLIMB_RATE min:-2000 max:2000 minAngle:-265 maxAngle:85]];
+        [instruments addObject:[[InstrumentGeneric alloc]initWithFilename:@"rpm"
+            hand:@"hand1.png" dataType:RPM min:0 max:3500 minAngle:-125 maxAngle:125]];
+        [instruments addObject:[[InstrumentGeneric alloc]initWithFilename:@"speed.png"
+            hand:@"hand1.png" dataType:SPEED min:0 max:320 minAngle:0 maxAngle:220]];
+        [instruments addObject:[[InstrumentTurnAndSlip alloc]initWithFilename:@"trn1.png"]];
                 
         int y = 0;
         int step = 69;
