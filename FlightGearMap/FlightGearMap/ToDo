@@ -5,7 +5,6 @@ Graphics
     Add ipad @2x graphics
     
 confg screen
-    instruments on off
     udp
     email config
     
@@ -16,7 +15,6 @@ Network
     andatlas.xml
     
 Instruments
-    Enable / disable
     Rotate
     Position
     Calibrate airspeed

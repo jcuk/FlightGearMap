@@ -18,7 +18,7 @@
 
 
 @implementation FGMViewController
-@synthesize _mapView,_planeView,_altitudeLabel,_instrumentView;
+@synthesize _mapView,_planeView,_altitudeLabel,_instrumentView, _titleLabel;
 
 TelnetPositionClient *client;
 PlaneData *planeData;
@@ -108,8 +108,10 @@ PlaneData *planeData;
         
         NSString *port = [temp objectForKey:@"port"];
         NSString *machine = [temp objectForKey:@"machine"];
+        NSString *instruments = [temp objectForKey:@"instruments"];
         
         [self updatePosition:START_LON lat:START_LAT altitudeInFt:0 updateZoom:YES];
+        [self makeInstrumentsVisible:![@"N" isEqualToString:instruments]];
         
         client = [[TelnetPositionClient alloc]init:self];
         
@@ -206,40 +208,57 @@ PlaneData *planeData;
 -(void) makeInstrumentsVisible:(bool)visible {
     //TODO: animate
     _instrumentView.hidden = !visible;
+    if (visible) {
+        _mapView.frame = CGRectMake(_instrumentView.frame.size.width, _mapView.frame.origin.y,
+            _mapView.frame.size.width-_instrumentView.frame.size.width, _mapView.frame.size.height);
+    } else {
+        //TODO adjust for orientation
+        _mapView.frame = CGRectMake(0, _mapView.frame.origin.y,
+            self.view.frame.size.width, _mapView.frame.size.height);
+    }
+    
+    _planeView.center = _mapView.center;
+    
+    _titleLabel.center = CGPointMake(_mapView.center.x, _titleLabel.center.y);
+    
 
 }
 
 - (void)configViewControllerDidSave:(UIConfigController *)controller {
     [self dismissViewControllerAnimated:YES completion:nil];
     
-    if ([controller.machineAddress.text length] > 0 && [controller.port.text length] > 0) {
-        //Save data
-        NSString *error;
+    //Save data
+    NSString *error;
         
-        NSString *rootPath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
+    NSString *rootPath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
         
-        NSString *plistPath = [rootPath stringByAppendingPathComponent:@"save.plist"];
+    NSString *plistPath = [rootPath stringByAppendingPathComponent:@"save.plist"];
         
-        NSDictionary *plistDict = [NSDictionary dictionaryWithObjects:
-                [NSArray arrayWithObjects: controller.port.text, controller.machineAddress.text, nil]
-                forKeys:[NSArray arrayWithObjects: @"port", @"machine", nil]];
+    NSDictionary *plistDict = [NSDictionary dictionaryWithObjects:
+                [NSArray arrayWithObjects: controller.port.text, controller.machineAddress.text, controller.instruments.isOn?@"Y":@"N", nil]
+                forKeys:[NSArray arrayWithObjects: @"port", @"machine", @"instruments", nil]];
         
-        NSData *plistData = [NSPropertyListSerialization dataFromPropertyList:plistDict
+    NSData *plistData = [NSPropertyListSerialization dataFromPropertyList:plistDict
                 format:NSPropertyListXMLFormat_v1_0 errorDescription:&error];
         
-        if(plistData) {
+    if(plistData) {
             
-            [plistData writeToFile:plistPath atomically:YES];
+        [plistData writeToFile:plistPath atomically:YES];
             
-        }
-        
-        else {
-            NSLog(@"Error writing data: %@",error);
+    } else {
+        NSLog(@"Error writing data: %@",error);
             
-        }
-        [self reconnectClient:[controller.machineAddress text] port:[controller.port text]];
-        [self makeInstrumentsVisible:controller.instruments.isOn];
     }
+    
+    [self makeInstrumentsVisible:controller.instruments.isOn];
+    
+    if ([controller.machineAddress.text length] > 0 && [controller.port.text length] > 0) {
+    
+        [self reconnectClient:[controller.machineAddress text] port:[controller.port text]];
+    }   
+        
+        
+    
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender

@@ -67,6 +67,7 @@
                         <outlet property="_instrumentView" destination="0cs-Na-L9B" id="ROk-yw-WmT"/>
                         <outlet property="_mapView" destination="u7a-GM-88b" id="p06-WB-OiX"/>
                         <outlet property="_planeView" destination="zcW-ao-nPM" id="OaI-fa-mtp"/>
+                        <outlet property="_titleLabel" destination="bNZ-lk-SoO" id="Lqe-yf-Hkk"/>
                     </connections>
                 </viewController>
             </objects>
@@ -181,6 +182,7 @@
                 <relationship kind="outlet" name="_instrumentView" candidateClass="InstrumentView"/>
                 <relationship kind="outlet" name="_mapView" candidateClass="MKMapView"/>
                 <relationship kind="outlet" name="_planeView" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="_titleLabel" candidateClass="UILabel"/>
             </relationships>
         </class>
         <class className="InstrumentView" superclassName="UIView">

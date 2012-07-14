@@ -27,6 +27,7 @@
 @property (weak, nonatomic) IBOutlet UIImageView *_planeView;
 @property (weak, nonatomic) IBOutlet UILabel *_altitudeLabel;
 @property (weak, nonatomic) IBOutlet InstrumentView *_instrumentView;
+@property (weak, nonatomic) IBOutlet UILabel *_titleLabel;
 
 
 @end
