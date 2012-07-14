@@ -203,6 +203,12 @@ PlaneData *planeData;
     
 }
 
+-(void) makeInstrumentsVisible:(bool)visible {
+    //TODO: animate
+    _instrumentView.hidden = !visible;
+
+}
+
 - (void)configViewControllerDidSave:(UIConfigController *)controller {
     [self dismissViewControllerAnimated:YES completion:nil];
     
@@ -232,6 +238,7 @@ PlaneData *planeData;
             
         }
         [self reconnectClient:[controller.machineAddress text] port:[controller.port text]];
+        [self makeInstrumentsVisible:controller.instruments.isOn];
     }
 }
 
@@ -257,6 +264,7 @@ PlaneData *planeData;
         
         [configViewController.machineAddress setText:client.address];
         [configViewController.port setText:client.port];
+        [configViewController.instruments setOn:!_instrumentView.isHidden];
         
 	}
 }

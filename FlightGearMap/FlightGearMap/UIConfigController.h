@@ -15,14 +15,12 @@
 - (void)configViewControllerDidSave:(UIConfigController *)controller;
 @end
 
-@interface UIConfigController : UIViewController {
-    IBOutlet UITextField *machineAddress;
-    IBOutlet UITextField *port;
-}
+@interface UIConfigController : UIViewController 
 
 @property (nonatomic, weak) id <UIConfigControllerDelagate> delegate;
 @property (strong) IBOutlet UITextField *machineAddress;
 @property (strong) IBOutlet UITextField *port;
+@property (strong) IBOutlet UISwitch *instruments;
 
 - (IBAction)cancel:(id)sender;
 - (IBAction)done:(id)sender;

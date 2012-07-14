@@ -96,7 +96,14 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Port" lineBreakMode="tailTruncation" minimumFontSize="10" id="IO8-Zg-2lD">
-                                <rect key="frame" x="205" y="329" width="112" height="41"/>
+                                <rect key="frame" x="205" y="315" width="112" height="41"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Instruments" lineBreakMode="tailTruncation" minimumFontSize="10" id="dIt-tU-Pgw">
+                                <rect key="frame" x="205" y="398" width="127" height="41"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -109,7 +116,7 @@
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder=" Port number" minimumFontSize="17" id="fZ7-sP-wSu">
-                                <rect key="frame" x="496" y="334" width="97" height="31"/>
+                                <rect key="frame" x="496" y="320" width="97" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="numberPad" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
@@ -144,10 +151,15 @@
                                     <action selector="done:" destination="9yy-uz-n2h" eventType="touchUpInside" id="9iu-vx-V8i"/>
                                 </connections>
                             </button>
+                            <switch opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" id="iQo-3Q-IF0">
+                                <rect key="frame" x="514" y="405" width="79" height="27"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </switch>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                     </view>
                     <connections>
+                        <outlet property="instruments" destination="iQo-3Q-IF0" id="TXx-ew-C2D"/>
                         <outlet property="machineAddress" destination="WKm-p3-mFG" id="tjU-tv-qB7"/>
                         <outlet property="port" destination="fZ7-sP-wSu" id="Rnr-bg-qLj"/>
                     </connections>
@@ -179,6 +191,7 @@
             <relationships>
                 <relationship kind="action" name="cancel:"/>
                 <relationship kind="action" name="done:"/>
+                <relationship kind="outlet" name="instruments" candidateClass="UISwitch"/>
                 <relationship kind="outlet" name="machineAddress" candidateClass="UITextField"/>
                 <relationship kind="outlet" name="port" candidateClass="UITextField"/>
             </relationships>
