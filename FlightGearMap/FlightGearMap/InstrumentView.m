@@ -32,16 +32,25 @@ NSMutableArray * instruments;
         [instruments addObject:[[InstrumentGeneric alloc]initWithFilename:@"speed.png"
             hand:@"hand1.png" dataType:SPEED min:0 max:320 minAngle:0 maxAngle:220]];
         [instruments addObject:[[InstrumentTurnAndSlip alloc]initWithFilename:@"trn1.png"]];
+        
+        int rectSize;
+        int step;
+        if (UI_USER_INTERFACE_IDIOM() != UIUserInterfaceIdiomPhone) {
+            step = 160;
+            rectSize = 160;
+        } else {
+            step = 69;
+            rectSize = 70;
+        }
                 
         int y = 0;
-        int step = 69;
         
         //TODO: rotate
         //TODO: retina
         //TODO: ipad
         for (Instrument *instrument in instruments) {
             [self addSubview:instrument];
-            instrument.frame = CGRectMake(0, y, 70, 70);
+            instrument.frame = CGRectMake(0, y, rectSize, rectSize);
             y += step;
         }
         

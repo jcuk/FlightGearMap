@@ -1,10 +1,12 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="1.0" toolsVersion="1938" systemVersion="10K549" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" initialViewController="2">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="1.1" toolsVersion="2182" systemVersion="11E2620" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" initialViewController="2">
     <dependencies>
+        <deployment defaultVersion="1296" identifier="iOS"/>
         <development defaultVersion="4200" identifier="xcode"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="933"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1181"/>
     </dependencies>
     <scenes>
+        <!--View Controller-->
         <scene sceneID="4">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3" sceneMemberID="firstResponder"/>
@@ -52,11 +54,17 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" id="0cs-Na-L9B" customClass="InstrumentView">
+                                <rect key="frame" x="0.0" y="0.0" width="160" height="960"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <connections>
                         <outlet property="_altitudeLabel" destination="oFB-GG-zQU" id="yX7-Jw-YtL"/>
+                        <outlet property="_instrumentView" destination="0cs-Na-L9B" id="ROk-yw-WmT"/>
                         <outlet property="_mapView" destination="u7a-GM-88b" id="p06-WB-OiX"/>
                         <outlet property="_planeView" destination="zcW-ao-nPM" id="OaI-fa-mtp"/>
                     </connections>
@@ -64,6 +72,7 @@
             </objects>
             <point key="canvasLocation" x="-131" y="-283"/>
         </scene>
+        <!--Config Controller-->
         <scene sceneID="sC4-cp-PjA">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uIX-5f-fDN" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -157,9 +166,13 @@
             <relationships>
                 <relationship kind="action" name="infoPressed:"/>
                 <relationship kind="outlet" name="_altitudeLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="_instrumentView" candidateClass="InstrumentView"/>
                 <relationship kind="outlet" name="_mapView" candidateClass="MKMapView"/>
                 <relationship kind="outlet" name="_planeView" candidateClass="UIImageView"/>
             </relationships>
+        </class>
+        <class className="InstrumentView" superclassName="UIView">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/InstrumentView.h"/>
         </class>
         <class className="UIConfigController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/UIConfigController.h"/>
