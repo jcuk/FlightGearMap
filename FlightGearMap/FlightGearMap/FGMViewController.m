@@ -190,6 +190,8 @@ PlaneData *planeData;
     }
     [infoView setNeedsDisplay];
     
+    [_instrumentView setNeedsLayout];
+    
     return YES;
 }
 

@@ -2,7 +2,7 @@ iPad problem: cant dismiss keyboard from modal view controller (Known apple bug 
 
 
 Graphics
-    Add ipad @2x graphics
+    BAckground for instruments
     
 confg screen
     udp
@@ -14,8 +14,7 @@ Network
     andatlas.xml
     
 Instruments
-    Rotate
-    Position
+    Horizon
     Calibrate airspeed
     Pegging?
     
@@ -23,4 +22,5 @@ Instructions
     Add udp deails
     
 SVN / project
+    Appirater
  

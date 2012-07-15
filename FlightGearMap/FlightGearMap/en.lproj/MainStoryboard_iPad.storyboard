@@ -56,7 +56,7 @@
                             </label>
                             <view contentMode="scaleToFill" id="0cs-Na-L9B" customClass="InstrumentView">
                                 <rect key="frame" x="0.0" y="0.0" width="160" height="960"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                             </view>
                         </subviews>
