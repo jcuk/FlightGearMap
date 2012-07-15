@@ -106,6 +106,7 @@ PlaneData *planeData;
             
         }
         
+//        NSString *version = [temp objectForKey:@"version"];
         NSString *port = [temp objectForKey:@"port"];
         NSString *machine = [temp objectForKey:@"machine"];
         NSString *instruments = [temp objectForKey:@"instruments"];
@@ -242,8 +243,8 @@ PlaneData *planeData;
     NSString *plistPath = [rootPath stringByAppendingPathComponent:@"save.plist"];
         
     NSDictionary *plistDict = [NSDictionary dictionaryWithObjects:
-                [NSArray arrayWithObjects: controller.port.text, controller.machineAddress.text, controller.instruments.isOn?@"Y":@"N", [NSNumber numberWithInt:controller.mapType.selectedSegmentIndex], nil]
-                forKeys:[NSArray arrayWithObjects: @"port", @"machine", @"instruments", @"mapType", nil]];
+                [NSArray arrayWithObjects: @"1.1", controller.port.text, controller.machineAddress.text, controller.instruments.isOn?@"Y":@"N", [NSNumber numberWithInt:controller.mapType.selectedSegmentIndex], nil]
+                forKeys:[NSArray arrayWithObjects: @"version", @"port", @"machine", @"instruments", @"mapType", nil]];
         
     NSData *plistData = [NSPropertyListSerialization dataFromPropertyList:plistDict
                 format:NSPropertyListXMLFormat_v1_0 errorDescription:&error];
