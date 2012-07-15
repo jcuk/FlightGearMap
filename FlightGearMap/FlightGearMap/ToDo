@@ -8,7 +8,6 @@ confg screen
     udp
     email config
     
-    
 Network
     UDP comms
     simulator ?
@@ -24,4 +23,4 @@ Instructions
     Add udp deails
     
 SVN / project
-    Tidy up unknown files - checkout / checkin
+ 
