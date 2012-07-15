@@ -10,7 +10,7 @@
 
 @implementation UIConfigController
 
-@synthesize delegate, machineAddress, port, instruments;
+@synthesize delegate, machineAddress, port, instruments, mapType;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {

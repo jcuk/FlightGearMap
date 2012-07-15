@@ -119,7 +119,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" highlighted="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="haS-0d-I3D">
-                                <rect key="frame" x="179" y="190" width="72" height="37"/>
+                                <rect key="frame" x="185" y="230" width="72" height="37"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="Done">
@@ -134,7 +134,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Tza-Ux-YUR">
-                                <rect key="frame" x="60" y="190" width="74" height="37"/>
+                                <rect key="frame" x="66" y="230" width="74" height="37"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="Cancel">
@@ -166,6 +166,15 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="unV-AT-Ueb">
+                                <rect key="frame" x="20" y="173" width="280" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <segments>
+                                    <segment title="Standard Map"/>
+                                    <segment title="Satelitte"/>
+                                    <segment title="Hybrid"/>
+                                </segments>
+                            </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                     </view>
@@ -173,6 +182,7 @@
                     <connections>
                         <outlet property="instruments" destination="lOu-Rl-cg1" id="Wcr-k8-FGv"/>
                         <outlet property="machineAddress" destination="UZO-mg-Wn1" id="ECf-n9-ISF"/>
+                        <outlet property="mapType" destination="unV-AT-Ueb" id="cix-pY-fbC"/>
                         <outlet property="port" destination="8ZB-rc-LRX" id="Ys9-dF-zqP"/>
                     </connections>
                 </viewController>
@@ -206,6 +216,7 @@
                 <relationship kind="action" name="done:"/>
                 <relationship kind="outlet" name="instruments" candidateClass="UISwitch"/>
                 <relationship kind="outlet" name="machineAddress" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="mapType" candidateClass="UISegmentedControl"/>
                 <relationship kind="outlet" name="port" candidateClass="UITextField"/>
             </relationships>
         </class>

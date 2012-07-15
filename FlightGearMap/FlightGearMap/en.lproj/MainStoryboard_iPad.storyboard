@@ -123,7 +123,7 @@
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="numberPad" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="QbR-97-d42">
-                                <rect key="frame" x="245" y="483" width="72" height="37"/>
+                                <rect key="frame" x="245" y="636" width="72" height="37"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="Cancel">
@@ -138,7 +138,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="3rH-b5-NgY">
-                                <rect key="frame" x="422" y="483" width="72" height="37"/>
+                                <rect key="frame" x="422" y="636" width="72" height="37"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="Done">
@@ -156,12 +156,22 @@
                                 <rect key="frame" x="514" y="405" width="79" height="27"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </switch>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" id="TyS-aE-bmX">
+                                <rect key="frame" x="205" y="488" width="388" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <segments>
+                                    <segment title="Standard Map"/>
+                                    <segment title="Satellite"/>
+                                    <segment title="Hybrid"/>
+                                </segments>
+                            </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                     </view>
                     <connections>
                         <outlet property="instruments" destination="iQo-3Q-IF0" id="TXx-ew-C2D"/>
                         <outlet property="machineAddress" destination="WKm-p3-mFG" id="tjU-tv-qB7"/>
+                        <outlet property="mapType" destination="TyS-aE-bmX" id="TPe-vy-dsr"/>
                         <outlet property="port" destination="fZ7-sP-wSu" id="Rnr-bg-qLj"/>
                     </connections>
                 </viewController>
@@ -195,6 +205,7 @@
                 <relationship kind="action" name="done:"/>
                 <relationship kind="outlet" name="instruments" candidateClass="UISwitch"/>
                 <relationship kind="outlet" name="machineAddress" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="mapType" candidateClass="UISegmentedControl"/>
                 <relationship kind="outlet" name="port" candidateClass="UITextField"/>
             </relationships>
         </class>

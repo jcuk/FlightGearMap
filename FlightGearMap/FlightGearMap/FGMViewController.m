@@ -109,6 +109,13 @@ PlaneData *planeData;
         NSString *port = [temp objectForKey:@"port"];
         NSString *machine = [temp objectForKey:@"machine"];
         NSString *instruments = [temp objectForKey:@"instruments"];
+        NSNumber *mapType = [temp objectForKey:@"mapType"];
+        
+        if (mapType) {
+            _mapView.mapType = [mapType intValue];
+        } else {
+            _mapView.mapType = MKMapTypeStandard;
+        }
         
         [self updatePosition:START_LON lat:START_LAT altitudeInFt:0 updateZoom:YES];
         [self makeInstrumentsVisible:![@"N" isEqualToString:instruments]];
@@ -235,8 +242,8 @@ PlaneData *planeData;
     NSString *plistPath = [rootPath stringByAppendingPathComponent:@"save.plist"];
         
     NSDictionary *plistDict = [NSDictionary dictionaryWithObjects:
-                [NSArray arrayWithObjects: controller.port.text, controller.machineAddress.text, controller.instruments.isOn?@"Y":@"N", nil]
-                forKeys:[NSArray arrayWithObjects: @"port", @"machine", @"instruments", nil]];
+                [NSArray arrayWithObjects: controller.port.text, controller.machineAddress.text, controller.instruments.isOn?@"Y":@"N", [NSNumber numberWithInt:controller.mapType.selectedSegmentIndex], nil]
+                forKeys:[NSArray arrayWithObjects: @"port", @"machine", @"instruments", @"mapType", nil]];
         
     NSData *plistData = [NSPropertyListSerialization dataFromPropertyList:plistDict
                 format:NSPropertyListXMLFormat_v1_0 errorDescription:&error];
@@ -257,7 +264,7 @@ PlaneData *planeData;
         [self reconnectClient:[controller.machineAddress text] port:[controller.port text]];
     }   
         
-        
+    _mapView.mapType = controller.mapType.selectedSegmentIndex;
     
 }
 
@@ -284,6 +291,7 @@ PlaneData *planeData;
         [configViewController.machineAddress setText:client.address];
         [configViewController.port setText:client.port];
         [configViewController.instruments setOn:!_instrumentView.isHidden];
+        configViewController.mapType.selectedSegmentIndex = _mapView.mapType;
         
 	}
 }
