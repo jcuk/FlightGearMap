@@ -54,6 +54,8 @@
 		9644E8D615B36D5B00D8BF96 /* trn0@2x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 9644E8C715B36D5B00D8BF96 /* trn0@2x~ipad.png */; };
 		9644E8D715B36D5B00D8BF96 /* trn1@2x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 9644E8C815B36D5B00D8BF96 /* trn1@2x~ipad.png */; };
 		9644E8D815B36D5B00D8BF96 /* turn@2x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 9644E8C915B36D5B00D8BF96 /* turn@2x~ipad.png */; };
+		9644E8DB15B3F24300D8BF96 /* InstrumentSpeedo.m in Sources */ = {isa = PBXBuildFile; fileRef = 9644E8DA15B3F24300D8BF96 /* InstrumentSpeedo.m */; };
+		96B414C515B3F8DB00CC02C9 /* UDPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 96B414C415B3F8DB00CC02C9 /* UDPClient.m */; };
 		96C3E02215A8F16500DCF289 /* hand1~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 96C3E02115A8F16500DCF289 /* hand1~iphone.png */; };
 		96C3E02915AB88BF00DCF289 /* InstrumentAltimeter.m in Sources */ = {isa = PBXBuildFile; fileRef = 96C3E02815AB88BF00DCF289 /* InstrumentAltimeter.m */; };
 		96C3E0C215AB8D4C00DCF289 /* alt0~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 96C3E0C115AB8D4C00DCF289 /* alt0~iphone.png */; };
@@ -164,6 +166,10 @@
 		9644E8C715B36D5B00D8BF96 /* trn0@2x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "trn0@2x~ipad.png"; sourceTree = "<group>"; };
 		9644E8C815B36D5B00D8BF96 /* trn1@2x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "trn1@2x~ipad.png"; sourceTree = "<group>"; };
 		9644E8C915B36D5B00D8BF96 /* turn@2x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "turn@2x~ipad.png"; sourceTree = "<group>"; };
+		9644E8D915B3F24300D8BF96 /* InstrumentSpeedo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InstrumentSpeedo.h; sourceTree = "<group>"; };
+		9644E8DA15B3F24300D8BF96 /* InstrumentSpeedo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InstrumentSpeedo.m; sourceTree = "<group>"; };
+		96B414C315B3F8DB00CC02C9 /* UDPClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UDPClient.h; sourceTree = "<group>"; };
+		96B414C415B3F8DB00CC02C9 /* UDPClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UDPClient.m; sourceTree = "<group>"; };
 		96C3E01C15A8D3A800DCF289 /* Drawable.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Drawable.h; sourceTree = "<group>"; };
 		96C3E02115A8F16500DCF289 /* hand1~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "hand1~iphone.png"; sourceTree = "<group>"; };
 		96C3E02715AB88BF00DCF289 /* InstrumentAltimeter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InstrumentAltimeter.h; sourceTree = "<group>"; };
@@ -242,6 +248,8 @@
 				5B35DD51158FCDAF009EA907 /* TelnetPositionClient.h */,
 				5B35DD52158FCDAF009EA907 /* TelnetPositionClient.m */,
 				5B3D3F861590EE1D00393425 /* MapStatusUpdater.h */,
+				96B414C315B3F8DB00CC02C9 /* UDPClient.h */,
+				96B414C415B3F8DB00CC02C9 /* UDPClient.m */,
 			);
 			name = Telnet;
 			sourceTree = "<group>";
@@ -365,6 +373,8 @@
 				96C3E0E315ADF03C00DCF289 /* InstrumentGeneric.m */,
 				96C3E0E715AF352000DCF289 /* InstrumentTurnAndSlip.h */,
 				96C3E0E815AF352000DCF289 /* InstrumentTurnAndSlip.m */,
+				9644E8D915B3F24300D8BF96 /* InstrumentSpeedo.h */,
+				9644E8DA15B3F24300D8BF96 /* InstrumentSpeedo.m */,
 			);
 			name = InstrumentView;
 			sourceTree = "<group>";
@@ -639,6 +649,8 @@
 				96C3E0CF15AC9C4E00DCF289 /* InstrumentHorizon.m in Sources */,
 				96C3E0E415ADF03C00DCF289 /* InstrumentGeneric.m in Sources */,
 				96C3E0E915AF352100DCF289 /* InstrumentTurnAndSlip.m in Sources */,
+				9644E8DB15B3F24300D8BF96 /* InstrumentSpeedo.m in Sources */,
+				96B414C515B3F8DB00CC02C9 /* UDPClient.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

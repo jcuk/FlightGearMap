@@ -8,6 +8,11 @@
 
 #import "Instrument.h"
 
-@interface InstrumentHorizon : Instrument
+@interface InstrumentHorizon : Instrument {
+
+    UIImageView *horizonView;
+    UIImageView *bankView;
+    UIImageView *horizonBGView;
+}
 
 @end
