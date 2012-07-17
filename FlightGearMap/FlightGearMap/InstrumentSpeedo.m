@@ -22,7 +22,7 @@
     NSNumber *dataValue = [planeData getDataValue:_planeDataType];
     
     //Default to 0 if no data available
-    double value=40;
+    double value=0;
     
     if (dataValue) {
         value = [dataValue doubleValue];

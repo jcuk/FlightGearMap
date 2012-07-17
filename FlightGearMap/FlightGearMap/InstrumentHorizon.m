@@ -19,6 +19,7 @@
         bankView = [[UIImageView alloc] initWithImage:bank];
         [self addSubviewBehind:bankView];
         
+        //TODO: clip horizon view
         UIImage *horizon = [UIImage imageNamed:@"ati1"];
         horizonView = [[UIImageView alloc] initWithImage:horizon];
         [self addSubviewBehind:horizonView];
@@ -36,21 +37,20 @@
     NSNumber *roll = [planeData getDataValue:ROLL];
     NSNumber *pitch = [planeData getDataValue:PITCH];
     
-    int rollAngle = 20;
-    int pitchAngle = 0;
+    double rollAngle = 0;
+    double pitchAngle = 45;
     
     if (roll && pitch) {
         rollAngle = [roll doubleValue];
         pitchAngle = [pitch doubleValue];
     }
     
-    //TODO: roll horizon BG?
-    CGAffineTransform rollTransform = CGAffineTransformMakeRotation(rollAngle);
-    [bankView       setTransform:rollTransform];
-    [horizonView    setTransform:rollTransform];
-    [horizonBGView  setTransform:rollTransform];
+    CGAffineTransform pitchTransform = CGAffineTransformMakeTranslation(0, -pitchAngle * PITCH_MOVEMENT_PER_DEGREE * [self rootSize].height);
     
-    //TODO: pitch
+    CGAffineTransform rollTransform = CGAffineTransformMakeRotation(rollAngle / 360 * 2 * PI);
+    [bankView       setTransform:rollTransform];
+    [horizonView    setTransform:CGAffineTransformConcat(rollTransform,pitchTransform)];
+    [horizonBGView  setTransform:rollTransform];
     
 }
 
