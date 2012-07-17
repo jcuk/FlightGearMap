@@ -10,6 +10,7 @@
 #import "TelnetPositionClient.h"
 #import <CoreLocation/CoreLocation.h>
 #import "PlaneData.h"
+#import "UDPClient.h"
 
 #define START_LAT 39.281516
 #define START_LON -76.580806
@@ -22,6 +23,7 @@
 
 TelnetPositionClient *client;
 PlaneData *planeData;
+UDPClient *udpClient;
 
 - (void)didReceiveMemoryWarning
 {
@@ -128,6 +130,9 @@ PlaneData *planeData;
         }
     
         [NSTimer scheduledTimerWithTimeInterval:1 target:client selector:@selector(requestNewPosition) userInfo:nil repeats:YES]; 
+        
+        udpClient = [[UDPClient alloc]init:9000];
+        
     } else {
         [client stop];
         [client start];
