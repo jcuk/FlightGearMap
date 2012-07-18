@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		5B35DD4F158FC3F8009EA907 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B35DD4E158FC3F8009EA907 /* MapKit.framework */; };
-		5B35DD53158FCDAF009EA907 /* TelnetPositionClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B35DD52158FCDAF009EA907 /* TelnetPositionClient.m */; };
 		5B35DD60158FDD41009EA907 /* GCDAsyncSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B35DD5E158FDD41009EA907 /* GCDAsyncSocket.m */; };
 		5B3D3F78158FE24E00393425 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B3D3F77158FE24E00393425 /* Security.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 		5B3D3F7E158FE3DB00393425 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B3D3F7D158FE3DB00393425 /* CFNetwork.framework */; };
@@ -106,8 +105,6 @@
 
 /* Begin PBXFileReference section */
 		5B35DD4E158FC3F8009EA907 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
-		5B35DD51158FCDAF009EA907 /* TelnetPositionClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TelnetPositionClient.h; sourceTree = "<group>"; };
-		5B35DD52158FCDAF009EA907 /* TelnetPositionClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TelnetPositionClient.m; sourceTree = "<group>"; };
 		5B35DD5E158FDD41009EA907 /* GCDAsyncSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDAsyncSocket.m; sourceTree = "<group>"; };
 		5B35DD5F158FDD41009EA907 /* GCDAsyncSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDAsyncSocket.h; sourceTree = "<group>"; };
 		5B3D3F77158FE24E00393425 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
@@ -250,8 +247,6 @@
 				96B414C815B544FE00CC02C9 /* GCDAsyncUdpSocket.m */,
 				5B35DD5E158FDD41009EA907 /* GCDAsyncSocket.m */,
 				5B35DD5F158FDD41009EA907 /* GCDAsyncSocket.h */,
-				5B35DD51158FCDAF009EA907 /* TelnetPositionClient.h */,
-				5B35DD52158FCDAF009EA907 /* TelnetPositionClient.m */,
 				5B3D3F861590EE1D00393425 /* MapStatusUpdater.h */,
 				96B414C315B3F8DB00CC02C9 /* UDPClient.h */,
 				96B414C415B3F8DB00CC02C9 /* UDPClient.m */,
@@ -642,7 +637,6 @@
 				5B68E654158FBF65009DBDE6 /* main.m in Sources */,
 				5B68E658158FBF65009DBDE6 /* FGMAppDelegate.m in Sources */,
 				5B68E661158FBF66009DBDE6 /* FGMViewController.m in Sources */,
-				5B35DD53158FCDAF009EA907 /* TelnetPositionClient.m in Sources */,
 				5B35DD60158FDD41009EA907 /* GCDAsyncSocket.m in Sources */,
 				5B3D3FCC1592776200393425 /* UIConfigController.m in Sources */,
 				5B3D3FEE159393DA00393425 /* InfoView.m in Sources */,

@@ -10,8 +10,7 @@
 #import "PlaneData.h"
 
 @protocol MapStatusUpdater <NSObject>
--(void)updatePosition:(double)lon lat:(double)latitude altInFt:(double)alt;
--(void)updateHeading:(double)heading;
+
 -(void)updateFlightData:(PlaneData *)planeData;
 
 @end

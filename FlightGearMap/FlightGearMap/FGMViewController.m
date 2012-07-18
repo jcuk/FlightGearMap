@@ -7,7 +7,6 @@
 //
 
 #import "FGMViewController.h"
-#import "TelnetPositionClient.h"
 #import <CoreLocation/CoreLocation.h>
 #import "PlaneData.h"
 #import "UDPClient.h"
