@@ -34,9 +34,9 @@ UIView *calibrationView;
     NSNumber *alt = [planeData getDataValue:ALTITUDE];
     
     if (alt) {
-        double altitude = [alt doubleValue];
-        double hundredsHandAngle = (altitude / 1000) * 2 * PI;
-        double thousandsHandAngle = (altitude / 10000) * 2 * PI;
+        float altitude = [alt floatValue];
+        float hundredsHandAngle = (altitude / 1000) * 2 * PI;
+        float thousandsHandAngle = (altitude / 10000) * 2 * PI;
         
         CGAffineTransform rotateHundreds = CGAffineTransformMakeRotation( hundredsHandAngle);
         [hundredsHandView setTransform:rotateHundreds];

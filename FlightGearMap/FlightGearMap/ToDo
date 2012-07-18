@@ -2,20 +2,20 @@ iPad problem: cant dismiss keyboard from modal view controller (Known apple bug 
 
 
 Graphics
-    BAckground for instruments
+    Background for instruments
+    H/V selectable
+    Clip horizon
     
 confg screen
-    udp
+    udp config (port number, default = 9999)
     email config
+    ip address of host
+    remove telnet config
     
 Network
-    UDP comms
-    simulator ?
-    andatlas.xml
+    Remove telnet
     
 Instruments
-    Horizon
-    Calibrate airspeed
     Pegging?
     
 Instructions
@@ -23,7 +23,5 @@ Instructions
     
 SVN / project
     Appirater
- 
-Data formatting from UDP
-    Populate all data
-  2.214627:593:117:-41.836487:-10.004389:2.680274:0.139577:37.6287040710:-122.3933258057:77533:0.000154:0.016324:103.858086:19.092297:19.092297:22.492882:64.255142:-15.000000:24.672592:0:1:-3.850616:0.000000:1:0:8.277659:0.000000:91.999992:0.000000:0.000000
+
+

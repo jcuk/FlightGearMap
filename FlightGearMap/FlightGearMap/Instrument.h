@@ -19,8 +19,8 @@
 -(void)addSubviewInFront:(UIView *)view;
 -(void)addSubviewBehind:(UIView *)view;
 -(void)updatePlaneData:(PlaneData *)planeData;
--(UIView *)addHand:(NSString *)fileName off:(double)offset inFront:(bool)front;
--(UIView *)addHandWithOffset:(NSString *)fileName off:(double)offset inFront:(bool)front;
+-(UIView *)addHand:(NSString *)fileName off:(float)offset inFront:(bool)front;
+-(UIView *)addHandWithOffset:(NSString *)fileName off:(float)offset inFront:(bool)front;
 -(CGSize)rootSize;
 
 @end

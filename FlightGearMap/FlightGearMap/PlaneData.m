@@ -29,8 +29,8 @@ NSMutableDictionary *data;
     return [data objectForKey:[self makeKey:dataType]];
 }
 
--(void)addData:(double)value dataType:(PlaneDataType)dataType {
-    [data setObject:[[NSNumber alloc]initWithDouble:value] forKey:[self makeKey:dataType]];
+-(void)addData:(float)value dataType:(PlaneDataType)dataType {
+    [data setObject:[[NSNumber alloc]initWithFloat:value] forKey:[self makeKey:dataType]];
 }
 
 @end

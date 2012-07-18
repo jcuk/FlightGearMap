@@ -22,13 +22,13 @@
     NSNumber *dataValue = [planeData getDataValue:_planeDataType];
     
     //Default to 0 if no data available
-    double value=0;
+    float value=0;
     
     if (dataValue) {
-        value = [dataValue doubleValue];
+        value = [dataValue floatValue];
     }
     
-    double angle;
+    float angle;
     
     //Correct for non-linarity of speedo
     if (value < 40) {

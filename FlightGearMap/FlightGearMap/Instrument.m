@@ -50,11 +50,11 @@
                       handSize.width, handSize.height);
 }
 
--(UIView *)addHand:(NSString *)fileName off:(double)offset inFront:(bool)front  {
+-(UIView *)addHand:(NSString *)fileName off:(float)offset inFront:(bool)front  {
     return [self addHandWithOffset:fileName off:offset inFront:front];    
 }
 
--(UIView *)addHandWithOffset:(NSString *)fileName off:(double)offset inFront:(bool)front {
+-(UIView *)addHandWithOffset:(NSString *)fileName off:(float)offset inFront:(bool)front {
     
     UIImage *handOffset = [UIImage imageNamed:fileName];
     UIImageView *handView = [[UIImageView alloc] initWithImage:handOffset];

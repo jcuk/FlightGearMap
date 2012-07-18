@@ -33,7 +33,7 @@ UDPClient *udpClient;
 
 #pragma mark - View lifecycle
 
--(void)updatePosition:(double)lon lat:(double)latitude altitudeInFt:(double)alt updateZoom:(bool)zoom {
+-(void)updatePosition:(float)lon lat:(float)latitude altitudeInFt:(float)alt updateZoom:(bool)zoom {
     
     CLLocationCoordinate2D zoomLocation;
     zoomLocation.latitude = latitude;
@@ -51,10 +51,20 @@ UDPClient *udpClient;
     
     _altitudeLabel.text = [NSString stringWithFormat:@"Alt: %dft",(int)alt];
     
-    //TODO: this should not be here. Move it to UDP code
-    [planeData addData:alt dataType:ALTITUDE];
+}
+
+-(void)updateFlightData:(PlaneData *)planeData {
     [_instrumentView updatePlaneData:planeData];
     
+    float lat = [[planeData getDataValue:LATITUDE] floatValue];
+    float lon = [[planeData getDataValue:LONGITUDE] floatValue];
+    float alt = [[planeData getDataValue:ALTITUDE] floatValue];
+    
+    float head = [[planeData getDataValue:HEADING] floatValue];
+    
+    [self updatePosition:lon lat:lat altitudeInFt:alt updateZoom:false];
+    
+    [self updateHeading:head];
 }
 
 -(void)reconnectClient:(NSString *)machine port:(NSString *)portNum {
@@ -131,7 +141,7 @@ UDPClient *udpClient;
     
         [NSTimer scheduledTimerWithTimeInterval:1 target:client selector:@selector(requestNewPosition) userInfo:nil repeats:YES]; 
         
-        udpClient = [[UDPClient alloc]init:9000];
+        udpClient = [[UDPClient alloc]init:9000 mapStatusUpdater:self] ;
         
     } else {
         [client stop];

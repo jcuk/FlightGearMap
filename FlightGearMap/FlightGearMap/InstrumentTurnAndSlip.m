@@ -35,14 +35,14 @@ float slipDown = 0.33;
     [super updatePlaneData:planeData];
     //Handle slip seperatly as it rotates about a non-central point
     
-    double slipValue = 0;
+    float slipValue = 0;
     NSNumber *slipData = [planeData getDataValue:SLIP];
     if (slipData) {
-        slipValue = [slipData doubleValue];
+        slipValue = [slipData floatValue];
     }
     
     //Compound affine transformation for curved slip indicator
-    double slipAngle = slipValue * SLIP_SCALE * MAX_SLIP_ANGLE;
+    float slipAngle = slipValue * SLIP_SCALE * MAX_SLIP_ANGLE;
             
     CGAffineTransform translate = CGAffineTransformMakeTranslation(0, [self rootSize].height * SLIP_RADIUS);
     CGAffineTransform translate2 = CGAffineTransformInvert(translate);

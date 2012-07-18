@@ -30,14 +30,14 @@ min:(float)minValue max:(float)maxValue minAngle:(float)minHandAngle maxAngle:(f
     NSNumber *dataValue = [planeData getDataValue:_planeDataType];
     
     //Default to 0 if no data available
-    double value=0;
+    float value=0;
 
     if (dataValue) {
-        value = [dataValue doubleValue];
+        value = [dataValue floatValue];
     }
     
-    double prop = (value - _minVal)/(_maxVal-_minVal);
-    double angle = prop *(_maxAngle - _minAngle) + _minAngle;
+    float prop = (value - _minVal)/(_maxVal-_minVal);
+    float angle = prop *(_maxAngle - _minAngle) + _minAngle;
         
     CGAffineTransform rotate = CGAffineTransformMakeRotation(angle/360 * 2 * PI);
     [_handView setTransform:rotate];

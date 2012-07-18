@@ -8,12 +8,14 @@
 
 #import <Foundation/Foundation.h>
 #import "GCDAsyncUdpSocket.h"
+#import "MapStatusUpdater.h"
 
 @interface UDPClient : NSObject {
     GCDAsyncUdpSocket *socket;
     
 }
 
--(id)init:(int)port;
+-(id)init:(int)port mapStatusUpdater:(NSObject <MapStatusUpdater> *)updater;
+
 
 @end
