@@ -10,14 +10,14 @@
 
 @implementation UIConfigController
 
-@synthesize delegate, machineAddress, port, instruments, mapType;
+@synthesize delegate, port, instruments, mapType;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
-        machineAddress = [[UITextField alloc]init];
+
     }
     return self;
 }

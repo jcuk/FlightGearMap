@@ -5,12 +5,15 @@ Graphics
     Background for instruments
     H/V selectable
     Clip horizon
+    Map view keeps shrinking from the right (ipad only?)
     
 confg screen
     udp config (port number, default = 9999)
     email config
     ip address of host
-    remove telnet config
+    
+Instructions
+    change command line
     
 Network
     Remove telnet
@@ -19,7 +22,7 @@ Instruments
     Pegging?
     
 Instructions
-    Add udp deails
+    Tidy up
     
 SVN / project
     Appirater

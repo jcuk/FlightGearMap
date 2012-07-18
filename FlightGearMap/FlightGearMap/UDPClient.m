@@ -12,6 +12,8 @@
 
 @implementation UDPClient
 
+@synthesize _port;
+
 NSObject <MapStatusUpdater> *mapStatusUpdater;
 PlaneData *planeData;
 
@@ -19,28 +21,44 @@ PlaneData *planeData;
     socket = nil;
 }
 
+-(void)bindToPortAndStart:(int)port {
+    NSError *err;
+    //TODO: config port
+
+    [socket bindToPort:port error:&err];
+
+    if (err) {
+        NSLog(@"Error binding port %@",err);
+    }
+
+    [socket beginReceiving:&err];
+
+    if (err) {
+        NSLog(@"Error starting UDP socket");
+    }
+    
+}
+
 -(id)init:(int)port mapStatusUpdater:(NSObject <MapStatusUpdater> *)updater {
     self = [super init];
     if (self) {
         mapStatusUpdater = updater;
+        _port = port;
         
         planeData = [[PlaneData alloc]init];
         socket = [[GCDAsyncUdpSocket alloc] initWithDelegate:self delegateQueue:dispatch_get_main_queue()];
-        NSError *err;
-        //TODO: config port
-        [socket bindToPort:port error:&err];
-    
-        if (err) {
-            NSLog(@"Error binding port %@",err);
-        }
         
-        [socket beginReceiving:&err];
-        
-        if (err) {
-            NSLog(@"Error starting UDP socket");
-        }
+        [self bindToPortAndStart:port];
+
     }
     return self;
+}
+
+-(void)reconnectToNewPort:(int)port {
+    [socket close];
+    _port = port;
+    [self bindToPortAndStart:port];
+    
 }
 
 -(float)floatValue:(NSString *)string {
