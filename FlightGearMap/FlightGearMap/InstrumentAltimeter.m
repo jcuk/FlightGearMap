@@ -17,13 +17,13 @@ UIView *calibrationView;
 -(id)initWithFilename:(NSString *)fileName {
     self = [super initWithFilename:fileName];
     if (self) {
-        UIImage *altitude = [UIImage imageNamed:@"alt0.png"];
+        UIImage *altitude = [UIImage imageNamed:@"alt0"];
         UIImageView *calibrationView = [[UIImageView alloc] initWithImage:altitude];
         [self addSubview:calibrationView];
         [self sendSubviewToBack:calibrationView];
         
-        hundredsHandView = [super addHand:@"hand1.png" off:0.0 inFront:YES];
-        thousandsHandsView = [super addHand:@"hand2.png" off:0.0 inFront:YES];
+        hundredsHandView = [super addHand:@"hand1" off:0.0 inFront:YES];
+        thousandsHandsView = [super addHand:@"hand2" off:0.0 inFront:YES];
              
     }
     

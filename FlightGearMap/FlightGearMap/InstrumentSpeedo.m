@@ -11,7 +11,7 @@
 @implementation InstrumentSpeedo
 
 -(id)initWithFilename:(NSString *)fileName {
-    self = [super initWithFilename:fileName hand:@"hand1.png" dataType:SPEED min:0 max:200 minAngle:0 maxAngle:320];
+    self = [super initWithFilename:fileName hand:@"hand1" dataType:SPEED min:0 max:200 minAngle:0 maxAngle:320];
     if (self) {
         
     }

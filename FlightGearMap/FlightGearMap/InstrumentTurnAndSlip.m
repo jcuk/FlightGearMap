@@ -20,11 +20,11 @@ float slipDown = 0.33;
 @implementation InstrumentTurnAndSlip
 
 -(id)initWithFilename:(NSString *)fileName {
-    self = [super initWithFilename:fileName hand:@"turn0.png" dataType:TURN_RATE
+    self = [super initWithFilename:fileName hand:@"turn0" dataType:TURN_RATE
         min:-4 max:4 minAngle:-80 maxAngle:80];
     if (self) {
-        _slipView = [self addHandWithOffset:@"slip.png" off:slipDown inFront:NO];
-        [self addSubviewBehind:[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"trn0.png"]]];
+        _slipView = [self addHandWithOffset:@"slip" off:slipDown inFront:NO];
+        [self addSubviewBehind:[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"trn0"]]];
         
     }
     
