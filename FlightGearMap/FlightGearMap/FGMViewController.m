@@ -215,22 +215,33 @@ UDPClient *udpClient;
 }
 
 -(void) makeInstrumentsVisible:(bool)visible {
-    //TODO: animate
     _instrumentView.hidden = !visible;
-    if (visible) {
-        _mapView.frame = CGRectMake(_instrumentView.frame.size.width, _mapView.frame.origin.y,
-            _mapView.frame.size.width-_instrumentView.frame.size.width, _mapView.frame.size.height);
+    
+    int mapWidth, mapX;
+    
+    if ([[UIDevice currentDevice] orientation] == UIDeviceOrientationLandscapeLeft ||
+        [[UIDevice currentDevice] orientation] == UIDeviceOrientationLandscapeRight ) {
+        mapWidth = self.view.frame.size.height;
     } else {
-        //TODO adjust for orientation
-        _mapView.frame = CGRectMake(0, _mapView.frame.origin.y,
-            self.view.frame.size.width, _mapView.frame.size.height);
+        mapWidth = self.view.frame.size.width;
     }
     
-    _planeView.center = _mapView.center;
+    if (visible) {
+        mapX = _instrumentView.frame.size.width;
+        mapWidth -= _instrumentView.frame.size.width;
+    } else {
+        mapX = 0;
+    }
     
-    _titleLabel.center = CGPointMake(_mapView.center.x, _titleLabel.center.y);
-    
+    _mapView.frame = CGRectMake(mapX, _mapView.frame.origin.y,
+        mapWidth, _mapView.frame.size.height);
 
+    _planeView.center = _mapView.center;    
+    _titleLabel.center = CGPointMake(_mapView.center.x, _titleLabel.center.y);
+}
+
+- (void)didRotateFromInterfaceOrientation:(UIInterfaceOrientation)fromInterfaceOrientation {
+    [self makeInstrumentsVisible:!_instrumentView.hidden];
 }
 
 - (void)configViewControllerDidSave:(UIConfigController *)controller {
