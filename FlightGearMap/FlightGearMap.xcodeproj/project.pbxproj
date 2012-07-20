@@ -54,6 +54,7 @@
 		9644E8D715B36D5B00D8BF96 /* trn1@2x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 9644E8C815B36D5B00D8BF96 /* trn1@2x~ipad.png */; };
 		9644E8D815B36D5B00D8BF96 /* turn@2x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 9644E8C915B36D5B00D8BF96 /* turn@2x~ipad.png */; };
 		9644E8DB15B3F24300D8BF96 /* InstrumentSpeedo.m in Sources */ = {isa = PBXBuildFile; fileRef = 9644E8DA15B3F24300D8BF96 /* InstrumentSpeedo.m */; };
+		964879EC15B9E6C300771730 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 964879EB15B9E6C300771730 /* QuartzCore.framework */; };
 		96B414C515B3F8DB00CC02C9 /* UDPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 96B414C415B3F8DB00CC02C9 /* UDPClient.m */; };
 		96B414C915B544FE00CC02C9 /* GCDAsyncUdpSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 96B414C815B544FE00CC02C9 /* GCDAsyncUdpSocket.m */; };
 		96C3E02215A8F16500DCF289 /* hand1~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 96C3E02115A8F16500DCF289 /* hand1~iphone.png */; };
@@ -166,6 +167,7 @@
 		9644E8C915B36D5B00D8BF96 /* turn@2x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "turn@2x~ipad.png"; sourceTree = "<group>"; };
 		9644E8D915B3F24300D8BF96 /* InstrumentSpeedo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InstrumentSpeedo.h; sourceTree = "<group>"; };
 		9644E8DA15B3F24300D8BF96 /* InstrumentSpeedo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InstrumentSpeedo.m; sourceTree = "<group>"; };
+		964879EB15B9E6C300771730 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		96B414C315B3F8DB00CC02C9 /* UDPClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UDPClient.h; sourceTree = "<group>"; };
 		96B414C415B3F8DB00CC02C9 /* UDPClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UDPClient.m; sourceTree = "<group>"; };
 		96B414C715B544FE00CC02C9 /* GCDAsyncUdpSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDAsyncUdpSocket.h; sourceTree = "<group>"; };
@@ -228,6 +230,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				964879EC15B9E6C300771730 /* QuartzCore.framework in Frameworks */,
 				5B3D3F7E158FE3DB00393425 /* CFNetwork.framework in Frameworks */,
 				5B35DD4F158FC3F8009EA907 /* MapKit.framework in Frameworks */,
 				5B68E648158FBF65009DBDE6 /* UIKit.framework in Frameworks */,
@@ -318,6 +321,7 @@
 		5B68E646158FBF65009DBDE6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				964879EB15B9E6C300771730 /* QuartzCore.framework */,
 				5B3D3F7D158FE3DB00393425 /* CFNetwork.framework */,
 				5B3D3F7B158FE38600393425 /* MobileCoreServices.framework */,
 				5B3D3F79158FE27C00393425 /* CoreFoundation.framework */,

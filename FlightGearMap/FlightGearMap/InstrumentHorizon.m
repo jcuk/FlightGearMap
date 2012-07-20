@@ -9,6 +9,7 @@
 #define PITCH_MOVEMENT_PER_DEGREE 0.01
 
 #import "InstrumentHorizon.h"
+#import <QuartzCore/QuartzCore.h>
 
 @implementation InstrumentHorizon
 
@@ -20,6 +21,14 @@
         [self addSubviewBehind:bankView];
         
         //TODO: clip horizon view - bit of a bodge, use RPM
+        UIImage *maskImage = [UIImage imageNamed:@"rpm"];
+        CALayer *maskingLayer = [CALayer layer];
+        maskingLayer.frame = self.bounds; //????
+        
+        [maskingLayer setContents:(id)[maskImage CGImage]];
+        [self.layer setMask:maskingLayer];
+        
+        
         UIImage *horizon = [UIImage imageNamed:@"ati1"];
         horizonView = [[UIImageView alloc] initWithImage:horizon];
         [self addSubviewBehind:horizonView];

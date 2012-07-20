@@ -1,30 +1,27 @@
 iPad problem: cant dismiss keyboard from modal view controller (Known apple bug WONTFIX)
 
-
 Graphics
     Background for instruments
-    H/V selectable
     Clip horizon
-    Map view keeps shrinking from the right (ipad only?)
     
 confg screen
-    udp config (port number, default = 9999)
     email config
     ip address of host
-    
-Instructions
-    change command line
-    
-Network
-    Remove telnet
-    
-Instruments
-    Pegging?
-    
+
 Instructions
     Tidy up
+    Video
     
 SVN / project
     Appirater
 
+
+v1.2
+    Breadcrumbs
+    Jet instruments
+    Secondary Instruments - Navigation etc
+    Record trip
+    HV selectable instruments
+    Calibrate instruments
+    Holes in instruments (alt etc.)
 
