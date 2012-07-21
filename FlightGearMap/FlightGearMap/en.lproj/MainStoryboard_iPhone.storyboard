@@ -96,7 +96,7 @@
                                 <rect key="frame" x="203" y="41" width="97" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="numberPad" returnKeyType="done"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="numberPad" keyboardAppearance="alert" returnKeyType="done"/>
                                 <connections>
                                     <action selector="clickedOutsidePort:" destination="H73-HB-dqe" eventType="touchUpOutside" id="ULt-zn-FDm"/>
                                     <action selector="portValueChanged:" destination="H73-HB-dqe" eventType="editingChanged" id="Wrk-4P-TPx"/>

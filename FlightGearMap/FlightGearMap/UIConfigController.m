@@ -49,10 +49,10 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    [[NSNotificationCenter defaultCenter] addObserver:self 
-                                             selector:@selector(keyboardWillShow:) 
-                                                 name:UIKeyboardWillShowNotification 
-                                               object:nil];
+//    [[NSNotificationCenter defaultCenter] addObserver:self 
+//                                             selector:@selector(keyboardWillShow:) 
+//                                                 name:UIKeyboardWillShowNotification 
+//                                               object:nil];
 }
 
 
@@ -60,7 +60,7 @@
 {
     [super viewDidUnload];
     
-    [[NSNotificationCenter defaultCenter] removeObserver:self];
+//    [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
