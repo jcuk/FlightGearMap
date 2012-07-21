@@ -15,15 +15,19 @@
 - (void)configViewControllerDidSave:(UIConfigController *)controller;
 @end
 
-@interface UIConfigController : UIViewController 
+@interface UIConfigController : UIViewController <UITextFieldDelegate>
 
 @property (nonatomic, weak) id <UIConfigControllerDelagate> delegate;
 @property (strong) IBOutlet UITextField *port;
 @property (strong) IBOutlet UISwitch *instruments;
 @property (strong) IBOutlet UISegmentedControl *mapType;
+@property (strong) IBOutlet UILabel *commandOption;
 
 - (IBAction)cancel:(id)sender;
 - (IBAction)done:(id)sender;
+-(IBAction)portValueChanged:(id)sender;
+
+-(void)updateCommandOptionsLabel;
 
 
 @end

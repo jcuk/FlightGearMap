@@ -1,11 +1,10 @@
-iPad problem: cant dismiss keyboard from modal view controller (Known apple bug WONTFIX)
 
 confg screen
     email config
-    ip address of host
+    keypad wont dismiss (iphone only)
 
 Instructions
-    Tidy up
+    Put support URL in instructions
     Video
     
 SVN / project

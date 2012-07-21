@@ -14,7 +14,7 @@
 #define START_LAT 39.281516
 #define START_LON -76.580806
 
-#define INFO_TEXT @"<html><head><style>body{background-color:transparent; font-family:helvetica} h3{text-align:center;}</style></head><body><h3>Flight Gear Map</h3><p>Live map for use with <a href=""http://www.flightgear.org"">FlightGear</a>, the open source flight simulator</p><p>To use flight gear map, you must first copy the mobatlas.xml file into the Protocol directory of your FlightGear application. On the config screen of this app you will see the IP address of your device. You can now start FlightGear with the UDP option enabled e.g.:</p><code>fgfs --generic=socket,out,5,{device ip address},{port},udp,mobatlas</code><p>where <code>{port number}</code> is the port number you wish to use. (If you are unsure what to use, try port 9999). On the configuration screen, ensure the same UPD port number is used. Tap Done and FlightGear Map will connect to your FlightGear instance.<br><center>Jason Crane 2012</center></br></body></html>"
+#define INFO_TEXT @"<html><head><style>body{background-color:transparent; font-family:helvetica} h3{text-align:center;}</style></head><body><h3>Flight Gear Map</h3><p>Live map for use with <a href=""http://www.flightgear.org"">FlightGear</a>, the open source flight simulator</p><p>To use flight gear map, you must first copy the mobatlas.xml file into the 'Protocol' directory of your FlightGear application. On the config screen of this app you will see the IP address of your device. You can now start FlightGear with the UDP option enabled e.g.:</p><code>fgfs --generic=socket,out,5,{device ip address},{port},udp,mobatlas</code><p>where <code>{port number}</code> is the port number you wish to use. (If you are unsure what to use, try port 9999). On the configuration screen, ensure the same UDP port number is used. Tap Done and FlightGear Map will connect to your FlightGear instance.<br><center>Jason Crane 2012</center></br></body></html>"
 
 
 @implementation FGMViewController
@@ -294,6 +294,7 @@ UDPClient *udpClient;
         [configViewController.port setText:[NSString stringWithFormat:@"%d", udpClient._port]];
         [configViewController.instruments setOn:!_instrumentView.isHidden];
         configViewController.mapType.selectedSegmentIndex = _mapView.mapType;
+        [configViewController updateCommandOptionsLabel];
         
 	}
 }
