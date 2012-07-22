@@ -55,6 +55,8 @@
 		9644E8D815B36D5B00D8BF96 /* turn@2x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 9644E8C915B36D5B00D8BF96 /* turn@2x~ipad.png */; };
 		9644E8DB15B3F24300D8BF96 /* InstrumentSpeedo.m in Sources */ = {isa = PBXBuildFile; fileRef = 9644E8DA15B3F24300D8BF96 /* InstrumentSpeedo.m */; };
 		964879EC15B9E6C300771730 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 964879EB15B9E6C300771730 /* QuartzCore.framework */; };
+		968CC2EA15BC56F200031375 /* DoneDown.png in Resources */ = {isa = PBXBuildFile; fileRef = 968CC2E815BC56F200031375 /* DoneDown.png */; };
+		968CC2EB15BC56F200031375 /* DoneUp.png in Resources */ = {isa = PBXBuildFile; fileRef = 968CC2E915BC56F200031375 /* DoneUp.png */; };
 		96B414C515B3F8DB00CC02C9 /* UDPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 96B414C415B3F8DB00CC02C9 /* UDPClient.m */; };
 		96B414C915B544FE00CC02C9 /* GCDAsyncUdpSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 96B414C815B544FE00CC02C9 /* GCDAsyncUdpSocket.m */; };
 		96C3E02215A8F16500DCF289 /* hand1~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 96C3E02115A8F16500DCF289 /* hand1~iphone.png */; };
@@ -168,6 +170,8 @@
 		9644E8D915B3F24300D8BF96 /* InstrumentSpeedo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InstrumentSpeedo.h; sourceTree = "<group>"; };
 		9644E8DA15B3F24300D8BF96 /* InstrumentSpeedo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InstrumentSpeedo.m; sourceTree = "<group>"; };
 		964879EB15B9E6C300771730 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		968CC2E815BC56F200031375 /* DoneDown.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DoneDown.png; sourceTree = "<group>"; };
+		968CC2E915BC56F200031375 /* DoneUp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DoneUp.png; sourceTree = "<group>"; };
 		96B414C315B3F8DB00CC02C9 /* UDPClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UDPClient.h; sourceTree = "<group>"; };
 		96B414C415B3F8DB00CC02C9 /* UDPClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UDPClient.m; sourceTree = "<group>"; };
 		96B414C715B544FE00CC02C9 /* GCDAsyncUdpSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDAsyncUdpSocket.h; sourceTree = "<group>"; };
@@ -269,6 +273,8 @@
 		5B3D3F9F1591B41B00393425 /* Graphics */ = {
 			isa = PBXGroup;
 			children = (
+				968CC2E815BC56F200031375 /* DoneDown.png */,
+				968CC2E915BC56F200031375 /* DoneUp.png */,
 				960B31B715A7A16300152F59 /* Instruments */,
 				5BA95C281598D65D0058D568 /* icon72.png */,
 				5BA95C261598D6110058D568 /* icon114.png */,
@@ -628,6 +634,8 @@
 				9644E8D615B36D5B00D8BF96 /* trn0@2x~ipad.png in Resources */,
 				9644E8D715B36D5B00D8BF96 /* trn1@2x~ipad.png in Resources */,
 				9644E8D815B36D5B00D8BF96 /* turn@2x~ipad.png in Resources */,
+				968CC2EA15BC56F200031375 /* DoneDown.png in Resources */,
+				968CC2EB15BC56F200031375 /* DoneUp.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

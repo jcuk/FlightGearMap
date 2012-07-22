@@ -82,6 +82,7 @@
                     </connections>
                 </viewController>
             </objects>
+            <point key="canvasLocation" x="127" y="45"/>
         </scene>
         <!--Config Controller-->
         <scene sceneID="mJd-Xt-QPO">
@@ -96,11 +97,9 @@
                                 <rect key="frame" x="203" y="41" width="97" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="numberPad" keyboardAppearance="alert" returnKeyType="done"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="numberPad" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
                                 <connections>
-                                    <action selector="clickedOutsidePort:" destination="H73-HB-dqe" eventType="touchUpOutside" id="ULt-zn-FDm"/>
                                     <action selector="portValueChanged:" destination="H73-HB-dqe" eventType="editingChanged" id="Wrk-4P-TPx"/>
-                                    <outlet property="delegate" destination="H73-HB-dqe" id="DuE-Xk-Ib7"/>
                                 </connections>
                             </textField>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Port" lineBreakMode="tailTruncation" minimumFontSize="10" id="zkL-DF-rrw">
@@ -189,7 +188,7 @@
                         <outlet property="commandOption" destination="tvj-XK-ve0" id="6d4-jJ-n6h"/>
                         <outlet property="instruments" destination="lOu-Rl-cg1" id="Wcr-k8-FGv"/>
                         <outlet property="mapType" destination="unV-AT-Ueb" id="cix-pY-fbC"/>
-                        <outlet property="port" destination="8ZB-rc-LRX" id="Ys9-dF-zqP"/>
+                        <outlet property="port" destination="8ZB-rc-LRX" id="Nkw-aH-YFN"/>
                     </connections>
                 </viewController>
             </objects>

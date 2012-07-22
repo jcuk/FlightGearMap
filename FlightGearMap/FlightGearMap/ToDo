@@ -12,9 +12,11 @@ SVN / project
 
 
 v1.2 +
+    Plane icon - contrasing colours
     Breadcrumbs
     Jet instruments
     Secondary Instruments - Navigation etc
+    Switch panel
     Record trip
     HV selectable instruments
     Calibrate instruments
@@ -22,4 +24,5 @@ v1.2 +
     Map points
         Airports
         Nav beacons
+    Navigation - distance to way points etc
 

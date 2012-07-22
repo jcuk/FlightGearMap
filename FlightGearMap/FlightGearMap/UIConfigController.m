@@ -49,10 +49,10 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-//    [[NSNotificationCenter defaultCenter] addObserver:self 
-//                                             selector:@selector(keyboardWillShow:) 
-//                                                 name:UIKeyboardWillShowNotification 
-//                                               object:nil];
+	[[NSNotificationCenter defaultCenter] addObserver:self 
+                                             selector:@selector(keyboardDidShow:) 
+                                                 name:UIKeyboardDidShowNotification 
+                                               object:nil];	
 }
 
 
@@ -138,5 +138,39 @@
     [textField resignFirstResponder]; 
     return YES;
 }
+
+- (void)addButtonToKeyboard {
+	// create custom button
+	UIButton *doneButton = [UIButton buttonWithType:UIButtonTypeCustom];
+	doneButton.frame = CGRectMake(0, 163, 106, 53);
+	doneButton.adjustsImageWhenHighlighted = NO;
+    [doneButton setImage:[UIImage imageNamed:@"DoneUp"] forState:UIControlStateNormal];
+    [doneButton setImage:[UIImage imageNamed:@"DoneDown"] forState:UIControlStateHighlighted];
+	[doneButton addTarget:self action:@selector(doneButton:) forControlEvents:UIControlEventTouchUpInside];
+	// locate keyboard view
+	UIWindow* tempWindow = [[[UIApplication sharedApplication] windows] objectAtIndex:1];
+	UIView* keyboard;
+	for(int i=0; i<[tempWindow.subviews count]; i++) {
+		keyboard = [tempWindow.subviews objectAtIndex:i];
+		// keyboard found, add the button
+		if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 3.2) {
+			if([[keyboard description] hasPrefix:@"<UIPeripheralHost"] == YES)
+				[keyboard addSubview:doneButton];
+		} else {
+			if([[keyboard description] hasPrefix:@"<UIKeyboard"] == YES)
+				[keyboard addSubview:doneButton];
+		}
+	}
+}
+
+-(void)doneButton:(id)sender {
+    [port resignFirstResponder];
+}
+
+- (void)keyboardDidShow:(NSNotification *)note {
+
+    [self addButtonToKeyboard];
+}
+
 
 @end
