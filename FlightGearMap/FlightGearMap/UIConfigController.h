@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <MessageUI/MessageUI.h>
 
 @class UIConfigController;
 
@@ -15,7 +16,7 @@
 - (void)configViewControllerDidSave:(UIConfigController *)controller;
 @end
 
-@interface UIConfigController : UIViewController <UITextFieldDelegate>
+@interface UIConfigController : UIViewController <UITextFieldDelegate, MFMailComposeViewControllerDelegate>
 
 @property (nonatomic, weak) id <UIConfigControllerDelagate> delegate;
 @property (strong) IBOutlet UITextField *port;

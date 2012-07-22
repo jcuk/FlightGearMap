@@ -55,6 +55,8 @@
 		9644E8D815B36D5B00D8BF96 /* turn@2x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 9644E8C915B36D5B00D8BF96 /* turn@2x~ipad.png */; };
 		9644E8DB15B3F24300D8BF96 /* InstrumentSpeedo.m in Sources */ = {isa = PBXBuildFile; fileRef = 9644E8DA15B3F24300D8BF96 /* InstrumentSpeedo.m */; };
 		964879EC15B9E6C300771730 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 964879EB15B9E6C300771730 /* QuartzCore.framework */; };
+		96898C0815BCB11400ABB2F9 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96898C0715BCB11400ABB2F9 /* MessageUI.framework */; };
+		96898C0B15BCC18300ABB2F9 /* mobatlas.xml in Resources */ = {isa = PBXBuildFile; fileRef = 96898C0A15BCC18300ABB2F9 /* mobatlas.xml */; };
 		968CC2EA15BC56F200031375 /* DoneDown.png in Resources */ = {isa = PBXBuildFile; fileRef = 968CC2E815BC56F200031375 /* DoneDown.png */; };
 		968CC2EB15BC56F200031375 /* DoneUp.png in Resources */ = {isa = PBXBuildFile; fileRef = 968CC2E915BC56F200031375 /* DoneUp.png */; };
 		96B414C515B3F8DB00CC02C9 /* UDPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 96B414C415B3F8DB00CC02C9 /* UDPClient.m */; };
@@ -170,6 +172,8 @@
 		9644E8D915B3F24300D8BF96 /* InstrumentSpeedo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InstrumentSpeedo.h; sourceTree = "<group>"; };
 		9644E8DA15B3F24300D8BF96 /* InstrumentSpeedo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InstrumentSpeedo.m; sourceTree = "<group>"; };
 		964879EB15B9E6C300771730 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		96898C0715BCB11400ABB2F9 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		96898C0A15BCC18300ABB2F9 /* mobatlas.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = mobatlas.xml; sourceTree = "<group>"; };
 		968CC2E815BC56F200031375 /* DoneDown.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DoneDown.png; sourceTree = "<group>"; };
 		968CC2E915BC56F200031375 /* DoneUp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DoneUp.png; sourceTree = "<group>"; };
 		96B414C315B3F8DB00CC02C9 /* UDPClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UDPClient.h; sourceTree = "<group>"; };
@@ -234,6 +238,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				96898C0815BCB11400ABB2F9 /* MessageUI.framework in Frameworks */,
 				964879EC15B9E6C300771730 /* QuartzCore.framework in Frameworks */,
 				5B3D3F7E158FE3DB00393425 /* CFNetwork.framework in Frameworks */,
 				5B35DD4F158FC3F8009EA907 /* MapKit.framework in Frameworks */,
@@ -298,6 +303,7 @@
 		5B3D3FF91593C1E200393425 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				96898C0A15BCC18300ABB2F9 /* mobatlas.xml */,
 				5B68E646158FBF65009DBDE6 /* Frameworks */,
 				5B68E64E158FBF65009DBDE6 /* Supporting Files */,
 				5B3D3F9F1591B41B00393425 /* Graphics */,
@@ -310,6 +316,7 @@
 		5B68E638158FBF65009DBDE6 = {
 			isa = PBXGroup;
 			children = (
+				96898C0715BCB11400ABB2F9 /* MessageUI.framework */,
 				5B3D3F9B1591ABA400393425 /* ToDo */,
 				5B68E64D158FBF65009DBDE6 /* FlightGearMap */,
 				5B68E644158FBF65009DBDE6 /* Products */,
@@ -636,6 +643,7 @@
 				9644E8D815B36D5B00D8BF96 /* turn@2x~ipad.png in Resources */,
 				968CC2EA15BC56F200031375 /* DoneDown.png in Resources */,
 				968CC2EB15BC56F200031375 /* DoneUp.png in Resources */,
+				96898C0B15BCC18300ABB2F9 /* mobatlas.xml in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

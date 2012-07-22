@@ -15,6 +15,8 @@
 
 @implementation UIConfigController
 
+bool inEmail = NO;
+
 @synthesize delegate, port, instruments, mapType, commandOption;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -134,6 +136,8 @@
     [self updateCommandOptionsLabel];
 }
 
+#pragma mark -- Text field delegate methods
+
 -(BOOL) textFieldShouldReturn:(UITextField*) textField {
     [textField resignFirstResponder]; 
     return YES;
@@ -168,8 +172,36 @@
 }
 
 - (void)keyboardDidShow:(NSNotification *)note {
+    //Only use extra Done button on config screen for iPhone, not on wmail screen or for iPad at all
+    if (!inEmail &&  UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone) {
+        [self addButtonToKeyboard];
+    }
+}
 
-    [self addButtonToKeyboard];
+#pragma mark -- Email delegate methods
+
+-(IBAction)emailConfig:(id)sender {
+    inEmail = YES;
+    
+    MFMailComposeViewController *picker = [[MFMailComposeViewController alloc] init];
+    
+    picker.mailComposeDelegate = self;
+    [picker setSubject:@"Mobatlas.xml confg file for FlightGear"];
+    
+    NSData *fileData = [NSData dataWithContentsOfFile:@"mobatlas.xml"];
+    [picker addAttachmentData:fileData mimeType:@"application/xml" fileName:@"mobatlas.xml"];
+    
+    NSString *emailBody = @"<p>This is the mobatlas.xml config file for FlightGear to connect with the FlightGear Map mobile app. Place this file in the FG_ROOT/Protocol directory, and start flight gear with the command:</p><code>fgfs --generic=socket,out,5,{ip address of your device},{port number},udp,mobatlas</code><p>To find the ip address and port number your device is using then open the config screen on FlightGear on your iPhone or iPad. This will show the exact option to start FlightGear with.</p>";
+    [picker setMessageBody:emailBody isHTML:YES];
+    
+    [self presentModalViewController:picker animated:YES];
+    
+}
+
+-(void)mailComposeController:(MFMailComposeViewController*)controller didFinishWithResult:(MFMailComposeResult)result error:(NSError*)error {
+    [self dismissModalViewControllerAnimated:YES];
+    
+    inEmail = NO;
 }
 
 

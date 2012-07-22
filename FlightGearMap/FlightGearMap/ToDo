@@ -1,10 +1,11 @@
 
 confg screen
-    email config
-    keypad wont dismiss (iphone only)
+    email config not loading data from file
+
 
 Instructions
     Put support URL in instructions
+    Put support URL in email
     Video
     
 SVN / project
