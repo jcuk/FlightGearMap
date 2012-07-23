@@ -23,7 +23,9 @@ PlaneData *planeData;
 
 -(void)bindToPortAndStart:(int)port {
     NSError *err;
-    //TODO: config port
+    if (!socket) {
+        socket = [[GCDAsyncUdpSocket alloc] initWithDelegate:self delegateQueue:dispatch_get_main_queue()];
+    }
 
     [socket bindToPort:port error:&err];
 
@@ -46,7 +48,6 @@ PlaneData *planeData;
         _port = port;
         
         planeData = [[PlaneData alloc]init];
-        socket = [[GCDAsyncUdpSocket alloc] initWithDelegate:self delegateQueue:dispatch_get_main_queue()];
         
         [self bindToPortAndStart:port];
 
@@ -56,6 +57,7 @@ PlaneData *planeData;
 
 -(void)reconnectToNewPort:(int)port {
     [socket close];
+    socket = nil;
     _port = port;
     [self bindToPortAndStart:port];
     

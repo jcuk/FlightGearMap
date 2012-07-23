@@ -278,9 +278,9 @@
 		5B3D3F9F1591B41B00393425 /* Graphics */ = {
 			isa = PBXGroup;
 			children = (
+				960B31B715A7A16300152F59 /* Instruments */,
 				968CC2E815BC56F200031375 /* DoneDown.png */,
 				968CC2E915BC56F200031375 /* DoneUp.png */,
-				960B31B715A7A16300152F59 /* Instruments */,
 				5BA95C281598D65D0058D568 /* icon72.png */,
 				5BA95C261598D6110058D568 /* icon114.png */,
 				5BA95C241598D5840058D568 /* icon57.png */,
@@ -303,10 +303,10 @@
 		5B3D3FF91593C1E200393425 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				96898C0A15BCC18300ABB2F9 /* mobatlas.xml */,
 				5B68E646158FBF65009DBDE6 /* Frameworks */,
 				5B68E64E158FBF65009DBDE6 /* Supporting Files */,
 				5B3D3F9F1591B41B00393425 /* Graphics */,
+				96898C0A15BCC18300ABB2F9 /* mobatlas.xml */,
 				5B68E659158FBF65009DBDE6 /* MainStoryboard_iPhone.storyboard */,
 				5B68E65C158FBF65009DBDE6 /* MainStoryboard_iPad.storyboard */,
 			);
