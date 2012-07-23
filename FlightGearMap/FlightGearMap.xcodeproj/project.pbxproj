@@ -316,7 +316,6 @@
 		5B68E638158FBF65009DBDE6 = {
 			isa = PBXGroup;
 			children = (
-				96898C0715BCB11400ABB2F9 /* MessageUI.framework */,
 				5B3D3F9B1591ABA400393425 /* ToDo */,
 				5B68E64D158FBF65009DBDE6 /* FlightGearMap */,
 				5B68E644158FBF65009DBDE6 /* Products */,
@@ -334,6 +333,7 @@
 		5B68E646158FBF65009DBDE6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				96898C0715BCB11400ABB2F9 /* MessageUI.framework */,
 				964879EB15B9E6C300771730 /* QuartzCore.framework */,
 				5B3D3F7D158FE3DB00393425 /* CFNetwork.framework */,
 				5B3D3F7B158FE38600393425 /* MobileCoreServices.framework */,

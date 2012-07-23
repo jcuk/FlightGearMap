@@ -120,13 +120,18 @@ bool inEmail = NO;
     
 } 
 
+-(NSString *)fgfsCommand {
+    NSString *ipAddress = [self getIPAddress];
+    return [NSString stringWithFormat:COMMAND_OPTION , ipAddress, port.text];
+}
+
 -(void)updateCommandOptionsLabel {
     NSString *ipAddress = [self getIPAddress];
     
     if ([ipAddress isEqualToString:ERROR]) {
         [commandOption setText:@"You need to connect to WiFi to talk to FlightGear!"];
     } else {
-        [commandOption setText:[NSString stringWithFormat:COMMAND_OPTION , ipAddress, port.text]];
+        [commandOption setText:[self fgfsCommand]];
     }
     
     
@@ -186,12 +191,13 @@ bool inEmail = NO;
     MFMailComposeViewController *picker = [[MFMailComposeViewController alloc] init];
     
     picker.mailComposeDelegate = self;
-    [picker setSubject:@"Mobatlas.xml confg file for FlightGear"];
+    [picker setSubject:@"mobatlas.xml confg file for FlightGear"];
     
-    NSData *fileData = [NSData dataWithContentsOfFile:@"mobatlas.xml"];
+    NSString *filePath = [[NSBundle mainBundle] pathForResource:@"mobatlas" ofType:@"xml"];
+    NSData *fileData = [NSData dataWithContentsOfFile:filePath];
     [picker addAttachmentData:fileData mimeType:@"application/xml" fileName:@"mobatlas.xml"];
     
-    NSString *emailBody = @"<p>This is the mobatlas.xml config file for FlightGear to connect with the FlightGear Map mobile app. Place this file in the FG_ROOT/Protocol directory, and start flight gear with the command:</p><code>fgfs --generic=socket,out,5,{ip address of your device},{port number},udp,mobatlas</code><p>To find the ip address and port number your device is using then open the config screen on FlightGear on your iPhone or iPad. This will show the exact option to start FlightGear with.</p>";
+    NSString *emailBody = [NSString stringWithFormat:@"<p>This is the mobatlas.xml config file for FlightGear to connect with the FlightGear Map mobile app. Place this file in the FG_ROOT/Protocol directory, and start flight gear with the command:</p><code>%@</code><p> NB this command needs to change if the IP address of your device changes or you change the UDP port on FlightGearMap. The correct command is always listed on the FlightGearMap setup page on your iPhone or iPad.</p><p>For tips, support or to report a bug or request a new feature, please visit the FlightGearMap thread on the FlightGear support forums at:</p><p><a href='http://www.flightgear.org/forums/viewtopic.php?f=31&t=16900'>http://www.flightgear.org/forums/viewtopic.php?f=31&t=16900</a></p>",[self fgfsCommand]];
     [picker setMessageBody:emailBody isHTML:YES];
     
     [self presentModalViewController:picker animated:YES];
@@ -199,6 +205,10 @@ bool inEmail = NO;
 }
 
 -(void)mailComposeController:(MFMailComposeViewController*)controller didFinishWithResult:(MFMailComposeResult)result error:(NSError*)error {
+    if (result == MFMailComposeResultSent) {
+        NSLog(@"Mail sent");
+    }
+
     [self dismissModalViewControllerAnimated:YES];
     
     inEmail = NO;
