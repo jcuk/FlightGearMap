@@ -128,6 +128,9 @@ UDPClient *udpClient;
         [self updatePosition:START_LON lat:START_LAT altitudeInFt:0 updateZoom:YES];
         [self makeInstrumentsVisible:![@"N" isEqualToString:instruments]];
         
+        UIImage *plane = [UIImage imageNamed:@"plane"];
+        _planeView.image = plane;
+        
         udpClient = [[UDPClient alloc]init:[port intValue] mapStatusUpdater:self] ;
         
     }
