@@ -57,8 +57,10 @@
 		964879EC15B9E6C300771730 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 964879EB15B9E6C300771730 /* QuartzCore.framework */; };
 		96898C0815BCB11400ABB2F9 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96898C0715BCB11400ABB2F9 /* MessageUI.framework */; };
 		96898C0B15BCC18300ABB2F9 /* mobatlas.xml in Resources */ = {isa = PBXBuildFile; fileRef = 96898C0A15BCC18300ABB2F9 /* mobatlas.xml */; };
+		96898C1415D0C49D00ABB2F9 /* UIGlossyButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 96898C1315D0C49D00ABB2F9 /* UIGlossyButton.m */; };
 		968CC2EA15BC56F200031375 /* DoneDown.png in Resources */ = {isa = PBXBuildFile; fileRef = 968CC2E815BC56F200031375 /* DoneDown.png */; };
 		968CC2EB15BC56F200031375 /* DoneUp.png in Resources */ = {isa = PBXBuildFile; fileRef = 968CC2E915BC56F200031375 /* DoneUp.png */; };
+		96A29D9A15D0F7AE00694DAF /* plane@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 96A29D9915D0F7AE00694DAF /* plane@2x.png */; };
 		96B414C515B3F8DB00CC02C9 /* UDPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 96B414C415B3F8DB00CC02C9 /* UDPClient.m */; };
 		96B414C915B544FE00CC02C9 /* GCDAsyncUdpSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 96B414C815B544FE00CC02C9 /* GCDAsyncUdpSocket.m */; };
 		96C3E02215A8F16500DCF289 /* hand1~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 96C3E02115A8F16500DCF289 /* hand1~iphone.png */; };
@@ -174,8 +176,11 @@
 		964879EB15B9E6C300771730 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		96898C0715BCB11400ABB2F9 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		96898C0A15BCC18300ABB2F9 /* mobatlas.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = mobatlas.xml; sourceTree = "<group>"; };
+		96898C1215D0C49D00ABB2F9 /* UIGlossyButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIGlossyButton.h; sourceTree = "<group>"; };
+		96898C1315D0C49D00ABB2F9 /* UIGlossyButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIGlossyButton.m; sourceTree = "<group>"; };
 		968CC2E815BC56F200031375 /* DoneDown.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DoneDown.png; sourceTree = "<group>"; };
 		968CC2E915BC56F200031375 /* DoneUp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DoneUp.png; sourceTree = "<group>"; };
+		96A29D9915D0F7AE00694DAF /* plane@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "plane@2x.png"; path = "Instruments/plane@2x.png"; sourceTree = "<group>"; };
 		96B414C315B3F8DB00CC02C9 /* UDPClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UDPClient.h; sourceTree = "<group>"; };
 		96B414C415B3F8DB00CC02C9 /* UDPClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UDPClient.m; sourceTree = "<group>"; };
 		96B414C715B544FE00CC02C9 /* GCDAsyncUdpSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDAsyncUdpSocket.h; sourceTree = "<group>"; };
@@ -287,6 +292,7 @@
 				5B3D40151593CD9B00393425 /* cross.png */,
 				5B3D3FAA15923A9400393425 /* info.png */,
 				5B3D3F9D1591AFC100393425 /* plane.png */,
+				96A29D9915D0F7AE00694DAF /* plane@2x.png */,
 			);
 			name = Graphics;
 			sourceTree = "<group>";
@@ -351,6 +357,7 @@
 		5B68E64D158FBF65009DBDE6 /* FlightGearMap */ = {
 			isa = PBXGroup;
 			children = (
+				96898C1015D0C45900ABB2F9 /* GlossyButton */,
 				96C3E0C615AC0F4400DCF289 /* PlaneData */,
 				96C3E0C515AC0F2F00DCF289 /* MainView */,
 				960B310815A77C5A00152F59 /* InstrumentView */,
@@ -451,6 +458,15 @@
 			);
 			name = "@2xiPad";
 			path = 320;
+			sourceTree = "<group>";
+		};
+		96898C1015D0C45900ABB2F9 /* GlossyButton */ = {
+			isa = PBXGroup;
+			children = (
+				96898C1215D0C49D00ABB2F9 /* UIGlossyButton.h */,
+				96898C1315D0C49D00ABB2F9 /* UIGlossyButton.m */,
+			);
+			name = GlossyButton;
 			sourceTree = "<group>";
 		};
 		96C3E0C515AC0F2F00DCF289 /* MainView */ = {
@@ -644,6 +660,7 @@
 				968CC2EA15BC56F200031375 /* DoneDown.png in Resources */,
 				968CC2EB15BC56F200031375 /* DoneUp.png in Resources */,
 				96898C0B15BCC18300ABB2F9 /* mobatlas.xml in Resources */,
+				96A29D9A15D0F7AE00694DAF /* plane@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -671,6 +688,7 @@
 				9644E8DB15B3F24300D8BF96 /* InstrumentSpeedo.m in Sources */,
 				96B414C515B3F8DB00CC02C9 /* UDPClient.m in Sources */,
 				96B414C915B544FE00CC02C9 /* GCDAsyncUdpSocket.m in Sources */,
+				96898C1415D0C49D00ABB2F9 /* UIGlossyButton.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
