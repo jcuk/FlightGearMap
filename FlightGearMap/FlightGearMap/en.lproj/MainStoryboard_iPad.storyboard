@@ -47,7 +47,7 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="FlightGear Map v1.1" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" id="bNZ-lk-SoO">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="FlightGear Map v1.2" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" id="bNZ-lk-SoO">
                                 <rect key="frame" x="251" y="51" width="264" height="39"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
