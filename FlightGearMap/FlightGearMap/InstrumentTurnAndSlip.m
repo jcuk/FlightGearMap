@@ -41,8 +41,13 @@ float slipDown = 0.33;
         slipValue = [slipData floatValue];
     }
     
-    //Compound affine transformation for curved slip indicator
+    //Compound affine transformation for curved slip indicator. Rotates around point above the
+    // centre of the instrument
     float slipAngle = slipValue * SLIP_SCALE * MAX_SLIP_ANGLE;
+    
+    if (ABS(slipAngle) > MAX_SLIP_ANGLE) {
+        slipAngle = slipAngle>0?MAX_SLIP_ANGLE:-MAX_SLIP_ANGLE;
+    }
             
     CGAffineTransform translate = CGAffineTransformMakeTranslation(0, [self rootSize].height * SLIP_RADIUS);
     CGAffineTransform translate2 = CGAffineTransformInvert(translate);
