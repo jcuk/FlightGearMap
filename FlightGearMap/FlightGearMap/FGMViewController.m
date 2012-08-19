@@ -14,7 +14,7 @@
 #define START_LAT 39.281516
 #define START_LON -76.580806
 
-#define INFO_TEXT @"<html><head><style>body{background-color:transparent; font-family:helvetica} h3{text-align:center;}</style></head><body><h3>Flight Gear Map</h3><p>Live map for use with <a href=""http://www.flightgear.org"">FlightGear</a>, the open source flight simulator</p><p>To use flight gear map, you must first copy the mobatlas.xml file into the 'Protocol' directory of your FlightGear application. On the config screen of this app you will see the IP address of your device. You can now start FlightGear with the UDP option enabled e.g.:</p><code>fgfs --generic=socket,out,5,{device ip address},{port},udp,mobatlas</code><p>where <code>{port number}</code> is the port number you wish to use. (If you are unsure what to use, try port 9999). On the configuration screen, ensure the same UDP port number is used. Tap Done and FlightGear Map will connect to your FlightGear instance.<br><center>Jason Crane 2012</center></br></body></html>"
+#define INFO_TEXT @"<html><head><style>body{background-color:transparent; font-family:helvetica} h3{text-align:center;}</style></head><body><h3>Flight Gear Map</h3><p>Live map for use with <a href=""http://www.flightgear.org"">FlightGear</a>, the open source flight simulator</p><p>To use flight gear map, you must first copy the mobatlas.xml file into the 'Protocol' directory of your FlightGear application. On the config screen of this app you will see the IP address of your device. You can now start FlightGear with the UDP option enabled e.g.:</p><code>fgfs --generic=socket,out,5, %@,%d,udp,mobatlas</code><p>Tap Done and FlightGear Map will connect to your FlightGear instance.<br><center>Jason Crane 2012</center></br></body></html>"
 
 
 @implementation FGMViewController
@@ -136,7 +136,7 @@ UDPClient *udpClient;
     }
     
     if (UI_USER_INTERFACE_IDIOM() != UIUserInterfaceIdiomPhone) {
-        infoRectV = CGRectMake(200,200,368,500);
+        infoRectV = CGRectMake(200,200,400,600);
         infoRectH = CGRectMake(262,200,500,368);
         
     } else {
@@ -303,7 +303,7 @@ UDPClient *udpClient;
 }
 
 -(IBAction) infoPressed:(id)sender {
-    [infoView setText:INFO_TEXT];
+    [infoView setText:[NSString stringWithFormat:INFO_TEXT, [ UIConfigController getIPAddress], udpClient._port]];
     if (infoView.hidden) {
         infoView.hidden = NO;
         [infoView setUserInteractionEnabled:YES];

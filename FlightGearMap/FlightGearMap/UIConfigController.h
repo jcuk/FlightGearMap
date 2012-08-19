@@ -26,9 +26,9 @@
 
 - (IBAction)cancel:(id)sender;
 - (IBAction)done:(id)sender;
--(IBAction)portValueChanged:(id)sender;
+- (IBAction)portValueChanged:(id)sender;
 
 -(void)updateCommandOptionsLabel;
-
++ (NSString *)getIPAddress;
 
 @end

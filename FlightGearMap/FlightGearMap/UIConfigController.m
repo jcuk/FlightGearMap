@@ -89,7 +89,7 @@ bool inEmail = NO;
 	[self.delegate configViewControllerDidSave:self];
 }
 
-- (NSString *)getIPAddress {
++ (NSString *)getIPAddress {
     
     NSString *address = ERROR;
     struct ifaddrs *interfaces = NULL;
@@ -121,12 +121,12 @@ bool inEmail = NO;
 } 
 
 -(NSString *)fgfsCommand {
-    NSString *ipAddress = [self getIPAddress];
+    NSString *ipAddress = [UIConfigController getIPAddress];
     return [NSString stringWithFormat:COMMAND_OPTION , ipAddress, port.text];
 }
 
 -(void)updateCommandOptionsLabel {
-    NSString *ipAddress = [self getIPAddress];
+    NSString *ipAddress = [UIConfigController getIPAddress];
     
     if ([ipAddress isEqualToString:ERROR]) {
         [commandOption setText:@"You need to connect to WiFi to talk to FlightGear!"];
