@@ -16,6 +16,8 @@
 
 @implementation InstrumentView
 
+@synthesize faceUpPortrait;
+
 NSMutableArray * instruments;
 
 - (id)initWithCoder:(NSCoder *)coder
@@ -56,9 +58,21 @@ NSMutableArray * instruments;
     
     NSLog(@"Orientation %d",[UIDevice currentDevice].orientation);
     
-    if ([UIDevice currentDevice].orientation == UIDeviceOrientationUnknown ||
-        [UIDevice currentDevice].orientation == UIDeviceOrientationPortrait ||
-        [UIDevice currentDevice].orientation == UIDeviceOrientationPortraitUpsideDown) {
+    int orientation = [UIDevice currentDevice].orientation;
+    
+    faceUpPortrait = NO;
+    
+    if (orientation == UIDeviceOrientationFaceUp) {
+        NSLog(@"Face up Width: %f Height: %f",self.frame.size.width, self.frame.size.height);
+        if (self.frame.size.width*2 < self.frame.size.height) {
+            orientation = UIDeviceOrientationPortrait;
+            faceUpPortrait = YES;
+        }        
+    }
+    
+    if (orientation == UIDeviceOrientationUnknown ||
+        orientation == UIDeviceOrientationPortrait ||
+        orientation == UIDeviceOrientationPortraitUpsideDown) {
         
         //Portrait - 1 coulum of 6 instruments
         if (UI_USER_INTERFACE_IDIOM() != UIUserInterfaceIdiomPhone) {

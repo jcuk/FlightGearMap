@@ -222,11 +222,15 @@ UDPClient *udpClient;
     
     int mapWidth, mapX;
     
-    if ([[UIDevice currentDevice] orientation] == UIDeviceOrientationLandscapeLeft ||
-        [[UIDevice currentDevice] orientation] == UIDeviceOrientationLandscapeRight ) {
-        mapWidth = self.view.frame.size.height;
-    } else {
+    int orientation = [[UIDevice currentDevice] orientation];
+    
+    if (orientation == UIDeviceOrientationPortrait ||
+        orientation == UIDeviceOrientationPortraitUpsideDown ||
+        orientation == UIDeviceOrientationUnknown ||
+        _instrumentView.faceUpPortrait ) {
         mapWidth = self.view.frame.size.width;
+    } else {
+        mapWidth = self.view.frame.size.height;
     }
     
     if (visible) {

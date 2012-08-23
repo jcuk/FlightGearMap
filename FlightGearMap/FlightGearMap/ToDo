@@ -6,10 +6,7 @@ SVN / project
     Appirater
     
 Bugs:
-    - If you are in portrait mode and if you turn instruments off, click done, then turn them back on, the instruments will be rotated to landscape mode if it isn't clearly in portrait mode (e.g. this happens when the orientation is questionable, could be be portrait or landscape depending on what it was last). When in this bug mode, the only thing that is different is that the instruments are in a 2x3 layout and the background is wider, but still extends to the ground.
-    
     - Cant pinch zoom / unzoom when streaming data
-    - Add IP address to info screen
     - Update instructions on app store
     - Update screen shots on app store
     
@@ -17,12 +14,14 @@ New in 1.2
     Bug fixes
         True /magnetic fix
         Unconstrained turn coordinator
+        Instrument orientation when face up (test on ipad)
     Imporvements
         Button graphics
         Plane graphics
     
 Todo:
     Retenize cross
+    Transparent background on instruments
     
 
 v1.2 +
