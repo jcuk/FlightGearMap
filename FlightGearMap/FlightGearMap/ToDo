@@ -14,13 +14,13 @@ New in 1.2
     Bug fixes
         True /magnetic fix
         Unconstrained turn coordinator
-        Instrument orientation when face up (test on ipad)
+        Instrument orientation when face up
     Imporvements
         Button graphics
         Plane graphics
     
 Todo:
-    Retenize cross
+    Retenize cross ?
     Transparent background on instruments
     
 

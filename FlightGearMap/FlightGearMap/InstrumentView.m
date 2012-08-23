@@ -64,7 +64,7 @@ NSMutableArray * instruments;
     
     if (orientation == UIDeviceOrientationFaceUp) {
         NSLog(@"Face up Width: %f Height: %f",self.frame.size.width, self.frame.size.height);
-        if (self.frame.size.width*2 < self.frame.size.height) {
+        if (self.frame.size.width*2.5 < self.frame.size.height) {
             orientation = UIDeviceOrientationPortrait;
             faceUpPortrait = YES;
         }        
