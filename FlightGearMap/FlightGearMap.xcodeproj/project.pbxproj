@@ -60,6 +60,7 @@
 		96898C1415D0C49D00ABB2F9 /* UIGlossyButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 96898C1315D0C49D00ABB2F9 /* UIGlossyButton.m */; };
 		968CC2EA15BC56F200031375 /* DoneDown.png in Resources */ = {isa = PBXBuildFile; fileRef = 968CC2E815BC56F200031375 /* DoneDown.png */; };
 		968CC2EB15BC56F200031375 /* DoneUp.png in Resources */ = {isa = PBXBuildFile; fileRef = 968CC2E915BC56F200031375 /* DoneUp.png */; };
+		968E70EF15E6E6E500001DE2 /* cross@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 968E70EE15E6E6E500001DE2 /* cross@2x.png */; };
 		96A29D9A15D0F7AE00694DAF /* plane@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 96A29D9915D0F7AE00694DAF /* plane@2x.png */; };
 		96B414C515B3F8DB00CC02C9 /* UDPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 96B414C415B3F8DB00CC02C9 /* UDPClient.m */; };
 		96B414C915B544FE00CC02C9 /* GCDAsyncUdpSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 96B414C815B544FE00CC02C9 /* GCDAsyncUdpSocket.m */; };
@@ -180,6 +181,7 @@
 		96898C1315D0C49D00ABB2F9 /* UIGlossyButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIGlossyButton.m; sourceTree = "<group>"; };
 		968CC2E815BC56F200031375 /* DoneDown.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DoneDown.png; sourceTree = "<group>"; };
 		968CC2E915BC56F200031375 /* DoneUp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DoneUp.png; sourceTree = "<group>"; };
+		968E70EE15E6E6E500001DE2 /* cross@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cross@2x.png"; sourceTree = "<group>"; };
 		96A29D9915D0F7AE00694DAF /* plane@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "plane@2x.png"; path = "Instruments/plane@2x.png"; sourceTree = "<group>"; };
 		96B414C315B3F8DB00CC02C9 /* UDPClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UDPClient.h; sourceTree = "<group>"; };
 		96B414C415B3F8DB00CC02C9 /* UDPClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UDPClient.m; sourceTree = "<group>"; };
@@ -290,6 +292,7 @@
 				5BA95C261598D6110058D568 /* icon114.png */,
 				5BA95C241598D5840058D568 /* icon57.png */,
 				5B3D40151593CD9B00393425 /* cross.png */,
+				968E70EE15E6E6E500001DE2 /* cross@2x.png */,
 				5B3D3FAA15923A9400393425 /* info.png */,
 				5B3D3F9D1591AFC100393425 /* plane.png */,
 				96A29D9915D0F7AE00694DAF /* plane@2x.png */,
@@ -661,6 +664,7 @@
 				968CC2EB15BC56F200031375 /* DoneUp.png in Resources */,
 				96898C0B15BCC18300ABB2F9 /* mobatlas.xml in Resources */,
 				96A29D9A15D0F7AE00694DAF /* plane@2x.png in Resources */,
+				968E70EF15E6E6E500001DE2 /* cross@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
