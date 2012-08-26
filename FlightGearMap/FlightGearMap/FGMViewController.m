@@ -24,6 +24,8 @@
 PlaneData *planeData;
 UDPClient *udpClient;
 
+UIInterfaceOrientation lastOrientation;
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
@@ -50,6 +52,10 @@ UDPClient *udpClient;
     
     _altitudeLabel.text = [NSString stringWithFormat:@"Alt: %dft",(int)alt];
     
+}
+
++(UIDeviceOrientation) lastOrientation {
+    return lastOrientation;
 }
 
 -(void)updateFlightData:(PlaneData *)planeData {
@@ -194,6 +200,13 @@ UDPClient *udpClient;
     
     [_instrumentView setNeedsLayout];
     
+    if (interfaceOrientation == UIDeviceOrientationPortrait ||
+        interfaceOrientation == UIDeviceOrientationPortraitUpsideDown ||
+        interfaceOrientation == UIDeviceOrientationLandscapeLeft ||
+        interfaceOrientation == UIDeviceOrientationLandscapeRight ) {
+        lastOrientation = interfaceOrientation;
+    }
+    
     return YES;
 }
 
@@ -219,32 +232,6 @@ UDPClient *udpClient;
 
 -(void) makeInstrumentsVisible:(bool)visible {
     _instrumentView.hidden = !visible;
-    
-    int mapWidth, mapX;
-    
-    int orientation = [[UIDevice currentDevice] orientation];
-    
-    if (orientation == UIDeviceOrientationPortrait ||
-        orientation == UIDeviceOrientationPortraitUpsideDown ||
-        orientation == UIDeviceOrientationUnknown ||
-        _instrumentView.faceUpPortrait ) {
-        mapWidth = self.view.frame.size.width;
-    } else {
-        mapWidth = self.view.frame.size.height;
-    }
-    
-    if (visible) {
-        mapX = _instrumentView.frame.size.width;
-        mapWidth -= _instrumentView.frame.size.width;
-    } else {
-        mapX = 0;
-    }
-    
-    _mapView.frame = CGRectMake(mapX, _mapView.frame.origin.y,
-        mapWidth, _mapView.frame.size.height);
-
-    _planeView.center = _mapView.center;    
-    _titleLabel.center = CGPointMake(_mapView.center.x, _titleLabel.center.y);
 }
 
 - (void)didRotateFromInterfaceOrientation:(UIInterfaceOrientation)fromInterfaceOrientation {

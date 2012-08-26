@@ -11,8 +11,6 @@
 
 @interface InstrumentView : UIView
 
-@property bool faceUpPortrait;
-
 -(void)updatePlaneData:(PlaneData *)planeData;
 
 @end

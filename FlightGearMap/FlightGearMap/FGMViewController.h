@@ -19,9 +19,9 @@
     bool _doneInitialZoom;
     InfoView *infoView;
     CGRect infoRectH,infoRectV;
-
 }
 -(IBAction) infoPressed:(id)sender;
++(UIDeviceOrientation) lastOrientation;
 
 @property (weak, nonatomic) IBOutlet MKMapView *_mapView;
 @property (weak, nonatomic) IBOutlet UIImageView *_planeView;

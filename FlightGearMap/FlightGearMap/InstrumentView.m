@@ -13,10 +13,9 @@
 #import "InstrumentGeneric.h"
 #import "InstrumentTurnAndSlip.h"
 #import "InstrumentSpeedo.h"
+#import "FGMViewController.h"
 
 @implementation InstrumentView
-
-@synthesize faceUpPortrait;
 
 NSMutableArray * instruments;
 
@@ -60,14 +59,8 @@ NSMutableArray * instruments;
     
     int orientation = [UIDevice currentDevice].orientation;
     
-    faceUpPortrait = NO;
-    
     if (orientation == UIDeviceOrientationFaceUp) {
-        NSLog(@"Face up Width: %f Height: %f",self.frame.size.width, self.frame.size.height);
-        if (self.frame.size.width*2.5 < self.frame.size.height) {
-            orientation = UIDeviceOrientationPortrait;
-            faceUpPortrait = YES;
-        }        
+        orientation = [FGMViewController lastOrientation];      
     }
     
     if (orientation == UIDeviceOrientationUnknown ||
