@@ -210,6 +210,14 @@ UIInterfaceOrientation lastOrientation;
     return YES;
 }
 
+//Rotation support for iOS 6
+-(NSUInteger)supportedInterfaceOrientations{
+    [_instrumentView setNeedsLayout];
+    return UIInterfaceOrientationMaskAll;
+}
+
+
+
 -(void)updatePosition:(double)lon lat:(double)latitude altInFt:(double)alt {
     [self updatePosition:lon lat:latitude altitudeInFt:alt updateZoom:NO];
 }
