@@ -1,14 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2549" systemVersion="11E2620" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" initialViewController="2">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2840" systemVersion="12C54" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" initialViewController="2">
     <dependencies>
-        <deployment defaultVersion="1296" identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1498"/>
+        <deployment defaultVersion="1536" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1926"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="4">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="3" sceneMemberID="firstResponder"/>
                 <viewController id="2" customClass="FGMViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5">
                         <rect key="frame" x="0.0" y="20" width="768" height="1004"/>
@@ -46,7 +45,7 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="FlightGear Map v1.2" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" id="bNZ-lk-SoO">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="FlightGear Map v1.3" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" id="bNZ-lk-SoO">
                                 <rect key="frame" x="251" y="51" width="264" height="39"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
@@ -69,13 +68,13 @@
                         <outlet property="_titleLabel" destination="bNZ-lk-SoO" id="Lqe-yf-Hkk"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-131" y="-283"/>
         </scene>
         <!--Config Controller-->
         <scene sceneID="sC4-cp-PjA">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="uIX-5f-fDN" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="9yy-uz-n2h" customClass="UIConfigController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="HjM-H1-hOx">
                         <rect key="frame" x="0.0" y="20" width="768" height="1004"/>
@@ -196,6 +195,7 @@
                         <outlet property="port" destination="fZ7-sP-wSu" id="Rnr-bg-qLj"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uIX-5f-fDN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="774" y="-230"/>
         </scene>

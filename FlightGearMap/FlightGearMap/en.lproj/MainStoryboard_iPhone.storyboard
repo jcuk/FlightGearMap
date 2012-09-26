@@ -30,7 +30,7 @@
                                 <rect key="frame" x="120" y="172" width="81" height="81"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="FlightGear Map v1.2" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="8" id="mTM-j8-8yj">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="FlightGear Map v1.3" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="8" id="mTM-j8-8yj">
                                 <rect key="frame" x="55" y="0.0" width="199" height="23"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
@@ -236,7 +236,6 @@
             <relationships>
                 <relationship kind="action" name="cancel:"/>
                 <relationship kind="action" name="done:"/>
-                <relationship kind="action" name="emailConfig:"/>
                 <relationship kind="action" name="portValueChanged:"/>
                 <relationship kind="outlet" name="commandOption" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="instruments" candidateClass="UISwitch"/>

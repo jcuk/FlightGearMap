@@ -184,7 +184,7 @@
 		968CC2E915BC56F200031375 /* DoneUp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DoneUp.png; sourceTree = "<group>"; };
 		968E70EE15E6E6E500001DE2 /* cross@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cross@2x.png"; sourceTree = "<group>"; };
 		96A29D9915D0F7AE00694DAF /* plane@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "plane@2x.png"; path = "Instruments/plane@2x.png"; sourceTree = "<group>"; };
-		96B28337160F463900189F24 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		96B28337160F463900189F24 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "../Default-568h@2x.png"; sourceTree = "<group>"; };
 		96B414C315B3F8DB00CC02C9 /* UDPClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UDPClient.h; sourceTree = "<group>"; };
 		96B414C415B3F8DB00CC02C9 /* UDPClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UDPClient.m; sourceTree = "<group>"; };
 		96B414C715B544FE00CC02C9 /* GCDAsyncUdpSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDAsyncUdpSocket.h; sourceTree = "<group>"; };
@@ -287,6 +287,7 @@
 		5B3D3F9F1591B41B00393425 /* Graphics */ = {
 			isa = PBXGroup;
 			children = (
+				96B28337160F463900189F24 /* Default-568h@2x.png */,
 				960B31B715A7A16300152F59 /* Instruments */,
 				968CC2E815BC56F200031375 /* DoneDown.png */,
 				968CC2E915BC56F200031375 /* DoneUp.png */,
@@ -327,7 +328,6 @@
 		5B68E638158FBF65009DBDE6 = {
 			isa = PBXGroup;
 			children = (
-				96B28337160F463900189F24 /* Default-568h@2x.png */,
 				5B3D3F9B1591ABA400393425 /* ToDo */,
 				5B68E64D158FBF65009DBDE6 /* FlightGearMap */,
 				5B68E644158FBF65009DBDE6 /* Products */,
