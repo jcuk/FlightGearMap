@@ -1,0 +1,41 @@
+
+Instructions
+    Video : http://www.youtube.com/watch?v=4xM3mGiFrGE
+    
+SVN / project
+    Appirater
+    
+Bugs:
+    - Cant pinch zoom / unzoom when streaming data
+    - Update instructions on app store
+    - Update screen shots on app store
+    
+New in 1.2
+    Bug fixes
+        True /magnetic fix
+        Unconstrained turn coordinator
+        Instrument orientation when face up
+    Imporvements
+        Button graphics
+        Plane graphics
+    
+Todo:
+    Transparent background on instruments
+    
+
+v1.2 +
+    Appirater
+    Plane icon - contrasing colours
+    Breadcrumbs
+    Jet instruments
+    Secondary Instruments - Navigation etc
+    Switch panel
+    Record trip
+    Calibrate instruments
+    Holes in instruments (Turn coordinator, speedo)
+    Map points
+        Airports
+        Nav beacons
+    Navigation - distance to way points etc
+    Instruments only view
+
