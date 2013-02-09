@@ -10,6 +10,7 @@
 
 #include "hidapi.h"
 #include "defs.h"
+#include "cpdemo.h"
 
 #ifndef _UINT8_T
 #define _UINT8_T
@@ -34,6 +35,8 @@ hid_device* switchPanel;
 
 int main (int argc, const char * argv[])
 {
+    
+    enumerateHidDevices();
 
     hid_init();
     
@@ -50,15 +53,18 @@ int main (int argc, const char * argv[])
         //TODO: get inital device state without blocking for message:
         //lastMsg = ~message;
         
-        //TODO: need to thread? Can only block on one device
+        hid_set_nonblocking(switchPanel, true);
                 
         for (;;) {
             //blocks for 100ms
-            int mRes = hid_read_timeout((hid_device*)switchPanel, (uint8_t*)&message, sizeof(uint32_t), 100);
+            int mRes = hid_read_timeout((hid_device*)switchPanel, (uint8_t*)&message, 6, 100);
             
             if (mRes > 0) {                
                 processSPMessage(message);
             }
+            
+            std::cout << "Tick\n";
+            sleep(1);
 
         }
     }
@@ -255,5 +261,41 @@ tristate getState(uint32_t msg, uint32_t msgChange, uint32_t mask) {
         return off;
     }
 
+}
+
+void enumerateHidDevices() {
+#define BUF_SIZE 65
+    int res;
+	unsigned char buf[BUF_SIZE];
+#define MAX_STR 255
+	wchar_t wstr[MAX_STR];
+	hid_device *handle;
+	int i;
+    
+	// Enumerate and print the HID devices on the system
+	struct hid_device_info *devs, *cur_dev;
+	
+	devs = hid_enumerate(0x0, 0x0);
+	cur_dev = devs;
+	while (cur_dev) {
+		printf("Device Found\n  type: %04hx %04hx\n  path: %s\n  serial_number: %ls",
+               cur_dev->vendor_id, cur_dev->product_id, cur_dev->path, cur_dev->serial_number);
+		printf("\n");
+		printf("  Manufacturer: %ls\n", cur_dev->manufacturer_string);
+		printf("  Product:      %ls\n", cur_dev->product_string);
+		printf("\n");
+		
+        // Open the device using the VID, PID,
+        // and optionally the Serial number.
+        handle = hid_open(cur_dev->vendor_id, cur_dev->product_id, NULL);
+        
+        // Read the Manufacturer String
+        res = hid_get_manufacturer_string(handle, wstr, MAX_STR);
+        printf("Manufacturer String: %ls\n", wstr);
+        
+        cur_dev = cur_dev->next;
+        
+    }
+	hid_free_enumeration(devs);
 }
 
