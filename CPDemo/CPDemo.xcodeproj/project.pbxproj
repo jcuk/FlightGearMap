@@ -11,7 +11,6 @@
 		5BB9538F1585628C0044383E /* cpdemo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5BB9538E1585628C0044383E /* cpdemo.cpp */; };
 		5BB953A91585D07A0044383E /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BB953A81585D07A0044383E /* IOKit.framework */; };
 		5BB953AC1585D11F0044383E /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BB953AB1585D11F0044383E /* Cocoa.framework */; };
-		96A29DA115D4DFCD00694DAF /* cpdemoNB.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 96A29DA015D4DFCD00694DAF /* cpdemoNB.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -44,7 +43,7 @@
 		5BB953A71585D02C0044383E /* defs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = defs.h; path = include/defs.h; sourceTree = "<group>"; };
 		5BB953A81585D07A0044383E /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = System/Library/Frameworks/IOKit.framework; sourceTree = SDKROOT; };
 		5BB953AB1585D11F0044383E /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
-		96A29DA015D4DFCD00694DAF /* cpdemoNB.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = cpdemoNB.cpp; sourceTree = "<group>"; };
+		96D0BC5F15ED7BE00074C855 /* cpdemo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = cpdemo.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,7 +108,7 @@
 				5BB953AA1585D0AD0044383E /* framework */,
 				5BB953971585CFB80044383E /* include */,
 				5BB9538E1585628C0044383E /* cpdemo.cpp */,
-				96A29DA015D4DFCD00694DAF /* cpdemoNB.cpp */,
+				96D0BC5F15ED7BE00074C855 /* cpdemo.h */,
 			);
 			path = CPDemo;
 			sourceTree = "<group>";
@@ -185,7 +184,6 @@
 			files = (
 				5BB9538F1585628C0044383E /* cpdemo.cpp in Sources */,
 				5B4B34E91588794A00335579 /* hid.c in Sources */,
-				96A29DA115D4DFCD00694DAF /* cpdemoNB.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
