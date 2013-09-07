@@ -57,8 +57,6 @@
 		96898C0815BCB11400ABB2F9 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96898C0715BCB11400ABB2F9 /* MessageUI.framework */; };
 		96898C0B15BCC18300ABB2F9 /* mobatlas.xml in Resources */ = {isa = PBXBuildFile; fileRef = 96898C0A15BCC18300ABB2F9 /* mobatlas.xml */; };
 		96898C1415D0C49D00ABB2F9 /* UIGlossyButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 96898C1315D0C49D00ABB2F9 /* UIGlossyButton.m */; };
-		968CC2EA15BC56F200031375 /* DoneDown.png in Resources */ = {isa = PBXBuildFile; fileRef = 968CC2E815BC56F200031375 /* DoneDown.png */; };
-		968CC2EB15BC56F200031375 /* DoneUp.png in Resources */ = {isa = PBXBuildFile; fileRef = 968CC2E915BC56F200031375 /* DoneUp.png */; };
 		968E70EF15E6E6E500001DE2 /* cross@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 968E70EE15E6E6E500001DE2 /* cross@2x.png */; };
 		96A29D9A15D0F7AE00694DAF /* plane@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 96A29D9915D0F7AE00694DAF /* plane@2x.png */; };
 		96B28338160F463900189F24 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 96B28337160F463900189F24 /* Default-568h@2x.png */; };
@@ -179,8 +177,6 @@
 		96898C0A15BCC18300ABB2F9 /* mobatlas.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = mobatlas.xml; sourceTree = "<group>"; };
 		96898C1215D0C49D00ABB2F9 /* UIGlossyButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIGlossyButton.h; sourceTree = "<group>"; };
 		96898C1315D0C49D00ABB2F9 /* UIGlossyButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIGlossyButton.m; sourceTree = "<group>"; };
-		968CC2E815BC56F200031375 /* DoneDown.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DoneDown.png; sourceTree = "<group>"; };
-		968CC2E915BC56F200031375 /* DoneUp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DoneUp.png; sourceTree = "<group>"; };
 		968E70EE15E6E6E500001DE2 /* cross@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cross@2x.png"; sourceTree = "<group>"; };
 		96A29D9915D0F7AE00694DAF /* plane@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "plane@2x.png"; path = "Instruments/plane@2x.png"; sourceTree = "<group>"; };
 		96B28337160F463900189F24 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "../Default-568h@2x.png"; sourceTree = "<group>"; };
@@ -288,8 +284,6 @@
 			children = (
 				96B28337160F463900189F24 /* Default-568h@2x.png */,
 				960B31B715A7A16300152F59 /* Instruments */,
-				968CC2E815BC56F200031375 /* DoneDown.png */,
-				968CC2E915BC56F200031375 /* DoneUp.png */,
 				5BA95C281598D65D0058D568 /* icon72.png */,
 				5BA95C261598D6110058D568 /* icon114.png */,
 				5BA95C241598D5840058D568 /* icon57.png */,
@@ -661,8 +655,6 @@
 				9644E8D615B36D5B00D8BF96 /* trn0@2x~ipad.png in Resources */,
 				9644E8D715B36D5B00D8BF96 /* trn1@2x~ipad.png in Resources */,
 				9644E8D815B36D5B00D8BF96 /* turn@2x~ipad.png in Resources */,
-				968CC2EA15BC56F200031375 /* DoneDown.png in Resources */,
-				968CC2EB15BC56F200031375 /* DoneUp.png in Resources */,
 				96898C0B15BCC18300ABB2F9 /* mobatlas.xml in Resources */,
 				96A29D9A15D0F7AE00694DAF /* plane@2x.png in Resources */,
 				968E70EF15E6E6E500001DE2 /* cross@2x.png in Resources */,
