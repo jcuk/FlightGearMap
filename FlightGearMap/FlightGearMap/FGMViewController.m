@@ -55,7 +55,7 @@ UIInterfaceOrientation lastOrientation;
 }
 
 +(UIDeviceOrientation) lastOrientation {
-    return lastOrientation;
+    return (UIDeviceOrientation)lastOrientation;
 }
 
 -(void)updateFlightData:(PlaneData *)planeData {
