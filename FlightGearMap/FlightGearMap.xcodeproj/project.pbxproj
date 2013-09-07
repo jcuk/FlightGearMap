@@ -11,7 +11,6 @@
 		5B35DD60158FDD41009EA907 /* GCDAsyncSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B35DD5E158FDD41009EA907 /* GCDAsyncSocket.m */; };
 		5B3D3F78158FE24E00393425 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B3D3F77158FE24E00393425 /* Security.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 		5B3D3F7E158FE3DB00393425 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B3D3F7D158FE3DB00393425 /* CFNetwork.framework */; };
-		5B3D3F9C1591ABA400393425 /* ToDo in Resources */ = {isa = PBXBuildFile; fileRef = 5B3D3F9B1591ABA400393425 /* ToDo */; };
 		5B3D3F9E1591AFC200393425 /* plane.png in Resources */ = {isa = PBXBuildFile; fileRef = 5B3D3F9D1591AFC100393425 /* plane.png */; };
 		5B3D3FAB15923A9400393425 /* info.png in Resources */ = {isa = PBXBuildFile; fileRef = 5B3D3FAA15923A9400393425 /* info.png */; };
 		5B3D3FCC1592776200393425 /* UIConfigController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B3D3FCB1592776200393425 /* UIConfigController.m */; };
@@ -121,7 +120,6 @@
 		5B3D3F7B158FE38600393425 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		5B3D3F7D158FE3DB00393425 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		5B3D3F861590EE1D00393425 /* MapStatusUpdater.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapStatusUpdater.h; sourceTree = "<group>"; };
-		5B3D3F9B1591ABA400393425 /* ToDo */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = ToDo; path = FlightGearMap/ToDo; sourceTree = "<group>"; };
 		5B3D3F9D1591AFC100393425 /* plane.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = plane.png; sourceTree = "<group>"; };
 		5B3D3FAA15923A9400393425 /* info.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = info.png; sourceTree = "<group>"; };
 		5B3D3FCA1592776100393425 /* UIConfigController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIConfigController.h; sourceTree = "<group>"; };
@@ -176,6 +174,7 @@
 		9644E8D915B3F24300D8BF96 /* InstrumentSpeedo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InstrumentSpeedo.h; sourceTree = "<group>"; };
 		9644E8DA15B3F24300D8BF96 /* InstrumentSpeedo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InstrumentSpeedo.m; sourceTree = "<group>"; };
 		964879EB15B9E6C300771730 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		9672823917DBA1FE0031BE7A /* ToDo */ = {isa = PBXFileReference; lastKnownFileType = text; path = ToDo; sourceTree = "<group>"; };
 		96898C0715BCB11400ABB2F9 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		96898C0A15BCC18300ABB2F9 /* mobatlas.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = mobatlas.xml; sourceTree = "<group>"; };
 		96898C1215D0C49D00ABB2F9 /* UIGlossyButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIGlossyButton.h; sourceTree = "<group>"; };
@@ -328,7 +327,7 @@
 		5B68E638158FBF65009DBDE6 = {
 			isa = PBXGroup;
 			children = (
-				5B3D3F9B1591ABA400393425 /* ToDo */,
+				9672823917DBA1FE0031BE7A /* ToDo */,
 				5B68E64D158FBF65009DBDE6 /* FlightGearMap */,
 				5B68E644158FBF65009DBDE6 /* Products */,
 			);
@@ -568,7 +567,7 @@
 		5B68E63A158FBF65009DBDE6 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0420;
+				LastUpgradeCheck = 0460;
 			};
 			buildConfigurationList = 5B68E63D158FBF65009DBDE6 /* Build configuration list for PBXProject "FlightGearMap" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -595,7 +594,6 @@
 				5B68E652158FBF65009DBDE6 /* InfoPlist.strings in Resources */,
 				5B68E65B158FBF65009DBDE6 /* MainStoryboard_iPhone.storyboard in Resources */,
 				5B68E65E158FBF65009DBDE6 /* MainStoryboard_iPad.storyboard in Resources */,
-				5B3D3F9C1591ABA400393425 /* ToDo in Resources */,
 				5B3D3F9E1591AFC200393425 /* plane.png in Resources */,
 				5B3D3FAB15923A9400393425 /* info.png in Resources */,
 				5B3D40161593CD9B00393425 /* cross.png in Resources */,
@@ -736,6 +734,10 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -749,6 +751,7 @@
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
@@ -764,6 +767,10 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				COPY_PHASE_STRIP = YES;
@@ -771,6 +778,7 @@
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
@@ -788,7 +796,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FlightGearMap/FlightGearMap-Prefix.pch";
 				INFOPLIST_FILE = "FlightGearMap/FlightGearMap-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
@@ -801,7 +809,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FlightGearMap/FlightGearMap-Prefix.pch";
 				INFOPLIST_FILE = "FlightGearMap/FlightGearMap-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
