@@ -6,14 +6,12 @@ Bugs:
     - Cant pinch zoom / unzoom when streaming data
     - Center plane icon / position when instruments on
 
-    
 To Do for v1.3
   Appirater
   RevMob
  Graphics
    Holes in instruments
    iPad Retina icon
-   Replace table background
    Rotation (dependant on screen height?) - not sure what this is
    Info screen
      Remove transparent overlay
@@ -33,7 +31,6 @@ To Do for v1.3
      
 Done in v1.3
   Updated to iOS 6.1
-    
 
 v1.2 +
     Appirater
