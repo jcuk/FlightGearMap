@@ -4,25 +4,37 @@ Instructions
         
 Bugs:
     - Cant pinch zoom / unzoom when streaming data
-    - Update screen shots on app store
     - Center plane icon / position when instruments on
 
     
 To Do for v1.3
-    Appirater
-    Fixes for iOS 6
-        Screenshots
+  Appirater
+  Fixes for iOS 6
+      Warnings
+  RevMob
+ Graphics
+   Holes in instruments
+   iPad Retina icon
+   Replace table background
+   Rotation (dependant on screen height?) - not sure what this is
+   Info screen
+     Remove transparent overlay
+     Replace i button
+ Other
+   Update instructions
+   Screenshots
       iPhone R3.5
       iPhone R4
       iPad
-        Rotation (dependant on screen height?)
-        icons?
-        Replace table background
-        launch images
- Graphics
-   Holes in insturments
- Other
-   Update instructions
+   launch images
+     iPhone
+     iPhone R3.5
+     iPhone R4
+     iPad
+     iPad R
+     
+Done in v1.3
+  Updated to iOS 6.1
     
 
 v1.2 +
