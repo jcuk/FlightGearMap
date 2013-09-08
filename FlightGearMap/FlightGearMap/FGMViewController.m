@@ -10,12 +10,10 @@
 #import <CoreLocation/CoreLocation.h>
 #import "PlaneData.h"
 #import "UDPClient.h"
+#import "InfoViewController.h"
 
 #define START_LAT 39.281516
 #define START_LON -76.580806
-
-#define INFO_TEXT @"<html><head><style>body{background-color:transparent; font-family:helvetica} h3{text-align:center;}</style></head><body><h3>Flight Gear Map</h3><p>Live map for use with <a href=""http://www.flightgear.org"">FlightGear</a>, the open source flight simulator</p><p>To use flight gear map, you must first copy the mobatlas.xml file into the 'Protocol' directory of your FlightGear application. On the config screen of this app you will see the IP address of your device. You can now start FlightGear with the UDP option enabled e.g.:</p><code>fgfs --generic=socket,out,5, %@,%d,udp,mobatlas</code><p>Tap Done and FlightGear Map will connect to your FlightGear instance.<br><center>Jason Crane 2012</center></br></body></html>"
-
 
 @implementation FGMViewController
 @synthesize _mapView,_planeView,_altitudeLabel,_instrumentView, _titleLabel;
@@ -25,14 +23,6 @@ PlaneData *planeData;
 UDPClient *udpClient;
 
 UIInterfaceOrientation lastOrientation;
-
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Release any cached data, images, etc that aren't in use.
-}
-
-#pragma mark - View lifecycle
 
 -(void)updatePosition:(float)lon lat:(float)latitude altitudeInFt:(float)alt updateZoom:(bool)zoom {
     
@@ -52,10 +42,6 @@ UIInterfaceOrientation lastOrientation;
     
     _altitudeLabel.text = [NSString stringWithFormat:@"Alt: %dft",(int)alt];
     
-}
-
-+(UIDeviceOrientation) lastOrientation {
-    return (UIDeviceOrientation)lastOrientation;
 }
 
 -(void)updateFlightData:(PlaneData *)planeData {
@@ -140,83 +126,21 @@ UIInterfaceOrientation lastOrientation;
         udpClient = [[UDPClient alloc]init:[port intValue] mapStatusUpdater:self] ;
         
     }
-    
-    if (UI_USER_INTERFACE_IDIOM() != UIUserInterfaceIdiomPhone) {
-        infoRectV = CGRectMake(200,200,400,600);
-        infoRectH = CGRectMake(262,200,500,368);
-        
-    } else {
-        infoRectV = CGRectMake(30,35,260,325);
-        infoRectH = CGRectMake(70,7,340,210);
-    }
-    
-    if ([[UIDevice currentDevice] orientation] == UIDeviceOrientationLandscapeLeft ||
-        [[UIDevice currentDevice] orientation] == UIDeviceOrientationLandscapeRight) {
-        infoView = [[InfoView alloc]initWithFrame:infoRectH];
-    } else {
-        infoView = [[InfoView alloc]initWithFrame:infoRectV];
-    }
-    
-    planeData = [[PlaneData alloc]init];
-    
-    [self.view addSubview:infoView];
-    infoView.hidden = YES;
-    [infoView setUserInteractionEnabled:NO];
 
+    planeData = [[PlaneData alloc]init];
     
 }
 
 - (void)viewDidUnload
 {
-    [infoView removeFromSuperview];
     [self set_mapView:nil];
     [super viewDidUnload];
 }
 
-- (void)viewDidAppear:(BOOL)animated
-{
-    [super viewDidAppear:animated];
-}
-
-- (void)viewWillDisappear:(BOOL)animated
-{
-	[super viewWillDisappear:animated];
-}
-
-- (void)viewDidDisappear:(BOOL)animated
-{
-	[super viewDidDisappear:animated];
-}
-
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
-{
-    //Rotate info view
-    if (interfaceOrientation == UIDeviceOrientationPortrait || interfaceOrientation == UIDeviceOrientationPortraitUpsideDown) {
-        infoView.frame = infoRectV;
-    } else {
-        infoView.frame = infoRectH;
-    }
-    [infoView setNeedsDisplay];
-    
+-(void)viewWillLayoutSubviews {
+    [super viewWillLayoutSubviews];
     [_instrumentView setNeedsLayout];
-    
-    if (interfaceOrientation == UIDeviceOrientationPortrait ||
-        interfaceOrientation == UIDeviceOrientationPortraitUpsideDown ||
-        interfaceOrientation == UIDeviceOrientationLandscapeLeft ||
-        interfaceOrientation == UIDeviceOrientationLandscapeRight ) {
-        lastOrientation = interfaceOrientation;
-    }
-    
-    return YES;
 }
-
-//Rotation support for iOS 6
--(NSUInteger)supportedInterfaceOrientations{
-    [_instrumentView setNeedsLayout];
-    return UIInterfaceOrientationMaskAll;
-}
-
-
 
 -(void)updatePosition:(double)lon lat:(double)latitude altInFt:(double)alt {
     [self updatePosition:lon lat:latitude altitudeInFt:alt updateZoom:NO];
@@ -229,7 +153,7 @@ UIInterfaceOrientation lastOrientation;
 }
 
 - (void)viewWillAppear:(BOOL)animated {
-     
+    [self.navigationController setNavigationBarHidden:YES animated:animated];
 }
 
 #pragma mark - delagate methods for config
@@ -287,7 +211,7 @@ UIInterfaceOrientation lastOrientation;
 {
 	if ([segue.identifier isEqualToString:@"Config"])
 	{
-		UIConfigController  *configViewController = segue.destinationViewController;
+		UIConfigController *configViewController = segue.destinationViewController;
 		configViewController.delegate = self;
         
         //lForce the view to load
@@ -298,19 +222,12 @@ UIInterfaceOrientation lastOrientation;
         configViewController.mapType.selectedSegmentIndex = _mapView.mapType;
         [configViewController updateCommandOptionsLabel];
         
-	}
-}
-
--(IBAction) infoPressed:(id)sender {
-    [infoView setText:[NSString stringWithFormat:INFO_TEXT, [ UIConfigController getIPAddress], udpClient._port]];
-    if (infoView.hidden) {
-        infoView.hidden = NO;
-        [infoView setUserInteractionEnabled:YES];
-    } else {
-        infoView.hidden = YES;
-        [infoView setUserInteractionEnabled:NO];
+	} else if ([segue.identifier isEqualToString:@"InfoView"]) {
+        InfoViewController *infoView = segue.destinationViewController;
+        infoView.ipAddress = [UIConfigController getIPAddress];
+        infoView.port = udpClient._port;
+        
     }
-    
 }
 
 

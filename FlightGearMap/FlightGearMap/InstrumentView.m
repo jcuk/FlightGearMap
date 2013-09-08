@@ -58,11 +58,7 @@ NSMutableArray * instruments;
     NSLog(@"Orientation %d",[UIDevice currentDevice].orientation);
     
     int orientation = [UIDevice currentDevice].orientation;
-    
-    if (orientation == UIDeviceOrientationFaceUp) {
-        orientation = [FGMViewController lastOrientation];      
-    }
-    
+
     if (orientation == UIDeviceOrientationUnknown ||
         orientation == UIDeviceOrientationPortrait ||
         orientation == UIDeviceOrientationPortraitUpsideDown) {

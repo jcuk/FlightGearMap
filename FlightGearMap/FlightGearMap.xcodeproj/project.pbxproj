@@ -14,7 +14,6 @@
 		5B3D3F9E1591AFC200393425 /* plane.png in Resources */ = {isa = PBXBuildFile; fileRef = 5B3D3F9D1591AFC100393425 /* plane.png */; };
 		5B3D3FAB15923A9400393425 /* info.png in Resources */ = {isa = PBXBuildFile; fileRef = 5B3D3FAA15923A9400393425 /* info.png */; };
 		5B3D3FCC1592776200393425 /* UIConfigController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B3D3FCB1592776200393425 /* UIConfigController.m */; };
-		5B3D3FEE159393DA00393425 /* InfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B3D3FEC159393DA00393425 /* InfoView.m */; };
 		5B3D40161593CD9B00393425 /* cross.png in Resources */ = {isa = PBXBuildFile; fileRef = 5B3D40151593CD9B00393425 /* cross.png */; };
 		5B3D402E1595175400393425 /* save.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5B3D402D1595175400393425 /* save.plist */; };
 		5B68E648158FBF65009DBDE6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B68E647158FBF65009DBDE6 /* UIKit.framework */; };
@@ -55,12 +54,14 @@
 		9672823E17DBDF330031BE7A /* icon114.png in Resources */ = {isa = PBXBuildFile; fileRef = 9672823D17DBDF330031BE7A /* icon114.png */; };
 		9672824017DBDF390031BE7A /* icon72.png in Resources */ = {isa = PBXBuildFile; fileRef = 9672823F17DBDF390031BE7A /* icon72.png */; };
 		9672824217DBE0D10031BE7A /* icon144.png in Resources */ = {isa = PBXBuildFile; fileRef = 9672824117DBE0D10031BE7A /* icon144.png */; };
+		9672824317DC75E20031BE7A /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 96B28337160F463900189F24 /* Default-568h@2x.png */; };
+		9672824617DC7C120031BE7A /* InfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9672824517DC7C120031BE7A /* InfoViewController.m */; };
+		9672824817DD0D860031BE7A /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 9672824717DD0D860031BE7A /* background.png */; };
 		96898C0815BCB11400ABB2F9 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96898C0715BCB11400ABB2F9 /* MessageUI.framework */; };
 		96898C0B15BCC18300ABB2F9 /* mobatlas.xml in Resources */ = {isa = PBXBuildFile; fileRef = 96898C0A15BCC18300ABB2F9 /* mobatlas.xml */; };
 		96898C1415D0C49D00ABB2F9 /* UIGlossyButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 96898C1315D0C49D00ABB2F9 /* UIGlossyButton.m */; };
 		968E70EF15E6E6E500001DE2 /* cross@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 968E70EE15E6E6E500001DE2 /* cross@2x.png */; };
 		96A29D9A15D0F7AE00694DAF /* plane@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 96A29D9915D0F7AE00694DAF /* plane@2x.png */; };
-		96B28338160F463900189F24 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 96B28337160F463900189F24 /* Default-568h@2x.png */; };
 		96B414C515B3F8DB00CC02C9 /* UDPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 96B414C415B3F8DB00CC02C9 /* UDPClient.m */; };
 		96B414C915B544FE00CC02C9 /* GCDAsyncUdpSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 96B414C815B544FE00CC02C9 /* GCDAsyncUdpSocket.m */; };
 		96C3E02215A8F16500DCF289 /* hand1~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 96C3E02115A8F16500DCF289 /* hand1~iphone.png */; };
@@ -123,8 +124,6 @@
 		5B3D3FAA15923A9400393425 /* info.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = info.png; sourceTree = "<group>"; };
 		5B3D3FCA1592776100393425 /* UIConfigController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIConfigController.h; sourceTree = "<group>"; };
 		5B3D3FCB1592776200393425 /* UIConfigController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIConfigController.m; sourceTree = "<group>"; };
-		5B3D3FEC159393DA00393425 /* InfoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InfoView.m; sourceTree = "<group>"; };
-		5B3D3FED159393DA00393425 /* InfoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InfoView.h; sourceTree = "<group>"; };
 		5B3D40151593CD9B00393425 /* cross.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cross.png; sourceTree = "<group>"; };
 		5B3D402D1595175400393425 /* save.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = save.plist; sourceTree = "<group>"; };
 		5B68E643158FBF65009DBDE6 /* FlightGearMap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlightGearMap.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -175,6 +174,9 @@
 		9672823D17DBDF330031BE7A /* icon114.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon114.png; path = ../icon114.png; sourceTree = "<group>"; };
 		9672823F17DBDF390031BE7A /* icon72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon72.png; path = ../icon72.png; sourceTree = "<group>"; };
 		9672824117DBE0D10031BE7A /* icon144.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon144.png; path = ../icon144.png; sourceTree = "<group>"; };
+		9672824417DC7C120031BE7A /* InfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InfoViewController.h; sourceTree = "<group>"; };
+		9672824517DC7C120031BE7A /* InfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InfoViewController.m; sourceTree = "<group>"; };
+		9672824717DD0D860031BE7A /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = SOURCE_ROOT; };
 		96898C0715BCB11400ABB2F9 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		96898C0A15BCC18300ABB2F9 /* mobatlas.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = mobatlas.xml; sourceTree = "<group>"; };
 		96898C1215D0C49D00ABB2F9 /* UIGlossyButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIGlossyButton.h; sourceTree = "<group>"; };
@@ -284,6 +286,7 @@
 		5B3D3F9F1591B41B00393425 /* Graphics */ = {
 			isa = PBXGroup;
 			children = (
+				9672824717DD0D860031BE7A /* background.png */,
 				9672823A17DBDEFD0031BE7A /* Icon */,
 				96B28337160F463900189F24 /* Default-568h@2x.png */,
 				960B31B715A7A16300152F59 /* Instruments */,
@@ -299,8 +302,8 @@
 		5B3D3FEB159393B000393425 /* InfoView */ = {
 			isa = PBXGroup;
 			children = (
-				5B3D3FEC159393DA00393425 /* InfoView.m */,
-				5B3D3FED159393DA00393425 /* InfoView.h */,
+				9672824417DC7C120031BE7A /* InfoViewController.h */,
+				9672824517DC7C120031BE7A /* InfoViewController.m */,
 			);
 			name = InfoView;
 			sourceTree = "<group>";
@@ -666,11 +669,12 @@
 				96898C0B15BCC18300ABB2F9 /* mobatlas.xml in Resources */,
 				96A29D9A15D0F7AE00694DAF /* plane@2x.png in Resources */,
 				968E70EF15E6E6E500001DE2 /* cross@2x.png in Resources */,
-				96B28338160F463900189F24 /* Default-568h@2x.png in Resources */,
 				9672823C17DBDF250031BE7A /* icon57.png in Resources */,
 				9672823E17DBDF330031BE7A /* icon114.png in Resources */,
 				9672824017DBDF390031BE7A /* icon72.png in Resources */,
 				9672824217DBE0D10031BE7A /* icon144.png in Resources */,
+				9672824317DC75E20031BE7A /* Default-568h@2x.png in Resources */,
+				9672824817DD0D860031BE7A /* background.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -686,7 +690,6 @@
 				5B68E661158FBF66009DBDE6 /* FGMViewController.m in Sources */,
 				5B35DD60158FDD41009EA907 /* GCDAsyncSocket.m in Sources */,
 				5B3D3FCC1592776200393425 /* UIConfigController.m in Sources */,
-				5B3D3FEE159393DA00393425 /* InfoView.m in Sources */,
 				5BA95C2C159CF43B0058D568 /* TBXML.m in Sources */,
 				960B310C15A77D9300152F59 /* InstrumentView.m in Sources */,
 				960B310F15A77E0D00152F59 /* Instrument.m in Sources */,
@@ -699,6 +702,7 @@
 				96B414C515B3F8DB00CC02C9 /* UDPClient.m in Sources */,
 				96B414C915B544FE00CC02C9 /* GCDAsyncUdpSocket.m in Sources */,
 				96898C1415D0C49D00ABB2F9 /* UIGlossyButton.m in Sources */,
+				9672824617DC7C120031BE7A /* InfoViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

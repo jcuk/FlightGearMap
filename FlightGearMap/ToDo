@@ -11,10 +11,16 @@ To Do for v1.3
   RevMob
  Graphics
    Holes in instruments
-   Rotation (dependant on screen height?) - not sure what this is
+     Asi
+       Potential:
+         Aircraft/Cessna-208-Caravan/Models/Interior/Panel/Instruments/asi
+     Trun coordinator
+       Power drop flag
+         Off = Red, On = black
+   Rotation (- different on iPad (4 pos) and iPhone (3 positions)
    Info screen
-     Remove transparent overlay
      Replace i button
+   Config button -> cog
  Other
    Update instructions
    Screenshots

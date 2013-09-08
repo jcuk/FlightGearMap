@@ -10,18 +10,14 @@
 #import <MapKit/MapKit.h>
 #import "MapStatusUpdater.h"
 #import "UIConfigController.h"
-#import "InfoView.h"
 #import "InstrumentView.h"
 
 #define METERS_PER_MILE 1609.344
 
 @interface FGMViewController : UIViewController <MapStatusUpdater, UIConfigControllerDelagate> {
     bool _doneInitialZoom;
-    InfoView *infoView;
     CGRect infoRectH,infoRectV;
 }
--(IBAction) infoPressed:(id)sender;
-+(UIDeviceOrientation) lastOrientation;
 
 @property (weak, nonatomic) IBOutlet MKMapView *_mapView;
 @property (weak, nonatomic) IBOutlet UIImageView *_planeView;
