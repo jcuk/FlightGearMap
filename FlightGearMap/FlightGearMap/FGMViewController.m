@@ -16,7 +16,7 @@
 #define START_LON -76.580806
 
 @implementation FGMViewController
-@synthesize _mapView,_planeView,_altitudeLabel,_instrumentView, _titleLabel;
+@synthesize _mapView,_planeView,_instrumentView;
 
 //TelnetPositionClient *client;
 PlaneData *planeData;
@@ -38,10 +38,7 @@ UIInterfaceOrientation lastOrientation;
     } else {
         
         [_mapView setCenterCoordinate:zoomLocation animated:YES];
-    }
-    
-    _altitudeLabel.text = [NSString stringWithFormat:@"Alt: %dft",(int)alt];
-    
+    }    
 }
 
 -(void)updateFlightData:(PlaneData *)planeData {

@@ -7,8 +7,10 @@ Bugs:
     - Center plane icon / position when instruments on
 
 To Do for v1.4
-  Remove Header / version number
-  Appirater
+  Instruments only view
+  Center view in remaing screen when instruments and map
+  Remove Header / version number ?
+  Appirater - 522d09b96c68723a7700002e
   RevMob
  Graphics
    Holes in instruments
@@ -35,8 +37,7 @@ To Do for v1.4
 Done in v1.3
   Updated to iOS 6.1
 
-v1.2 +
-    Appirater
+Later versions
     Plane icon - contrasing colours
     Breadcrumbs
     Jet instruments
@@ -48,4 +49,4 @@ v1.2 +
         Airports
         Nav beacons
     Navigation - distance to way points etc
-    Instruments only view
+    

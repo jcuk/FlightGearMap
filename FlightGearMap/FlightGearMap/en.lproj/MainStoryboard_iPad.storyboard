@@ -40,20 +40,6 @@
                                     </barButtonItem>
                                 </items>
                             </toolbar>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Altitude: 0ft" textAlignment="right" lineBreakMode="tailTruncation" minimumFontSize="10" id="oFB-GG-zQU">
-                                <rect key="frame" x="537" y="146" width="153" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="FlightGear Map v1.3" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" id="bNZ-lk-SoO">
-                                <rect key="frame" x="251" y="51" width="264" height="39"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <view opaque="NO" contentMode="scaleToFill" id="0cs-Na-L9B" customClass="InstrumentView">
                                 <rect key="frame" x="0.0" y="0.0" width="160" height="960"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" heightSizable="YES"/>
@@ -63,11 +49,9 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <connections>
-                        <outlet property="_altitudeLabel" destination="oFB-GG-zQU" id="yX7-Jw-YtL"/>
                         <outlet property="_instrumentView" destination="0cs-Na-L9B" id="ROk-yw-WmT"/>
                         <outlet property="_mapView" destination="u7a-GM-88b" id="p06-WB-OiX"/>
                         <outlet property="_planeView" destination="zcW-ao-nPM" id="OaI-fa-mtp"/>
-                        <outlet property="_titleLabel" destination="bNZ-lk-SoO" id="Lqe-yf-Hkk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3" sceneMemberID="firstResponder"/>
@@ -213,8 +197,8 @@
                                 <rect key="frame" x="0.0" y="0.0" width="380" height="500"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="FlightGear Map" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Hle-j9-oF9">
-                                <rect key="frame" x="60" y="14" width="260" height="59"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="FlightGear Map v1.4" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Hle-j9-oF9">
+                                <rect key="frame" x="0.0" y="14" width="380" height="59"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="35"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -245,18 +229,16 @@
     <resources>
         <image name="background.png" width="380" height="500"/>
         <image name="gear.png" width="30" height="30"/>
-        <image name="info.png" width="21" height="21"/>
+        <image name="info.png" width="30" height="30"/>
         <image name="plane.png" width="50" height="50"/>
     </resources>
     <classes>
         <class className="FGMViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/FGMViewController.h"/>
             <relationships>
-                <relationship kind="outlet" name="_altitudeLabel" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="_instrumentView" candidateClass="InstrumentView"/>
                 <relationship kind="outlet" name="_mapView" candidateClass="MKMapView"/>
                 <relationship kind="outlet" name="_planeView" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="_titleLabel" candidateClass="UILabel"/>
             </relationships>
         </class>
         <class className="InfoViewController" superclassName="UIViewController">
@@ -273,6 +255,7 @@
             <relationships>
                 <relationship kind="action" name="cancel:"/>
                 <relationship kind="action" name="done:"/>
+                <relationship kind="action" name="emailConfig:"/>
                 <relationship kind="action" name="portValueChanged:"/>
                 <relationship kind="outlet" name="commandOption" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="instruments" candidateClass="UISwitch"/>
