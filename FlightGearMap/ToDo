@@ -7,6 +7,9 @@ Bugs:
     - Center plane icon / position when instruments on
 
 To Do for v1.3
+  Tidy up files
+    Remove cross
+    missing info files (remove in VSS?)
   Appirater
   RevMob
  Graphics
@@ -20,7 +23,6 @@ To Do for v1.3
    Rotation (- different on iPad (4 pos) and iPhone (3 positions)
    Info screen
      Replace i button
-   Config button -> cog
  Other
    Update instructions
    Screenshots

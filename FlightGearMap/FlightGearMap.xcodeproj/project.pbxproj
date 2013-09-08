@@ -57,6 +57,7 @@
 		9672824317DC75E20031BE7A /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 96B28337160F463900189F24 /* Default-568h@2x.png */; };
 		9672824617DC7C120031BE7A /* InfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9672824517DC7C120031BE7A /* InfoViewController.m */; };
 		9672824817DD0D860031BE7A /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 9672824717DD0D860031BE7A /* background.png */; };
+		9672824A17DD16A20031BE7A /* gear.png in Resources */ = {isa = PBXBuildFile; fileRef = 9672824917DD16A20031BE7A /* gear.png */; };
 		96898C0815BCB11400ABB2F9 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96898C0715BCB11400ABB2F9 /* MessageUI.framework */; };
 		96898C0B15BCC18300ABB2F9 /* mobatlas.xml in Resources */ = {isa = PBXBuildFile; fileRef = 96898C0A15BCC18300ABB2F9 /* mobatlas.xml */; };
 		96898C1415D0C49D00ABB2F9 /* UIGlossyButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 96898C1315D0C49D00ABB2F9 /* UIGlossyButton.m */; };
@@ -177,6 +178,7 @@
 		9672824417DC7C120031BE7A /* InfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InfoViewController.h; sourceTree = "<group>"; };
 		9672824517DC7C120031BE7A /* InfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InfoViewController.m; sourceTree = "<group>"; };
 		9672824717DD0D860031BE7A /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = SOURCE_ROOT; };
+		9672824917DD16A20031BE7A /* gear.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gear.png; sourceTree = "<group>"; };
 		96898C0715BCB11400ABB2F9 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		96898C0A15BCC18300ABB2F9 /* mobatlas.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = mobatlas.xml; sourceTree = "<group>"; };
 		96898C1215D0C49D00ABB2F9 /* UIGlossyButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIGlossyButton.h; sourceTree = "<group>"; };
@@ -465,6 +467,7 @@
 		9672823A17DBDEFD0031BE7A /* Icon */ = {
 			isa = PBXGroup;
 			children = (
+				9672824917DD16A20031BE7A /* gear.png */,
 				9672824117DBE0D10031BE7A /* icon144.png */,
 				9672823F17DBDF390031BE7A /* icon72.png */,
 				9672823D17DBDF330031BE7A /* icon114.png */,
@@ -675,6 +678,7 @@
 				9672824217DBE0D10031BE7A /* icon144.png in Resources */,
 				9672824317DC75E20031BE7A /* Default-568h@2x.png in Resources */,
 				9672824817DD0D860031BE7A /* background.png in Resources */,
+				9672824A17DD16A20031BE7A /* gear.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

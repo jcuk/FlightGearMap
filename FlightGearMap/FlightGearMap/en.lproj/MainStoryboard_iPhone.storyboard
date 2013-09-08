@@ -49,7 +49,7 @@
                                 <rect key="frame" x="0.0" y="416" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <items>
-                                    <barButtonItem title="Config" id="IGE-kx-h1T">
+                                    <barButtonItem image="gear.png" style="plain" id="IGE-kx-h1T">
                                         <connections>
                                             <segue destination="H73-HB-dqe" kind="modal" identifier="Config" id="uT7-0O-WxO"/>
                                         </connections>
@@ -266,6 +266,7 @@
     </scenes>
     <resources>
         <image name="background.png" width="380" height="500"/>
+        <image name="gear.png" width="30" height="30"/>
         <image name="info.png" width="21" height="21"/>
         <image name="plane.png" width="50" height="50"/>
     </resources>
