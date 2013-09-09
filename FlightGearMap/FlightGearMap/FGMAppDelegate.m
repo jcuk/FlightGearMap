@@ -7,6 +7,7 @@
 //
 
 #import "FGMAppDelegate.h"
+#import "Appirater.h"
 
 @implementation FGMAppDelegate
 
@@ -14,7 +15,11 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // Override point for customization after application launch.
+    [Appirater setAppId:@"540190228"];
+    [Appirater setUsesUntilPrompt:5];
+    [Appirater setDaysUntilPrompt:15];
+    [Appirater appLaunched:YES];
+    
     return YES;
 }
 							
@@ -36,6 +41,7 @@
 
 - (void)applicationWillEnterForeground:(UIApplication *)application
 {
+    [Appirater appEnteredForeground:YES];
     /*
      Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
      */

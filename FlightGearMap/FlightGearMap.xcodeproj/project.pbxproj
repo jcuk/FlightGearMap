@@ -108,6 +108,9 @@
 		96C3E19915B0E21B00DCF289 /* trn0~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 96C3E18B15B0E21B00DCF289 /* trn0~ipad.png */; };
 		96C3E19A15B0E21B00DCF289 /* trn1~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 96C3E18C15B0E21B00DCF289 /* trn1~ipad.png */; };
 		96C3E19B15B0E21B00DCF289 /* turn0~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 96C3E18D15B0E21B00DCF289 /* turn0~ipad.png */; };
+		96FAE9A117DE5E76008F4664 /* Appirater.m in Sources */ = {isa = PBXBuildFile; fileRef = 96FAE99F17DE5E76008F4664 /* Appirater.m */; };
+		96FAE9A517DE605B008F4664 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96FAE9A317DE605B008F4664 /* StoreKit.framework */; };
+		96FAE9A617DE605B008F4664 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96FAE9A417DE605B008F4664 /* SystemConfiguration.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -237,6 +240,11 @@
 		96C3E18B15B0E21B00DCF289 /* trn0~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "trn0~ipad.png"; sourceTree = "<group>"; };
 		96C3E18C15B0E21B00DCF289 /* trn1~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "trn1~ipad.png"; sourceTree = "<group>"; };
 		96C3E18D15B0E21B00DCF289 /* turn0~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "turn0~ipad.png"; sourceTree = "<group>"; };
+		96FAE99E17DE5E76008F4664 /* Appirater.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Appirater.h; path = ../Appirater.h; sourceTree = "<group>"; };
+		96FAE99F17DE5E76008F4664 /* Appirater.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Appirater.m; path = ../Appirater.m; sourceTree = "<group>"; };
+		96FAE9A017DE5E76008F4664 /* AppiraterDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppiraterDelegate.h; path = ../AppiraterDelegate.h; sourceTree = "<group>"; };
+		96FAE9A317DE605B008F4664 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		96FAE9A417DE605B008F4664 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -244,9 +252,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				96FAE9A517DE605B008F4664 /* StoreKit.framework in Frameworks */,
+				96FAE9A617DE605B008F4664 /* SystemConfiguration.framework in Frameworks */,
+				5B3D3F7E158FE3DB00393425 /* CFNetwork.framework in Frameworks */,
 				96898C0815BCB11400ABB2F9 /* MessageUI.framework in Frameworks */,
 				964879EC15B9E6C300771730 /* QuartzCore.framework in Frameworks */,
-				5B3D3F7E158FE3DB00393425 /* CFNetwork.framework in Frameworks */,
 				5B35DD4F158FC3F8009EA907 /* MapKit.framework in Frameworks */,
 				5B68E648158FBF65009DBDE6 /* UIKit.framework in Frameworks */,
 				5B68E64A158FBF65009DBDE6 /* Foundation.framework in Frameworks */,
@@ -337,6 +347,8 @@
 		5B68E646158FBF65009DBDE6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				96FAE9A317DE605B008F4664 /* StoreKit.framework */,
+				96FAE9A417DE605B008F4664 /* SystemConfiguration.framework */,
 				96898C0715BCB11400ABB2F9 /* MessageUI.framework */,
 				964879EB15B9E6C300771730 /* QuartzCore.framework */,
 				5B3D3F7D158FE3DB00393425 /* CFNetwork.framework */,
@@ -355,6 +367,7 @@
 		5B68E64D158FBF65009DBDE6 /* FlightGearMap */ = {
 			isa = PBXGroup;
 			children = (
+				96FAE9A217DE5E7D008F4664 /* Appirater */,
 				96898C1015D0C45900ABB2F9 /* GlossyButton */,
 				96C3E0C615AC0F4400DCF289 /* PlaneData */,
 				96C3E0C515AC0F2F00DCF289 /* MainView */,
@@ -546,6 +559,16 @@
 			path = 160;
 			sourceTree = "<group>";
 		};
+		96FAE9A217DE5E7D008F4664 /* Appirater */ = {
+			isa = PBXGroup;
+			children = (
+				96FAE99E17DE5E76008F4664 /* Appirater.h */,
+				96FAE99F17DE5E76008F4664 /* Appirater.m */,
+				96FAE9A017DE5E76008F4664 /* AppiraterDelegate.h */,
+			);
+			name = Appirater;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -699,6 +722,7 @@
 				96B414C915B544FE00CC02C9 /* GCDAsyncUdpSocket.m in Sources */,
 				96898C1415D0C49D00ABB2F9 /* UIGlossyButton.m in Sources */,
 				9672824617DC7C120031BE7A /* InfoViewController.m in Sources */,
+				96FAE9A117DE5E76008F4664 /* Appirater.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
