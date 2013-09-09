@@ -3,23 +3,14 @@ Instructions
     Video : http://www.youtube.com/watch?v=4xM3mGiFrGE
         
 Bugs:
-    - Cant pinch zoom / unzoom when streaming data
-    - Center plane icon / position when instruments on
+  Cant pinch zoom / unzoom when streaming data
 
 To Do for v1.4
   Instruments only view
   Center view in remaing screen when instruments and map
-  Remove Header / version number ?
-  Appirater - 522d09b96c68723a7700002e
-  RevMob
+  Appirater 
+  RevMob - 522d09b96c68723a7700002e
  Graphics
-   Holes in instruments
-     Asi
-       Potential:
-         Aircraft/Cessna-208-Caravan/Models/Interior/Panel/Instruments/asi
-     Trun coordinator
-       Power drop flag
-         Off = Red, On = black
    Rotation (- different on iPad (4 pos) and iPhone (3 positions)
  Other
    Update instructions
@@ -36,6 +27,8 @@ To Do for v1.4
      
 Done in v1.3
   Updated to iOS 6.1
+  Updated GUI
+  
 
 Later versions
     Plane icon - contrasing colours
