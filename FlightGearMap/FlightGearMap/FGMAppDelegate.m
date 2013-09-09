@@ -8,6 +8,7 @@
 
 #import "FGMAppDelegate.h"
 #import "Appirater.h"
+#import <RevMobAds/RevMobAds.h>
 
 @implementation FGMAppDelegate
 
@@ -15,6 +16,8 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    [RevMobAds startSessionWithAppID:@"522d09b96c68723a7700002e"];
+    
     [Appirater setAppId:@"540190228"];
     [Appirater setUsesUntilPrompt:5];
     [Appirater setDaysUntilPrompt:15];
@@ -52,6 +55,7 @@
     /*
      Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
      */
+    [[RevMobAds session] showFullscreen];
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application
@@ -61,6 +65,28 @@
      Save data if appropriate.
      See also applicationDidEnterBackground:.
      */
+}
+
+#pragma mark RevMob delegate methods
+
+-(void)revmobAdDidFailWithError:(NSError *)error {
+    NSLog(@"Ad failed with error: %@", error);
+}
+
+-(void)revmobAdDidReceive {
+    NSLog(@"Ad loaded successfullly");
+}
+
+-(void)revmobAdDisplayed {
+    NSLog(@"Ad displayed");
+}
+
+-(void)revmobUserClickedInTheAd {
+    NSLog(@"User clicked in the ad");
+}
+
+-(void)revmobUserClosedTheAd {
+    NSLog(@"User closed the ad");
 }
 
 @end

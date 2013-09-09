@@ -111,6 +111,8 @@
 		96FAE9A117DE5E76008F4664 /* Appirater.m in Sources */ = {isa = PBXBuildFile; fileRef = 96FAE99F17DE5E76008F4664 /* Appirater.m */; };
 		96FAE9A517DE605B008F4664 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96FAE9A317DE605B008F4664 /* StoreKit.framework */; };
 		96FAE9A617DE605B008F4664 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96FAE9A417DE605B008F4664 /* SystemConfiguration.framework */; };
+		96FAE9A817DE6AA5008F4664 /* RevMobAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96FAE9A717DE6AA4008F4664 /* RevMobAds.framework */; };
+		96FAE9AA17DE6B6C008F4664 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96FAE9A917DE6B6C008F4664 /* AdSupport.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -245,6 +247,8 @@
 		96FAE9A017DE5E76008F4664 /* AppiraterDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppiraterDelegate.h; path = ../AppiraterDelegate.h; sourceTree = "<group>"; };
 		96FAE9A317DE605B008F4664 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		96FAE9A417DE605B008F4664 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		96FAE9A717DE6AA4008F4664 /* RevMobAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RevMobAds.framework; sourceTree = "<group>"; };
+		96FAE9A917DE6B6C008F4664 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -252,6 +256,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				96FAE9AA17DE6B6C008F4664 /* AdSupport.framework in Frameworks */,
 				96FAE9A517DE605B008F4664 /* StoreKit.framework in Frameworks */,
 				96FAE9A617DE605B008F4664 /* SystemConfiguration.framework in Frameworks */,
 				5B3D3F7E158FE3DB00393425 /* CFNetwork.framework in Frameworks */,
@@ -262,6 +267,7 @@
 				5B68E64A158FBF65009DBDE6 /* Foundation.framework in Frameworks */,
 				5B68E64C158FBF65009DBDE6 /* CoreGraphics.framework in Frameworks */,
 				5B3D3F78158FE24E00393425 /* Security.framework in Frameworks */,
+				96FAE9A817DE6AA5008F4664 /* RevMobAds.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -347,6 +353,8 @@
 		5B68E646158FBF65009DBDE6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				96FAE9A917DE6B6C008F4664 /* AdSupport.framework */,
+				96FAE9A717DE6AA4008F4664 /* RevMobAds.framework */,
 				96FAE9A317DE605B008F4664 /* StoreKit.framework */,
 				96FAE9A417DE605B008F4664 /* SystemConfiguration.framework */,
 				96898C0715BCB11400ABB2F9 /* MessageUI.framework */,
@@ -821,6 +829,10 @@
 		5B68E665158FBF66009DBDE6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FlightGearMap/FlightGearMap-Prefix.pch";
 				INFOPLIST_FILE = "FlightGearMap/FlightGearMap-Info.plist";
@@ -834,6 +846,10 @@
 		5B68E666158FBF66009DBDE6 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FlightGearMap/FlightGearMap-Prefix.pch";
 				INFOPLIST_FILE = "FlightGearMap/FlightGearMap-Info.plist";
