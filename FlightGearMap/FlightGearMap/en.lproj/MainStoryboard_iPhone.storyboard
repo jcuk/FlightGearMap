@@ -99,7 +99,7 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="haS-0d-I3D" customClass="UIGlossyButton">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="haS-0d-I3D" customClass="UIGlossyButton">
                                 <rect key="frame" x="184" y="350" width="72" height="37"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -115,7 +115,7 @@
                                     <action selector="done:" destination="H73-HB-dqe" eventType="touchUpInside" id="CzD-Wj-tgO"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Tza-Ux-YUR" customClass="UIGlossyButton">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Tza-Ux-YUR" customClass="UIGlossyButton">
                                 <rect key="frame" x="65" y="350" width="74" height="37"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -172,7 +172,7 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="AcE-cP-wA0" customClass="UIGlossyButton">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="AcE-cP-wA0" customClass="UIGlossyButton">
                                 <rect key="frame" x="25" y="271" width="275" height="37"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -193,9 +193,12 @@
                     </view>
                     <navigationItem key="navigationItem" id="UFg-hm-SXD"/>
                     <connections>
+                        <outlet property="cancel" destination="Tza-Ux-YUR" id="rV8-Tw-9FL"/>
                         <outlet property="commandOption" destination="tvj-XK-ve0" id="6d4-jJ-n6h"/>
+                        <outlet property="email" destination="AcE-cP-wA0" id="3c5-hc-S2x"/>
                         <outlet property="instruments" destination="lOu-Rl-cg1" id="Wcr-k8-FGv"/>
                         <outlet property="mapType" destination="unV-AT-Ueb" id="cix-pY-fbC"/>
+                        <outlet property="ok" destination="haS-0d-I3D" id="xWm-or-Djf"/>
                         <outlet property="port" destination="8ZB-rc-LRX" id="Nkw-aH-YFN"/>
                     </connections>
                 </viewController>
@@ -223,12 +226,28 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="x4Y-7c-8qT" customClass="UIGlossyButton">
+                                <rect key="frame" x="20" y="323" width="280" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Get free stuff now!">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="getFreeStuff:" destination="Jip-5o-Ly9" eventType="touchUpInside" id="0X2-QS-9Ha"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="FlightGear Map v1.4" id="fa5-x3-aS2"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
+                        <outlet property="freeStuffButton" destination="x4Y-7c-8qT" id="8vY-eo-0pV"/>
                         <outlet property="infoView" destination="RqN-f7-0FP" id="nVu-Io-Fch"/>
                     </connections>
                 </viewController>
@@ -273,6 +292,8 @@
         <class className="InfoViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/InfoViewController.h"/>
             <relationships>
+                <relationship kind="action" name="getFreeStuff:"/>
+                <relationship kind="outlet" name="freeStuffButton" candidateClass="UIGlossyButton"/>
                 <relationship kind="outlet" name="infoView" candidateClass="UITextView"/>
             </relationships>
         </class>
@@ -286,9 +307,12 @@
                 <relationship kind="action" name="done:"/>
                 <relationship kind="action" name="emailConfig:"/>
                 <relationship kind="action" name="portValueChanged:"/>
+                <relationship kind="outlet" name="cancel" candidateClass="UIGlossyButton"/>
                 <relationship kind="outlet" name="commandOption" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="email" candidateClass="UIGlossyButton"/>
                 <relationship kind="outlet" name="instruments" candidateClass="UISwitch"/>
                 <relationship kind="outlet" name="mapType" candidateClass="UISegmentedControl"/>
+                <relationship kind="outlet" name="ok" candidateClass="UIGlossyButton"/>
                 <relationship kind="outlet" name="port" candidateClass="UITextField"/>
             </relationships>
         </class>

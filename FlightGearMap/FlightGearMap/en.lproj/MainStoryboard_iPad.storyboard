@@ -175,9 +175,12 @@
                         <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                     </view>
                     <connections>
+                        <outlet property="cancel" destination="QbR-97-d42" id="Fyb-1J-iqV"/>
                         <outlet property="commandOption" destination="sQV-b2-pR4" id="V3v-8J-Y1Z"/>
+                        <outlet property="email" destination="IE1-ls-pv9" id="3lL-nF-B8T"/>
                         <outlet property="instruments" destination="iQo-3Q-IF0" id="TXx-ew-C2D"/>
                         <outlet property="mapType" destination="TyS-aE-bmX" id="TPe-vy-dsr"/>
+                        <outlet property="ok" destination="3rH-b5-NgY" id="Gx2-g9-8HC"/>
                         <outlet property="port" destination="fZ7-sP-wSu" id="Rnr-bg-qLj"/>
                     </connections>
                 </viewController>
@@ -212,12 +215,28 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="S6l-Cj-I9G" customClass="UIGlossyButton">
+                                <rect key="frame" x="20" y="354" width="340" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Get free stuff now!">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="getFreeStuff:" destination="jeC-th-AB7" eventType="touchUpInside" id="wXQ-0R-9sd"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <value key="contentSizeForViewInPopover" type="size" width="380" height="500"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <connections>
+                        <outlet property="freeStuffButton" destination="S6l-Cj-I9G" id="Lx1-3M-Taa"/>
                         <outlet property="infoView" destination="Qbx-Ks-iWy" id="Wmt-Dk-MqQ"/>
                     </connections>
                 </viewController>
@@ -244,6 +263,8 @@
         <class className="InfoViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/InfoViewController.h"/>
             <relationships>
+                <relationship kind="action" name="getFreeStuff:"/>
+                <relationship kind="outlet" name="freeStuffButton" candidateClass="UIGlossyButton"/>
                 <relationship kind="outlet" name="infoView" candidateClass="UITextView"/>
             </relationships>
         </class>
@@ -257,9 +278,12 @@
                 <relationship kind="action" name="done:"/>
                 <relationship kind="action" name="emailConfig:"/>
                 <relationship kind="action" name="portValueChanged:"/>
+                <relationship kind="outlet" name="cancel" candidateClass="UIGlossyButton"/>
                 <relationship kind="outlet" name="commandOption" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="email" candidateClass="UIGlossyButton"/>
                 <relationship kind="outlet" name="instruments" candidateClass="UISwitch"/>
                 <relationship kind="outlet" name="mapType" candidateClass="UISegmentedControl"/>
+                <relationship kind="outlet" name="ok" candidateClass="UIGlossyButton"/>
                 <relationship kind="outlet" name="port" candidateClass="UITextField"/>
             </relationships>
         </class>

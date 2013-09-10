@@ -19,33 +19,6 @@ bool inEmail = NO;
 
 @synthesize delegate, port, instruments, mapType, commandOption;
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-
-    }
-    return self;
-}
-
-- (void)didReceiveMemoryWarning
-{
-    // Releases the view if it doesn't have a superview.
-    [super didReceiveMemoryWarning];
-    
-    // Release any cached data, images, etc that aren't in use.
-}
-
-#pragma mark - View lifecycle
-
-/*
-// Implement loadView to create a view hierarchy programmatically, without using a nib.
-- (void)loadView
-{
-}
-*/
-
 
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad
@@ -54,7 +27,13 @@ bool inEmail = NO;
 	[[NSNotificationCenter defaultCenter] addObserver:self 
                                              selector:@selector(keyboardDidShow:) 
                                                  name:UIKeyboardDidShowNotification 
-                                               object:nil];	
+                                               object:nil];
+    
+        [ok setNavigationButtonWithColor: [UIColor colorWithRed:0.0f green:0.5f blue:1.0f alpha:1.0f]];
+    
+        [cancel setNavigationButtonWithColor: [UIColor colorWithRed:0.0f green:0.5f blue:1.0f alpha:1.0f]];
+    
+        [email setNavigationButtonWithColor: [UIColor colorWithRed:0.0f green:0.5f blue:1.0f alpha:1.0f]];
 }
 
 

@@ -7,9 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <RevMobAds/RevMobAds.h>
+#import "UIGlossyButton.h"
 
-@interface InfoViewController : UIViewController {
+@interface InfoViewController : UIViewController <RevMobAdsDelegate> {
     @private IBOutlet UITextView *infoView;
+    @private IBOutlet UIGlossyButton *freeStuffButton;
 }
 
 @property (nonatomic, retain) NSString *ipAddress;

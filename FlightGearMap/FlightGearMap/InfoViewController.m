@@ -35,6 +35,8 @@
     [text setAttributes:attrs range:range];
     
     infoView.attributedText = text;
+    
+    [freeStuffButton setNavigationButtonWithColor: [UIColor colorWithRed:0.0f green:0.5f blue:1.0f alpha:1.0f]];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -43,6 +45,16 @@
 
 -(void)willRotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration {
     [infoView setNeedsLayout];
+}
+
+#pragma mark RevMobAds
+
+- (void)revmobAdDidFailWithError:(NSError *)error {
+    
+}
+
+-(IBAction)getFreeStuff:(id)sender {
+    [[RevMobAds session] openAdLinkWithDelegate:self];
 }
 
 @end

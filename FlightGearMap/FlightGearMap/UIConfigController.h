@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import <MessageUI/MessageUI.h>
+#import "UIGlossyButton.h"
 
 @class UIConfigController;
 
@@ -16,7 +17,11 @@
 - (void)configViewControllerDidSave:(UIConfigController *)controller;
 @end
 
-@interface UIConfigController : UIViewController <UITextFieldDelegate, MFMailComposeViewControllerDelegate>
+@interface UIConfigController : UIViewController <UITextFieldDelegate, MFMailComposeViewControllerDelegate> {
+    @private IBOutlet UIGlossyButton *ok;
+    @private IBOutlet UIGlossyButton *cancel;
+    @private IBOutlet UIGlossyButton *email;
+}
 
 @property (nonatomic, weak) id <UIConfigControllerDelagate> delegate;
 @property (strong) IBOutlet UITextField *port;
