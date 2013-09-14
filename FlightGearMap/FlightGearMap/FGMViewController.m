@@ -35,10 +35,12 @@ UIInterfaceOrientation lastOrientation;
         
         MKCoordinateRegion adjustedRegion = [_mapView regionThatFits:viewRegion];
         [_mapView setRegion:adjustedRegion animated:YES];
+                
     } else {
         
         [_mapView setCenterCoordinate:zoomLocation animated:YES];
-    }    
+    }
+
 }
 
 -(void)updateFlightData:(PlaneData *)planeData {
@@ -135,8 +137,30 @@ UIInterfaceOrientation lastOrientation;
 }
 
 -(void)viewWillLayoutSubviews {
-    [super viewWillLayoutSubviews];
     [_instrumentView setNeedsLayout];
+        
+    int xOffset = _instrumentView.hidden?0:_instrumentView.frame.size.width / 2;
+    
+    NSLog(@"X offset %d",xOffset);
+    
+    CGRect mapFrame = CGRectMake(0, _mapView.frame.origin.y,
+                                 self.view.frame.size.width + xOffset,
+                                 _mapView.frame.size.height);
+    
+    _mapView.frame = mapFrame;
+    
+    //Center plane in map view
+    CGRect planeFrame = CGRectMake(mapFrame.size.width /2 - _planeView.frame.size.width /2,
+                                   mapFrame.size.height /2 - _planeView.frame.size.height /2,
+                                   _planeView.frame.size.width,
+                                   _planeView.frame.size.height);
+    
+    _planeView.frame = planeFrame;
+    
+    
+
+    
+    [super viewWillLayoutSubviews];
 }
 
 -(void)updatePosition:(double)lon lat:(double)latitude altInFt:(double)alt {
@@ -161,6 +185,10 @@ UIInterfaceOrientation lastOrientation;
 
 -(void) makeInstrumentsVisible:(bool)visible {
     _instrumentView.hidden = !visible;
+}
+
+-(void)willRotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration {
+    [self viewWillLayoutSubviews];
 }
 
 - (void)didRotateFromInterfaceOrientation:(UIInterfaceOrientation)fromInterfaceOrientation {
@@ -201,6 +229,8 @@ UIInterfaceOrientation lastOrientation;
     }   
         
     _mapView.mapType = controller.mapType.selectedSegmentIndex;
+    
+    [self viewWillLayoutSubviews];
     
 }
 

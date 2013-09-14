@@ -4,6 +4,10 @@ Instructions
         
 Bugs:
   Cant pinch zoom / unzoom when streaming data
+  Config when horizontal (iPhone only?)
+  Spread instruments around on iPhone 5
+  iPad (only?) layout wrong on starting in landscape
+  iPad map dosent center
 
 To Do for v1.4
   Instruments only view
@@ -11,8 +15,7 @@ To Do for v1.4
  Graphics
    Rotation (different on iPad (4 pos) and iPhone (3 positions))
  Other
-   Get free stuff button
-   Update instructions
+   Update instructions on iTunes
    Screenshots
       iPhone R3.5
       iPhone R4
@@ -31,7 +34,7 @@ Done in v1.3
   
 
 Later versions
-    Plane icon - contrasing colours
+    Plane icon - make into map annotation / overlay?
     Breadcrumbs
     Jet instruments
     Secondary Instruments - Navigation etc
