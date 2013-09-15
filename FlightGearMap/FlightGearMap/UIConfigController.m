@@ -46,8 +46,22 @@ bool inEmail = NO;
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
-    // Return YES for supported orientations
-    return (interfaceOrientation == UIInterfaceOrientationPortrait);
+    if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
+        return YES;
+    }
+    
+    return (interfaceOrientation==UIInterfaceOrientationPortrait);
+}
+
+- (BOOL)shouldAutorotate {
+    
+    if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
+        return YES;
+    }
+    
+    UIDeviceOrientation orientation = [[UIDevice currentDevice] orientation];
+    
+    return (orientation==UIDeviceOrientationPortrait);
 }
 
 //This should fix the keyboard not being dismissed 

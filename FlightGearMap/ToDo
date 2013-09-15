@@ -1,19 +1,18 @@
 
 Instructions
     Video : http://www.youtube.com/watch?v=4xM3mGiFrGE
+    
+ToD: check on device
+ e.g rotation
+ email instructions
         
 Bugs:
   Cant pinch zoom / unzoom when streaming data
-  Config when horizontal (iPhone only?)
   Spread instruments around on iPhone 5
   iPad (only?) layout wrong on starting in landscape
-  iPad map dosent center
 
 To Do for v1.4
   Instruments only view
-  Center view in remaing screen when instruments and map
- Graphics
-   Rotation (different on iPad (4 pos) and iPhone (3 positions))
  Other
    Update instructions on iTunes
    Screenshots
@@ -34,9 +33,9 @@ Done in v1.3
   
 
 Later versions
-    Plane icon - make into map annotation / overlay?
+    Rotation (different on iPad (4 pos) and iPhone (3 positions))
     Breadcrumbs
-    Jet instruments
+    Jet instruments - Faster ASI
     Secondary Instruments - Navigation etc
     Switch panel
     Record trip

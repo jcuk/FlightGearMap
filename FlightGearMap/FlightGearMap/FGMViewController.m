@@ -22,8 +22,6 @@
 PlaneData *planeData;
 UDPClient *udpClient;
 
-UIInterfaceOrientation lastOrientation;
-
 -(void)updatePosition:(float)lon lat:(float)latitude altitudeInFt:(float)alt updateZoom:(bool)zoom {
     
     CLLocationCoordinate2D zoomLocation;
