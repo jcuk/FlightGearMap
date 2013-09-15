@@ -15,11 +15,7 @@
 #define METERS_PER_MILE 1609.344
 
 @interface FGMViewController : UIViewController <MapStatusUpdater, UIConfigControllerDelagate> {
-    @private bool _doneInitialZoom;
-    @private CGRect infoRectH,infoRectV;
-    @private int mapWidth;
-    @private int mapHeight;
-    
+    @private bool _doneInitialZoom; 
 }
 
 @property (weak, nonatomic) IBOutlet MKMapView *_mapView;

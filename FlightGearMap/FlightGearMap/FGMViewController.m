@@ -141,10 +141,21 @@ UIInterfaceOrientation lastOrientation;
         
     int xOffset = _instrumentView.hidden?0:_instrumentView.frame.size.width / 2;
     
-    NSLog(@"X offset %d",xOffset);
+    CGFloat mapWidth = self.view.frame.size.width;
+    
+    if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
+        
+        if ([[UIDevice currentDevice] orientation] == UIInterfaceOrientationPortrait ||
+            [[UIDevice currentDevice] orientation] == UIInterfaceOrientationPortraitUpsideDown) {
+            mapWidth = 768;
+        } else {
+            mapWidth = 1024;
+        }
+        
+    }
     
     CGRect mapFrame = CGRectMake(0, _mapView.frame.origin.y,
-                                 self.view.frame.size.width + xOffset,
+                                 mapWidth + xOffset,
                                  _mapView.frame.size.height);
     
     _mapView.frame = mapFrame;
@@ -157,8 +168,6 @@ UIInterfaceOrientation lastOrientation;
     
     _planeView.frame = planeFrame;
     
-    
-
     
     [super viewWillLayoutSubviews];
 }
