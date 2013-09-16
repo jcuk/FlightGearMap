@@ -5,9 +5,12 @@ import java.io.PrintWriter;
 import java.net.ServerSocket;
 import java.net.Socket;
 import java.net.SocketException;
+import java.util.Random;
 
 
 public class TelnetServer {
+	
+	private Random rnd = new Random();
 	
 	private static final int TELNET_SOCKET = 9999; // the port used by the server
 	private static final int HEADER_LENGTH = 21;
@@ -157,6 +160,9 @@ public class TelnetServer {
 		lat = start_lat + Math.sin(pos_rad) * n_rad;
 		lon = start_lon + Math.cos(pos_rad) * w_rad;
 		
+
+		alt = rnd.nextInt(10000);	
+		
 		if (alt == 1000){
 			alt_check = 1;}
 		else if (alt == 5001){
@@ -169,5 +175,6 @@ public class TelnetServer {
 		
 			
 		}
+
 	}
 
