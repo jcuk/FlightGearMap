@@ -1,55 +1,49 @@
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
-import java.io.OutputStream;
-import java.io.PrintWriter;
-import java.net.ServerSocket;
-import java.net.Socket;
-import java.net.SocketException;
+import java.io.UnsupportedEncodingException;
+import java.net.DatagramPacket;
+import java.net.DatagramSocket;
+import java.net.InetAddress;
 import java.util.Random;
 
 
 public class TelnetServer {
 	
+	private static final long SLEEP_TIME = 500L;
+	
 	private Random rnd = new Random();
 	
 	private static final int TELNET_SOCKET = 9999; // the port used by the server
-	private static final int HEADER_LENGTH = 21;
-	
-	private static final String EXIT = "quit";
-	private static final String DUMP_POSITION = "dump /position";
-	private static final String DUMP_ORIENTATION = "dump /orientation";
+	private static final String ipAddress = ""; //TODO: add this
 	
 	private double lat; // latitude
 	private double lon; // longitude
+	private int rpm;
+	private float speed;
 	
 	private double start_lat; // starting latitude
 	private double start_lon; // starting longitude
 	private double alt; //altitude
-	private double alt_check; // the value of this variable tells the server whether the plane should be ascending or descending   i.e. 0 = descending 1 = ascending
-	private double ground_elv_m; // height above ground in meters
-	private double ground_elv_ft;  // height above ground in feet
 	private double hdg; // heading
 	private double w_rad;
 	private double n_rad;
 	
 	private double ms_per_cir; // ... per circle
 
+	private long updateTime = 0;
+	private static final int MIN_UPDATE_TIME = 5000;
+
 	public static void main(String[] args) throws Exception {
-		TelnetServer server = new TelnetServer(51.471333, -0.460768, 5000.0, 0, 1666.66, 5000.0, 0.0112, -0.019, 60 * 2000); //LHR, 1m per c
+		TelnetServer server = new TelnetServer(51.471333, -0.460768, 5000.0, 1666.66, 5000.0, 0.0112, -0.019, 60 * 2000); //LHR, 1m per c
 		// W : 51.472081,-0.498877
 		// N : 51.493782,-0.462313
 		server.start();
 	}
 	
 	
-	public TelnetServer(double start_lat, double start_lon, double alt, double alt_check, double gelv_m, double gelv_ft, double w_rad, double n_rad, double ms_per_cir) {
+	public TelnetServer(double start_lat, double start_lon, double alt, double gelv_m, double gelv_ft, double w_rad, double n_rad, double ms_per_cir) {
 		this.start_lat		= start_lat;
 		this.start_lon		= start_lon;
 		
 		this.alt		= alt;
-		this.alt_check  = alt_check;
-		this.ground_elv_m		= gelv_m;
-		this.ground_elv_ft	= gelv_ft;
 		
 		this.w_rad		= w_rad;
 		this.n_rad		= n_rad;
@@ -59,98 +53,63 @@ public class TelnetServer {
 
 		
 	void start() throws Exception {
-		ServerSocket ss = new ServerSocket(TELNET_SOCKET);
 		while (true) {
-			try {
-				System.out.println("Waiting\n");
-				Socket s = ss.accept();
-				System.out.println("Got connection\n");
-				BufferedReader socketReader = 
-						new BufferedReader(new InputStreamReader(s.getInputStream()));
-				OutputStream os = s.getOutputStream();
-				PrintWriter pw = new PrintWriter(os, true);
+	        DatagramSocket serverSocket = new DatagramSocket(9876);
+            byte[] sendData = new byte[1024];
+            while(true)
+            {
+            	  updatePos();
 
-				boolean first = true;
-				
-				while (true) {
-					String line = socketReader.readLine();
-					if (first && line != null && line.length()>HEADER_LENGTH) {
-						line = line.substring(HEADER_LENGTH);
-					}
-					
-					first = false;
+                  InetAddress IPAddress = InetAddress.getByName("192.168.1.41"); //TODO: configure for device
 
-					if (line == null) {
-						System.out.println("Pinging");
-						os.write("PING".getBytes());
-						os.flush();
-						Thread.sleep(1000L);
-					}  else {
-						System.out.println(">"+line);
-						updatePos();
-						
-						if (DUMP_POSITION.equals(line)) {
-							System.out.println("--- Dumping position");
-							pw.println(getPositionXML());
-						} else if (DUMP_ORIENTATION.equals(line)) {
-							System.out.println("--- Dumping orientation");
-							pw.println(getOrientationXML());
-						} else if (EXIT.equals(line)) {
-							System.out.println("Exiting");
-							pw.close();
-							os.close();
-							s.close();
-							ss.close();
-							s = null;
-							ss = null;
-							System.exit(0);
-						}
-					}
-				}
-			} catch (SocketException e) {
-				System.out.println("Disconnect");
-			}
+                  MessageBuilder mb = new MessageBuilder();
+                  
+                  mb
+                  .withFloat(speed)	//  SPEED
+                  .withInt(rpm)			//  RPM
+                  .withDouble(hdg)	//  HEADING
+                  .withDouble(alt)	//  ALTITUDE
+                  .withFloat(0.0f)	//  CLIMB_RATE
+                  .withFloat(0.0f)	//  PITCH,
+                  .withFloat(0.0f)	//  ROLL
+                  .withDouble(lat)	//  LATITUDE
+                  .withDouble(lon)	//  LONGITUDE
+                  .withFloat(0.0f)	//  SECONDS
+                  .withFloat(0.0f)	//  TURN_RATE
+                  .withFloat(0.0f)	//  SLIP
+                  .withFloat(0.0f)	//  INDICATED_HEADING
+                  .withFloat(0.0f)	//  FUEL1
+                  .withFloat(0.0f)	//  FUEL2,
+                  .withFloat(0.0f)	//  OIL_PRESS
+                  .withFloat(0.0f)	//  OIL_TEMP
+                  .withFloat(0.0f)	//  AMP
+                  .withFloat(0.0f)	//  VOLT
+                  .withFloat(0.0f)	//  NAV1_TO
+                  .withFloat(0.0f)	//  NAV1_FROM
+                  .withFloat(0.0f)	//  NAV1_DEFLECTION
+                  .withFloat(0.0f)	//  NAV1_SEL_RADIAL
+                  .withFloat(0.0f)	//  NAV2_TO
+                  .withFloat(0.0f)	//  NAV2_FROM
+                  .withFloat(0.0f)	//  NAV2_DEFLECTION,
+                  .withFloat(0.0f)	//  NAV2_SEL_RADIAL
+                  .withFloat(0.0f)	//  ADF_DEFLECTION
+                  .withFloat(0.0f)	//  ELEV_TRIM,
+                  .withFloat(0.0f)	//  FLAPS
+                  ;
+                  
+                  sendData = mb.getBytes();
+                  DatagramPacket sendPacket =
+                  new DatagramPacket(sendData, sendData.length, IPAddress, TELNET_SOCKET);
+                  serverSocket.send(sendPacket);
+                  
+                  System.out.println("Sent packet");
+                  
+                  Thread.sleep(SLEEP_TIME);
+            }
 		}
 	}
 	
-	private String getOrientationXML() {
-		StringBuilder sb = new StringBuilder();
-		sb.append("<?xml version=\"1.0\"?>\r\n");
-		sb.append("<PropertyList>\r\n");
-		sb.append("  <heading-deg type=\"double\">");
-		sb.append(hdg);
-		sb.append("</heading-deg>\r\n");
-		sb.append("  <alpha-deg type=\"double\">0.0</alpha-deg>\r\n");
-		sb.append("  <pitch-rate-degps type=\"double\">0.0</pitch-rate-degps>\r\n");
-		sb.append("</PropertyList>\r\n");
-		sb.append("\r\n");
-		sb.append("/> ");
-		return sb.toString();	}
 
-	private String getPositionXML() {
-		StringBuilder sb = new StringBuilder();
-		sb.append("<?xml version=\"1.0\"?>\r\n");
-		sb.append("<PropertyList>\r\n");
-		sb.append("  <longitude-deg type=\"double\">");
-		sb.append(lon);
-		sb.append("</longitude-deg>\r\n");
-		sb.append("  <latitude-deg type=\"double\">");
-		sb.append(lat);
-		sb.append("</latitude-deg>\r\n");
-		sb.append("  <altitude-ft type=\"double\">");
-		sb.append(alt);
-		sb.append("</altitude-ft>\r\n");
-		sb.append("  <ground-elev-m type=\"double\">");
-		sb.append(ground_elv_m);
-		sb.append("</ground-elev-m>\r\n");
-		sb.append("  <ground-elev-ft type=\"double\">");
-		sb.append(ground_elv_ft);
-		sb.append("</ground-elev-ft>\r\n");
-		sb.append("</PropertyList>\r\n");
-		sb.append("\r\n");
-		sb.append("/> ");
-		return sb.toString();
-	}
 	
 	private void updatePos() { // calculates latitude, longitude and heading for virtual plane
 		double pos_rad = (System.currentTimeMillis() % ms_per_cir)/ms_per_cir * 2 * Math.PI;
@@ -160,21 +119,60 @@ public class TelnetServer {
 		lat = start_lat + Math.sin(pos_rad) * n_rad;
 		lon = start_lon + Math.cos(pos_rad) * w_rad;
 		
-
-		alt = rnd.nextInt(10000);	
-		
-		if (alt == 1000){
-			alt_check = 1;}
-		else if (alt == 5001){
-			alt_check = 0;}
-		
-		if (alt_check == 0){
-			--alt;}
-		else if (alt_check == 1){
-			++alt;}
-		
+		if (System.currentTimeMillis() > updateTime) {
+			updateTime = System.currentTimeMillis() + MIN_UPDATE_TIME + rnd.nextInt(MIN_UPDATE_TIME);
+			
+			//TODO: make this a bit more flexible
+			alt = rnd.nextDouble();
+			rpm = rnd.nextInt();
+			//speed = rnd.nextFloat();
+			
+			speed = 500f;
+			
+			System.out.println("Changing");
 			
 		}
-
 	}
+	
+	private static class MessageBuilder {
+		private static final char SEP = ':';
+		final StringBuilder sb;
+		
+		public MessageBuilder() {
+			sb = new StringBuilder();
+		}
+		
+		public MessageBuilder withFloat(float f) {
+			sb.append(f);
+			sb.append(SEP);
+			return this;
+		}
+		
+		public MessageBuilder withInt(int i) {
+			sb.append(i);
+			sb.append(SEP);
+			return this;
+		}
+		
+		public MessageBuilder withDouble(double d) {
+			sb.append(d);
+			sb.append(SEP);
+			return this;
+		}
+		
+		public byte[] getBytes() {
+			try {
+				return sb.toString().getBytes("UTF-8");
+			} catch (UnsupportedEncodingException e) {
+				e.printStackTrace();
+			}		
+			return null;
+
+		}
+		
+	}
+
+}
+
+
 
