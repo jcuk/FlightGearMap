@@ -108,6 +108,8 @@
 		96C3E19915B0E21B00DCF289 /* trn0~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 96C3E18B15B0E21B00DCF289 /* trn0~ipad.png */; };
 		96C3E19A15B0E21B00DCF289 /* trn1~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 96C3E18C15B0E21B00DCF289 /* trn1~ipad.png */; };
 		96C3E19B15B0E21B00DCF289 /* turn0~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 96C3E18D15B0E21B00DCF289 /* turn0~ipad.png */; };
+		96D93D8217E5D2E80060E78B /* InstrumentsASI2.m in Sources */ = {isa = PBXBuildFile; fileRef = 96D93D8117E5D2E80060E78B /* InstrumentsASI2.m */; };
+		96D93D8417E782A50060E78B /* jet-asi@2x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 96D93D8317E782A50060E78B /* jet-asi@2x~ipad.png */; };
 		96FAE9A117DE5E76008F4664 /* Appirater.m in Sources */ = {isa = PBXBuildFile; fileRef = 96FAE99F17DE5E76008F4664 /* Appirater.m */; };
 		96FAE9A517DE605B008F4664 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96FAE9A317DE605B008F4664 /* StoreKit.framework */; };
 		96FAE9A617DE605B008F4664 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96FAE9A417DE605B008F4664 /* SystemConfiguration.framework */; };
@@ -242,6 +244,9 @@
 		96C3E18B15B0E21B00DCF289 /* trn0~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "trn0~ipad.png"; sourceTree = "<group>"; };
 		96C3E18C15B0E21B00DCF289 /* trn1~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "trn1~ipad.png"; sourceTree = "<group>"; };
 		96C3E18D15B0E21B00DCF289 /* turn0~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "turn0~ipad.png"; sourceTree = "<group>"; };
+		96D93D8017E5D2E80060E78B /* InstrumentsASI2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InstrumentsASI2.h; sourceTree = "<group>"; };
+		96D93D8117E5D2E80060E78B /* InstrumentsASI2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InstrumentsASI2.m; sourceTree = "<group>"; };
+		96D93D8317E782A50060E78B /* jet-asi@2x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "jet-asi@2x~ipad.png"; sourceTree = "<group>"; };
 		96FAE99E17DE5E76008F4664 /* Appirater.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Appirater.h; path = ../Appirater.h; sourceTree = "<group>"; };
 		96FAE99F17DE5E76008F4664 /* Appirater.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Appirater.m; path = ../Appirater.m; sourceTree = "<group>"; };
 		96FAE9A017DE5E76008F4664 /* AppiraterDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppiraterDelegate.h; path = ../AppiraterDelegate.h; sourceTree = "<group>"; };
@@ -418,6 +423,8 @@
 				96C3E0E815AF352000DCF289 /* InstrumentTurnAndSlip.m */,
 				9644E8D915B3F24300D8BF96 /* InstrumentSpeedo.h */,
 				9644E8DA15B3F24300D8BF96 /* InstrumentSpeedo.m */,
+				96D93D8017E5D2E80060E78B /* InstrumentsASI2.h */,
+				96D93D8117E5D2E80060E78B /* InstrumentsASI2.m */,
 			);
 			name = InstrumentView;
 			sourceTree = "<group>";
@@ -459,6 +466,7 @@
 		9644E8BA15B36D5B00D8BF96 /* @2xiPad */ = {
 			isa = PBXGroup;
 			children = (
+				96D93D8317E782A50060E78B /* jet-asi@2x~ipad.png */,
 				9644E8BB15B36D5B00D8BF96 /* alt0@2x~ipad.png */,
 				9644E8BC15B36D5B00D8BF96 /* alt1@2x~ipad.png */,
 				9644E8BD15B36D5B00D8BF96 /* ati0@2x~ipad.png */,
@@ -702,6 +710,7 @@
 				9672824317DC75E20031BE7A /* Default-568h@2x.png in Resources */,
 				9672824817DD0D860031BE7A /* background.png in Resources */,
 				9672824A17DD16A20031BE7A /* gear.png in Resources */,
+				96D93D8417E782A50060E78B /* jet-asi@2x~ipad.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -731,6 +740,7 @@
 				96898C1415D0C49D00ABB2F9 /* UIGlossyButton.m in Sources */,
 				9672824617DC7C120031BE7A /* InfoViewController.m in Sources */,
 				96FAE9A117DE5E76008F4664 /* Appirater.m in Sources */,
+				96D93D8217E5D2E80060E78B /* InstrumentsASI2.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

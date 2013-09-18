@@ -7,9 +7,6 @@ ToD: check on device
  email instructions
         
 Bugs:
-  Cant pinch zoom / unzoom when streaming data
-  Spread instruments around on iPhone 5
-  iPad (only?) layout wrong on starting in landscape
 
 To Do for v1.4
   Instruments only view
@@ -34,8 +31,11 @@ Done in v1.3
 
 Later versions
     Rotation (different on iPad (4 pos) and iPhone (3 positions))
+    Cant pinch zoom / unzoom when streaming data (still a problem?)
+    iPad (only?) layout wrong on starting in landscape - Unknown device rotation?
     Breadcrumbs
     Jet instruments - Faster ASI
+      Dial - 777-asi-face-1 256 -> 216 241.5%
     Secondary Instruments - Navigation etc
     Switch panel
     Record trip
