@@ -8,6 +8,12 @@
 
 #import "InstrumentGeneric.h"
 
-@interface InstrumentsASI2 : InstrumentGeneric
+@interface InstrumentsASI2 : InstrumentGeneric {
+
+    @private UIView *digitsView;
+    @private UIView *digit1;
+    @private UIView *digit2;
+    @private UIView *digit3;
+}
 
 @end

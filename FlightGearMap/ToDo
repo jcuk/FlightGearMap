@@ -7,8 +7,12 @@ ToD: check on device
  email instructions
         
 Bugs:
+ Update controls e.g. ASI on start
+ Re-connect on config 'OK'
 
-To Do for v1.4
+To Do for v1.4+
+  Seletct jet instruments
+    Hi Altitude
   Instruments only view
  Other
    Update instructions on iTunes
@@ -34,8 +38,6 @@ Later versions
     Cant pinch zoom / unzoom when streaming data (still a problem?)
     iPad (only?) layout wrong on starting in landscape - Unknown device rotation?
     Breadcrumbs
-    Jet instruments - Faster ASI
-      Dial - 777-asi-face-1 256 -> 216 241.5%
     Secondary Instruments - Navigation etc
     Switch panel
     Record trip

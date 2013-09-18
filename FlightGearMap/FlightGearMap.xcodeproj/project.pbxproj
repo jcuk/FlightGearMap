@@ -61,6 +61,13 @@
 		96898C0B15BCC18300ABB2F9 /* mobatlas.xml in Resources */ = {isa = PBXBuildFile; fileRef = 96898C0A15BCC18300ABB2F9 /* mobatlas.xml */; };
 		96898C1415D0C49D00ABB2F9 /* UIGlossyButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 96898C1315D0C49D00ABB2F9 /* UIGlossyButton.m */; };
 		96A29D9A15D0F7AE00694DAF /* plane@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 96A29D9915D0F7AE00694DAF /* plane@2x.png */; };
+		96A7B27B17E9EDA000D052D0 /* jet-asi-digits@2x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 96A7B27A17E9EDA000D052D0 /* jet-asi-digits@2x~ipad.png */; };
+		96A7B27E17EA38C600D052D0 /* jet-asi~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 96A7B27C17EA38C600D052D0 /* jet-asi~ipad.png */; };
+		96A7B27F17EA38C600D052D0 /* jet-asi-digits~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 96A7B27D17EA38C600D052D0 /* jet-asi-digits~ipad.png */; };
+		96A7B28217EA38E700D052D0 /* jet-asi@2x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 96A7B28017EA38E700D052D0 /* jet-asi@2x~iphone.png */; };
+		96A7B28317EA38E700D052D0 /* jet-asi-digits@2x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 96A7B28117EA38E700D052D0 /* jet-asi-digits@2x~iphone.png */; };
+		96A7B28617EA38F400D052D0 /* jet-asi~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 96A7B28417EA38F400D052D0 /* jet-asi~iphone.png */; };
+		96A7B28717EA38F400D052D0 /* jet-asi-digits~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 96A7B28517EA38F400D052D0 /* jet-asi-digits~iphone.png */; };
 		96B414C515B3F8DB00CC02C9 /* UDPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 96B414C415B3F8DB00CC02C9 /* UDPClient.m */; };
 		96B414C915B544FE00CC02C9 /* GCDAsyncUdpSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 96B414C815B544FE00CC02C9 /* GCDAsyncUdpSocket.m */; };
 		96C3E02215A8F16500DCF289 /* hand1~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 96C3E02115A8F16500DCF289 /* hand1~iphone.png */; };
@@ -188,6 +195,13 @@
 		96898C1215D0C49D00ABB2F9 /* UIGlossyButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIGlossyButton.h; sourceTree = "<group>"; };
 		96898C1315D0C49D00ABB2F9 /* UIGlossyButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIGlossyButton.m; sourceTree = "<group>"; };
 		96A29D9915D0F7AE00694DAF /* plane@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "plane@2x.png"; path = "Instruments/plane@2x.png"; sourceTree = "<group>"; };
+		96A7B27A17E9EDA000D052D0 /* jet-asi-digits@2x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "jet-asi-digits@2x~ipad.png"; sourceTree = "<group>"; };
+		96A7B27C17EA38C600D052D0 /* jet-asi~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "jet-asi~ipad.png"; sourceTree = "<group>"; };
+		96A7B27D17EA38C600D052D0 /* jet-asi-digits~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "jet-asi-digits~ipad.png"; sourceTree = "<group>"; };
+		96A7B28017EA38E700D052D0 /* jet-asi@2x~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "jet-asi@2x~iphone.png"; path = "140/jet-asi@2x~iphone.png"; sourceTree = "<group>"; };
+		96A7B28117EA38E700D052D0 /* jet-asi-digits@2x~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "jet-asi-digits@2x~iphone.png"; path = "140/jet-asi-digits@2x~iphone.png"; sourceTree = "<group>"; };
+		96A7B28417EA38F400D052D0 /* jet-asi~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "jet-asi~iphone.png"; sourceTree = "<group>"; };
+		96A7B28517EA38F400D052D0 /* jet-asi-digits~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "jet-asi-digits~iphone.png"; sourceTree = "<group>"; };
 		96B28337160F463900189F24 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "../Default-568h@2x.png"; sourceTree = "<group>"; };
 		96B414C315B3F8DB00CC02C9 /* UDPClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UDPClient.h; sourceTree = "<group>"; };
 		96B414C415B3F8DB00CC02C9 /* UDPClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UDPClient.m; sourceTree = "<group>"; };
@@ -443,6 +457,8 @@
 		960B31D915A7A16300152F59 /* iPhone */ = {
 			isa = PBXGroup;
 			children = (
+				96A7B28417EA38F400D052D0 /* jet-asi~iphone.png */,
+				96A7B28517EA38F400D052D0 /* jet-asi-digits~iphone.png */,
 				96C3E11F15B0B23800DCF289 /* rpm~iphone.png */,
 				96C3E10915B008CD00DCF289 /* trn0~iphone.png */,
 				96C3E10715AF388600DCF289 /* slip~iphone.png */,
@@ -466,6 +482,7 @@
 		9644E8BA15B36D5B00D8BF96 /* @2xiPad */ = {
 			isa = PBXGroup;
 			children = (
+				96A7B27A17E9EDA000D052D0 /* jet-asi-digits@2x~ipad.png */,
 				96D93D8317E782A50060E78B /* jet-asi@2x~ipad.png */,
 				9644E8BB15B36D5B00D8BF96 /* alt0@2x~ipad.png */,
 				9644E8BC15B36D5B00D8BF96 /* alt1@2x~ipad.png */,
@@ -533,6 +550,8 @@
 		96C3E17C15B0D23200DCF289 /* @2xiPhone */ = {
 			isa = PBXGroup;
 			children = (
+				96A7B28017EA38E700D052D0 /* jet-asi@2x~iphone.png */,
+				96A7B28117EA38E700D052D0 /* jet-asi-digits@2x~iphone.png */,
 				96C3E15E15B0CAF700DCF289 /* alt0@2x~iphone.png */,
 				96C3E15F15B0CAF700DCF289 /* alt1@2x~iphone.png */,
 				96C3E16015B0CAF800DCF289 /* ati0@2x~iphone.png */,
@@ -555,6 +574,8 @@
 		96C3E17D15B0DB0700DCF289 /* iPad */ = {
 			isa = PBXGroup;
 			children = (
+				96A7B27C17EA38C600D052D0 /* jet-asi~ipad.png */,
+				96A7B27D17EA38C600D052D0 /* jet-asi-digits~ipad.png */,
 				96C3E18015B0E21B00DCF289 /* alt0~ipad.png */,
 				96C3E18115B0E21B00DCF289 /* ati0~ipad.png */,
 				96C3E18215B0E21B00DCF289 /* ati1~ipad.png */,
@@ -711,6 +732,13 @@
 				9672824817DD0D860031BE7A /* background.png in Resources */,
 				9672824A17DD16A20031BE7A /* gear.png in Resources */,
 				96D93D8417E782A50060E78B /* jet-asi@2x~ipad.png in Resources */,
+				96A7B27B17E9EDA000D052D0 /* jet-asi-digits@2x~ipad.png in Resources */,
+				96A7B27E17EA38C600D052D0 /* jet-asi~ipad.png in Resources */,
+				96A7B27F17EA38C600D052D0 /* jet-asi-digits~ipad.png in Resources */,
+				96A7B28217EA38E700D052D0 /* jet-asi@2x~iphone.png in Resources */,
+				96A7B28317EA38E700D052D0 /* jet-asi-digits@2x~iphone.png in Resources */,
+				96A7B28617EA38F400D052D0 /* jet-asi~iphone.png in Resources */,
+				96A7B28717EA38F400D052D0 /* jet-asi-digits~iphone.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
