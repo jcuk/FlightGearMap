@@ -14,6 +14,7 @@
 #import "InstrumentTurnAndSlip.h"
 #import "InstrumentSpeedo.h"
 #import "FGMViewController.h"
+#import "InstrumentsASI2.h"
 
 @implementation InstrumentView
 
@@ -31,7 +32,8 @@ NSMutableArray * instruments;
             hand:@"hand1" dataType:CLIMB_RATE min:-2000 max:2000 minAngle:-265 maxAngle:85]];
         [instruments addObject:[[InstrumentGeneric alloc]initWithFilename:@"rpm"
             hand:@"hand1" dataType:RPM min:0 max:3500 minAngle:-125 maxAngle:125]];
-        [instruments addObject:[[InstrumentSpeedo alloc]initWithFilename:@"speed"]];
+        //[instruments addObject:[[InstrumentSpeedo alloc]initWithFilename:@"speed"]];
+        [instruments addObject:[[InstrumentsASI2 alloc]initWithFilename:@"jet-asi"]];
         [instruments addObject:[[InstrumentTurnAndSlip alloc]initWithFilename:@"trn1"]];
         
         [self setNeedsLayout];

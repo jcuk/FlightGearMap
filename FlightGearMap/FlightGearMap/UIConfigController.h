@@ -25,7 +25,7 @@
 
 @property (nonatomic, weak) id <UIConfigControllerDelagate> delegate;
 @property (strong) IBOutlet UITextField *port;
-@property (strong) IBOutlet UISwitch *instruments;
+@property (strong) IBOutlet UISegmentedControl *instrumentType;
 @property (strong) IBOutlet UISegmentedControl *mapType;
 @property (strong) IBOutlet UILabel *commandOption;
 

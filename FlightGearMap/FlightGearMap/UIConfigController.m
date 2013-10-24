@@ -17,7 +17,7 @@
 
 bool inEmail = NO;
 
-@synthesize delegate, port, instruments, mapType, commandOption;
+@synthesize delegate, port, mapType, commandOption;
 
 
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.

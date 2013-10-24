@@ -138,17 +138,6 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <switch opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" id="lOu-Rl-cg1">
-                                <rect key="frame" x="221" y="91" width="79" height="27"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </switch>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Instruments" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="r7T-x5-10y">
-                                <rect key="frame" x="20" y="94" width="90" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="unV-AT-Ueb">
                                 <rect key="frame" x="20" y="142" width="280" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -188,6 +177,15 @@
                                     <action selector="emailConfig:" destination="H73-HB-dqe" eventType="touchUpInside" id="yGJ-it-lsD"/>
                                 </connections>
                             </button>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="bgP-LU-gZh">
+                                <rect key="frame" x="20" y="91" width="280" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <segments>
+                                    <segment title="Instruments off"/>
+                                    <segment title="Prop"/>
+                                    <segment title="Fast Jet"/>
+                                </segments>
+                            </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                     </view>
@@ -196,7 +194,6 @@
                         <outlet property="cancel" destination="Tza-Ux-YUR" id="rV8-Tw-9FL"/>
                         <outlet property="commandOption" destination="tvj-XK-ve0" id="6d4-jJ-n6h"/>
                         <outlet property="email" destination="AcE-cP-wA0" id="3c5-hc-S2x"/>
-                        <outlet property="instruments" destination="lOu-Rl-cg1" id="Wcr-k8-FGv"/>
                         <outlet property="mapType" destination="unV-AT-Ueb" id="cix-pY-fbC"/>
                         <outlet property="ok" destination="haS-0d-I3D" id="xWm-or-Djf"/>
                         <outlet property="port" destination="8ZB-rc-LRX" id="Nkw-aH-YFN"/>
@@ -292,7 +289,6 @@
         <class className="InfoViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/InfoViewController.h"/>
             <relationships>
-                <relationship kind="action" name="getFreeStuff:"/>
                 <relationship kind="outlet" name="freeStuffButton" candidateClass="UIGlossyButton"/>
                 <relationship kind="outlet" name="infoView" candidateClass="UITextView"/>
             </relationships>

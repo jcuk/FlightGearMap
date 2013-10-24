@@ -98,11 +98,10 @@ UDPClient *udpClient;
             
         }
         
-//        NSString *version = [temp objectForKey:@"version"];
         NSString *port = [temp objectForKey:@"port"];
-//        NSString *machine = [temp objectForKey:@"machine"];
         NSString *instruments = [temp objectForKey:@"instruments"];
         NSNumber *mapType = [temp objectForKey:@"mapType"];
+        NSString *instrumentType = [temp objectForKey:@"instrumentType"];
         
         if ([port length]==0) {
             port = @"9999"; //Default port
@@ -115,7 +114,12 @@ UDPClient *udpClient;
         }
         
         [self updatePosition:START_LON lat:START_LAT altitudeInFt:0 updateZoom:YES];
-        [self makeInstrumentsVisible:![@"N" isEqualToString:instruments]];
+        
+        if (instrumentType) {
+            //TODO: instruments type / visibility
+        } else { // From v1.1
+            [self makeInstrumentsVisible:![@"N" isEqualToString:instruments]];
+        }
         
         UIImage *plane = [UIImage imageNamed:@"plane"];
         _planeView.image = plane;
@@ -213,9 +217,18 @@ UDPClient *udpClient;
     NSString *plistPath = [rootPath stringByAppendingPathComponent:@"save.plist"];
         
     NSDictionary *plistDict = [NSDictionary dictionaryWithObjects:
-                [NSArray arrayWithObjects: @"1.1", controller.port.text, controller.instruments.isOn?@"Y":@"N", [NSNumber numberWithInt:controller.mapType.selectedSegmentIndex], nil]
-                forKeys:[NSArray arrayWithObjects: @"version", @"port", @"instruments", @"mapType", nil]];
-        
+                [NSArray arrayWithObjects:
+                 @"1.4",
+                 controller.port.text,
+                 [NSNumber numberWithInt:controller.instrumentType.selectedSegmentIndex],
+                 [NSNumber numberWithInt:controller.mapType.selectedSegmentIndex],
+                 nil]
+                forKeys:[NSArray arrayWithObjects: @"version", @"port", @"instrumentType", @"mapType", nil]];
+    
+//    NSDictionary *plistDict = [NSDictionary dictionaryWithObjects:
+//                [NSArray arrayWithObjects: @"1.1", controller.port.text, controller.instruments.isOn?@"Y":@"N", [NSNumber numberWithInt:controller.mapType.selectedSegmentIndex], nil]
+//                forKeys:[NSArray arrayWithObjects: @"version", @"port", @"instruments", @"mapType", nil]];
+    
     NSData *plistData = [NSPropertyListSerialization dataFromPropertyList:plistDict
                 format:NSPropertyListXMLFormat_v1_0 errorDescription:&error];
         
@@ -228,7 +241,8 @@ UDPClient *udpClient;
             
     }
     
-    [self makeInstrumentsVisible:controller.instruments.isOn];
+    //TODO: set insturment type / visibility
+    //[self makeInstrumentsVisible:controller.instruments.isOn];
     
     if ([controller.port.text length] > 0) {
     
@@ -252,7 +266,8 @@ UDPClient *udpClient;
         [configViewController view];
         
         [configViewController.port setText:[NSString stringWithFormat:@"%d", udpClient._port]];
-        [configViewController.instruments setOn:!_instrumentView.isHidden];
+        //TODO: set instruments visibility / type
+        //[configViewController.instruments setOn:!_instrumentView.isHidden];
         configViewController.mapType.selectedSegmentIndex = _mapView.mapType;
         [configViewController updateCommandOptionsLabel];
         
