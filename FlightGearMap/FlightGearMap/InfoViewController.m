@@ -8,7 +8,7 @@
 
 #import "InfoViewController.h"
 
-#define INFO_TEXT @"Live map for use with FlightGear, the open source flight simulator.\nTo use flight gear map, you must first copy the mobatlas.xml file into the 'Protocol' directory of your FlightGear application. On the config screen of this app you will see the IP address of your device. You can now start FlightGear with the UDP option enabled e.g.:\n\nfgfs --generic=socket,out,5, %@,%d,udp,mobatlas\n\nTap Done and FlightGear Map will connect to your FlightGear instance.\n\n© Jason Crane 2012\n"
+#define INFO_TEXT @"Live map for use with FlightGear, the open source flight simulator.\nTo use flight gear map, you must first copy the mobatlas.xml file into the 'Protocol' directory of your FlightGear application. On the config screen of this app you will see the IP address of your device. You can now start FlightGear with the UDP option enabled e.g.:\n\nfgfs --generic=socket,out,5, %@,%d,udp,mobatlas\n\nTap Done and FlightGear Map will connect to your FlightGear instance.\n\nhttp://www.flightgear.org/\n\n© Jason Crane 2012\n"
 
 @interface InfoViewController ()
 
@@ -19,9 +19,13 @@
 -(void)viewDidLoad {
     
     UIFont *boldFont = [UIFont fontWithName:@"Courier-Bold" size:[infoView font].pointSize];
+
+    NSMutableParagraphStyle *paragrapStyle = [[NSMutableParagraphStyle alloc] init];
+    paragrapStyle.alignment = NSTextAlignmentCenter;
     
     NSDictionary *attrs = [NSDictionary dictionaryWithObjectsAndKeys:
-                           boldFont, NSFontAttributeName, nil];
+                           boldFont,        NSFontAttributeName,
+                           nil];
     
     NSMutableAttributedString *text = [[NSMutableAttributedString alloc]initWithString:[NSString stringWithFormat:INFO_TEXT, _ipAddress,
         _port]];
@@ -33,6 +37,8 @@
         end - start);
     
     [text setAttributes:attrs range:range];
+    
+    [text addAttribute:NSParagraphStyleAttributeName value:paragrapStyle range:NSMakeRange(0, [[text string] length])];
     
     infoView.attributedText = text;
     
