@@ -5,45 +5,34 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>771D868F-E069-44F9-BBF7-D53431A8F50D</string>
+	<string>51B138EE-8C89-4935-B308-0C441C9A56C2</string>
 	<key>IDESourceControlProjectName</key>
 	<string>FlightGearMap</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>284D4E85-D3F5-4087-95E5-20C2E70D9D12</key>
-		<string>svn://ts-119/svnroot/FlightGear/trunk/FlightGearMap</string>
+		<key>6A1139A4-2BA7-4964-89A4-58D99497DFF3</key>
+		<string>jason@ts-119:git/FlightGearMap.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>FlightGearMap.xcodeproj/project.xcworkspace</string>
+	<string>FlightGearMap/FlightGearMap.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>284D4E85-D3F5-4087-95E5-20C2E70D9D12</key>
-		<string>../..</string>
-	</dict>
-	<key>IDESourceControlProjectRepositoryRootDictionary</key>
-	<dict>
-		<key>284D4E85-D3F5-4087-95E5-20C2E70D9D12</key>
-		<string>svn://ts-119/svnroot</string>
+		<key>6A1139A4-2BA7-4964-89A4-58D99497DFF3</key>
+		<string>../../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>svn://ts-119/svnroot/FlightGear/trunk/FlightGearMap/FlightGearMap.xcodeproj</string>
+	<string>jason@ts-119:git/FlightGearMap.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>110</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>284D4E85-D3F5-4087-95E5-20C2E70D9D12</string>
+	<string>6A1139A4-2BA7-4964-89A4-58D99497DFF3</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
-			<key>IDESourceControlRepositoryBranchesRelativeLocationKey</key>
-			<string>FlightGear/branches</string>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
-			<string>public.vcs.subversion</string>
-			<key>IDESourceControlRepositoryTagsRelativeLocationKey</key>
-			<string>FlightGear/tags</string>
-			<key>IDESourceControlRepositoryTrunkRelativeLocationKey</key>
-			<string>FlightGear/trunk</string>
+			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>284D4E85-D3F5-4087-95E5-20C2E70D9D12</string>
+			<string>6A1139A4-2BA7-4964-89A4-58D99497DFF3</string>
 			<key>IDESourceControlWCCName</key>
 			<string>FlightGearMap</string>
 		</dict>
