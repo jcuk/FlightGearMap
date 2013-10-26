@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12F37" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" initialViewController="2">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4510" systemVersion="12F45" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" initialViewController="2">
     <dependencies>
         <deployment defaultVersion="1552" identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3742"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -10,19 +10,19 @@
             <objects>
                 <viewController id="2" customClass="FGMViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5">
-                        <rect key="frame" x="0.0" y="20" width="768" height="1004"/>
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" id="u7a-GM-88b">
-                                <rect key="frame" x="-1" y="0.0" width="768" height="960"/>
+                                <rect key="frame" x="-1" y="0.0" width="768" height="980"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </mapView>
                             <imageView opaque="NO" userInteractionEnabled="NO" contentMode="center" image="plane.png" id="zcW-ao-nPM">
-                                <rect key="frame" x="263" y="438" width="240" height="128"/>
+                                <rect key="frame" x="263" y="448" width="240" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="sNU-xI-QhF">
-                                <rect key="frame" x="0.0" y="960" width="768" height="44"/>
+                                <rect key="frame" x="0.0" y="980" width="768" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <items>
                                     <barButtonItem image="gear.png" style="plain" id="f0m-Ef-5yJ">
@@ -41,7 +41,7 @@
                                 </items>
                             </toolbar>
                             <view opaque="NO" contentMode="scaleToFill" id="0cs-Na-L9B" customClass="InstrumentView">
-                                <rect key="frame" x="0.0" y="0.0" width="160" height="960"/>
+                                <rect key="frame" x="0.0" y="0.0" width="160" height="980"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </view>
@@ -63,7 +63,7 @@
             <objects>
                 <viewController id="9yy-uz-n2h" customClass="UIConfigController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="HjM-H1-hOx">
-                        <rect key="frame" x="0.0" y="20" width="768" height="1004"/>
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Configuration" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" id="9SZ-bl-rU1">
@@ -75,13 +75,6 @@
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Port" lineBreakMode="tailTruncation" minimumFontSize="10" id="IO8-Zg-2lD">
                                 <rect key="frame" x="190" y="104" width="112" height="41"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Instruments" lineBreakMode="tailTruncation" minimumFontSize="10" id="dIt-tU-Pgw">
-                                <rect key="frame" x="190" y="187" width="127" height="41"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -99,14 +92,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="QbR-97-d42" customClass="UIGlossyButton">
                                 <rect key="frame" x="260" y="634" width="72" height="37"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="Cancel">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <state key="highlighted">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="cancel:" destination="9yy-uz-n2h" eventType="touchUpInside" id="YbG-oQ-yKm"/>
@@ -115,31 +103,24 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="3rH-b5-NgY" customClass="UIGlossyButton">
                                 <rect key="frame" x="436" y="634" width="72" height="37"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="Done">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <state key="highlighted" title="Done">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
+                                <state key="highlighted" title="Done"/>
                                 <connections>
                                     <action selector="done:" destination="9yy-uz-n2h" eventType="touchUpInside" id="9iu-vx-V8i"/>
                                 </connections>
                             </button>
-                            <switch opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" id="iQo-3Q-IF0">
-                                <rect key="frame" x="499" y="194" width="79" height="27"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </switch>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" id="TyS-aE-bmX">
-                                <rect key="frame" x="190" y="285" width="388" height="44"/>
+                                <rect key="frame" x="190" y="285" width="388" height="29"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <segments>
                                     <segment title="Standard Map"/>
                                     <segment title="Satellite"/>
                                     <segment title="Hybrid"/>
                                 </segments>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </segmentedControl>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Run FlightGear like this:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="v9y-Xw-jmA">
                                 <rect key="frame" x="190" y="372" width="288" height="38"/>
@@ -158,19 +139,24 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="IE1-ls-pv9" customClass="UIGlossyButton">
                                 <rect key="frame" x="224" y="507" width="320" height="37"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="Email me mobatlas.xml config file">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <state key="highlighted">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="emailConfig:" destination="9yy-uz-n2h" eventType="touchUpInside" id="tCy-c0-fXF"/>
                                 </connections>
                             </button>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" id="IXa-PP-FOX">
+                                <rect key="frame" x="190" y="233" width="388" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <segments>
+                                    <segment title="Instruments Off"/>
+                                    <segment title="Second"/>
+                                    <segment title="Fast Jet"/>
+                                </segments>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                     </view>
@@ -178,7 +164,7 @@
                         <outlet property="cancel" destination="QbR-97-d42" id="Fyb-1J-iqV"/>
                         <outlet property="commandOption" destination="sQV-b2-pR4" id="V3v-8J-Y1Z"/>
                         <outlet property="email" destination="IE1-ls-pv9" id="3lL-nF-B8T"/>
-                        <outlet property="instruments" destination="iQo-3Q-IF0" id="TXx-ew-C2D"/>
+                        <outlet property="instrumentType" destination="IXa-PP-FOX" id="CGD-2B-7XN"/>
                         <outlet property="mapType" destination="TyS-aE-bmX" id="TPe-vy-dsr"/>
                         <outlet property="ok" destination="3rH-b5-NgY" id="Gx2-g9-8HC"/>
                         <outlet property="port" destination="fZ7-sP-wSu" id="Rnr-bg-qLj"/>
@@ -193,7 +179,7 @@
             <objects>
                 <viewController id="jeC-th-AB7" customClass="InfoViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bNl-JP-yJr">
-                        <rect key="frame" x="0.0" y="20" width="380" height="500"/>
+                        <rect key="frame" x="0.0" y="0.0" width="380" height="500"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="background.png" id="6mK-vq-9Ig">
@@ -207,24 +193,20 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" textAlignment="center" id="Qbx-Ks-iWy">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" editable="NO" textAlignment="center" id="Qbx-Ks-iWy">
                                 <rect key="frame" x="20" y="81" width="340" height="399"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <dataDetectorType key="dataDetectorTypes" link="YES"/>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="S6l-Cj-I9G" customClass="UIGlossyButton">
                                 <rect key="frame" x="20" y="354" width="340" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="Get free stuff now!">
-                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <state key="highlighted">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="getFreeStuff:" destination="jeC-th-AB7" eventType="touchUpInside" id="wXQ-0R-9sd"/>
@@ -251,46 +233,8 @@
         <image name="info.png" width="30" height="30"/>
         <image name="plane.png" width="50" height="50"/>
     </resources>
-    <classes>
-        <class className="FGMViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/FGMViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="_instrumentView" candidateClass="InstrumentView"/>
-                <relationship kind="outlet" name="_mapView" candidateClass="MKMapView"/>
-                <relationship kind="outlet" name="_planeView" candidateClass="UIImageView"/>
-            </relationships>
-        </class>
-        <class className="InfoViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/InfoViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="freeStuffButton" candidateClass="UIGlossyButton"/>
-                <relationship kind="outlet" name="infoView" candidateClass="UITextView"/>
-            </relationships>
-        </class>
-        <class className="InstrumentView" superclassName="UIView">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/InstrumentView.h"/>
-        </class>
-        <class className="UIConfigController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/UIConfigController.h"/>
-            <relationships>
-                <relationship kind="action" name="cancel:"/>
-                <relationship kind="action" name="done:"/>
-                <relationship kind="action" name="portValueChanged:"/>
-                <relationship kind="outlet" name="cancel" candidateClass="UIGlossyButton"/>
-                <relationship kind="outlet" name="commandOption" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="email" candidateClass="UIGlossyButton"/>
-                <relationship kind="outlet" name="instruments" candidateClass="UISwitch"/>
-                <relationship kind="outlet" name="mapType" candidateClass="UISegmentedControl"/>
-                <relationship kind="outlet" name="ok" candidateClass="UIGlossyButton"/>
-                <relationship kind="outlet" name="port" candidateClass="UITextField"/>
-            </relationships>
-        </class>
-        <class className="UIGlossyButton" superclassName="UIButton">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/UIGlossyButton.h"/>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
-        <simulatedStatusBarMetrics key="statusBar" statusBarStyle="blackTranslucent"/>
+        <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>

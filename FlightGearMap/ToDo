@@ -8,8 +8,10 @@ ToD: check on device
  fixes for iOS 7
         
 Bugs:
- Update controls e.g. ASI on start
+ Update controls e.g. ASI on start -- ?
  Re-connect on config 'OK'
+ Control type not hooked up
+ Hi Speed ASI digits not morking (iOS 7 only ?)
 
 To Do for v1.4+
   Seletct jet instruments
@@ -28,10 +30,12 @@ To Do for v1.4+
      iPad
      iPad R
      
-Done in v1.3
+Done in v1.4
   Fixes to instrument graphics
   Updated to iOS 6.1
   Updated GUI
+  Updates for iOS 7
+  Hi speed ASI
   
 
 Later versions
