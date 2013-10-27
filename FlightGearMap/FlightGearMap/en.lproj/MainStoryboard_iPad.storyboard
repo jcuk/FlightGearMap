@@ -164,7 +164,7 @@
                         <outlet property="cancel" destination="QbR-97-d42" id="Fyb-1J-iqV"/>
                         <outlet property="commandOption" destination="sQV-b2-pR4" id="V3v-8J-Y1Z"/>
                         <outlet property="email" destination="IE1-ls-pv9" id="3lL-nF-B8T"/>
-                        <outlet property="instrumentType" destination="IXa-PP-FOX" id="CGD-2B-7XN"/>
+                        <outlet property="instrumentType" destination="IXa-PP-FOX" id="zGY-K9-hTj"/>
                         <outlet property="mapType" destination="TyS-aE-bmX" id="TPe-vy-dsr"/>
                         <outlet property="ok" destination="3rH-b5-NgY" id="Gx2-g9-8HC"/>
                         <outlet property="port" destination="fZ7-sP-wSu" id="Rnr-bg-qLj"/>

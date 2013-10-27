@@ -18,6 +18,8 @@
 @implementation FGMViewController
 @synthesize _mapView,_planeView,_instrumentView;
 
+enum {NO_INSTRUMENTS, PROP_INSTRUM, JET_INSTRUM };
+
 //TelnetPositionClient *client;
 PlaneData *planeData;
 UDPClient *udpClient;
@@ -58,7 +60,6 @@ UDPClient *udpClient;
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
         
     if (!udpClient) {
         //load data
@@ -240,9 +241,19 @@ UDPClient *udpClient;
         NSLog(@"Error writing data: %@",error);
             
     }
+            
+    [self makeInstrumentsVisible:
+     controller.instrumentType.selectedSegmentIndex != NO_INSTRUMENTS];
     
-    //TODO: set insturment type / visibility
-    //[self makeInstrumentsVisible:controller.instruments.isOn];
+    switch (controller.instrumentType.selectedSegmentIndex) {
+        case PROP_INSTRUM:
+            [_instrumentView showPropInstruments];
+            break;
+        case JET_INSTRUM:
+            [_instrumentView showFastJetInstruments];
+            break;
+            
+    }
     
     if ([controller.port.text length] > 0) {
     
@@ -267,7 +278,7 @@ UDPClient *udpClient;
         
         [configViewController.port setText:[NSString stringWithFormat:@"%d", udpClient._port]];
         //TODO: set instruments visibility / type
-        //[configViewController.instruments setOn:!_instrumentView.isHidden];
+        //[configViewController.instruments setOn:!_instrumentView.isHidden];        
         configViewController.mapType.selectedSegmentIndex = _mapView.mapType;
         [configViewController updateCommandOptionsLabel];
         

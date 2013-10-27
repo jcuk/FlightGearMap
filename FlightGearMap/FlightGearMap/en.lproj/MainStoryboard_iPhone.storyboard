@@ -181,6 +181,7 @@
                         <outlet property="cancel" destination="Tza-Ux-YUR" id="rV8-Tw-9FL"/>
                         <outlet property="commandOption" destination="tvj-XK-ve0" id="6d4-jJ-n6h"/>
                         <outlet property="email" destination="AcE-cP-wA0" id="3c5-hc-S2x"/>
+                        <outlet property="instrumentType" destination="bgP-LU-gZh" id="Nqa-0F-yVE"/>
                         <outlet property="mapType" destination="unV-AT-Ueb" id="cix-pY-fbC"/>
                         <outlet property="ok" destination="haS-0d-I3D" id="xWm-or-Djf"/>
                         <outlet property="port" destination="8ZB-rc-LRX" id="Nkw-aH-YFN"/>

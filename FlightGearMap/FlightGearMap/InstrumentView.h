@@ -12,5 +12,7 @@
 @interface InstrumentView : UIView
 
 -(void)updatePlaneData:(PlaneData *)planeData;
+-(void)showPropInstruments;
+-(void)showFastJetInstruments;
 
 @end

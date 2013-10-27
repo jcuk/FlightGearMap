@@ -18,28 +18,37 @@
 
 @implementation InstrumentView
 
-NSMutableArray * instruments;
+NSMutableArray *instruments, *propInstruments, *jetInstruments;
 
 - (id)initWithCoder:(NSCoder *)coder
 {
     self = [super initWithCoder:coder];
     if (self) {
-        instruments = [[NSMutableArray alloc]init];
+        Instrument *alti = [[InstrumentAltimeter alloc]initWithFilename:@"alt1"];
+        Instrument *hori = [[InstrumentHorizon alloc]initWithFilename:@"ati3"];
+        Instrument *climb = [[InstrumentGeneric alloc]initWithFilename:@"climb"
+                hand:@"hand1" dataType:CLIMB_RATE min:-2000 max:2000 minAngle:-265 maxAngle:85];
+        Instrument *rpm = [[InstrumentGeneric alloc]initWithFilename:@"rpm"
+                hand:@"hand1" dataType:RPM min:0 max:3500 minAngle:-125 maxAngle:125];
+        Instrument *speed = [[InstrumentSpeedo alloc]initWithFilename:@"speed"];
+        Instrument *tas = [[InstrumentTurnAndSlip alloc]initWithFilename:@"trn1"];
+        Instrument *jetAsi =[[InstrumentsASI2 alloc]initWithFilename:@"jet-asi"];
         
-        [instruments addObject:[[InstrumentAltimeter alloc]initWithFilename:@"alt1"]];
-        [instruments addObject:[[InstrumentHorizon alloc]initWithFilename:@"ati3"]];
-        [instruments addObject:[[InstrumentGeneric alloc]initWithFilename:@"climb"
-            hand:@"hand1" dataType:CLIMB_RATE min:-2000 max:2000 minAngle:-265 maxAngle:85]];
-        [instruments addObject:[[InstrumentGeneric alloc]initWithFilename:@"rpm"
-            hand:@"hand1" dataType:RPM min:0 max:3500 minAngle:-125 maxAngle:125]];
-        //[instruments addObject:[[InstrumentSpeedo alloc]initWithFilename:@"speed"]];
-        [instruments addObject:[[InstrumentsASI2 alloc]initWithFilename:@"jet-asi"]];
-        [instruments addObject:[[InstrumentTurnAndSlip alloc]initWithFilename:@"trn1"]];
-        
-        [self setNeedsLayout];
-                                
+        propInstruments = [[NSMutableArray alloc]initWithObjects:alti,hori,climb, rpm, speed, tas, nil];
+        jetInstruments = [[NSMutableArray alloc]initWithObjects:alti,hori,climb, rpm, jetAsi, tas, nil];
+        [self showPropInstruments];
     }
     return self;
+}
+
+-(void)showPropInstruments {
+    instruments = propInstruments;
+    [self setNeedsLayout];
+}
+
+-(void)showFastJetInstruments {
+    instruments = jetInstruments;
+    [self setNeedsLayout];
 }
 
 -(void)updatePlaneData:(PlaneData *)planeData {
@@ -61,11 +70,19 @@ NSMutableArray * instruments;
     
     int orientation = [UIDevice currentDevice].orientation;
 
+    //Remove any views not needed
+    //NB: Will need changing if any non-instrument subviews are added
+    for (UIView *view in [self subviews]) {
+        if (![instruments containsObject:view]){
+            [view removeFromSuperview];
+        }
+    }
+    
     if (orientation == UIDeviceOrientationUnknown ||
         orientation == UIDeviceOrientationPortrait ||
         orientation == UIDeviceOrientationPortraitUpsideDown) {
         
-        //Portrait - 1 coulum of 6 instruments
+        //Portrait - 1 column of 6 instruments
         if (UI_USER_INTERFACE_IDIOM() != UIUserInterfaceIdiomPhone) {
             step = 160;
             rectSize = 160;
