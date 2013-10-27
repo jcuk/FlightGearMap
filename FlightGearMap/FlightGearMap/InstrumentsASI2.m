@@ -32,6 +32,9 @@
         [digitsView addSubview:digit2];
         [digitsView addSubview:digit3];
         
+        //Force the layout to speed 000
+        [self updatePlaneData:nil];
+        
     }
     return self;
 }

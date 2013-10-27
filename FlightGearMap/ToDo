@@ -10,8 +10,7 @@ ToD: check on device
 Bugs:
  Update controls e.g. ASI on start -- ?
  Re-connect on config 'OK'
- Control type not hooked up
- Hi Speed ASI digits not morking (iOS 7 only ?)
+ Change port number not hooked up?
 
 To Do for v1.4+
   Seletct jet instruments
