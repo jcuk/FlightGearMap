@@ -18,11 +18,13 @@
 @implementation FGMViewController
 @synthesize _mapView,_planeView,_instrumentView;
 
-enum {NO_INSTRUMENTS, PROP_INSTRUM, JET_INSTRUM };
+typedef enum {NO_INSTRUMENTS, PROP_INSTRUM, JET_INSTRUM } InstrumentType;
 
 //TelnetPositionClient *client;
 PlaneData *planeData;
 UDPClient *udpClient;
+
+InstrumentType _instrumentType;
 
 -(void)updatePosition:(float)lon lat:(float)latitude altitudeInFt:(float)alt updateZoom:(bool)zoom {
     
@@ -117,7 +119,7 @@ UDPClient *udpClient;
         [self updatePosition:START_LON lat:START_LAT altitudeInFt:0 updateZoom:YES];
         
         if (instrumentType) {
-            //TODO: instruments type / visibility
+            [self updateInstruments:[instrumentType intValue]];
         } else { // From v1.1
             [self makeInstrumentsVisible:![@"N" isEqualToString:instruments]];
         }
@@ -241,20 +243,9 @@ UDPClient *udpClient;
         NSLog(@"Error writing data: %@",error);
             
     }
-            
-    [self makeInstrumentsVisible:
-     controller.instrumentType.selectedSegmentIndex != NO_INSTRUMENTS];
     
-    switch (controller.instrumentType.selectedSegmentIndex) {
-        case PROP_INSTRUM:
-            [_instrumentView showPropInstruments];
-            break;
-        case JET_INSTRUM:
-            [_instrumentView showFastJetInstruments];
-            break;
-            
-    }
-    
+    [self updateInstruments:controller.instrumentType.selectedSegmentIndex];
+
     if ([controller.port.text length] > 0) {
     
         [udpClient reconnectToNewPort:[[controller.port text] intValue]];
@@ -266,6 +257,22 @@ UDPClient *udpClient;
     
 }
 
+-(void)updateInstruments:(InstrumentType)instrumentType {
+    _instrumentType = instrumentType;
+    [self makeInstrumentsVisible:_instrumentType != NO_INSTRUMENTS];
+    
+    switch (_instrumentType) {
+        case NO_INSTRUMENTS:
+            break;
+        case PROP_INSTRUM:
+            [_instrumentView showPropInstruments];
+            break;
+        case JET_INSTRUM:
+            [_instrumentView showFastJetInstruments];
+            break;
+    }
+}
+
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
 	if ([segue.identifier isEqualToString:@"Config"])
@@ -273,12 +280,11 @@ UDPClient *udpClient;
 		UIConfigController *configViewController = segue.destinationViewController;
 		configViewController.delegate = self;
         
-        //lForce the view to load
+        //Force the view to load
         [configViewController view];
         
         [configViewController.port setText:[NSString stringWithFormat:@"%d", udpClient._port]];
-        //TODO: set instruments visibility / type
-        //[configViewController.instruments setOn:!_instrumentView.isHidden];        
+        [configViewController.instrumentType setSelectedSegmentIndex:_instrumentType];
         configViewController.mapType.selectedSegmentIndex = _mapView.mapType;
         [configViewController updateCommandOptionsLabel];
         
