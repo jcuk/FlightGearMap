@@ -8,9 +8,7 @@ ToD: check on device
  fixes for iOS 7
         
 Bugs:
- Update controls e.g. ASI on start -- ?
  Re-connect on config 'OK'
- Change port number not hooked up?
 
 To Do for v1.4+
   Seletct jet instruments
