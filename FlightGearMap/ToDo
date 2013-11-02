@@ -7,13 +7,17 @@ ToD: check on device
  email instructions
  fixes for iOS 7
         
-Bugs:
- Re-connect on config 'OK'
+1.4 Bugs:
+ ?Re-connect on config 'OK'
+ iOS 6:
+   iPad instruments start in wrong roatation
+   Instruments button:
+     'Instruments off' truncated
+     Off on startup, but instruments on
+   info
+     Get free stuff button too high
 
-To Do for v1.4+
-  Seletct jet instruments
-    Hi Altitude
-  Instruments only view
+
  Other
    Update instructions on iTunes
    Screenshots
