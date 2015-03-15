@@ -97,7 +97,7 @@ InstrumentType _instrumentType;
         
         if (!temp) {
             
-            NSLog(@"Error reading plist: %@, format: %d", errorDesc, format);
+            NSLog(@"Error reading plist: %@, format: %d", errorDesc, (int)format);
             
         }
         
@@ -223,8 +223,8 @@ InstrumentType _instrumentType;
                 [NSArray arrayWithObjects:
                  @"1.4",
                  controller.port.text,
-                 [NSNumber numberWithInt:controller.instrumentType.selectedSegmentIndex],
-                 [NSNumber numberWithInt:controller.mapType.selectedSegmentIndex],
+                 [NSNumber numberWithInt:(int)controller.instrumentType.selectedSegmentIndex],
+                 [NSNumber numberWithInt:(int)controller.mapType.selectedSegmentIndex],
                  nil]
                 forKeys:[NSArray arrayWithObjects: @"version", @"port", @"instrumentType", @"mapType", nil]];
     
@@ -244,7 +244,7 @@ InstrumentType _instrumentType;
             
     }
     
-    [self updateInstruments:controller.instrumentType.selectedSegmentIndex];
+    [self updateInstruments:(int)controller.instrumentType.selectedSegmentIndex];
 
     if ([controller.port.text length] > 0) {
     

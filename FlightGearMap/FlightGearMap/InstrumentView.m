@@ -66,7 +66,7 @@ NSMutableArray *instruments, *propInstruments, *jetInstruments;
     int step;
     int viewWidth;
     
-    NSLog(@"Orientation %d",[UIDevice currentDevice].orientation);
+    NSLog(@"Orientation %d",(int)[UIDevice currentDevice].orientation);
     
     int orientation = [UIDevice currentDevice].orientation;
 

@@ -30,8 +30,8 @@
     NSMutableAttributedString *text = [[NSMutableAttributedString alloc]initWithString:[NSString stringWithFormat:INFO_TEXT, _ipAddress,
         _port]];
     
-    int start = [[text string] rangeOfString:@"fgfs"].location;
-    int end = [[text string] rangeOfString:@",mobatlas"].location + 9;
+    int start = (int)[[text string] rangeOfString:@"fgfs"].location;
+    int end = (int)[[text string] rangeOfString:@",mobatlas"].location + 9;
     const NSRange range = NSMakeRange(
         start,
         end - start);

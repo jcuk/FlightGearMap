@@ -10,52 +10,46 @@
 	<string>FlightGearMap</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>2482E616-E60D-4E1F-AFFB-0D7751D30974</key>
+		<key>38F921656748FF5746470537E60EE410C0E47B8B</key>
+		<string>ts-119:git/FlightGearMap.git</string>
+		<key>72f42c43-2fde-4703-8d14-ba6d159ddb44++4168</key>
 		<string>svn://ts-119/svnroot/FlightGear/trunk/FlightGearMap</string>
-		<key>6A1139A4-2BA7-4964-89A4-58D99497DFF3</key>
-		<string>jason@ts-119:git/FlightGearMap.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>FlightGearMap/FlightGearMap.xcodeproj/project.xcworkspace</string>
+	<string>FlightGearMap/FlightGearMap.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>2482E616-E60D-4E1F-AFFB-0D7751D30974</key>
-		<string>../../../../../Projects/iPhoneProjects/FlightGearMap</string>
-		<key>6A1139A4-2BA7-4964-89A4-58D99497DFF3</key>
+		<key>38F921656748FF5746470537E60EE410C0E47B8B</key>
 		<string>../../..</string>
+		<key>72f42c43-2fde-4703-8d14-ba6d159ddb44++4168</key>
+		<string>../../../../../Projects/iPhoneProjects/FlightGearMap</string>
 	</dict>
 	<key>IDESourceControlProjectRepositoryRootDictionary</key>
 	<dict>
-		<key>2482E616-E60D-4E1F-AFFB-0D7751D30974</key>
+		<key>72f42c43-2fde-4703-8d14-ba6d159ddb44++4168</key>
 		<string>svn://ts-119/svnroot</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>jason@ts-119:git/FlightGearMap.git</string>
+	<string>ts-119:git/FlightGearMap.git</string>
 	<key>IDESourceControlProjectVersion</key>
-	<integer>110</integer>
+	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>6A1139A4-2BA7-4964-89A4-58D99497DFF3</string>
+	<string>38F921656748FF5746470537E60EE410C0E47B8B</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>6A1139A4-2BA7-4964-89A4-58D99497DFF3</string>
+			<string>38F921656748FF5746470537E60EE410C0E47B8B</string>
 			<key>IDESourceControlWCCName</key>
 			<string>FlightGearMap</string>
 		</dict>
 		<dict>
-			<key>IDESourceControlRepositoryBranchesRelativeLocationKey</key>
-			<string>FlightGear/branches</string>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.subversion</string>
-			<key>IDESourceControlRepositoryTagsRelativeLocationKey</key>
-			<string>FlightGear/tags</string>
-			<key>IDESourceControlRepositoryTrunkRelativeLocationKey</key>
-			<string>FlightGear/trunk</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>2482E616-E60D-4E1F-AFFB-0D7751D30974</string>
+			<string>72f42c43-2fde-4703-8d14-ba6d159ddb44++4168</string>
 			<key>IDESourceControlWCCName</key>
 			<string>FlightGearMap</string>
 		</dict>
