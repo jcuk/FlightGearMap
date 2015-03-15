@@ -310,8 +310,8 @@
 		5B3D3F9F1591B41B00393425 /* Graphics */ = {
 			isa = PBXGroup;
 			children = (
-				9672824717DD0D860031BE7A /* background.png */,
 				960B31B715A7A16300152F59 /* Instruments */,
+				9672824717DD0D860031BE7A /* background.png */,
 				5B3D3FAA15923A9400393425 /* info.png */,
 				5B3D3F9D1591AFC100393425 /* plane.png */,
 				96A29D9915D0F7AE00694DAF /* plane@2x.png */,
