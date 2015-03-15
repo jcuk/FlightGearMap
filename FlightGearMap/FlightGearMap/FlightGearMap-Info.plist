@@ -21,35 +21,9 @@
 		<string>icon144.png</string>
 	</array>
 	<key>CFBundleIcons</key>
-	<dict>
-		<key>CFBundlePrimaryIcon</key>
-		<dict>
-			<key>CFBundleIconFiles</key>
-			<array>
-				<string>icon120</string>
-				<string>icon57.png</string>
-				<string>icon114.png</string>
-				<string>icon72.png</string>
-				<string>icon144.png</string>
-			</array>
-		</dict>
-	</dict>
+	<dict/>
 	<key>CFBundleIcons~ipad</key>
-	<dict>
-		<key>CFBundlePrimaryIcon</key>
-		<dict>
-			<key>CFBundleIconFiles</key>
-			<array>
-				<string>icon152</string>
-				<string>icon76</string>
-				<string>icon120</string>
-				<string>icon57.png</string>
-				<string>icon114.png</string>
-				<string>icon72.png</string>
-				<string>icon144.png</string>
-			</array>
-		</dict>
-	</dict>
+	<dict/>
 	<key>CFBundleIdentifier</key>
 	<string>com.jason.crane.${PRODUCT_NAME:rfc1034identifier}</string>
 	<key>CFBundleInfoDictionaryVersion</key>

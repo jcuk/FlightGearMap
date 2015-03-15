@@ -17,28 +17,6 @@ ToD: check on device
    info
      Get free stuff button too high
 
-
- Other
-   Update instructions on iTunes
-   Screenshots
-      iPhone R3.5
-      iPhone R4
-      iPad
-   launch images
-     iPhone
-     iPhone R3.5
-     iPhone R4
-     iPad
-     iPad R
-     
-Done in v1.4
-  Fixes to instrument graphics
-  Updated to iOS 6.1
-  Updated GUI
-  Updates for iOS 7
-  Hi speed ASI
-  
-
 Later versions
     Rotation (different on iPad (4 pos) and iPhone (3 positions))
     Cant pinch zoom / unzoom when streaming data (still a problem?)
@@ -55,3 +33,23 @@ Later versions
     
 Other
   waypoints at: http://www.fallingrain.com/world/index.html
+
+======================================
+V1.5
+
+Done
+ Updates for iOS 8
+ Update for iPhone 6 and 6+
+
+ToDo
+ Update icons
+ Update rotation (iphone at least - check ipdad)
+ iPhone 6 in native mode
+   - Native mode graphics?
+ Update startup screens
+ Update itunes screens
+ Update video
+ Video in ITunes
+ Revmob not starting
+ Comms not starting
+ Mapkit location services not starting
