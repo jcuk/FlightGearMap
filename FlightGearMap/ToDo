@@ -27,6 +27,7 @@ Later versions
     Record trip
     Calibrate instruments
     True full screen mode
+
   Map points
         Airports
         Nav beacons
@@ -43,7 +44,6 @@ Done
  Update for iPhone 6 and 6+
 
 ToDo
- Update icons
  Update rotation (iphone at least - check ipdad)
  iPhone 6 in native mode
    - Native mode graphics?
@@ -54,3 +54,4 @@ ToDo
  Revmob not starting
  Comms not starting
  Mapkit location services not starting
+ Coms status icon in toolbar

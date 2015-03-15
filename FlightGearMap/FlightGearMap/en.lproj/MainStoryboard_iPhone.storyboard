@@ -196,7 +196,7 @@
         <scene sceneID="nQX-Lt-IGu">
             <objects>
                 <viewController title="FlightGear Map" modalTransitionStyle="crossDissolve" id="Jip-5o-Ly9" customClass="InfoViewController" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="YVj-Np-3nt" customClass="InfoViewControler">
+                    <view key="view" contentMode="scaleToFill" id="YVj-Np-3nt">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
