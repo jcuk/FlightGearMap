@@ -1,11 +1,7 @@
 
 Instructions
     Video : http://www.youtube.com/watch?v=4xM3mGiFrGE
-    
-ToDo: check on device
- e.g rotation
- email instructions
-        
+
 1.4 Bugs:
  ?Re-connect on config 'OK'
  iOS 6:
@@ -21,7 +17,6 @@ Later versions
     Secondary Instruments - Navigation etc
     Switch panel
     Record trip
-    Calibrate instruments
     True full screen mode
 
   Map points
@@ -38,17 +33,20 @@ V1.5
 Done
  Updates for iOS 8
  Update for iPhone 6 and 6+
+ Minor bug fixes
+ Updates to GUI
 
 ToDo
  Update rotation (iphone at least - check ipdad)
  iPhone 6 in native mode
    - Native mode graphics?
- Update startup screens
- Update itunes screens
- Update video
- Video in ITunes
  Revmob not starting
  Comms not starting
- Mapkit location services not starting
- Coms status icon in toolbar
- Remove power off stripes
+ Comms status icon in toolbar
+ Email instructions
+ ITC:
+    Update startup screens
+    Update itunes screens
+    Update video
+    Video in ITunes
+

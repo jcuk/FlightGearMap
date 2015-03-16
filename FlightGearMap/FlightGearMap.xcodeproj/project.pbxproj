@@ -115,6 +115,9 @@
 		96D93D8417E782A50060E78B /* jet-asi@2x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 96D93D8317E782A50060E78B /* jet-asi@2x~ipad.png */; };
 		96DC975D1AB60AE5001418BA /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 96DC975C1AB60AE5001418BA /* Images.xcassets */; };
 		96DC97611AB61294001418BA /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96DC97601AB61294001418BA /* StoreKit.framework */; };
+		96DC97651AB73C06001418BA /* info@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 96DC97641AB73C06001418BA /* info@2x.png */; };
+		96DC97671AB74853001418BA /* gear.png in Resources */ = {isa = PBXBuildFile; fileRef = 96DC97661AB74853001418BA /* gear.png */; };
+		96DC97691AB749C5001418BA /* gear@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 96DC97681AB749C5001418BA /* gear@2x.png */; };
 		96FAE9A117DE5E76008F4664 /* Appirater.m in Sources */ = {isa = PBXBuildFile; fileRef = 96FAE99F17DE5E76008F4664 /* Appirater.m */; };
 		96FAE9A617DE605B008F4664 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96FAE9A417DE605B008F4664 /* SystemConfiguration.framework */; };
 /* End PBXBuildFile section */
@@ -254,6 +257,9 @@
 		96D93D8317E782A50060E78B /* jet-asi@2x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "jet-asi@2x~ipad.png"; sourceTree = "<group>"; };
 		96DC975C1AB60AE5001418BA /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		96DC97601AB61294001418BA /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		96DC97641AB73C06001418BA /* info@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "info@2x.png"; sourceTree = "<group>"; };
+		96DC97661AB74853001418BA /* gear.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gear.png; sourceTree = "<group>"; };
+		96DC97681AB749C5001418BA /* gear@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "gear@2x.png"; sourceTree = "<group>"; };
 		96FAE99E17DE5E76008F4664 /* Appirater.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Appirater.h; path = ../Appirater.h; sourceTree = "<group>"; };
 		96FAE99F17DE5E76008F4664 /* Appirater.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Appirater.m; path = ../Appirater.m; sourceTree = "<group>"; };
 		96FAE9A017DE5E76008F4664 /* AppiraterDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppiraterDelegate.h; path = ../AppiraterDelegate.h; sourceTree = "<group>"; };
@@ -313,6 +319,9 @@
 				960B31B715A7A16300152F59 /* Instruments */,
 				9672824717DD0D860031BE7A /* background.png */,
 				5B3D3FAA15923A9400393425 /* info.png */,
+				96DC97641AB73C06001418BA /* info@2x.png */,
+				96DC97661AB74853001418BA /* gear.png */,
+				96DC97681AB749C5001418BA /* gear@2x.png */,
 				5B3D3F9D1591AFC100393425 /* plane.png */,
 				96A29D9915D0F7AE00694DAF /* plane@2x.png */,
 			);
@@ -671,6 +680,7 @@
 				96C3E16E15B0CB0200DCF289 /* alt1@2x~iphone.png in Resources */,
 				96C3E16F15B0CB0200DCF289 /* ati0@2x~iphone.png in Resources */,
 				96C3E17015B0CB0200DCF289 /* ati1@2x~iphone.png in Resources */,
+				96DC97671AB74853001418BA /* gear.png in Resources */,
 				96C3E17115B0CB0200DCF289 /* ati2@2x~iphone.png in Resources */,
 				96C3E17215B0CB0200DCF289 /* ati3@2x~iphone.png in Resources */,
 				96C3E17315B0CB0200DCF289 /* climb@2x~iphone.png in Resources */,
@@ -684,6 +694,7 @@
 				96C3E17B15B0CB0200DCF289 /* turn@2x~iphone.png in Resources */,
 				96C3E17F15B0DB0800DCF289 /* alt1~ipad.png in Resources */,
 				96C3E18E15B0E21B00DCF289 /* alt0~ipad.png in Resources */,
+				96DC97691AB749C5001418BA /* gear@2x.png in Resources */,
 				96C3E18F15B0E21B00DCF289 /* ati0~ipad.png in Resources */,
 				96C3E19015B0E21B00DCF289 /* ati1~ipad.png in Resources */,
 				96C3E19115B0E21B00DCF289 /* ati2~ipad.png in Resources */,
@@ -702,6 +713,7 @@
 				9644E8CC15B36D5B00D8BF96 /* ati0@2x~ipad.png in Resources */,
 				9644E8CD15B36D5B00D8BF96 /* ati1@2x~ipad.png in Resources */,
 				9644E8CE15B36D5B00D8BF96 /* ati2@2x~ipad.png in Resources */,
+				96DC97651AB73C06001418BA /* info@2x.png in Resources */,
 				9644E8CF15B36D5B00D8BF96 /* ati3@2x~ipad.png in Resources */,
 				9644E8D015B36D5B00D8BF96 /* climb@2x~ipad.png in Resources */,
 				9644E8D115B36D5B00D8BF96 /* hand1@2x~ipad.png in Resources */,
