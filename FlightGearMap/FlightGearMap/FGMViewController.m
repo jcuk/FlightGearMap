@@ -1,5 +1,5 @@
 //
-//  ASTViewController.m
+//  FGMViewController.m
 //  FlightGearMap
 //
 //  Created by Jason Crane on 18/06/2012.
@@ -122,6 +122,10 @@ InstrumentType _instrumentType;
             [self updateInstruments:[instrumentType intValue]];
         } else { // From v1.1
             [self makeInstrumentsVisible:![@"N" isEqualToString:instruments]];
+        }
+        
+        if (!instruments && !instrumentType) {
+            _instrumentType = PROP_INSTRUM;
         }
         
         UIImage *plane = [UIImage imageNamed:@"plane"];

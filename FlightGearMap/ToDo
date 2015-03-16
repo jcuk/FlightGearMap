@@ -2,18 +2,14 @@
 Instructions
     Video : http://www.youtube.com/watch?v=4xM3mGiFrGE
     
-ToD: check on device
+ToDo: check on device
  e.g rotation
  email instructions
- fixes for iOS 7
         
 1.4 Bugs:
  ?Re-connect on config 'OK'
  iOS 6:
    iPad instruments start in wrong roatation
-   Instruments button:
-     'Instruments off' truncated
-     Off on startup, but instruments on
    info
      Get free stuff button too high
 
@@ -55,3 +51,4 @@ ToDo
  Comms not starting
  Mapkit location services not starting
  Coms status icon in toolbar
+ Remove power off stripes
