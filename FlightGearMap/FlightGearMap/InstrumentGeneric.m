@@ -21,6 +21,10 @@ min:(float)minValue max:(float)maxValue minAngle:(float)minHandAngle maxAngle:(f
         _maxVal = maxValue;
         _maxAngle = maxHandAngle;
         _minAngle = minHandAngle;
+        
+        PlaneData *planeData = [[PlaneData alloc]init];
+        
+        [self updatePlaneData:planeData];
     }
     
     return self;

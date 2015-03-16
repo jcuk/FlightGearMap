@@ -2,17 +2,8 @@
 Instructions
     Video : http://www.youtube.com/watch?v=4xM3mGiFrGE
 
-1.4 Bugs:
- ?Re-connect on config 'OK'
- iOS 6:
-   iPad instruments start in wrong roatation
-   info
-     Get free stuff button too high
-
 Later versions
-    Rotation (different on iPad (4 pos) and iPhone (3 positions))
     Cant pinch zoom / unzoom when streaming data (still a problem?)
-    iPad (only?) layout wrong on starting in landscape - Unknown device rotation?
     Breadcrumbs
     Secondary Instruments - Navigation etc
     Switch panel
@@ -37,13 +28,18 @@ Done
  Updates to GUI
 
 ToDo
- Update rotation (iphone at least - check ipdad)
+ Fix rotation on iphone
+  - info
+  - config
  iPhone 6 in native mode
    - Native mode graphics?
  Revmob not starting
- Comms not starting
- Comms status icon in toolbar
- Email instructions
+Comms:
+    ?Re-connect on config 'OK'
+    Comms not starting
+    Comms status icon in toolbar
+Config
+  Cant dismiss edit port field
  ITC:
     Update startup screens
     Update itunes screens
