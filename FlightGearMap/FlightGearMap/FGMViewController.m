@@ -15,18 +15,38 @@
 #define START_LAT 39.281516
 #define START_LON -76.580806
 
+#define RESET_PINCH_TIME 2.5f
+
 @implementation FGMViewController
 @synthesize _mapView,_planeView,_instrumentView;
 
 typedef enum {NO_INSTRUMENTS, PROP_INSTRUM, JET_INSTRUM } InstrumentType;
 
-//TelnetPositionClient *client;
 PlaneData *planeData;
 UDPClient *udpClient;
 
 InstrumentType _instrumentType;
 
--(void)updatePosition:(float)lon lat:(float)latitude altitudeInFt:(float)alt updateZoom:(bool)zoom {
+bool  _touchInProgress = NO;
+
+- (instancetype)initWithCoder:(NSCoder *)coder
+{
+    self = [super initWithCoder:coder];
+    if (self) {
+        //Handle pinch gestures for interuppting map updates while zooming
+        UIPinchGestureRecognizer *pinchGesture = [[UIPinchGestureRecognizer alloc] initWithTarget:self action:@selector(handlePinch:)];
+        [pinchGesture setDelegate:self];
+        [_mapView addGestureRecognizer:pinchGesture];
+    }
+    return self;
+}
+
+-(void)updatePosition:(float)lon lat:(float)latitude altitudeInFt:(float)alt updateZoom:(bool)zoom
+{
+    //Zoom in progress. Supress updating position - it will override the zoom
+    if (_touchInProgress) {
+        return;
+    }
     
     CLLocationCoordinate2D zoomLocation;
     zoomLocation.latitude = latitude;
@@ -134,7 +154,7 @@ InstrumentType _instrumentType;
         udpClient = [[UDPClient alloc]init:[port intValue] mapStatusUpdater:self] ;
         
     }
-
+    
     planeData = [[PlaneData alloc]init];
     
 }
@@ -298,6 +318,32 @@ InstrumentType _instrumentType;
         infoView.port = udpClient._port;
         
     }
+}
+
+#pragma mark Touch event handlers
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
+    _touchInProgress = YES;
+}
+
+- (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event {
+    _touchInProgress = NO;
+}
+
+-(void)touchesCancelled:(NSSet *)touches withEvent:(UIEvent *)event {
+    //Reset touch flag after fixed time. This catches any missed guesture end events
+    [self performSelector:@selector(resetTouch:) withObject:self afterDelay:RESET_PINCH_TIME];
+}
+
+- (void)handlePinch:(UIGestureRecognizer *)gestureRecognizer
+{
+    if (gestureRecognizer.state == UIGestureRecognizerStateEnded ||
+        gestureRecognizer.state == UIGestureRecognizerStateCancelled) {
+        _touchInProgress = NO;
+    }
+}
+
+-(void)resetTouch:(id)sender {
+    _touchInProgress = NO;
 }
 
 

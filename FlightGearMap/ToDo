@@ -31,13 +31,12 @@ ToDo
    - Native mode graphics?
  Revmob not starting
 Comms:
-    ?Re-connect on config 'OK'
-    Comms not starting
     Comms status icon in toolbar
+    Automatic reconnect
  ITC:
     Update startup screens
     Update itunes screens
     Update video
     Video in ITunes
-Cant pinch zoom / unzoom when streaming data (still a problem?)
+Leave phone running when app is active
 
