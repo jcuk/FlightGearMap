@@ -625,6 +625,9 @@
 					5B68E642158FBF65009DBDE6 = {
 						DevelopmentTeam = M46K8C4NZG;
 						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
 							com.apple.InAppPurchase = {
 								enabled = 0;
 							};
