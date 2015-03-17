@@ -120,6 +120,7 @@
 		96DC97691AB749C5001418BA /* gear@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 96DC97681AB749C5001418BA /* gear@2x.png */; };
 		96FAE9A117DE5E76008F4664 /* Appirater.m in Sources */ = {isa = PBXBuildFile; fileRef = 96FAE99F17DE5E76008F4664 /* Appirater.m */; };
 		96FAE9A617DE605B008F4664 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96FAE9A417DE605B008F4664 /* SystemConfiguration.framework */; };
+		96FD2CE21AB8A9DF00F8A684 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96FD2CE11AB8A9DF00F8A684 /* CoreLocation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -265,6 +266,7 @@
 		96FAE9A017DE5E76008F4664 /* AppiraterDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppiraterDelegate.h; path = ../AppiraterDelegate.h; sourceTree = "<group>"; };
 		96FAE9A417DE605B008F4664 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		96FAE9A917DE6B6C008F4664 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
+		96FD2CE11AB8A9DF00F8A684 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -272,6 +274,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				96FD2CE21AB8A9DF00F8A684 /* CoreLocation.framework in Frameworks */,
 				96DC97611AB61294001418BA /* StoreKit.framework in Frameworks */,
 				962AC8641AB5FD2400C50CF7 /* MediaPlayer.framework in Frameworks */,
 				96FAE9A617DE605B008F4664 /* SystemConfiguration.framework in Frameworks */,
@@ -370,6 +373,7 @@
 		5B68E646158FBF65009DBDE6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				96FD2CE11AB8A9DF00F8A684 /* CoreLocation.framework */,
 				96DC97601AB61294001418BA /* StoreKit.framework */,
 				962AC8631AB5FD2400C50CF7 /* MediaPlayer.framework */,
 				962AC8611AB5FCD900C50CF7 /* RevMobAds.framework */,

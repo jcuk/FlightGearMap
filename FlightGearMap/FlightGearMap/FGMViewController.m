@@ -48,19 +48,26 @@ bool  _touchInProgress = NO;
         return;
     }
     
-    CLLocationCoordinate2D zoomLocation;
-    zoomLocation.latitude = latitude;
-    zoomLocation.longitude= lon;
+    CLLocationCoordinate2D newLocation;
+    newLocation.latitude = latitude;
+    newLocation.longitude= lon;
     
+    CLLocationCoordinate2D currentLocation = _mapView.camera.centerCoordinate;
+    CLLocation *loc1 = [[CLLocation alloc]initWithLatitude:latitude longitude:lon];
+    CLLocation *loc2 = [[CLLocation alloc]initWithLatitude:currentLocation.latitude longitude:currentLocation.longitude];
+    
+    //Dont animate large jumps in distance. Speed is meters per 1/5s (update period)
+    bool bigJump = ([loc1 distanceFromLocation:loc2] > 2000);
+        
     if (zoom) {
-        MKCoordinateRegion viewRegion = MKCoordinateRegionMakeWithDistance(zoomLocation, 2*METERS_PER_MILE, 2*METERS_PER_MILE);
+        MKCoordinateRegion viewRegion = MKCoordinateRegionMakeWithDistance(newLocation, 2*METERS_PER_MILE, 2*METERS_PER_MILE);
         
         MKCoordinateRegion adjustedRegion = [_mapView regionThatFits:viewRegion];
-        [_mapView setRegion:adjustedRegion animated:YES];
+        [_mapView setRegion:adjustedRegion animated:NO];
                 
     } else {
         
-        [_mapView setCenterCoordinate:zoomLocation animated:YES];
+        [_mapView setCenterCoordinate:newLocation animated:!bigJump];
     }
 
 }
