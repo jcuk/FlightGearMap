@@ -134,6 +134,11 @@ bool inEmail = NO;
     [self updateCommandOptionsLabel];
 }
 
+-(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    [self.view endEditing:YES];
+}
+
 #pragma mark -- Text field delegate methods
 
 -(BOOL) textFieldShouldReturn:(UITextField*) textField {

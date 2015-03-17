@@ -3,7 +3,6 @@ Instructions
     Video : http://www.youtube.com/watch?v=4xM3mGiFrGE
 
 Later versions
-    Cant pinch zoom / unzoom when streaming data (still a problem?)
     Breadcrumbs
     Secondary Instruments - Navigation etc
     Switch panel
@@ -28,8 +27,6 @@ Done
  Updates to GUI
 
 ToDo
- Fix rotation on iphone
-  - config
  iPhone 6 in native mode
    - Native mode graphics?
  Revmob not starting
@@ -37,11 +34,10 @@ Comms:
     ?Re-connect on config 'OK'
     Comms not starting
     Comms status icon in toolbar
-Config
-  Cant dismiss edit port field
  ITC:
     Update startup screens
     Update itunes screens
     Update video
     Video in ITunes
+Cant pinch zoom / unzoom when streaming data (still a problem?)
 
