@@ -8,6 +8,9 @@ Later versions
     Switch panel
     Record trip
     True full screen mode
+    Comms:
+        Comms status icon in toolbar
+        Connection occasionally causes error binding port - Address already in use
 
   Map points
         Airports
@@ -30,10 +33,7 @@ ToDo
  iPhone 6 in native mode
    - Native mode graphics?
  Revmob not starting
-Comms:
-    Comms status icon in toolbar
-    Automatic reconnect
-    Dont animate first map update
+
  ITC:
     Update startup screens
     Update itunes screens
