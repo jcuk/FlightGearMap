@@ -40,11 +40,16 @@ min:(float)minValue max:(float)maxValue minAngle:(float)minHandAngle maxAngle:(f
         value = [dataValue floatValue];
     }
     
-    float prop = (value - _minVal)/(_maxVal-_minVal);
-    float angle = prop *(_maxAngle - _minAngle) + _minAngle;
+    float angle = [self getHandAngle:value];
         
     CGAffineTransform rotate = CGAffineTransformMakeRotation(angle/360 * 2 * PI);
     [_handView setTransform:rotate];
+}
+
+-(float)getHandAngle:(float)value
+{
+    float prop = (value - _minVal)/(_maxVal-_minVal);
+    return prop *(_maxAngle - _minAngle) + _minAngle;
 }
 
 @end

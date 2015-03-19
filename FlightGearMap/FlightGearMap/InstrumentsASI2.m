@@ -18,49 +18,6 @@
     return self;
 }
 
--(void)updatePlaneData:(PlaneData *)planeData {
-    NSNumber *dataValue = [planeData getDataValue:_planeDataType];
-    
-    //Default to 0 if no data available
-    float value=0;
-    
-    if (dataValue) {
-        value = [dataValue floatValue];
-    }
-    
-    float angle = [self getHandAngle:value];
-    
-    CGAffineTransform rotate = CGAffineTransformMakeRotation(angle/360 * 2 * PI);
-    [_handView setTransform:rotate];
- 
-    //Set up digits in window of ASI
-    float xoff = digit1.frame.size.width;
-    float yoff = digit1.frame.size.height * 0.8325;
-
-    float digitHeight = digit1.frame.size.height *0.088372;
-    
-    float fraction = value - (int)value;
-    float units = ((int)value % 10) + fraction;
-    float tens = (((int)value % 100) - ((int)value % 10)) / 10;
-    if (units >= 9) {
-        tens += fraction;
-    }
-    float hundreds = (((int)value % 1000) - ((int)value % 100)) / 100;
-    if (tens >= 9) {
-        hundreds += fraction;
-    }
-    
-    CGAffineTransform translate1 = CGAffineTransformMakeTranslation(xoff*2, -yoff + units * digitHeight);
-    [digit1 setTransform:translate1];
-    
-    CGAffineTransform translate2 = CGAffineTransformMakeTranslation(xoff, -yoff + tens * digitHeight);
-    [digit2 setTransform:translate2];
-    
-    CGAffineTransform translate3 = CGAffineTransformMakeTranslation(0.0f, -yoff + hundreds * digitHeight);
-    [digit3 setTransform:translate3];
-    
-}
-
 -(float)getHandAngle:(float)value {
     float angle;
     

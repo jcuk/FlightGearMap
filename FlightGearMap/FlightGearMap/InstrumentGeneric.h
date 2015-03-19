@@ -16,5 +16,6 @@
 
 -(id)initWithFilename:(NSString *)fileName hand:(NSString *)handFilename dataType:(PlaneDataType)planeDataType
     min:(float)minValue max:(float)maxValue minAngle:(float)minHandAngle maxAngle:(float)maxHandAngle;
+-(float)getHandAngle:(float)value;
 
 @end

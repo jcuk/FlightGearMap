@@ -18,4 +18,10 @@
     return self;
 }
 
+-(float)getHandAngle:(float)value {
+    float ft = fmod(value,100.0f);
+    
+    return ft / 100 * 360 ;
+}
+
 @end
