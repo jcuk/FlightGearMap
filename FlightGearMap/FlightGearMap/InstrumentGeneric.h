@@ -8,6 +8,7 @@
 
 #import "Instrument.h"
 
+//A generic instrument with a hand
 @interface InstrumentGeneric : Instrument {
     UIView *_handView;
     PlaneDataType _planeDataType;

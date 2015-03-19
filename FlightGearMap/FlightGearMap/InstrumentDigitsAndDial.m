@@ -32,6 +32,8 @@
         [digitsView addSubview:digit2];
         [digitsView addSubview:digit3];
         
+        [self setDigitOffsets];
+        
         //Force the layout to speed 000
         [self updatePlaneData:nil];
         
@@ -39,9 +41,17 @@
     return self;
 }
 
+-(void)setDigitOffsets {
+    //Default location in in upper half of the center of the dial
+    yoff = digit1.frame.size.height * 0.8325;
+    xoff = 0.0f;
+}
+
 -(void)updatePlaneData:(PlaneData *)planeData {
-    
     [super updatePlaneData:planeData];
+    
+    float digitWidth = digit1.frame.size.width;
+    float digitHeight = digit1.frame.size.height *0.088372;
     
     NSNumber *dataValue = [planeData getDataValue:_planeDataType];
     
@@ -52,12 +62,29 @@
         value = [dataValue floatValue];
     }
     
-    //Set up digits in window of ASI
-    float xoff = digit1.frame.size.width;
-    float yoff = digit1.frame.size.height * 0.8325;
+    NSArray *digits = [self getDigits:value];
     
-    float digitHeight = digit1.frame.size.height *0.088372;
+    CGAffineTransform translate1 = CGAffineTransformMakeTranslation(
+                xoff+digitWidth*2,
+                -yoff + [[digits objectAtIndex:0]floatValue] * digitHeight);
+    [digit1 setTransform:translate1];
     
+    CGAffineTransform translate2 = CGAffineTransformMakeTranslation(
+                xoff+digitWidth,
+                -yoff + [[digits objectAtIndex:1]floatValue] * digitHeight);
+    [digit2 setTransform:translate2];
+    
+    CGAffineTransform translate3 = CGAffineTransformMakeTranslation(
+                xoff,
+                -yoff + [[digits objectAtIndex:2]floatValue] * digitHeight);
+    [digit3 setTransform:translate3];
+}
+
+-(float)getHandAngle:(float)value {
+    return [super getHandAngle:value];
+}
+
+-(NSArray *)getDigits:(float)value {
     float fraction = value - (int)value;
     float units = ((int)value % 10) + fraction;
     float tens = (((int)value % 100) - ((int)value % 10)) / 10;
@@ -69,18 +96,11 @@
         hundreds += fraction;
     }
     
-    CGAffineTransform translate1 = CGAffineTransformMakeTranslation(xoff*2, -yoff + units * digitHeight);
-    [digit1 setTransform:translate1];
-    
-    CGAffineTransform translate2 = CGAffineTransformMakeTranslation(xoff, -yoff + tens * digitHeight);
-    [digit2 setTransform:translate2];
-    
-    CGAffineTransform translate3 = CGAffineTransformMakeTranslation(0.0f, -yoff + hundreds * digitHeight);
-    [digit3 setTransform:translate3];
-}
-
--(float)getHandAngle:(float)value {
-    return [super getHandAngle:value];
+    return [[NSArray alloc] initWithObjects:
+        [NSNumber numberWithFloat:hundreds],
+        [NSNumber numberWithFloat:tens],
+        [NSNumber numberWithFloat:units],
+        nil];
 }
 
 @end

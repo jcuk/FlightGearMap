@@ -39,7 +39,7 @@
         UIImageView *imageView = [[UIImageView alloc]initWithImage:image];
         self.frame = imageView.frame;
         self.opaque = NO;
-        [self addSubviewInFront:[[UIImageView alloc]initWithImage:image]];
+ //       [self addSubviewInFront:[[UIImageView alloc]initWithImage:image]];
     }
     
     return self;
