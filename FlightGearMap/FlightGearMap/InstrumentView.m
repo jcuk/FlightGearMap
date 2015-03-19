@@ -15,6 +15,7 @@
 #import "InstrumentSpeedo.h"
 #import "FGMViewController.h"
 #import "InstrumentsASI2.h"
+#import "InstrumentsALT2.h"
 
 @implementation InstrumentView
 
@@ -32,10 +33,11 @@ NSMutableArray *instruments, *propInstruments, *jetInstruments;
                 hand:@"hand1" dataType:RPM min:0 max:3500 minAngle:-125 maxAngle:125];
         Instrument *speed = [[InstrumentSpeedo alloc]initWithFilename:@"speed"];
         Instrument *tas = [[InstrumentTurnAndSlip alloc]initWithFilename:@"trn1"];
-        Instrument *jetAsi =[[InstrumentsASI2 alloc]initWithFilename:@"jet-asi"];
+        Instrument *jetAsi =[[InstrumentsASI2 alloc]initWithFilename:@"jet-asi" hand:@"hand1" digits:@"jet-asi-digits"];
+        Instrument *jetAlti =[[InstrumentsALT2 alloc]initWithFilename:@"jet-alt" hand:@"hand1" digits:@"jet-alt-digits"];
         
-        propInstruments = [[NSMutableArray alloc]initWithObjects:alti,hori,climb, rpm, speed, tas, nil];
-        jetInstruments = [[NSMutableArray alloc]initWithObjects:alti,hori,climb, rpm, jetAsi, tas, nil];
+        propInstruments = [[NSMutableArray alloc]initWithObjects:alti, hori, climb, rpm, speed, tas, nil];
+        jetInstruments = [[NSMutableArray alloc]initWithObjects:jetAlti, hori, climb, rpm, jetAsi, tas, nil];
         [self showPropInstruments];
     }
     return self;

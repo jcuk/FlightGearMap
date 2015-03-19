@@ -121,6 +121,10 @@
 		96FAE9A117DE5E76008F4664 /* Appirater.m in Sources */ = {isa = PBXBuildFile; fileRef = 96FAE99F17DE5E76008F4664 /* Appirater.m */; };
 		96FAE9A617DE605B008F4664 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96FAE9A417DE605B008F4664 /* SystemConfiguration.framework */; };
 		96FD2CE21AB8A9DF00F8A684 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96FD2CE11AB8A9DF00F8A684 /* CoreLocation.framework */; };
+		96FD2CE51ABAF6EE00F8A684 /* jet-alt-digits@2x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 96FD2CE31ABAF6EE00F8A684 /* jet-alt-digits@2x~ipad.png */; };
+		96FD2CE61ABAF6EE00F8A684 /* jet-alt@2x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 96FD2CE41ABAF6EE00F8A684 /* jet-alt@2x~ipad.png */; };
+		96FD2CE91ABAFA1200F8A684 /* InstrumentsALT2.m in Sources */ = {isa = PBXBuildFile; fileRef = 96FD2CE81ABAFA1200F8A684 /* InstrumentsALT2.m */; };
+		96FD2CEC1ABAFACF00F8A684 /* InstrumentDigitsAndDial.m in Sources */ = {isa = PBXBuildFile; fileRef = 96FD2CEB1ABAFACF00F8A684 /* InstrumentDigitsAndDial.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -267,6 +271,12 @@
 		96FAE9A417DE605B008F4664 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		96FAE9A917DE6B6C008F4664 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
 		96FD2CE11AB8A9DF00F8A684 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		96FD2CE31ABAF6EE00F8A684 /* jet-alt-digits@2x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "jet-alt-digits@2x~ipad.png"; sourceTree = "<group>"; };
+		96FD2CE41ABAF6EE00F8A684 /* jet-alt@2x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "jet-alt@2x~ipad.png"; sourceTree = "<group>"; };
+		96FD2CE71ABAFA1200F8A684 /* InstrumentsALT2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InstrumentsALT2.h; sourceTree = "<group>"; };
+		96FD2CE81ABAFA1200F8A684 /* InstrumentsALT2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InstrumentsALT2.m; sourceTree = "<group>"; };
+		96FD2CEA1ABAFACF00F8A684 /* InstrumentDigitsAndDial.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InstrumentDigitsAndDial.h; sourceTree = "<group>"; };
+		96FD2CEB1ABAFACF00F8A684 /* InstrumentDigitsAndDial.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InstrumentDigitsAndDial.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -443,6 +453,10 @@
 				9644E8DA15B3F24300D8BF96 /* InstrumentSpeedo.m */,
 				96D93D8017E5D2E80060E78B /* InstrumentsASI2.h */,
 				96D93D8117E5D2E80060E78B /* InstrumentsASI2.m */,
+				96FD2CE71ABAFA1200F8A684 /* InstrumentsALT2.h */,
+				96FD2CE81ABAFA1200F8A684 /* InstrumentsALT2.m */,
+				96FD2CEA1ABAFACF00F8A684 /* InstrumentDigitsAndDial.h */,
+				96FD2CEB1ABAFACF00F8A684 /* InstrumentDigitsAndDial.m */,
 			);
 			name = InstrumentView;
 			sourceTree = "<group>";
@@ -486,6 +500,8 @@
 		9644E8BA15B36D5B00D8BF96 /* @2xiPad */ = {
 			isa = PBXGroup;
 			children = (
+				96FD2CE31ABAF6EE00F8A684 /* jet-alt-digits@2x~ipad.png */,
+				96FD2CE41ABAF6EE00F8A684 /* jet-alt@2x~ipad.png */,
 				96A7B27A17E9EDA000D052D0 /* jet-asi-digits@2x~ipad.png */,
 				96D93D8317E782A50060E78B /* jet-asi@2x~ipad.png */,
 				9644E8BB15B36D5B00D8BF96 /* alt0@2x~ipad.png */,
@@ -728,6 +744,7 @@
 				9644E8D315B36D5B00D8BF96 /* rpm@2x~ipad.png in Resources */,
 				9644E8D415B36D5B00D8BF96 /* slip@2x~ipad.png in Resources */,
 				9644E8D515B36D5B00D8BF96 /* speed@2x~ipad.png in Resources */,
+				96FD2CE51ABAF6EE00F8A684 /* jet-alt-digits@2x~ipad.png in Resources */,
 				9644E8D615B36D5B00D8BF96 /* trn0@2x~ipad.png in Resources */,
 				9644E8D715B36D5B00D8BF96 /* trn1@2x~ipad.png in Resources */,
 				9644E8D815B36D5B00D8BF96 /* turn@2x~ipad.png in Resources */,
@@ -737,6 +754,7 @@
 				96D93D8417E782A50060E78B /* jet-asi@2x~ipad.png in Resources */,
 				96A7B27B17E9EDA000D052D0 /* jet-asi-digits@2x~ipad.png in Resources */,
 				96A7B27E17EA38C600D052D0 /* jet-asi~ipad.png in Resources */,
+				96FD2CE61ABAF6EE00F8A684 /* jet-alt@2x~ipad.png in Resources */,
 				96A7B27F17EA38C600D052D0 /* jet-asi-digits~ipad.png in Resources */,
 				96A7B28217EA38E700D052D0 /* jet-asi@2x~iphone.png in Resources */,
 				96A7B28317EA38E700D052D0 /* jet-asi-digits@2x~iphone.png in Resources */,
@@ -762,6 +780,7 @@
 				960B310F15A77E0D00152F59 /* Instrument.m in Sources */,
 				96C3E02915AB88BF00DCF289 /* InstrumentAltimeter.m in Sources */,
 				96C3E0CC15AC10A100DCF289 /* PlaneData.m in Sources */,
+				96FD2CEC1ABAFACF00F8A684 /* InstrumentDigitsAndDial.m in Sources */,
 				96C3E0CF15AC9C4E00DCF289 /* InstrumentHorizon.m in Sources */,
 				96C3E0E415ADF03C00DCF289 /* InstrumentGeneric.m in Sources */,
 				96C3E0E915AF352100DCF289 /* InstrumentTurnAndSlip.m in Sources */,
@@ -771,6 +790,7 @@
 				96898C1415D0C49D00ABB2F9 /* UIGlossyButton.m in Sources */,
 				9672824617DC7C120031BE7A /* InfoViewController.m in Sources */,
 				96FAE9A117DE5E76008F4664 /* Appirater.m in Sources */,
+				96FD2CE91ABAFA1200F8A684 /* InstrumentsALT2.m in Sources */,
 				96D93D8217E5D2E80060E78B /* InstrumentsASI2.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

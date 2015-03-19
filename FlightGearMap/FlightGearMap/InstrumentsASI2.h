@@ -6,14 +6,12 @@
 //
 //
 
-#import "InstrumentGeneric.h"
+#import "InstrumentDigitsAndDial.h"
 
-@interface InstrumentsASI2 : InstrumentGeneric {
+@interface InstrumentsASI2 : InstrumentDigitsAndDial {
 
-    @private UIView *digitsView;
-    @private UIView *digit1;
-    @private UIView *digit2;
-    @private UIView *digit3;
 }
+
+-(id)initWithFilename:(NSString *)fileName hand:(NSString*)handFilename digits:(NSString *)digitsName;
 
 @end
