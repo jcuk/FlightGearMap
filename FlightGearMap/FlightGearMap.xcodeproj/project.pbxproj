@@ -53,6 +53,12 @@
 		964879EC15B9E6C300771730 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 964879EB15B9E6C300771730 /* QuartzCore.framework */; };
 		964C92571ABB81EA0062D95F /* FlightGearMapInstrumentDigitsAndDial_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 964C92561ABB81EA0062D95F /* FlightGearMapInstrumentDigitsAndDial_Tests.m */; };
 		964C925E1ABB8FC30062D95F /* FlightGearMap_ASI2Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 964C925D1ABB8FC30062D95F /* FlightGearMap_ASI2Tests.m */; };
+		964C92611ABC79AE0062D95F /* jet-alt-digits~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 964C925F1ABC79AE0062D95F /* jet-alt-digits~ipad.png */; };
+		964C92621ABC79AE0062D95F /* jet-alt~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 964C92601ABC79AE0062D95F /* jet-alt~ipad.png */; };
+		964C92651ABC79C20062D95F /* jet-alt-digits@2x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 964C92631ABC79C20062D95F /* jet-alt-digits@2x~iphone.png */; };
+		964C92661ABC79C20062D95F /* jet-alt@2x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 964C92641ABC79C20062D95F /* jet-alt@2x~iphone.png */; };
+		964C92691ABC79CF0062D95F /* jet-alt-digits~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 964C92671ABC79CF0062D95F /* jet-alt-digits~iphone.png */; };
+		964C926A1ABC79CF0062D95F /* jet-alt~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 964C92681ABC79CF0062D95F /* jet-alt~iphone.png */; };
 		9672824617DC7C120031BE7A /* InfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9672824517DC7C120031BE7A /* InfoViewController.m */; };
 		9672824817DD0D860031BE7A /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 9672824717DD0D860031BE7A /* background.png */; };
 		96898C0815BCB11400ABB2F9 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96898C0715BCB11400ABB2F9 /* MessageUI.framework */; };
@@ -202,6 +208,12 @@
 		964C92551ABB81EA0062D95F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		964C92561ABB81EA0062D95F /* FlightGearMapInstrumentDigitsAndDial_Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FlightGearMapInstrumentDigitsAndDial_Tests.m; sourceTree = "<group>"; };
 		964C925D1ABB8FC30062D95F /* FlightGearMap_ASI2Tests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlightGearMap_ASI2Tests.m; sourceTree = "<group>"; };
+		964C925F1ABC79AE0062D95F /* jet-alt-digits~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "jet-alt-digits~ipad.png"; sourceTree = "<group>"; };
+		964C92601ABC79AE0062D95F /* jet-alt~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "jet-alt~ipad.png"; sourceTree = "<group>"; };
+		964C92631ABC79C20062D95F /* jet-alt-digits@2x~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "jet-alt-digits@2x~iphone.png"; path = "140/jet-alt-digits@2x~iphone.png"; sourceTree = "<group>"; };
+		964C92641ABC79C20062D95F /* jet-alt@2x~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "jet-alt@2x~iphone.png"; path = "140/jet-alt@2x~iphone.png"; sourceTree = "<group>"; };
+		964C92671ABC79CF0062D95F /* jet-alt-digits~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "jet-alt-digits~iphone.png"; sourceTree = "<group>"; };
+		964C92681ABC79CF0062D95F /* jet-alt~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "jet-alt~iphone.png"; sourceTree = "<group>"; };
 		9672823917DBA1FE0031BE7A /* ToDo */ = {isa = PBXFileReference; lastKnownFileType = text; path = ToDo; sourceTree = "<group>"; };
 		9672824417DC7C120031BE7A /* InfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InfoViewController.h; sourceTree = "<group>"; };
 		9672824517DC7C120031BE7A /* InfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InfoViewController.m; sourceTree = "<group>"; };
@@ -500,6 +512,8 @@
 		960B31D915A7A16300152F59 /* iPhone */ = {
 			isa = PBXGroup;
 			children = (
+				964C92671ABC79CF0062D95F /* jet-alt-digits~iphone.png */,
+				964C92681ABC79CF0062D95F /* jet-alt~iphone.png */,
 				96A7B28417EA38F400D052D0 /* jet-asi~iphone.png */,
 				96A7B28517EA38F400D052D0 /* jet-asi-digits~iphone.png */,
 				96C3E11F15B0B23800DCF289 /* rpm~iphone.png */,
@@ -601,6 +615,8 @@
 		96C3E17C15B0D23200DCF289 /* @2xiPhone */ = {
 			isa = PBXGroup;
 			children = (
+				964C92631ABC79C20062D95F /* jet-alt-digits@2x~iphone.png */,
+				964C92641ABC79C20062D95F /* jet-alt@2x~iphone.png */,
 				96A7B28017EA38E700D052D0 /* jet-asi@2x~iphone.png */,
 				96A7B28117EA38E700D052D0 /* jet-asi-digits@2x~iphone.png */,
 				96C3E15E15B0CAF700DCF289 /* alt0@2x~iphone.png */,
@@ -625,6 +641,8 @@
 		96C3E17D15B0DB0700DCF289 /* iPad */ = {
 			isa = PBXGroup;
 			children = (
+				964C925F1ABC79AE0062D95F /* jet-alt-digits~ipad.png */,
+				964C92601ABC79AE0062D95F /* jet-alt~ipad.png */,
 				96A7B27C17EA38C600D052D0 /* jet-asi~ipad.png */,
 				96A7B27D17EA38C600D052D0 /* jet-asi-digits~ipad.png */,
 				96C3E18015B0E21B00DCF289 /* alt0~ipad.png */,
@@ -767,6 +785,7 @@
 				96C3E12015B0B23800DCF289 /* rpm~iphone.png in Resources */,
 				96C3E16D15B0CB0200DCF289 /* alt0@2x~iphone.png in Resources */,
 				96C3E16E15B0CB0200DCF289 /* alt1@2x~iphone.png in Resources */,
+				964C92661ABC79C20062D95F /* jet-alt@2x~iphone.png in Resources */,
 				96C3E16F15B0CB0200DCF289 /* ati0@2x~iphone.png in Resources */,
 				96C3E17015B0CB0200DCF289 /* ati1@2x~iphone.png in Resources */,
 				96DC97671AB74853001418BA /* gear.png in Resources */,
@@ -789,6 +808,7 @@
 				96C3E19115B0E21B00DCF289 /* ati2~ipad.png in Resources */,
 				96C3E19215B0E21B00DCF289 /* ati3~ipad.png in Resources */,
 				96C3E19315B0E21B00DCF289 /* climb~ipad.png in Resources */,
+				964C92691ABC79CF0062D95F /* jet-alt-digits~iphone.png in Resources */,
 				96C3E19415B0E21B00DCF289 /* hand1~ipad.png in Resources */,
 				96C3E19515B0E21B00DCF289 /* hand2~ipad.png in Resources */,
 				96C3E19615B0E21B00DCF289 /* rpm~ipad.png in Resources */,
@@ -803,7 +823,9 @@
 				9644E8CD15B36D5B00D8BF96 /* ati1@2x~ipad.png in Resources */,
 				9644E8CE15B36D5B00D8BF96 /* ati2@2x~ipad.png in Resources */,
 				96DC97651AB73C06001418BA /* info@2x.png in Resources */,
+				964C92611ABC79AE0062D95F /* jet-alt-digits~ipad.png in Resources */,
 				9644E8CF15B36D5B00D8BF96 /* ati3@2x~ipad.png in Resources */,
+				964C92621ABC79AE0062D95F /* jet-alt~ipad.png in Resources */,
 				9644E8D015B36D5B00D8BF96 /* climb@2x~ipad.png in Resources */,
 				9644E8D115B36D5B00D8BF96 /* hand1@2x~ipad.png in Resources */,
 				9644E8D215B36D5B00D8BF96 /* hand2@2x~ipad.png in Resources */,
@@ -816,6 +838,7 @@
 				9644E8D815B36D5B00D8BF96 /* turn@2x~ipad.png in Resources */,
 				96898C0B15BCC18300ABB2F9 /* mobatlas.xml in Resources */,
 				96A29D9A15D0F7AE00694DAF /* plane@2x.png in Resources */,
+				964C926A1ABC79CF0062D95F /* jet-alt~iphone.png in Resources */,
 				9672824817DD0D860031BE7A /* background.png in Resources */,
 				96D93D8417E782A50060E78B /* jet-asi@2x~ipad.png in Resources */,
 				96A7B27B17E9EDA000D052D0 /* jet-asi-digits@2x~ipad.png in Resources */,
@@ -825,6 +848,7 @@
 				96A7B28217EA38E700D052D0 /* jet-asi@2x~iphone.png in Resources */,
 				96A7B28317EA38E700D052D0 /* jet-asi-digits@2x~iphone.png in Resources */,
 				96A7B28617EA38F400D052D0 /* jet-asi~iphone.png in Resources */,
+				964C92651ABC79C20062D95F /* jet-alt-digits@2x~iphone.png in Resources */,
 				96A7B28717EA38F400D052D0 /* jet-asi-digits~iphone.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
