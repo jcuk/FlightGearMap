@@ -34,7 +34,7 @@ NSMutableArray *instruments, *propInstruments, *jetInstruments;
         Instrument *speed = [[InstrumentSpeedo alloc]initWithFilename:@"speed"];
         Instrument *tas = [[InstrumentTurnAndSlip alloc]initWithFilename:@"trn1"];
         Instrument *jetAsi =[[InstrumentsASI2 alloc]initWithFilename:@"jet-asi" hand:@"hand1" digits:@"jet-asi-digits"];
-        Instrument *jetAlti =[[InstrumentsALT2 alloc]initWithFilename:@"jet-alt" hand:@"hand1" digits:@"jet-asi-digits"];
+        Instrument *jetAlti =[[InstrumentsALT2 alloc]initWithFilename:@"jet-alt" hand:@"hand1" digits:@"jet-alt-digits"];
         
         propInstruments = [[NSMutableArray alloc]initWithObjects:alti, hori, climb, rpm, speed, tas, nil];
         jetInstruments = [[NSMutableArray alloc]initWithObjects:jetAlti, hori, climb, rpm, jetAsi, tas, nil];
