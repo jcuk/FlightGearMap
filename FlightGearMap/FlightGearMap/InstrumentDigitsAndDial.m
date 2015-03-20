@@ -10,6 +10,8 @@
 
 @implementation InstrumentDigitsAndDial
 
+float _someValue = 0.0f;
+
 -(id)initWithFilename:(NSString *)fileName hand:(NSString*)handFilename digits:(NSString *)digitsName dataType:(PlaneDataType)planeDataType
            digitsXFrame:(float)digitsXFrame digitsYFrame:(float)digitsYFrame {
     self = [super initWithFilename:fileName hand:handFilename dataType:planeDataType min:0 max:450 minAngle:0 maxAngle:335];
@@ -79,7 +81,7 @@
     return [super getHandAngle:value];
 }
 
--(NSArray *)getDigits:(float)value {
+-(NSArray *)getDigits:(float)value {    
     float fraction = value - (int)value;
     float units = ((int)value % 10) + fraction;
     float tens = (((int)value % 100) - ((int)value % 10)) / 10;
@@ -87,7 +89,7 @@
         tens += fraction;
     }
     float hundreds = (((int)value % 1000) - ((int)value % 100)) / 100;
-    if (tens >= 9) {
+    if (tens >= 9 && units >= 9) {
         hundreds += fraction;
     }
     

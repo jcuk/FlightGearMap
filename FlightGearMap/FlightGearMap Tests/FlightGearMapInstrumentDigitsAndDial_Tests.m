@@ -46,5 +46,15 @@
 
 }
 
+- (void)testHundrensDigits {
+    InstrumentDigitsAndDial *iad = [[InstrumentDigitsAndDial alloc]init];
+    
+    NSArray *digits = [iad getDigits:91.5f];
+    XCTAssertEqualWithAccuracy(0.0f, [[digits objectAtIndex:0]floatValue], 0.01f);
+    XCTAssertEqualWithAccuracy(9.0f, [[digits objectAtIndex:1]floatValue], 0.01f);
+    XCTAssertEqualWithAccuracy(1.5f, [[digits objectAtIndex:2]floatValue], 0.01f);
+    
+}
+
 
 @end
