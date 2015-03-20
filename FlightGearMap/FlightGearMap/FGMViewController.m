@@ -296,10 +296,10 @@ bool  _touchInProgress = NO;
         case NO_INSTRUMENTS:
             break;
         case PROP_INSTRUM:
-            [_instrumentView showPropInstruments];
+            [_instrumentView showPropInstruments:false];
             break;
         case JET_INSTRUM:
-            [_instrumentView showFastJetInstruments];
+            [_instrumentView showFastJetInstruments:false];
             break;
     }
 }

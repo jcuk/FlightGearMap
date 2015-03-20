@@ -38,17 +38,19 @@ NSMutableArray *instruments, *propInstruments, *jetInstruments;
         
         propInstruments = [[NSMutableArray alloc]initWithObjects:alti, hori, climb, rpm, speed, tas, nil];
         jetInstruments = [[NSMutableArray alloc]initWithObjects:jetAlti, hori, climb, rpm, jetAsi, tas, nil];
-        [self showPropInstruments];
+        [self showPropInstruments:false];
     }
     return self;
 }
 
--(void)showPropInstruments {
+-(void)showPropInstruments:(bool)fullscreen {
+    _fullScreenView = fullscreen;
     instruments = propInstruments;
     [self setNeedsLayout];
 }
 
--(void)showFastJetInstruments {
+-(void)showFastJetInstruments:(bool)fullscreen {
+    _fullScreenView = fullscreen;
     instruments = jetInstruments;
     [self setNeedsLayout];
 }
@@ -61,8 +63,6 @@ NSMutableArray *instruments, *propInstruments, *jetInstruments;
 
 -(void)setNeedsLayout {
     [super setNeedsLayout];
-    
-    int y=0;
     
     int rectSize;
     int step;
@@ -80,52 +80,77 @@ NSMutableArray *instruments, *propInstruments, *jetInstruments;
         }
     }
     
-    if (orientation == UIDeviceOrientationUnknown ||
-        orientation == UIDeviceOrientationPortrait ||
-        orientation == UIDeviceOrientationPortraitUpsideDown) {
-        
-        //Portrait - 1 column of 6 instruments
-        if (UI_USER_INTERFACE_IDIOM() != UIUserInterfaceIdiomPhone) {
-            step = 160;
-            rectSize = 160;
-            viewWidth = 160;
+    int cols = 0;
+    
+    if (_fullScreenView) {
+        if (orientation == UIDeviceOrientationUnknown ||
+            orientation == UIDeviceOrientationPortrait ||
+            orientation == UIDeviceOrientationPortraitUpsideDown) {
+            cols = 2;
+    
+            //Portrait - 2 columns of 3 instruments
+            if (UI_USER_INTERFACE_IDIOM() != UIUserInterfaceIdiomPhone) {
+                step = 320;
+                rectSize = 350;
+                viewWidth = 160;
+            } else {
+                step = 140;
+                rectSize = 150;
+                viewWidth = 70;
+            }
+    
         } else {
-            step = 69;
-            rectSize = 70;
-            viewWidth = 70;
-        }
-        
-        for (Instrument *instrument in instruments) {
-            [self addSubview:instrument];
-            instrument.frame = CGRectMake(0, y, rectSize, rectSize);
-            y += step;
+            //Landscape - 3 columns of 2 instruments
+            cols = 3;
+            if (UI_USER_INTERFACE_IDIOM() != UIUserInterfaceIdiomPhone) {
+                step = 350;
+                rectSize = 350;
+                viewWidth = 320;
+            } else {
+                step = 135;
+                rectSize = 170;
+                viewWidth = 140;
+            }
+    
         }
         
     } else {
-        //Landscape - 2 columns of 3 instruments
-        if (UI_USER_INTERFACE_IDIOM() != UIUserInterfaceIdiomPhone) {
-            step = 260;
-            rectSize = 160;
-            viewWidth = 320;
-        } else {
-            step = 90;
-            rectSize = 70;
-            viewWidth = 140;
-        }
-        
-        bool left = YES;
-        for (Instrument *instrument in instruments) {
-            [self addSubview:instrument];
-            if (left) {
-                instrument.frame = CGRectMake(0, y, rectSize, rectSize);
-            } else {
-                instrument.frame = CGRectMake(instrument.frame.size.width, y, rectSize, rectSize);
-                y += step;
-            }
+        if (orientation == UIDeviceOrientationUnknown ||
+            orientation == UIDeviceOrientationPortrait ||
+            orientation == UIDeviceOrientationPortraitUpsideDown) {
+            cols = 1;
             
-            left = !left;
+            //Portrait - 1 column of 6 instruments
+            if (UI_USER_INTERFACE_IDIOM() != UIUserInterfaceIdiomPhone) {
+                step = 160;
+                rectSize = 160;
+                viewWidth = 160;
+            } else {
+                step = 69;
+                rectSize = 70;
+                viewWidth = 70;
+            }
+        } else {
+            //Landscape - 2 columns of 3 instruments
+            cols = 2;
+            if (UI_USER_INTERFACE_IDIOM() != UIUserInterfaceIdiomPhone) {
+                step = 260;
+                rectSize = 160;
+                viewWidth = 320;
+            } else {
+                step = 90;
+                rectSize = 70;
+                viewWidth = 140;
+            }
         }
-        
+    }
+    
+    int count = 0;
+    for (Instrument *instrument in instruments) {
+        [self addSubview:instrument];
+        instrument.frame = CGRectMake(instrument.frame.size.width * (count % cols), step * (int)(count / cols), rectSize, rectSize);
+    //    instrument.transform = CGAffineTransformMakeScale(2, 2);
+        count++;
     }
     
     self.frame = CGRectMake(self.frame.origin.x,

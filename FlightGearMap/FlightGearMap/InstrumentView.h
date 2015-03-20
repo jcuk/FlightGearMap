@@ -9,10 +9,12 @@
 #import <UIKit/UIKit.h>
 #import "PlaneData.h"
 
-@interface InstrumentView : UIView
+@interface InstrumentView : UIView {
+    bool _fullScreenView;
+}
 
 -(void)updatePlaneData:(PlaneData *)planeData;
--(void)showPropInstruments;
--(void)showFastJetInstruments;
+-(void)showPropInstruments:(bool)fullScreen;
+-(void)showFastJetInstruments:(bool)fullScreen;
 
 @end
