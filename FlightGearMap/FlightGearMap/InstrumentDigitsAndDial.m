@@ -32,19 +32,11 @@
         [digitsView addSubview:digit2];
         [digitsView addSubview:digit3];
         
-        [self setDigitOffsets];
-        
         //Force the layout to speed 000
         [self updatePlaneData:nil];
         
     }
     return self;
-}
-
--(void)setDigitOffsets {
-    //Default location in in upper half of the center of the dial
-    yoff = digit1.frame.size.height * 0.8325;
-    xoff = 0.0f;
 }
 
 -(void)updatePlaneData:(PlaneData *)planeData {
@@ -64,18 +56,20 @@
     
     NSArray *digits = [self getDigits:value];
     
+    float yoff = digit1.frame.size.height * 0.8325;
+    
     CGAffineTransform translate1 = CGAffineTransformMakeTranslation(
-                xoff+digitWidth*2,
+                digitWidth*2,
                 -yoff + [[digits objectAtIndex:0]floatValue] * digitHeight);
     [digit1 setTransform:translate1];
     
     CGAffineTransform translate2 = CGAffineTransformMakeTranslation(
-                xoff+digitWidth,
+                digitWidth,
                 -yoff + [[digits objectAtIndex:1]floatValue] * digitHeight);
     [digit2 setTransform:translate2];
     
     CGAffineTransform translate3 = CGAffineTransformMakeTranslation(
-                xoff,
+                0,
                 -yoff + [[digits objectAtIndex:2]floatValue] * digitHeight);
     [digit3 setTransform:translate3];
 }

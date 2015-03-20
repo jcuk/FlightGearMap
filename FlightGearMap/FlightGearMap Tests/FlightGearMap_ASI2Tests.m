@@ -39,8 +39,8 @@
     InstrumentsALT2 *alt2 = [[InstrumentsALT2 alloc]init];
     
     NSArray *digits = [alt2 getDigits:39950.0f];
-    XCTAssertEqualWithAccuracy(3.5f,  [[digits objectAtIndex:0]floatValue], 0.01f);
-    XCTAssertEqualWithAccuracy(9.5f,  [[digits objectAtIndex:1]floatValue], 0.01f);
+    XCTAssertEqualWithAccuracy(3.5f, [[digits objectAtIndex:0]floatValue], 0.01f);
+    XCTAssertEqualWithAccuracy(9.5f, [[digits objectAtIndex:1]floatValue], 0.01f);
     XCTAssertEqualWithAccuracy(9.5f, [[digits objectAtIndex:2]floatValue], 0.01f);
 }
 
