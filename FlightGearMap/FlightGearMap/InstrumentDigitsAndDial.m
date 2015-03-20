@@ -10,7 +10,8 @@
 
 @implementation InstrumentDigitsAndDial
 
--(id)initWithFilename:(NSString *)fileName hand:(NSString*)handFilename digits:(NSString *)digitsName dataType:(PlaneDataType)planeDataType {
+-(id)initWithFilename:(NSString *)fileName hand:(NSString*)handFilename digits:(NSString *)digitsName dataType:(PlaneDataType)planeDataType
+           digitsXFrame:(float)digitsXFrame digitsYFrame:(float)digitsYFrame {
     self = [super initWithFilename:fileName hand:handFilename dataType:planeDataType min:0 max:450 minAngle:0 maxAngle:335];
     if (self) {
         UIImage *digits = [UIImage imageNamed:digitsName];
@@ -20,8 +21,8 @@
         
         NSLog(@"Frame %f %f",self.frame.size.width, self.frame.size.height);
         
-        CGRect frame = CGRectMake(0, 0, self.frame.size.width*0.375,
-                                  self.frame.size.height*0.625);
+        CGRect frame = CGRectMake(0, 0, self.frame.size.width*digitsXFrame,
+                                  self.frame.size.height*digitsYFrame);
         
         digitsView = [[UIView alloc]initWithFrame:frame];
         digitsView.clipsToBounds = YES;
@@ -60,7 +61,7 @@
     
     CGAffineTransform translate1 = CGAffineTransformMakeTranslation(
                 digitWidth*2,
-                -yoff + [[digits objectAtIndex:0]floatValue] * digitHeight);
+                -yoff + [[digits objectAtIndex:2]floatValue] * digitHeight);
     [digit1 setTransform:translate1];
     
     CGAffineTransform translate2 = CGAffineTransformMakeTranslation(
@@ -70,7 +71,7 @@
     
     CGAffineTransform translate3 = CGAffineTransformMakeTranslation(
                 0,
-                -yoff + [[digits objectAtIndex:2]floatValue] * digitHeight);
+                -yoff + [[digits objectAtIndex:0]floatValue] * digitHeight);
     [digit3 setTransform:translate3];
 }
 

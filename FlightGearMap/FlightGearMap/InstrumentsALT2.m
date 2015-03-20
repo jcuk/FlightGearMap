@@ -11,7 +11,7 @@
 @implementation InstrumentsALT2
 
 -(id)initWithFilename:(NSString *)fileName hand:(NSString*)handFilename digits:(NSString *)digitsName {
-    self = [super initWithFilename:fileName hand:handFilename digits:digitsName dataType:ALTITUDE];
+    self = [super initWithFilename:fileName hand:handFilename digits:digitsName dataType:ALTITUDE digitsXFrame:0.75f digitsYFrame:0.3f];
     if (self) {
         
     }

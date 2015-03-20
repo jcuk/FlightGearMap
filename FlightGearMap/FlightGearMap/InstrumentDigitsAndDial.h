@@ -17,7 +17,7 @@
     @protected UIView *digit3;
 }
 
--(id)initWithFilename:(NSString *)fileName hand:(NSString*)handFilename digits:(NSString *)digitsName dataType:(PlaneDataType)planeDataType;
+-(id)initWithFilename:(NSString *)fileName hand:(NSString*)handFilename digits:(NSString *)digitsName dataType:(PlaneDataType)planeDataType digitsXFrame:(float)digitsXFrame digitsYFrame:(float)digitsYFrame;
 -(NSArray *)getDigits:(float)value;
 
 @end

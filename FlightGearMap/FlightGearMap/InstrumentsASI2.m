@@ -11,7 +11,7 @@
 @implementation InstrumentsASI2
 
 -(id)initWithFilename:(NSString *)fileName hand:(NSString*)handFilename digits:(NSString *)digitsName {
-    self = [super initWithFilename:fileName hand:handFilename digits:digitsName dataType:SPEED];
+    self = [super initWithFilename:fileName hand:handFilename digits:digitsName dataType:SPEED digitsXFrame:0.375 digitsYFrame:0.625];
     if (self) {
         
     }
