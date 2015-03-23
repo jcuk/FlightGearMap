@@ -11,11 +11,13 @@
 #import "MapStatusUpdater.h"
 #import "UIConfigController.h"
 #import "InstrumentView.h"
+#import "Config.h"
 
 #define METERS_PER_MILE 1609.344
 
 @interface FGMViewController : UIViewController <MapStatusUpdater, UIConfigControllerDelagate, UIGestureRecognizerDelegate> {
-    @private bool _doneInitialZoom; 
+    @private bool _doneInitialZoom;
+    @private Config *_config;
 }
 
 @property (weak, nonatomic) IBOutlet MKMapView *_mapView;

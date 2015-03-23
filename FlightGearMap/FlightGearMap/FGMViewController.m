@@ -20,12 +20,8 @@
 @implementation FGMViewController
 @synthesize _mapView,_planeView,_instrumentView;
 
-typedef enum {NO_INSTRUMENTS, PROP_INSTRUM, JET_INSTRUM } InstrumentType;
-
 PlaneData *planeData;
 UDPClient *udpClient;
-
-InstrumentType _instrumentType;
 
 bool  _touchInProgress = NO;
 
@@ -128,42 +124,31 @@ bool  _touchInProgress = NO;
             
         }
         
-        NSString *port = [temp objectForKey:@"port"];
-        NSString *instruments = [temp objectForKey:@"instruments"];
-        NSNumber *mapType = [temp objectForKey:@"mapType"];
-        NSString *instrumentType = [temp objectForKey:@"instrumentType"];
-        
-        if ([port length]==0) {
-            port = @"9999"; //Default port
-        }
-        
-        if (mapType) {
-            _mapView.mapType = [mapType intValue];
-        } else {
-            _mapView.mapType = MKMapTypeStandard;
-        }
+        _config = [[Config alloc]initFromDictionary:temp];
         
         [self updatePosition:START_LON lat:START_LAT altitudeInFt:0 updateZoom:YES];
-        
-        if (instrumentType) {
-            [self updateInstruments:[instrumentType intValue]];
-        } else { // From v1.1
-            [self makeInstrumentsVisible:![@"N" isEqualToString:instruments]];
-        }
-        
-        if (!instruments && !instrumentType) {
-            _instrumentType = PROP_INSTRUM;
-        }
         
         UIImage *plane = [UIImage imageNamed:@"plane"];
         _planeView.image = plane;
         
-        udpClient = [[UDPClient alloc]init:[port intValue] mapStatusUpdater:self] ;
-        
+        [self updateStateFromConfig];
+
     }
     
     planeData = [[PlaneData alloc]init];
     
+}
+
+-(void)updateStateFromConfig {
+    udpClient = [[UDPClient alloc]init:_config.port mapStatusUpdater:self] ;
+    
+    if (_config.mapType != FULLSCREEN) {
+        _mapView.mapType = (MKMapType)_config.mapType;
+    } else {
+        _mapView.mapType = MKMapTypeStandard;
+    }
+    
+    [self updateInstruments:_config.instrumentType];
 }
 
 - (void)viewDidUnload
@@ -243,56 +228,22 @@ bool  _touchInProgress = NO;
 - (void)configViewControllerDidSave:(UIConfigController *)controller {
     [self dismissViewControllerAnimated:YES completion:nil];
     
-    //Save data
-    NSString *error;
-        
-    NSString *rootPath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
-        
-    NSString *plistPath = [rootPath stringByAppendingPathComponent:@"save.plist"];
-        
-    NSDictionary *plistDict = [NSDictionary dictionaryWithObjects:
-                [NSArray arrayWithObjects:
-                 @"1.4",
-                 controller.port.text,
-                 [NSNumber numberWithInt:(int)controller.instrumentType.selectedSegmentIndex],
-                 [NSNumber numberWithInt:(int)controller.mapType.selectedSegmentIndex],
-                 nil]
-                forKeys:[NSArray arrayWithObjects: @"version", @"port", @"instrumentType", @"mapType", nil]];
+    Config *savedConfig = controller.config;
     
-//    NSDictionary *plistDict = [NSDictionary dictionaryWithObjects:
-//                [NSArray arrayWithObjects: @"1.1", controller.port.text, controller.instruments.isOn?@"Y":@"N", [NSNumber numberWithInt:controller.mapType.selectedSegmentIndex], nil]
-//                forKeys:[NSArray arrayWithObjects: @"version", @"port", @"instruments", @"mapType", nil]];
+    [savedConfig persist];
     
-    NSData *plistData = [NSPropertyListSerialization dataFromPropertyList:plistDict
-                format:NSPropertyListXMLFormat_v1_0 errorDescription:&error];
-        
-    if(plistData) {
-            
-        [plistData writeToFile:plistPath atomically:YES];
-            
-    } else {
-        NSLog(@"Error writing data: %@",error);
-            
-    }
+    _config = savedConfig;
     
-    [self updateInstruments:(int)controller.instrumentType.selectedSegmentIndex];
-
-    if ([controller.port.text length] > 0) {
-    
-        [udpClient reconnectToNewPort:[[controller.port text] intValue]];
-    }   
-        
-    _mapView.mapType = controller.mapType.selectedSegmentIndex;
+    [self updateStateFromConfig];
     
     [self viewWillLayoutSubviews];
     
 }
 
 -(void)updateInstruments:(InstrumentType)instrumentType {
-    _instrumentType = instrumentType;
-    [self makeInstrumentsVisible:_instrumentType != NO_INSTRUMENTS];
+    [self makeInstrumentsVisible:instrumentType != NO_INSTRUMENTS];
     
-    switch (_instrumentType) {
+    switch (instrumentType) {
         case NO_INSTRUMENTS:
             break;
         case PROP_INSTRUM:
@@ -314,10 +265,7 @@ bool  _touchInProgress = NO;
         //Force the view to load
         [configViewController view];
         
-        [configViewController.port setText:[NSString stringWithFormat:@"%d", udpClient._port]];
-        [configViewController.instrumentType setSelectedSegmentIndex:_instrumentType];
-        configViewController.mapType.selectedSegmentIndex = _mapView.mapType;
-        [configViewController updateCommandOptionsLabel];
+        configViewController.config = _config;
         
 	} else if ([segue.identifier isEqualToString:@"InfoView"]) {
         InfoViewController *infoView = segue.destinationViewController;

@@ -32,6 +32,9 @@
 		960B320015A7A16300152F59 /* climb~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 960B31DC15A7A16300152F59 /* climb~iphone.png */; };
 		960B320215A7A16300152F59 /* speed~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 960B31DE15A7A16300152F59 /* speed~iphone.png */; };
 		960B320315A7A16300152F59 /* trn1~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 960B31DF15A7A16300152F59 /* trn1~iphone.png */; };
+		961C44D51ABF465800BB15BD /* PortConfigCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 961C44D41ABF465800BB15BD /* PortConfigCell.m */; };
+		961C44D81ABF882D00BB15BD /* StartCommandCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 961C44D71ABF882D00BB15BD /* StartCommandCell.m */; };
+		961C44DC1AC038DA00BB15BD /* Config.m in Sources */ = {isa = PBXBuildFile; fileRef = 961C44DB1AC038DA00BB15BD /* Config.m */; };
 		962AC8621AB5FCD900C50CF7 /* RevMobAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 962AC8611AB5FCD900C50CF7 /* RevMobAds.framework */; };
 		962AC8641AB5FD2400C50CF7 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 962AC8631AB5FD2400C50CF7 /* MediaPlayer.framework */; };
 		9644E8CA15B36D5B00D8BF96 /* alt0@2x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 9644E8BB15B36D5B00D8BF96 /* alt0@2x~ipad.png */; };
@@ -184,6 +187,13 @@
 		960B31DC15A7A16300152F59 /* climb~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "climb~iphone.png"; sourceTree = "<group>"; };
 		960B31DE15A7A16300152F59 /* speed~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "speed~iphone.png"; sourceTree = "<group>"; };
 		960B31DF15A7A16300152F59 /* trn1~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "trn1~iphone.png"; sourceTree = "<group>"; };
+		961C44D31ABF465800BB15BD /* PortConfigCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PortConfigCell.h; sourceTree = "<group>"; };
+		961C44D41ABF465800BB15BD /* PortConfigCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PortConfigCell.m; sourceTree = "<group>"; };
+		961C44D61ABF882D00BB15BD /* StartCommandCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StartCommandCell.h; sourceTree = "<group>"; };
+		961C44D71ABF882D00BB15BD /* StartCommandCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StartCommandCell.m; sourceTree = "<group>"; };
+		961C44D91ABF9F1400BB15BD /* Constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		961C44DA1AC038DA00BB15BD /* Config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Config.h; sourceTree = "<group>"; };
+		961C44DB1AC038DA00BB15BD /* Config.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Config.m; sourceTree = "<group>"; };
 		962AC8611AB5FCD900C50CF7 /* RevMobAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RevMobAds.framework; sourceTree = "<group>"; };
 		962AC8631AB5FD2400C50CF7 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 		9644E8BB15B36D5B00D8BF96 /* alt0@2x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "alt0@2x~ipad.png"; sourceTree = "<group>"; };
@@ -444,6 +454,7 @@
 		5B68E64D158FBF65009DBDE6 /* FlightGearMap */ = {
 			isa = PBXGroup;
 			children = (
+				961C44D21ABF460900BB15BD /* ConfigView */,
 				96FAE9A217DE5E7D008F4664 /* Appirater */,
 				96898C1015D0C45900ABB2F9 /* GlossyButton */,
 				96C3E0C615AC0F4400DCF289 /* PlaneData */,
@@ -536,6 +547,22 @@
 			path = 70;
 			sourceTree = "<group>";
 		};
+		961C44D21ABF460900BB15BD /* ConfigView */ = {
+			isa = PBXGroup;
+			children = (
+				5B3D3FCA1592776100393425 /* UIConfigController.h */,
+				5B3D3FCB1592776200393425 /* UIConfigController.m */,
+				961C44D31ABF465800BB15BD /* PortConfigCell.h */,
+				961C44D41ABF465800BB15BD /* PortConfigCell.m */,
+				961C44D61ABF882D00BB15BD /* StartCommandCell.h */,
+				961C44D71ABF882D00BB15BD /* StartCommandCell.m */,
+				961C44D91ABF9F1400BB15BD /* Constants.h */,
+				961C44DA1AC038DA00BB15BD /* Config.h */,
+				961C44DB1AC038DA00BB15BD /* Config.m */,
+			);
+			name = ConfigView;
+			sourceTree = "<group>";
+		};
 		9644E8BA15B36D5B00D8BF96 /* @2xiPad */ = {
 			isa = PBXGroup;
 			children = (
@@ -597,8 +624,6 @@
 				5B68E657158FBF65009DBDE6 /* FGMAppDelegate.m */,
 				5B68E65F158FBF65009DBDE6 /* FGMViewController.h */,
 				5B68E660158FBF66009DBDE6 /* FGMViewController.m */,
-				5B3D3FCA1592776100393425 /* UIConfigController.h */,
-				5B3D3FCB1592776200393425 /* UIConfigController.m */,
 			);
 			name = MainView;
 			sourceTree = "<group>";
@@ -872,10 +897,13 @@
 				5B68E661158FBF66009DBDE6 /* FGMViewController.m in Sources */,
 				5B35DD60158FDD41009EA907 /* GCDAsyncSocket.m in Sources */,
 				5B3D3FCC1592776200393425 /* UIConfigController.m in Sources */,
+				961C44DC1AC038DA00BB15BD /* Config.m in Sources */,
 				5BA95C2C159CF43B0058D568 /* TBXML.m in Sources */,
 				960B310C15A77D9300152F59 /* InstrumentView.m in Sources */,
 				960B310F15A77E0D00152F59 /* Instrument.m in Sources */,
 				96C3E02915AB88BF00DCF289 /* InstrumentAltimeter.m in Sources */,
+				961C44D51ABF465800BB15BD /* PortConfigCell.m in Sources */,
+				961C44D81ABF882D00BB15BD /* StartCommandCell.m in Sources */,
 				96C3E0CC15AC10A100DCF289 /* PlaneData.m in Sources */,
 				96FD2CEC1ABAFACF00F8A684 /* InstrumentDigitsAndDial.m in Sources */,
 				96C3E0CF15AC9C4E00DCF289 /* InstrumentHorizon.m in Sources */,
@@ -1136,6 +1164,7 @@
 				964C925B1ABB81EA0062D95F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

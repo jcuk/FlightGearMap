@@ -10,7 +10,11 @@
 #import "ifaddrs.h"
 #import <arpa/inet.h>
 
-#define COMMAND_OPTION @"fgfs --generic=socket,out,5,%@,%@,udp,mobatlas"
+#import "PortConfigCell.h"
+#import "StartCommandCell.h"
+#import "Constants.h"
+
+#define COMMAND_OPTION @"fgfs --generic=socket,out,5,%@,%d,udp,mobatlas"
 #define ERROR @"error"
 
 @implementation UIConfigController
@@ -19,6 +23,8 @@ bool inEmail = NO;
 
 @synthesize delegate, port, mapType, commandOption;
 
+enum groupTypes {NETWORK, INSTRUMENTS, MAP};
+enum networkCells {PORT, RUN, CONFIG};
 
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad
@@ -34,6 +40,7 @@ bool inEmail = NO;
         [cancel setNavigationButtonWithColor: [UIColor colorWithRed:0.0f green:0.5f blue:1.0f alpha:1.0f]];
     
         [email setNavigationButtonWithColor: [UIColor colorWithRed:0.0f green:0.5f blue:1.0f alpha:1.0f]];
+    
 }
 
 
@@ -115,9 +122,10 @@ bool inEmail = NO;
 
 -(NSString *)fgfsCommand {
     NSString *ipAddress = [UIConfigController getIPAddress];
-    return [NSString stringWithFormat:COMMAND_OPTION , ipAddress, port.text];
+    return [NSString stringWithFormat:COMMAND_OPTION , ipAddress, _config.port];
 }
 
+//TODO remove this
 -(void)updateCommandOptionsLabel {
     NSString *ipAddress = [UIConfigController getIPAddress];
     
@@ -126,9 +134,18 @@ bool inEmail = NO;
     } else {
         [commandOption setText:[self fgfsCommand]];
     }
-    
-    
 }
+
+-(NSString *)getCommandOption {
+    NSString *ipAddress = [UIConfigController getIPAddress];
+    
+    if ([ipAddress isEqualToString:ERROR]) {
+        return @"You need to connect to WiFi to talk to FlightGear!";
+    } else {
+        return [self fgfsCommand];
+    }
+}
+
 
 -(IBAction)portValueChanged:(id)sender {
     [self updateCommandOptionsLabel];
@@ -144,6 +161,12 @@ bool inEmail = NO;
 -(BOOL) textFieldShouldReturn:(UITextField*) textField {
     [textField resignFirstResponder]; 
     return YES;
+}
+
+- (void) textFieldDidEndEditing:(UITextField *)textField {
+    //Only copes with one field. Need to get superview, to get cell then look up in table if >1 text field is used
+    
+    NSLog(@"%@",[textField text]);
 }
 
 - (void)addButtonToKeyboard {
@@ -209,6 +232,131 @@ bool inEmail = NO;
     [self dismissViewControllerAnimated:YES completion:nil]; 
     
     inEmail = NO;
+}
+
+#pragma mark data table
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    switch (section) {
+        case NETWORK:
+            return 3;
+        case INSTRUMENTS:
+            return 3;
+        case MAP:
+            return 4;
+        default:
+            return 0;
+    }
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    NSString *cellIdentifier;
+    
+    //Calculate cell type
+    if (indexPath.section == NETWORK) {
+        switch (indexPath.row) {
+            case PORT:
+                cellIdentifier = @"PortCell";
+                break;
+            case RUN:
+                cellIdentifier = @"StartCommandCell";
+                break;
+            case CONFIG:
+                cellIdentifier = @"EmailConfigCell";
+                break;
+        }
+        
+    } else {
+        cellIdentifier = @"CheckboxCell";
+    }
+    
+    //Get correct cell type
+    UITableViewCell *cell = [tableView
+                             dequeueReusableCellWithIdentifier:cellIdentifier];
+    if(cell==nil) {
+        if([cellIdentifier isEqualToString:@"PortCell"]) {
+            cell=[[PortConfigCell alloc]
+                  initWithStyle:(UITableViewCellStyleDefault) reuseIdentifier:cellIdentifier];
+        } else if ([cellIdentifier isEqualToString:@"StartCommandCell"]) {
+            cell=[[StartCommandCell alloc]
+                  initWithStyle:(UITableViewCellStyleDefault) reuseIdentifier:cellIdentifier];
+        } else {
+            cell=[[UITableViewCell alloc]
+              initWithStyle:(UITableViewCellStyleDefault) reuseIdentifier:cellIdentifier];
+        }
+    }
+    
+    //Update cells with current value
+    switch (indexPath.section) {
+        case NETWORK:
+            switch (indexPath.row) {
+                case PORT:
+                    [((PortConfigCell *)cell).portField setText:[NSString stringWithFormat:@"%d",_config.port]];
+                    break;
+                case RUN:
+                    [((StartCommandCell *)cell).label setText:[self getCommandOption]];
+                    break;
+                case CONFIG:
+                    break;
+            }
+            break;
+        case INSTRUMENTS:
+            if (indexPath.row == _config.instrumentType) {
+                cell.accessoryType = UITableViewCellAccessoryCheckmark;
+            }
+            switch (indexPath.row) {
+                case NO_INSTRUMENTS:
+                    cell.textLabel.text = @"No Instruments";
+                    break;
+                case PROP_INSTRUM:
+                    cell.textLabel.text = @"Prop";
+                    break;
+                case JET_INSTRUM:
+                    cell.textLabel.text = @"Jet";
+                    break;
+            }
+            break;
+        case MAP:
+            if (indexPath.row == _config.mapType) {
+                cell.accessoryType = UITableViewCellAccessoryCheckmark;
+            }
+            switch (indexPath.row) {
+                case SATELLITE:
+                    cell.textLabel.text = @"Satellite";
+                    break;
+                case STANDARD:
+                    cell.textLabel.text = @"Standard";
+                    break;
+                case HYBRID:
+                    cell.textLabel.text = @"Hybrid";
+                    break;
+                case FULLSCREEN:
+                    cell.textLabel.text = @"Full Screen";
+                    break;
+            }
+            break;
+    }
+    
+    return cell;
+}
+
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    return 3;
+}
+
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
+    switch (section) {
+        case 0:
+            return @"Network";
+        case 1:
+            return @"Instruments";
+        case 2:
+            return @"Map";
+        default:
+            return @"";
+            
+    }
 }
 
 
