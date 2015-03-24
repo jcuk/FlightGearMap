@@ -7,7 +7,6 @@ Later versions
     Secondary Instruments - Navigation etc
     Switch panel
     Record trip
-    True full screen mode
     Comms:
         Comms status icon in toolbar
         Connection occasionally causes error binding port - Address already in use
@@ -28,6 +27,7 @@ Done
  Update for iPhone 6 and 6+
  Minor bug fixes
  Updates to GUI
+ Full screen mode
 
 ToDo
  iPhone 6 in native mode
