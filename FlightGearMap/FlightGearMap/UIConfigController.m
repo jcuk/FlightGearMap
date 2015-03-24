@@ -298,6 +298,11 @@ enum networkCells {PORT, RUN, CONFIG};
             break;
 
     }
+    
+    if (_config.instrumentType == NO_INSTRUMENTS && _config.mapType == FULLSCREEN) {
+        _config.instrumentType = PROP_INSTRUM;
+    }
+    
     [tableView reloadData];
 }
 

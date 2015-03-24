@@ -255,6 +255,9 @@ bool  _touchInProgress = NO;
             [_instrumentView showFastJetInstruments:fullscreen];
             break;
     }
+    
+    _planeView.hidden = fullscreen;
+    _mapView.hidden = fullscreen;
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
