@@ -46,8 +46,17 @@
     return self;
 }
 
+-(id)copyWithZone:(NSZone *)zone {
+    Config *copy = [[[self class]alloc]init];
+    if (copy) {
+        copy.port = self.port;
+        copy.instrumentType = self.instrumentType;
+        copy.mapType = self.mapType;
+    }
+    return copy;
+}
+
 -(void)persist {
-    
     //Save data
     NSString *error;
     

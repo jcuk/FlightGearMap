@@ -228,6 +228,8 @@ enum networkCells {PORT, RUN, CONFIG};
         case INSTRUMENTS:
             if (indexPath.row == _config.instrumentType) {
                 cell.accessoryType = UITableViewCellAccessoryCheckmark;
+            } else {
+                cell.accessoryType = UITableViewCellAccessoryNone;
             }
             switch (indexPath.row) {
                 case NO_INSTRUMENTS:
@@ -244,6 +246,8 @@ enum networkCells {PORT, RUN, CONFIG};
         case MAP:
             if (indexPath.row == _config.mapType) {
                 cell.accessoryType = UITableViewCellAccessoryCheckmark;
+            } else {
+                cell.accessoryType = UITableViewCellAccessoryNone;
             }
             switch (indexPath.row) {
                 case SATELLITE:
@@ -282,6 +286,19 @@ enum networkCells {PORT, RUN, CONFIG};
             return @"";
             
     }
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    switch (indexPath.section) {
+        case INSTRUMENTS:
+            _config.instrumentType = indexPath.row;
+            break;
+        case MAP:
+            _config.mapType = indexPath.row;
+            break;
+
+    }
+    [tableView reloadData];
 }
 
 

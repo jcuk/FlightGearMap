@@ -26,7 +26,7 @@
 
 @property (nonatomic, weak) id <UIConfigControllerDelagate> delegate;
 
-@property Config *config;
+@property (copy) Config *config;
 
 - (IBAction)cancel:(id)sender;
 - (IBAction)done:(id)sender;

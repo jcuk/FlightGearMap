@@ -10,6 +10,6 @@
 #define FlightGearMap_Constants_h
 
 typedef enum InstrumentType {NO_INSTRUMENTS, PROP_INSTRUM, JET_INSTRUM } InstrumentType;
-typedef enum MapType {SATELLITE, STANDARD, HYBRID, FULLSCREEN} MapType;
+typedef enum MapType {STANDARD, SATELLITE, HYBRID, FULLSCREEN} MapType;
 
 #endif

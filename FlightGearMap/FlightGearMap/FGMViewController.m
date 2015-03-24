@@ -207,12 +207,6 @@ bool  _touchInProgress = NO;
     [self.navigationController setNavigationBarHidden:YES animated:animated];
 }
 
-#pragma mark - delagate methods for config
-- (void)configViewControllerDidCancel:(UIConfigController *)controller {
-    [self dismissViewControllerAnimated:YES completion:nil];
-    
-}
-
 -(void) makeInstrumentsVisible:(bool)visible {
     _instrumentView.hidden = !visible;
 }
@@ -223,6 +217,12 @@ bool  _touchInProgress = NO;
 
 - (void)didRotateFromInterfaceOrientation:(UIInterfaceOrientation)fromInterfaceOrientation {
     [self makeInstrumentsVisible:!_instrumentView.hidden];
+}
+
+#pragma mark - delagate methods for config
+- (void)configViewControllerDidCancel:(UIConfigController *)controller {
+    [self dismissViewControllerAnimated:YES completion:nil];
+    
 }
 
 - (void)configViewControllerDidSave:(UIConfigController *)controller {
