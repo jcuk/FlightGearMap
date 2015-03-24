@@ -149,7 +149,11 @@ NSMutableArray *instruments, *propInstruments, *jetInstruments;
     for (Instrument *instrument in instruments) {
         [self addSubview:instrument];
         instrument.frame = CGRectMake(instrument.frame.size.width * (count % cols), step * (int)(count / cols), rectSize, rectSize);
-    //    instrument.transform = CGAffineTransformMakeScale(2, 2);
+        if (_fullScreenView) {
+            instrument.transform = CGAffineTransformMakeScale(2, 2);
+        } else {
+            instrument.transform = CGAffineTransformMakeScale(1, 1);
+        }
         count++;
     }
     

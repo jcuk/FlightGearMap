@@ -142,13 +142,15 @@ bool  _touchInProgress = NO;
 -(void)updateStateFromConfig {
     udpClient = [[UDPClient alloc]init:_config.port mapStatusUpdater:self] ;
     
+    bool fullscreen = NO;
     if (_config.mapType != FULLSCREEN) {
         _mapView.mapType = (MKMapType)_config.mapType;
     } else {
         _mapView.mapType = MKMapTypeStandard;
+        fullscreen = YES;
     }
     
-    [self updateInstruments:_config.instrumentType];
+    [self updateInstruments:_config.instrumentType fullscreen:fullscreen];
 }
 
 - (void)viewDidUnload
@@ -240,17 +242,17 @@ bool  _touchInProgress = NO;
     
 }
 
--(void)updateInstruments:(InstrumentType)instrumentType {
+-(void)updateInstruments:(InstrumentType)instrumentType fullscreen:(bool)fullscreen {
     [self makeInstrumentsVisible:instrumentType != NO_INSTRUMENTS];
     
     switch (instrumentType) {
         case NO_INSTRUMENTS:
             break;
         case PROP_INSTRUM:
-            [_instrumentView showPropInstruments:false];
+            [_instrumentView showPropInstruments:fullscreen];
             break;
         case JET_INSTRUM:
-            [_instrumentView showFastJetInstruments:false];
+            [_instrumentView showFastJetInstruments:fullscreen];
             break;
     }
 }
