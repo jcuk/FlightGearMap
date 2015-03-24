@@ -8,10 +8,17 @@
 
 #import <UIKit/UIKit.h>
 
-@interface PortConfigCell : UITableViewCell {
+@protocol PortUpdater <NSObject>
+
+-(void)updatePort:(int)port;
+
+@end
+
+@interface PortConfigCell : UITableViewCell <UITextFieldDelegate> {
 
 }
 
 @property (nonatomic, strong) IBOutlet UITextField *portField;
+@property (nonatomic, weak) NSObject<PortUpdater> *portUpdater;
 
 @end

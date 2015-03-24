@@ -10,7 +10,6 @@
 #import "ifaddrs.h"
 #import <arpa/inet.h>
 
-#import "PortConfigCell.h"
 #import "StartCommandCell.h"
 #import "Constants.h"
 
@@ -21,8 +20,6 @@
 
 bool inEmail = NO;
 
-@synthesize delegate, port, mapType, commandOption;
-
 enum groupTypes {NETWORK, INSTRUMENTS, MAP};
 enum networkCells {PORT, RUN, CONFIG};
 
@@ -30,25 +27,14 @@ enum networkCells {PORT, RUN, CONFIG};
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	[[NSNotificationCenter defaultCenter] addObserver:self 
-                                             selector:@selector(keyboardDidShow:) 
-                                                 name:UIKeyboardDidShowNotification 
-                                               object:nil];
-    
-        [ok setNavigationButtonWithColor: [UIColor colorWithRed:0.0f green:0.5f blue:1.0f alpha:1.0f]];
-    
-        [cancel setNavigationButtonWithColor: [UIColor colorWithRed:0.0f green:0.5f blue:1.0f alpha:1.0f]];
-    
-        [email setNavigationButtonWithColor: [UIColor colorWithRed:0.0f green:0.5f blue:1.0f alpha:1.0f]];
-    
+  
 }
 
 
 - (void)viewDidUnload
 {
     [super viewDidUnload];
-    
-//    [[NSNotificationCenter defaultCenter] removeObserver:self];
+
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
@@ -125,17 +111,6 @@ enum networkCells {PORT, RUN, CONFIG};
     return [NSString stringWithFormat:COMMAND_OPTION , ipAddress, _config.port];
 }
 
-//TODO remove this
--(void)updateCommandOptionsLabel {
-    NSString *ipAddress = [UIConfigController getIPAddress];
-    
-    if ([ipAddress isEqualToString:ERROR]) {
-        [commandOption setText:@"You need to connect to WiFi to talk to FlightGear!"];
-    } else {
-        [commandOption setText:[self fgfsCommand]];
-    }
-}
-
 -(NSString *)getCommandOption {
     NSString *ipAddress = [UIConfigController getIPAddress];
     
@@ -146,62 +121,10 @@ enum networkCells {PORT, RUN, CONFIG};
     }
 }
 
+#pragma mark port updater
 
--(IBAction)portValueChanged:(id)sender {
-    [self updateCommandOptionsLabel];
-}
-
--(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
-{
-    [self.view endEditing:YES];
-}
-
-#pragma mark -- Text field delegate methods
-
--(BOOL) textFieldShouldReturn:(UITextField*) textField {
-    [textField resignFirstResponder]; 
-    return YES;
-}
-
-- (void) textFieldDidEndEditing:(UITextField *)textField {
-    //Only copes with one field. Need to get superview, to get cell then look up in table if >1 text field is used
-    
-    NSLog(@"%@",[textField text]);
-}
-
-- (void)addButtonToKeyboard {
-	// create custom button
-	UIButton *doneButton = [UIButton buttonWithType:UIButtonTypeCustom];
-	doneButton.frame = CGRectMake(0, 163, 106, 53);
-	doneButton.adjustsImageWhenHighlighted = NO;
-    [doneButton setImage:[UIImage imageNamed:@"DoneUp"] forState:UIControlStateNormal];
-    [doneButton setImage:[UIImage imageNamed:@"DoneDown"] forState:UIControlStateHighlighted];
-	[doneButton addTarget:self action:@selector(doneButton:) forControlEvents:UIControlEventTouchUpInside];
-	// locate keyboard view
-	UIWindow* tempWindow = [[[UIApplication sharedApplication] windows] objectAtIndex:1];
-	UIView* keyboard;
-	for(int i=0; i<[tempWindow.subviews count]; i++) {
-		keyboard = [tempWindow.subviews objectAtIndex:i];
-		// keyboard found, add the button
-		if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 3.2) {
-			if([[keyboard description] hasPrefix:@"<UIPeripheralHost"] == YES)
-				[keyboard addSubview:doneButton];
-		} else {
-			if([[keyboard description] hasPrefix:@"<UIKeyboard"] == YES)
-				[keyboard addSubview:doneButton];
-		}
-	}
-}
-
--(void)doneButton:(id)sender {
-    [port resignFirstResponder];
-}
-
-- (void)keyboardDidShow:(NSNotification *)note {
-    //Only use extra Done button on config screen for iPhone, not on wmail screen or for iPad at all
-    if (!inEmail &&  UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone) {
-        [self addButtonToKeyboard];
-    }
+-(void)updatePort:(int)port {
+    _config.port =  port;
 }
 
 #pragma mark -- Email delegate methods
@@ -256,7 +179,7 @@ enum networkCells {PORT, RUN, CONFIG};
     if (indexPath.section == NETWORK) {
         switch (indexPath.row) {
             case PORT:
-                cellIdentifier = @"PortCell";
+                cellIdentifier = @"PortConfigCell";
                 break;
             case RUN:
                 cellIdentifier = @"StartCommandCell";
@@ -274,9 +197,10 @@ enum networkCells {PORT, RUN, CONFIG};
     UITableViewCell *cell = [tableView
                              dequeueReusableCellWithIdentifier:cellIdentifier];
     if(cell==nil) {
-        if([cellIdentifier isEqualToString:@"PortCell"]) {
+        if([cellIdentifier isEqualToString:@"PortConfigCell"]) {
             cell=[[PortConfigCell alloc]
                   initWithStyle:(UITableViewCellStyleDefault) reuseIdentifier:cellIdentifier];
+            
         } else if ([cellIdentifier isEqualToString:@"StartCommandCell"]) {
             cell=[[StartCommandCell alloc]
                   initWithStyle:(UITableViewCellStyleDefault) reuseIdentifier:cellIdentifier];
@@ -292,6 +216,7 @@ enum networkCells {PORT, RUN, CONFIG};
             switch (indexPath.row) {
                 case PORT:
                     [((PortConfigCell *)cell).portField setText:[NSString stringWithFormat:@"%d",_config.port]];
+                    [((PortConfigCell *)cell) setPortUpdater:self];
                     break;
                 case RUN:
                     [((StartCommandCell *)cell).label setText:[self getCommandOption]];
