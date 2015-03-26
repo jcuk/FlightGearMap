@@ -18,6 +18,6 @@
 @property int _port;
 
 -(id)init:(int)port mapStatusUpdater:(NSObject <MapStatusUpdater> *)updater;
--(void) reconnectToNewPort:(int)port;
+-(void)reconnectToNewPort:(int)port;
 
 @end

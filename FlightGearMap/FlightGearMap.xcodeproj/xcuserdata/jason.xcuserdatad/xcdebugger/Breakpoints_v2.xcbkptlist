@@ -10,7 +10,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "FlightGearMap/FGMViewController.m"
-            timestampString = "448903313.918134"
+            timestampString = "449103351.333724"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "322"
@@ -30,6 +30,22 @@
             startingLineNumber = "85"
             endingLineNumber = "85"
             landmarkName = "-getDigits:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "FlightGearMap/GCDAsyncSocket.m"
+            timestampString = "449074008.520644"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "2539"
+            endingLineNumber = "2539"
+            landmarkName = "-closeWithError:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

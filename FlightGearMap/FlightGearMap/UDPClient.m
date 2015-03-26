@@ -17,8 +17,18 @@
 NSObject <MapStatusUpdater> *mapStatusUpdater;
 PlaneData *planeData;
 
--(void)stop {
-    socket = nil;
+-(id)init:(int)port mapStatusUpdater:(NSObject <MapStatusUpdater> *)updater {
+    self = [super init];
+    if (self) {
+        mapStatusUpdater = updater;
+        _port = port;
+        
+        planeData = [[PlaneData alloc]init];
+        
+        [self bindToPortAndStart:port];
+        
+    }
+    return self;
 }
 
 -(void)bindToPortAndStart:(int)port {
@@ -39,20 +49,6 @@ PlaneData *planeData;
         NSLog(@"Error starting UDP socket");
     }
     
-}
-
--(id)init:(int)port mapStatusUpdater:(NSObject <MapStatusUpdater> *)updater {
-    self = [super init];
-    if (self) {
-        mapStatusUpdater = updater;
-        _port = port;
-        
-        planeData = [[PlaneData alloc]init];
-        
-        [self bindToPortAndStart:port];
-
-    }
-    return self;
 }
 
 -(void)reconnectToNewPort:(int)port {

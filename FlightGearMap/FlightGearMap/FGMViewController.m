@@ -33,6 +33,8 @@ bool  _touchInProgress = NO;
         UIPinchGestureRecognizer *pinchGesture = [[UIPinchGestureRecognizer alloc] initWithTarget:self action:@selector(handlePinch:)];
         [pinchGesture setDelegate:self];
         [_mapView addGestureRecognizer:pinchGesture];
+        
+        udpClient = [[UDPClient alloc]init:_config.port mapStatusUpdater:self] ;
     }
     return self;
 }
@@ -85,63 +87,57 @@ bool  _touchInProgress = NO;
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-        
-    if (!udpClient) {
-        //load data
-        NSString *errorDesc = nil;
-        
-        NSPropertyListFormat format;
-        
-        NSString *plistPath;
-        
-        NSString *rootPath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,
-                                                                  
-                                                                  NSUserDomainMask, YES) objectAtIndex:0];
-        
-        plistPath = [rootPath stringByAppendingPathComponent:@"save.plist"];
-        
-        if (![[NSFileManager defaultManager] fileExistsAtPath:plistPath]) {
-            
-            plistPath = [[NSBundle mainBundle] pathForResource:@"save" ofType:@"plist"];
-            
-        }
-        
-        NSData *plistXML = [[NSFileManager defaultManager] contentsAtPath:plistPath];
-        
-        NSDictionary *temp = (NSDictionary *)[NSPropertyListSerialization
-                                              
-                                              propertyListFromData:plistXML
-                                              
-                                              mutabilityOption:NSPropertyListMutableContainersAndLeaves
-                                              
-                                              format:&format
-                                              
-                                              errorDescription:&errorDesc];
-        
-        if (!temp) {
-            
-            NSLog(@"Error reading plist: %@, format: %d", errorDesc, (int)format);
-            
-        }
-        
-        _config = [[Config alloc]initFromDictionary:temp];
-        
-        [self updatePosition:START_LON lat:START_LAT altitudeInFt:0 updateZoom:YES];
-        
-        UIImage *plane = [UIImage imageNamed:@"plane"];
-        _planeView.image = plane;
-        
-        [self updateStateFromConfig];
 
+    //load data
+    NSString *errorDesc = nil;
+    
+    NSPropertyListFormat format;
+    
+    NSString *plistPath;
+    
+    NSString *rootPath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,
+                                                              
+                                                              NSUserDomainMask, YES) objectAtIndex:0];
+    
+    plistPath = [rootPath stringByAppendingPathComponent:@"save.plist"];
+    
+    if (![[NSFileManager defaultManager] fileExistsAtPath:plistPath]) {
+        
+        plistPath = [[NSBundle mainBundle] pathForResource:@"save" ofType:@"plist"];
+        
     }
     
-    planeData = [[PlaneData alloc]init];
+    NSData *plistXML = [[NSFileManager defaultManager] contentsAtPath:plistPath];
     
+    NSDictionary *temp = (NSDictionary *)[NSPropertyListSerialization
+                                          
+                                          propertyListFromData:plistXML
+                                          
+                                          mutabilityOption:NSPropertyListMutableContainersAndLeaves
+                                          
+                                          format:&format
+                                          
+                                          errorDescription:&errorDesc];
+    
+    if (!temp) {
+        
+        NSLog(@"Error reading plist: %@, format: %d", errorDesc, (int)format);
+        
+    }
+    
+    _config = [[Config alloc]initFromDictionary:temp];
+    
+    [self updatePosition:START_LON lat:START_LAT altitudeInFt:0 updateZoom:YES];
+    
+    UIImage *plane = [UIImage imageNamed:@"plane"];
+    _planeView.image = plane;
+    
+    [self updateStateFromConfig];
+    
+    planeData = [[PlaneData alloc]init];
 }
 
 -(void)updateStateFromConfig {
-    udpClient = [[UDPClient alloc]init:_config.port mapStatusUpdater:self] ;
-    
     bool fullscreen = NO;
     if (_config.mapType != FULLSCREEN) {
         _mapView.mapType = (MKMapType)_config.mapType;
@@ -151,6 +147,8 @@ bool  _touchInProgress = NO;
     }
     
     [self updateInstruments:_config.instrumentType fullscreen:fullscreen];
+    
+    [udpClient reconnectToNewPort:_config.port];
 }
 
 - (void)viewDidUnload
