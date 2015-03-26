@@ -291,10 +291,10 @@ enum networkCells {PORT, RUN, CONFIG};
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     switch (indexPath.section) {
         case INSTRUMENTS:
-            _config.instrumentType = indexPath.row;
+            _config.instrumentType = (InstrumentType)indexPath.row;
             break;
         case MAP:
-            _config.mapType = indexPath.row;
+            _config.mapType = (MapType)indexPath.row;
             break;
 
     }

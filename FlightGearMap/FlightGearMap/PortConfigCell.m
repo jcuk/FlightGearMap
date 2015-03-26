@@ -25,7 +25,7 @@
 
 -(BOOL) textFieldShouldReturn:(UITextField*) textField {
     [textField resignFirstResponder];
-    [_portUpdater updatePort:[[textField text] integerValue]];
+    [_portUpdater updatePort:(int)[[textField text] integerValue]];
     return YES;
 }
 
