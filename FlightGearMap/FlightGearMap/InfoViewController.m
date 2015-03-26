@@ -53,14 +53,4 @@
     [infoView setNeedsLayout];
 }
 
-#pragma mark RevMobAds
-
-- (void)revmobAdDidFailWithError:(NSError *)error {
-    
-}
-
--(IBAction)getFreeStuff:(id)sender {
-    [[RevMobAds session] openAdLinkWithDelegate:self];
-}
-
 @end

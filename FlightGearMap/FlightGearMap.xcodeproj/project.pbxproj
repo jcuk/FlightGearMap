@@ -35,8 +35,6 @@
 		961C44D51ABF465800BB15BD /* PortConfigCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 961C44D41ABF465800BB15BD /* PortConfigCell.m */; };
 		961C44D81ABF882D00BB15BD /* StartCommandCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 961C44D71ABF882D00BB15BD /* StartCommandCell.m */; };
 		961C44DC1AC038DA00BB15BD /* Config.m in Sources */ = {isa = PBXBuildFile; fileRef = 961C44DB1AC038DA00BB15BD /* Config.m */; };
-		962AC8621AB5FCD900C50CF7 /* RevMobAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 962AC8611AB5FCD900C50CF7 /* RevMobAds.framework */; };
-		962AC8641AB5FD2400C50CF7 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 962AC8631AB5FD2400C50CF7 /* MediaPlayer.framework */; };
 		9644E8CA15B36D5B00D8BF96 /* alt0@2x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 9644E8BB15B36D5B00D8BF96 /* alt0@2x~ipad.png */; };
 		9644E8CB15B36D5B00D8BF96 /* alt1@2x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 9644E8BC15B36D5B00D8BF96 /* alt1@2x~ipad.png */; };
 		9644E8CC15B36D5B00D8BF96 /* ati0@2x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 9644E8BD15B36D5B00D8BF96 /* ati0@2x~ipad.png */; };
@@ -194,7 +192,6 @@
 		961C44D91ABF9F1400BB15BD /* Constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
 		961C44DA1AC038DA00BB15BD /* Config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Config.h; sourceTree = "<group>"; };
 		961C44DB1AC038DA00BB15BD /* Config.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Config.m; sourceTree = "<group>"; };
-		962AC8611AB5FCD900C50CF7 /* RevMobAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RevMobAds.framework; sourceTree = "<group>"; };
 		962AC8631AB5FD2400C50CF7 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 		9644E8BB15B36D5B00D8BF96 /* alt0@2x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "alt0@2x~ipad.png"; sourceTree = "<group>"; };
 		9644E8BC15B36D5B00D8BF96 /* alt1@2x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "alt1@2x~ipad.png"; sourceTree = "<group>"; };
@@ -324,15 +321,13 @@
 			files = (
 				96FD2CE21AB8A9DF00F8A684 /* CoreLocation.framework in Frameworks */,
 				96DC97611AB61294001418BA /* StoreKit.framework in Frameworks */,
-				962AC8641AB5FD2400C50CF7 /* MediaPlayer.framework in Frameworks */,
 				96FAE9A617DE605B008F4664 /* SystemConfiguration.framework in Frameworks */,
 				5B3D3F7E158FE3DB00393425 /* CFNetwork.framework in Frameworks */,
 				96898C0815BCB11400ABB2F9 /* MessageUI.framework in Frameworks */,
 				964879EC15B9E6C300771730 /* QuartzCore.framework in Frameworks */,
-				5B35DD4F158FC3F8009EA907 /* MapKit.framework in Frameworks */,
 				5B68E648158FBF65009DBDE6 /* UIKit.framework in Frameworks */,
+				5B35DD4F158FC3F8009EA907 /* MapKit.framework in Frameworks */,
 				5B68E64A158FBF65009DBDE6 /* Foundation.framework in Frameworks */,
-				962AC8621AB5FCD900C50CF7 /* RevMobAds.framework in Frameworks */,
 				5B68E64C158FBF65009DBDE6 /* CoreGraphics.framework in Frameworks */,
 				5B3D3F78158FE24E00393425 /* Security.framework in Frameworks */,
 			);
@@ -433,7 +428,6 @@
 				96FD2CE11AB8A9DF00F8A684 /* CoreLocation.framework */,
 				96DC97601AB61294001418BA /* StoreKit.framework */,
 				962AC8631AB5FD2400C50CF7 /* MediaPlayer.framework */,
-				962AC8611AB5FCD900C50CF7 /* RevMobAds.framework */,
 				96FAE9A917DE6B6C008F4664 /* AdSupport.framework */,
 				96FAE9A417DE605B008F4664 /* SystemConfiguration.framework */,
 				96898C0715BCB11400ABB2F9 /* MessageUI.framework */,

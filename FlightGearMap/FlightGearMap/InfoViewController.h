@@ -7,10 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <RevMobAds/RevMobAds.h>
 #import "UIGlossyButton.h"
 
-@interface InfoViewController : UIViewController <RevMobAdsDelegate> {
+@interface InfoViewController : UIViewController {
     @private IBOutlet UITextView *infoView;
     @private IBOutlet UIGlossyButton *freeStuffButton;
 }
