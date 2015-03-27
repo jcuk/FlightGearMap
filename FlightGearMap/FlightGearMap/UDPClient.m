@@ -52,10 +52,13 @@ PlaneData *planeData;
 }
 
 -(void)reconnectToNewPort:(int)port {
-    [socket close];
-    socket = nil;
-    _port = port;
-    [self bindToPortAndStart:port];
+    if (_port != port) {
+        NSLog(@"Connecting to port %d", port);
+        [socket close];
+        socket = nil;
+        _port = port;
+        [self bindToPortAndStart:port];
+    }
     
 }
 
@@ -93,6 +96,10 @@ withFilterContext:(id)filterContext
     
     [mapStatusUpdater updateFlightData:planeData];
    
+}
+
+- (void)udpSocketDidClose:(GCDAsyncUdpSocket *)sock withError:(NSError *)error {
+    NSLog(@"Socket closed");
 }
 
 

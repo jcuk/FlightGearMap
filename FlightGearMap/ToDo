@@ -9,7 +9,6 @@ Later versions
     Record trip
     Comms:
         Comms status icon in toolbar
-        Connection occasionally causes error binding port - Address already in use
 
   Map points
         Airports
@@ -28,6 +27,7 @@ Done
  Minor bug fixes
  Updates to GUI
  Full screen mode
+ Map zoom
 
 ToDo
  iPhone 6 in native mode
